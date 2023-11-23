@@ -5,18 +5,18 @@ CatFe
 
 |   Tarea                |    estado   | quién lo hace |     descripción                    |
 | :--------------------: | :---------: | :-----------: | ---------------------------------- |
-| Memoria                | Sin empezar | -             | Redacción completa                 |
+| Memoria                | Sin empezar | César & CO    | Redacción completa                 |
 | Estructura básica HTML | Sin empezar | Todos         | Html básico                        |
 | home                   | Sin empezar | Paula         | **Html** + **css** + js            |
-| Actividades            | Sin empezar |               | **Html** + **css** + js            |
-| Rserva                 | Sin empezar |               | **Html** + **css** + js            |
-| Pedido + Menú          | Sin empezar |               | **Html** + **css** + **js**        |
+| Actividades            | Sin empezar | Paula         | **Html** + **css**                 |
+| Reserva                | Sin empezar | Álvaro        | **Html** + **css** + js            |
+| Pedido + Menú          | Sin empezar | Adri          | **Html** + **css** + **js**        |
 | Contactanos            | Sin empezar |               | **Html** + **css** + js            |
 | Gatos                  | Sin empezar |               | **Html** + **css** + js[^1]        | 
-| Loacalización          | Sin empezar |               | Html + **css** + js                | 
-| Tarifas                | Sin empezar |               | Html + **css** + js                | 
-| Establecimiento        | Sin empezar |               | Html + **css** + **js**            | 
-| Utilizades             | Sin empezar |               | Headers, y demás cosas comunes     |
+| Loacalización          | Sin empezar | César         | Html + **css**                     | 
+| Tarifas                | Sin empezar | Adri          | Html + **css**                     | 
+| Establecimiento        | Sin empezar | César         | Html + **css** + **js**            | 
+| Utilizades             | Sin empezar | Álvaro        | Headers, y demás cosas comunes     |
 
 
 
