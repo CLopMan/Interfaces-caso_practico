@@ -1,0 +1,72 @@
+header {
+    height: 100px;
+    background-color: green;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 150vh;
+    background-color: darkturquoise;
+}
+    .sec {
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 20px 60px 10px 60px;
+        flex-flow: column nowrap;
+        flex: 1 1 auto;
+        background-color: blue;
+        border: red thin solid;
+        justify-content: center;
+        height: 20%;
+    }
+        .sec > .Title {
+            flex: 1 1 2vh;
+            font-size: 2em;
+            background-color: red;
+            text-align: left;
+        }
+            .Title > p {
+                align-self: center;
+                margin-top: 20px;
+                height: 100%;
+            }
+        .sec > hr {
+            color: black;
+        }
+        .sec > .Content {
+            display: flex;
+            flex: 1 1 80%;
+
+        }
+
+            .Content > ul {
+                flex: 1 1 auto;
+                width: 100%;
+                background-color: purple;
+            }
+                ul > li {
+                    padding: 20px 0 0 0;
+                    margin-left: 3vw;
+                    justify-content: center;
+                }
+                ul > .Up {
+                    font-size: 2.5em;
+                }
+                ul > .Down {
+                    margin-left: 4vw;
+                }
+
+            .Content > .Packs {
+                flex: 1 1 auto;
+                background-color: blanchedalmond;
+                margin: 20px;
+                align-items: center;
+            }
+                .Packs > .Pack {
+                    background-color: green;
+                    border: purple thick solid;
+                    height: 100%;
+                    margin: 0 4%;
+                    border-radius: 30px;
+                }
