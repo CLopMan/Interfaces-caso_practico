@@ -3,10 +3,25 @@ CatFe
 
 # Tareas: 
 
-|   Tarea                |    estado   | quién lo hace |     descripción    |
-| :--------------------: | :---------: | :-----------: | ------------------ |
-| Memoria                | Sin empezar | -             | Redacción completa |
-| Estructura básica HTML | Sin empezar | Todos         | Html básico        |
+|   Tarea                |    estado   | quién lo hace |     descripción                    |
+| :--------------------: | :---------: | :-----------: | ---------------------------------- |
+| Memoria                | Sin empezar | -             | Redacción completa                 |
+| Estructura básica HTML | Sin empezar | Todos         | Html básico                        |
+| home                   | Sin empezar | Paula         | **Html** + **css** + js            |
+| Actividades            | Sin empezar |               | **Html** + **css** + js            |
+| Rserva                 | Sin empezar |               | **Html** + **css** + js            |
+| Pedido + Menú          | Sin empezar |               | **Html** + **css** + **js**        |
+| Contactanos            | Sin empezar |               | **Html** + **css** + js            |
+| Gatos                  | Sin empezar |               | **Html** + **css** + js[^1]        | 
+| Loacalización          | Sin empezar |               | Html + **css** + js                | 
+| Tarifas                | Sin empezar |               | Html + **css** + js                | 
+| Establecimiento        | Sin empezar |               | Html + **css** + **js**            | 
+| Utilizades             | Sin empezar |               | Headers, y demás cosas comunes     |
+
+
+
+
+[^1]: Agrandar la foto de un gato para poner más fotos (galería)
 
 
 ## Memoria
@@ -22,3 +37,10 @@ CatFe
 - Un directorio para todos los .css (src/style)
 - un directorio para todos los .js (src/script)
 - Un directorio para todas las img (src/images)
+
+# Utilidades: 
+- insertar un mapa de google: 
+```html
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.4152684844107!2d-3.805155323390724!3d40.19982467147538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41f45dc575d2e1%3A0xc1ad5df43a09ea80!2sRestaurante%20El%20Torre%C3%B3n!5e0!3m2!1ses!2ses!4v1700735804122!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+```
