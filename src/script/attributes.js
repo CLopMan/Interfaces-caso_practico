@@ -76,7 +76,7 @@ class Email extends Attribute {
  */
 class Phone extends Attribute {
     validate(value) {
-        if (!(/^\d{9}$/.test(value))) { throw "formato de número de teléfono incorrecto"; }
+        if (!(/^\+34[7-9]\d{8}$/.test(value))) { throw "formato de número de teléfono incorrecto"; }
         return value;
     }
 }
@@ -87,7 +87,7 @@ class Phone extends Attribute {
  */
 class Password extends Attribute {
     validate(value) {
-        if (value.length() < 8) { throw "la contraseña debe tener al menos 8 caracteres"; }
+        if (value.length < 8) { throw "la contraseña debe tener al menos 8 caracteres"; }
         return value;
     }
 }
