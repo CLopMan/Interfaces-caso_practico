@@ -10,7 +10,75 @@ A continuación se expone un conjunto de personas y escenarios de uso de una pá
 
 # 2.  Personas y escenarios 
 Se han definido tres personas, cada una representante de un tipo de público objetivo de nuestro restraurante, para poder determinar la funcionalidad necesaria en nuestra página web. 
+
+Para la especificación de las personas se ha diseñado una pantilla en forma de tabla con el siguiente formado: 
+<table border>
+<tr><td> Estereotipo </td> <td> tipo de público al que representa</td></tr>
+<tr>
+    <td> FOTO </td> <td> Nombre <br/> cita </td>
+</tr>
+<tr>
+    <td> Edad: </td> <td> número de años </td>
+</tr>
+<tr>
+    <td> Personalidad: </td> <td> rasgos definitorios de la persona </td>
+</tr>
+<tr>
+    <td> Plataforma: </td> <td> ordenador/movil/tablet </td>
+</tr>
+<tr>
+    <td> Experiencia tecnológica: </td> <td> 
+        <b>Alta</b>: trata con dispositivos a menudo, se desenvuelve bien y está familiarizado con tramitaciones online<br>
+        <b>media</b>: pese a que está abituado al trato en persona, usa adecuadamente su dispositivo. Aunque necesita que las cosas sean intuitivas y guías para los pasos más complejos.<br>
+        <b>baja</b>: poca experiencia con las tramitaciones online, necesita que los pasos sean intuitivos y perfectamente guiados con ayudas visuales. 
+    </td>
+</tr>
+<tr>
+    <td> Motivaciones: </td> <td> qué busca en nuestro local </td>
+</tr>
+</table>
+
 ## 2.1. Jana Pérez
+
+<table border>
+<tr><td> Estereotipo </td> <td> joven sociable</td></tr>
+<tr>
+    <td> <img src="img_memoria/jana.png"> </td> <td> Jana Pérez <br/> <i>"Cada día es una oportunidad para crear algo nuevo y maravilloso"</i> </td>
+</tr>
+<tr>
+    <td> Edad: </td> <td> 21 años </td>
+</tr>
+<tr>
+    <td> Personalidad: </td> 
+    <td> <ul>
+        <li> Extrovertida </li>
+        <li> Espontánea </li>
+        <li> Impaciente </li>
+        <li> Social </li>
+        <li> Activa </li>
+        <li> Aventurera </li>
+    </ul> </td>
+</tr>
+<tr>
+    <td> Plataforma: </td> <td> móvil </td>
+</tr>
+<tr>
+    <td> Experiencia tecnológica: </td> <td> 
+        Media
+    </td>
+</tr>
+<tr>
+    <td> Motivaciones: </td> 
+    <td>
+        Busca quedar con amigos para planes divertidos que poder publicar en sus redes sociales. Quiere poder hacer una reserva de manera fácil en un restaurante interesante, sin tener que rebuscar ni malgastar mucho tiempo. 
+    </td>
+</tr>
+</table>
+
+### Escenario de uso: 
+1. Jana entra en la web 
+2. Consulta la información acerca del local
+3. Reserva desde su *móvil*. Como su grupo de amigos es numeroso, decide pagar en persona en vez de a través de la web. 
 
 ## 2.2. Enmanuel García-Ruíz
 
