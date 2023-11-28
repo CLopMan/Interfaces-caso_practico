@@ -82,7 +82,89 @@ Para la especificación de las personas se ha diseñado una pantilla en forma de
 
 ## 2.2. Enmanuel García-Ruíz
 
+<table border>
+<tr><td> Estereotipo </td> <td> persona con alergias </td></tr>
+<tr>
+    <td> <img src=img_memoria/enmanuel.png> </td> <td> Enmanuel  <br/> <i>“Yo soy yo y mi circunstancia. Si no la salvo a ella no me salvo yo”</i> </td>
+</tr>
+<tr>
+    <td> Edad: </td> <td>  50 </td>
+</tr>
+<tr>
+    <td> Personalidad: </td> 
+    <td> <ul>
+        <li> Precavido </li>
+        <li> Relajado </li>
+        <li> Educado </li>
+        <li> Paciente </li>
+        <li> Agradecido </li>
+    </ul> </td>
+</tr>
+<tr>
+    <td> Plataforma: </td> <td> Ordenador y tablet </td>
+</tr>
+<tr>
+    <td> Experiencia tecnológica: </td> <td> 
+        Media
+    </td>
+</tr>
+<tr>
+    <td> Motivaciones: </td> 
+    <td>
+        Busca realizar un pedido a domicilio sin tener que complicarse demasiado. Por tanto, espera que la información sobre alérgenos se exponga de manera clara y sencilla, facilitando el proceso de hacer un pedido. 
+    </td>
+</tr>
+</table>
+
+### Escenario de uso: 
+
+1. Ennmanuel consulta la web desde su ordenador portátil.
+2. Consulta la localización del establecimiento, asegurándose de que está cerca de su casa. 
+3. Usa el menú para navegar hasta la pestaña para hacer un pedido a domicilio
+4. Para cada alimento, comprueba los alérgenos a través de la leyenda. 
+5. Realiza el pedido mediante la secuencia de pasos, guiado por el sistema. 
+
 ## 2.3. José Daniel Expósito
+
+<table border>
+<tr><td> Estereotipo </td> <td> persona con alergias </td></tr>
+<tr>
+    <td> <img src=img_memoria/jose_daniel.png> </td> <td> Enmanuel  <br/> <i>"Jamás hallé compañera más sociable que la soledad, o un gato"</i> </td>
+</tr>
+<tr>
+    <td> Edad: </td> <td>  30 </td>
+</tr>
+<tr>
+    <td> Personalidad: </td> 
+    <td> <ul>
+        <li> Tímido </li>
+        <li> Introvertido </li>
+        <li> Inteligente </li>
+        <li> trabajador </li>
+        <li> Ocupado </li>
+    </ul> </td>
+</tr>
+<tr>
+    <td> Plataforma: </td> <td> Ordenador </td>
+</tr>
+<tr>
+    <td> Experiencia tecnológica: </td> <td> 
+        Alta
+    </td>
+</tr>
+<tr>
+    <td> Motivaciones: </td> 
+    <td>
+        Busca un sitio donde trabajar donde pueda disfrutar de la compañía de animales cariñosos, sin que esto le impida completar todas sus tareas. Además de disfrutar de algún tentempié mientras realiza su trabajo. 
+    </td>
+</tr>
+</table>
+
+### Escenario de uso: 
+
+1. José entra a la web y consulta la información sobre los gatos y actividades. 
+2. Comprueba si en el establecimiento existe un área de trabajo. 
+3. Reserva una mesa desde la web para una persona.  
 
 # 3. Análisis de otras webs
 De forma complementaria al diseño de personas, se han analizado tres páginas web de otros restaurantes para lograr una mayor especificaicón de funcionalidades para nuestra web. 
@@ -96,7 +178,7 @@ De forma complementaria al diseño de personas, se han analizado tres páginas w
 
 # 4. Diseño del prototipo 
 ## 4.1. Requisitos funcionales 
-Teniendo en cuenta tanto los escenarios del [apartado 2](#2-personas-y-escenarios) y el análisis del [apartado 3](#3-análisis-de-otras-webs), se han determinado 11 funcionalidades que deben estar implementadas en neustra web. Estas se recogen a continuación en la siguiente tabla: 
+Teniendo en cuenta tanto los escenarios del [apartado 2](#2-personas-y-escenarios) y el análisis del [apartado 3](#3-análisis-de-otras-webs), se han determinado 11 funcionalidades que deben estar implementadas en nuestra web. Estas se recogen a continuación en la siguiente tabla: 
 
 | ID | Funcionalidad | Descripción | 
 | -- | :-----------: | ------------| 
