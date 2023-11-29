@@ -64,9 +64,74 @@ main {
                 align-items: center;
             }
                 .Packs > .Pack {
-                    background-color: green;
-                    border: purple thick solid;
+                    background-color: #F9F8F6;
+                    border: purple 2px solid;
                     height: 100%;
                     margin: 0 4%;
                     border-radius: 30px;
+                    padding: 0;
+                    overflow: auto;
                 }
+
+                    .Pack > .head {
+                        width: 100%;
+                        height: 20%;
+                        background-color: #DDD8D1;
+                        border-top-right-radius: 30px;
+                        border-top-left-radius: 30px;
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                    }
+                        .Pack > .head > p {
+                            flex: 1 1 auto;
+                            font-weight: bold;
+                            font-size: 1.7em;
+                            text-shadow: darkgray 1px 2px 5px;
+                        }
+
+                    .Pack > .body {
+                        height: 80%;
+                    }
+
+                        .Pack > .body > .desciption {
+                            width: 100%;
+                            height: 25%;
+                            text-align: center;
+                            padding: 10px 30px;
+                            font-size: 0.8em;
+                        }
+
+                        .Pack > .body > .offers {
+                            height: 50%;
+                            overflow: auto;
+                        }
+                            .Pack > .body > .offers > p {
+                                padding: 0 20px;
+                                font-weight: bold;
+                            }
+                            .Pack > .body > .offers > ul {
+                                font-weight: bold;
+                                height: 80%;
+                            }
+                            .Pack > .body > .offers > ul > li {
+                                padding: 0 25px;
+                                margin: 5px 0;
+                            }
+
+
+                        .Pack > .body > .price {
+                            height: 25%;
+                            text-align: center;
+                        }
+                            .Pack > .body > .price > .ammount {
+                                height: 55%;
+                                font-size: 1.5em;
+                                font-weight: bold;
+                            }
+
+                            .Pack > .body > .price > .note {
+                                height: 45%;
+                                font-size: 0.8em;
+                            }
+
