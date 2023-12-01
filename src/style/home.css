@@ -1,0 +1,96 @@
+*{
+    background: #EEEBE7;
+    margin: 0%;
+}
+
+header {
+    position: absolute;
+    height: 100%;
+    background-image: url("../image/catcafe5.png");
+    background-position: 50%;
+    background-size: 110%;
+}
+
+.titulo {
+    position: relative;
+    height: 307px;
+    left: 9px;
+    background: none;
+}
+
+.titulo > img {
+    position: absolute;
+    width: 45%;
+    left: 55%;
+    top: -5%;
+    background: none;
+}
+
+
+.titulo > p {
+    width: 70%;
+    height: 104px;
+    left: 9px;
+    top: 23px;
+
+    font-family: 'Newsreader';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 128px;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+
+    color: #6C461A;
+    background: none;
+}
+/*
+#header > article {
+    width: 671px;
+    height: 257px;
+    left: 47px;
+    top: 320px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+}
+
+#header > button {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 516px;
+    height: 62px;
+    right: 768px;
+    bottom: 3757px;
+
+    background: #6C461A;
+    border: 1px solid #DDD8D1;
+    border-radius: 32px;
+}
+
+button > text {
+    position: absolute;
+    width: 281px;
+    height: 52px;
+    left: calc(50% - 281px/2 + 0.5px);
+    top: calc(50% - 52px/2 - 0.5px);
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #EEEBE7;
+}
+
+*/
+
