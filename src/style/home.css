@@ -3,45 +3,39 @@
     margin: 0%;
 }
 
-header {
+header.col-12 {
     position: absolute;
     height: 100%;
     background-image: url("../image/catcafe5.png");
     background-position: 50%;
     background-size: 110%;
+    padding: 0;
 }
 
 .titulo {
     position: relative;
-    height: 307px;
-    left: 9px;
+    height: 30%;
+    left: 1%;
     background: none;
+    padding: 0;
 }
 
 .titulo > img {
-    position: absolute;
+    position: relative;
     width: 45%;
-    left: 55%;
-    top: -5%;
+    left: 52%;
     background: none;
 }
 
-
 .titulo > p {
     width: 70%;
-    height: 104px;
-    left: 9px;
-    top: 23px;
-
-    font-family: 'Newsreader';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 128px;
-    line-height: 100%;
-    letter-spacing: -0.01em;
-
+    height: 0;
     color: #6C461A;
     background: none;
+    font-family: 'Newsreader';
+    font-size: 13vw;
+    line-height: 100%;
+    letter-spacing: -0.01em;
 }
 /*
 #header > article {
