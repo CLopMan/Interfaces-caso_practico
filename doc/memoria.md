@@ -172,10 +172,32 @@ De forma complementaria al diseño de personas, se han analizado tres páginas w
 [Taikit](https://teikit.es/) es una franquicia de restaurantes especializado en sushi con posibilidad de pedir a domicilio. 
 
 ### Página principal 
+De la página principal destaca el diseño, basado en la simplicidad y con un estilo moderno. La letra es fácilmente legible y contenido accesible a través de un scroll vertical. 
+El contenido está dibidido por secciones: 
+- Un vídeo promocional de la franquicia con un botón para acceder a la página para pedidos on-line. 
+- Información sobre la marca.
+- Best sellers, cada uno enlazado a la carta del restaurante, en el menú de pedidos on-line. 
+- Enlaces de interés (política de privacidad, redes sociales, contacto...)
 
+La página principal cuenta con información relevante par una persona que entra a la página por primera vez, dándole toda la iformación necesaria para que pueda conocer la marca y pedir a domicilio fácilmente. No obstante, la presencia de botones distintos con el mismo destino puede resultar confusa. 
 ### Pedido a domicilio 
+Esta página engloba la funcionalidad principal de la página web. 
+
+El menú es *fácilmente navegable*, permitiendo al usuario seleccionar una categoría y navegar por la misma mediante scroll vertical. Cada plato viene acompañado de un título, foto, descripciń, precio e información sobre alérgenos. 
+
+La información sobre alérgenos viene especificada por una *leyenda sencilla*, de iconoes reconocibles. Una persona puede colocar el ratón sobre el icono para que aparezca un texto con el alérgeno que representa ese icono. 
+
+Todo producto seleccionado aparece en un contenedor a la derecha de la pantalla, permitiendo consultar tu pedido en *tiempo real*; así como el precio. Además, este menú te permite aumentar o reducir la cantidad de un producto que hayas seleccionado previamente en la carta. 
 
 ### Otros aspectos funcionales 
+Además de lo antes mencioado, otras funcionalidades destacables de taikit son las siguientes: 
+- Registro de usuario.
+- Página "conócenos" con información sobre la franquicia, políticas de empresa y reseñas de otros clientes.
+- Página de contacto.
+- Localización de locales. 
+
+### Conclusiones 
+Taikit destaca sobre todo por su menú a domicilio, caracterizado por la simplicidad y la estética común a toda la página. Su funcionalidad intuitiva y la disposición de elementos en la página hacen de la experiencia de pedir a domicilio algo intiuitivo para todo tipo de personas. 
 
 ## 3.2. CatCafe Mocha 
 
@@ -211,7 +233,7 @@ Teniendo en cuenta tanto los escenarios del [apartado 2](#2-personas-y-escenario
 | Fun8 | Indicador que incite al usuario a hacer scroll en la página | En las páginas con scroll vertical se incluirá un icono que indique al usuario la dirección del mismo | 
 | Fun9 | Página de contacto | Debe existir una página con iformación de contacto, preguntas frecuentes y un formulario de contacto | 
 | Fun10 | Página con actividades | Debe exsistir una página que describa qué tipo de actividades se pueden llevar a cabo en el establecimiento | 
-| Fun11 | Localización del local | Debe existir una página o sección que incluya un mapa con la ubicación del local, así como informació relativa a paradas cercanas de transporte público o similares |
+| Fun 11 | Localización del local | Debe existir una página o sección que incluya un mapa con la ubicación del local, así como informació relativa a paradas cercanas de transporte público o similares |
 
 
 ## 4.2. Prototipo 
