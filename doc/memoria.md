@@ -167,12 +167,31 @@ Para la especificación de las personas se ha diseñado una pantilla en forma de
 3. Reserva una mesa desde la web para una persona.  
 
 # 3. Análisis de otras webs
-De forma complementaria al diseño de personas, se han analizado tres páginas web de otros restaurantes para lograr una mayor especificaicón de funcionalidades para nuestra web. 
+De forma complementaria al diseño de personas, se han analizado tres páginas web de otros restaurantes para lograr una mayor especificaicón de funcionalidades para nuestra web. Para cada página web, se han analizado la página principal, la funcionalidad más destacada dentro de la web y otros aspectos funcionales notables. 
 ## 3.1. Taikit
+[Taikit](https://teikit.es/) es una franquicia de restaurantes especializado en sushi con posibilidad de pedir a domicilio. 
+
+### Página principal 
+
+### Pedido a domicilio 
+
+### Otros aspectos funcionales 
 
 ## 3.2. CatCafe Mocha 
 
+### Página principal 
+
+### Localizaciones y actividades
+
+### Otros aspectos funcionales
+
 ## CatFé Santander
+
+### Página principal 
+
+### Página de reserva 
+
+### Otros aspectos funcionales 
 
 ## Conclusiones
 
@@ -192,7 +211,7 @@ Teniendo en cuenta tanto los escenarios del [apartado 2](#2-personas-y-escenario
 | Fun8 | Indicador que incite al usuario a hacer scroll en la página | En las páginas con scroll vertical se incluirá un icono que indique al usuario la dirección del mismo | 
 | Fun9 | Página de contacto | Debe existir una página con iformación de contacto, preguntas frecuentes y un formulario de contacto | 
 | Fun10 | Página con actividades | Debe exsistir una página que describa qué tipo de actividades se pueden llevar a cabo en el establecimiento | 
-| Fun 11 | Localización del local | Debe existir una página o sección que incluya un mapa con la ubicación del local, así como informació relativa a paradas cercanas de transporte público o similares |
+| Fun11 | Localización del local | Debe existir una página o sección que incluya un mapa con la ubicación del local, así como informació relativa a paradas cercanas de transporte público o similares |
 
 
 ## 4.2. Prototipo 
