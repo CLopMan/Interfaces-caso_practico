@@ -172,7 +172,7 @@ De forma complementaria al diseño de personas, se han analizado tres páginas w
 [Taikit](https://teikit.es/) es una franquicia de restaurantes especializado en sushi con posibilidad de pedir a domicilio. 
 
 ### Página principal 
-De la página principal destaca el diseño, basado en la simplicidad y con un estilo moderno. La letra es fácilmente legible y contenido accesible a través de un scroll vertical. 
+De la página principal destaca el diseño, basado en la simplicidad y con un estilo moderno. La letra es fácilmente legible y contenido accesible a través de un scroll vertical. Además, existe una pequeña animación para indicar la posibilidad de desplazar la ventana hacia abajo. 
 El contenido está dibidido por secciones: 
 - Un vídeo promocional de la franquicia con un botón para acceder a la página para pedidos on-line. 
 - Información sobre la marca.
@@ -197,12 +197,19 @@ Además de lo antes mencioado, otras funcionalidades destacables de taikit son l
 - Localización de locales. 
 
 ### Conclusiones 
-Taikit destaca sobre todo por su menú a domicilio, caracterizado por la simplicidad y la estética común a toda la página. Su funcionalidad intuitiva y la disposición de elementos en la página hacen de la experiencia de pedir a domicilio algo intiuitivo para todo tipo de personas. 
+Taikit destaca sobre todo por su menú a domicilio, caracterizado por la simplicidad y la estética común a toda la página. Su funcionalidad intuitiva, la disposición de elementos y la información que se mantiene accesible al usuario en todo momento hacen de la experiencia de pedir a domicilio algo sencillo para todo tipo de personas. 
 
 ## 3.2. CatCafe Mocha 
+(CatCafé)[https://catmocha.jp/] mocha es un franquicia de cat-cafés japonesa, caracterizada por su estética minimalista. 
 
 ### Página principal 
-
+Destaca el diseño *minimalista*, sobrio y elegante; basado en tonos marrones y blancos. De nuevo, aparece un vídeo promocional acompañado de un indicativo para que aquella persona que visite la web entienda que puede hacer scroll. Además, arriba a la izquierda contamos con la posibilidad de *cambiar el idioma* entre inglés, coreano, japonés y chino. También existe un *header* fijo que nos da acceso al menú de navegación (de tipo hamburguesa), la funcionalidad de cambio de idioma y el logo de la marca. 
+La página principal está dividida en secciones diferenciadas por separadores (cambio de color de fondo o imágenes): 
+- Información: en esta sección se da información a usuarios sobre qué es un catcafé, qué se puede hacer allí e información para nuevos visitantes. Cada uno de estos textos viene acompañado de un enlace "read more...", que te dirige a otra página donde con la información más detallada.
+- Shoplist: se detalla la localización de distintos establecimientos. Cada una de las localizaciones es un enlace a una página donde se habla específicamente de ese local. 
+- Noticias y media
+- Enlaces sobre la compañía, empleo y tratamiento de los gatos.
+- Contacto
 ### Localizaciones y actividades
 
 ### Otros aspectos funcionales
