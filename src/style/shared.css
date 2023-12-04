@@ -63,12 +63,21 @@ body > header {
     flex-direction: row;
     align-items: center;
     height: 100%;
+    width: 80px;
     top: 0px;
 }
 
 #nav-menu-button {
     position: fixed;
     z-index: 100;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--marron-base);
+    color: #E6E6E6;
+    font-size: 64px;
+    line-height: 0;
+    padding-bottom: 15px;
 }
 
 nav {
