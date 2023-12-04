@@ -2,7 +2,7 @@
 $("body").prepend(`<header>
     CATfé
     <img src="TODO: missing image" alt="CATfé logo">
-    <button type="button" id="nav-menu-button" onclick="toggle_menu()">☰</button>
+    <div id="nav-button-container"><button type="button" id="nav-menu-button" onclick="toggle_menu()">☰</button></div>
 </header>
 <nav id="nav-menu">
     <a class="Button" href="./home.html">Home</a>
@@ -27,11 +27,13 @@ menu_shown = false
  */
 function toggle_menu() {
     if (menu_shown === true) {
-        $("#nav-menu").hide();
+        $("body").css({overflow: ""});
+        $("#nav-menu").fadeOut(250);
         $("#nav-menu-button").text("☰");
         menu_shown = false
     } else {
-        $("#nav-menu").show();
+        $("body").css({overflow: "hidden"});
+        $("#nav-menu").fadeIn(250);
         $("#nav-menu-button").text("🗙");
         menu_shown = true
     }

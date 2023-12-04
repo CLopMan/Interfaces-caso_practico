@@ -1,4 +1,6 @@
 * {
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
 }
 
@@ -49,4 +51,43 @@ body > header {
     color: var(--marron-base);
     border-bottom: 2px solid var(--bordes); 
     font-size: 80px;
+    height: 120px;
+    font-family: Newsreader;
+    line-height: 120px;
+    padding: 0 30px;
+}
+
+#nav-button-container {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    top: 0px;
+}
+
+#nav-menu-button {
+    position: fixed;
+    z-index: 100;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--page-bg);
+}
+
+nav > * {
+    color: #000;
+    font-family: Newsreader;
+    font-size: 64px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
 }
