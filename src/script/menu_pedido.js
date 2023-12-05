@@ -1,12 +1,12 @@
 generate_form(
     "#form-register",
+    "Registro de Usuario",
     [
-        {name: 'Nombre',     valid: Name},
-        {name: 'Apellidos',  valid: Name},
-        {name: 'Email',      valid: Email},
-        {name: 'Teléfono',   valid: Phone},
-        {name: 'Contraseña', valid: Password},
+        {name: "Nombre",     valid: Name,     placeholder: "Nombre"},
+        {name: "Apellidos",  valid: Name,     placeholder: "Apellido1 Apellido2"},
+        {name: "Email",      valid: Email,    placeholder: "ejemplo@dominio.extensión", type: "email"},
+        {name: "Teléfono",   valid: Phone,    placeholder: "+34766666666"},
+        {name: "Contraseña", valid: Password, placeholder: "Introduzca un mínimo de 8 caracteres", type: "password"},
     ],
-    User,
-    {fun: () => {}, name: 'Datos de envío'}
+    {name: "Datos de envío", serialize: User, fun: () => {}}
 )

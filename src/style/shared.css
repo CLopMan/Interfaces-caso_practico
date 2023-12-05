@@ -38,6 +38,7 @@ html {
     --producto-bg: #F9F8F6;
     --bordes: #DDD8D1;
     --page-bg: #EEEBE7;
+    --recuadros: #E6E6E6;
     --verde-confirmar: #9ADE56;
     --text: #000000;
 }
@@ -78,7 +79,7 @@ body > header {
     height: 80px;
     border-radius: 50%;
     background-color: var(--marron-base);
-    color: #E6E6E6;
+    color: var(--recuadros);
     font-size: 64px;
     line-height: 0;
     padding-bottom: 15px;
@@ -119,5 +120,95 @@ h2 {
 }
 
 p {
+    font-size: 20px;
+}
+
+button {
+    cursor: pointer;
+    border: transparent;
+}
+
+form {
+    width: 100%;
+    background-color: var(--producto-bg);
+    padding: 25px;
+    border-radius: 25px;
+    border: 2px solid var(--bordes);
+}
+
+form > header {
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+form > * {
+    width: 100%;
+}
+
+form > .field {
+    padding: 0 25px 0 25px;
+    margin-top: 15px;
+    float: left;
+}
+
+form > .field > .label {
+    font-family: Inter;
+    font-size: 22px;
+}
+
+form > .field > .label > span {
+    color: red;
+}
+
+form > .field > .input {
+    display: flex;
+    height: 70px;
+    padding: 25px;
+    margin-top: 10px;
+    align-items: center; 
+    border-radius: 25px;
+    border: 2px solid var(--bordes);
+    background: #FFF; 
+}
+
+form > .field > .input > input {
+    background-color: transparent; 
+    border: transparent;
+    font-family: Inter;
+    font-size: 20px;
+    width: 100%;
+}
+
+form > .field > .input > input::placeholder {
+    opacity: 0.33;
+}
+
+form > button {
+    padding: 8px 24px; 
+    border-radius: 10px;
+    background-color: var(--marron-base);
+    margin-top: 25px;
+    color: var(--page-bg);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+form > button > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+}
+
+form > button > div:first-child {
+    float: left;
+}
+
+form > button > div:not(:first-child) {
+    float: right;
+    width: 32px;
     font-size: 20px;
 }
