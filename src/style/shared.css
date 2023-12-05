@@ -185,6 +185,12 @@ form > .field > .input > input::placeholder {
     opacity: 0.33;
 }
 
+form::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 form > button {
     padding: 8px 24px; 
     border-radius: 10px;

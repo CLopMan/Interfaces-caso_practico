@@ -33,7 +33,7 @@ function clear_form(form) {
  * @param {string} form Form ID of the form in which to include the fields
  * @param {string} title Form title
  * @param {{name: string, valid: Class, placeholder: string, type: string=}[]} fields Array with the field name and validation class
- * @param {{name: string, serialize: Class, fun: function}} next Content, serialization class, and callback of the next button
+ * @param {{name: string, serialize: Class, fun: function}} [next] Content, serialization class, and callback of the next button
  * @public
  */
 function generate_form(elem, title, fields, next) {
@@ -49,6 +49,7 @@ function generate_form(elem, title, fields, next) {
         </div>
         `);
     }
+    if (!next) { return; }
     form.append(`<button type="button"><div>${next.name}</div><div>🡢</div></button>`);
     form.find("button").click(() => {
         validate_form(
