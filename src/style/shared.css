@@ -128,7 +128,16 @@ button {
     border: transparent;
 }
 
-form {
+input {
+    background-color: transparent; 
+    border: transparent;
+}
+
+input::placeholder {
+    opacity: 0.33;
+}
+
+.ItemContainer {
     width: 100%;
     background-color: var(--producto-bg);
     padding: 25px;
@@ -136,62 +145,57 @@ form {
     border: 2px solid var(--bordes);
 }
 
-form > header {
+.ItemContainer > header {
     font-family: Inter;
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-form > * {
+.ItemContainer > * {
     width: 100%;
 }
 
-form > .field {
+.ItemContainer > .ItemLabelContainer {
     padding: 0 25px 0 25px;
     margin-top: 15px;
     float: left;
 }
 
-form > .field > .label {
+.ItemContainer > .ItemLabelContainer > .ItemLabel {
     font-family: Inter;
     font-size: 22px;
+    margin-bottom: 10px;
+    display:inline-block
 }
 
-form > .field > .label > span {
+form.ItemContainer > .ItemLabelContainer > .ItemLabel > span {
     color: red;
 }
 
-form > .field > .input {
+.ItemContainer > .ItemLabelContainer > .Item {
     display: flex;
     height: 70px;
     padding: 25px;
-    margin-top: 10px;
     align-items: center; 
     border-radius: 25px;
     border: 2px solid var(--bordes);
     background: #FFF; 
 }
 
-form > .field > .input > input {
-    background-color: transparent; 
-    border: transparent;
+.ItemContainer > .ItemLabelContainer > .Item > .ItemText {
     font-family: Inter;
     font-size: 20px;
     width: 100%;
 }
 
-form > .field > .input > input::placeholder {
-    opacity: 0.33;
-}
-
-form::after {
+.ItemContainer::after {
     content: "";
     clear: both;
     display: table;
 }
 
-form > button {
+.ItemContainer > button {
     padding: 8px 24px; 
     border-radius: 10px;
     background-color: var(--marron-base);
@@ -202,18 +206,18 @@ form > button {
     font-weight: bold;
 }
 
-form > button > div {
+.ItemContainer > button > div {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 32px;
 }
 
-form > button > div:first-child {
+.ItemContainer > button > .ButtonText {
     float: left;
 }
 
-form > button > div:not(:first-child) {
+.ItemContainer > button > .ButtonArrow {
     float: right;
     width: 32px;
     font-size: 20px;

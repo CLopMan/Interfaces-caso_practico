@@ -32,25 +32,26 @@ function clear_form(form) {
  * Generates a form with the given fields
  * @param {string} form Form ID of the form in which to include the fields
  * @param {string} title Form title
- * @param {{name: string, valid: Class, placeholder: string, type: string=}[]} fields Array with the field name and validation class
+ * @param {{name: string, hide_name: boolean=, valid: Class, placeholder: string, type: string=}[]} fields Array with the field name and validation class
  * @param {{name: string, serialize: Class, fun: function}} [next] Content, serialization class, and callback of the next button
  * @public
  */
 function generate_form(elem, title, fields, next) {
     let form = $(elem);
+    form.addClass("ItemContainer");
     form.append(`<header>${title}</header>`);
     for (const field of fields) {
         form.append(`
-        <div id="${field.name}-field" class="field">
-            <label id="${field.name}-label" class="label" for="${field.name}-input">${field.name} <span>*</span></label><br>
-            <div id="${field.name}-input-container" class="input">
-                <input type="${field.type? field.type : "text"}" id="${field.name}-input" name="${field.name}-input" placeholder="${field.placeholder}">
+        <div id="${field.name}-item" class="ItemLabelContainer">
+            ${field.hide_name? "" : `<label id="${field.name}-label" class="ItemLabel" for="${field.name}-input">${field.name} <span>*</span></label>`}
+            <div id="${field.name}-input-container" class="Item">
+                <input type="${field.type? field.type : "text"}" id="${field.name}-input" class="ItemText" name="${field.name}-input" placeholder="${field.placeholder}">
             </div>
         </div>
         `);
     }
     if (!next) { return; }
-    form.append(`<button type="button"><div>${next.name}</div><div>🡢</div></button>`);
+    form.append(`<button type="button"><div class="ButtonText">${next.name}</div><div class="ButtonArrow">🡢</div></button>`);
     form.find("button").click(() => {
         validate_form(
             document.forms[form.attr("id")],
