@@ -1,3 +1,5 @@
+/* General */
+
 * {
     padding: 0px;
     margin: 0px;
@@ -52,6 +54,43 @@ main {
     padding: 0 50px;
 }
 
+h1 {
+    border-bottom: 2px solid var(--marron-base);
+    padding-bottom: 10px;
+    font-family: Newsreader;
+    font-size: 64px;
+    font-weight: initial;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: initial;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: initial;
+}
+
+p {
+    font-size: 24px;
+}
+
+button {
+    cursor: pointer;
+    border: transparent;
+}
+
+input {
+    background-color: transparent; 
+    border: transparent;
+}
+
+input::placeholder {
+    opacity: 0.33;
+}
+
+/* Page header with logo */
 body > header {
     color: var(--marron-base);
     border-bottom: 2px solid var(--bordes); 
@@ -61,6 +100,8 @@ body > header {
     line-height: 120px;
     padding: 0 30px;
 }
+
+/* Navigation menu */
 
 #nav-button-container {
     float: right;
@@ -106,41 +147,7 @@ nav > * {
     justify-content: center;
 }
 
-h1 {
-    border-bottom: 2px solid var(--marron-base);
-    padding-bottom: 10px;
-    font-family: Newsreader;
-    font-size: 64px;
-    font-weight: initial;
-}
-
-h2 {
-    font-size: 40px;
-    font-weight: initial;
-}
-
-h3 {
-    font-size: 40px;
-    font-weight: initial;
-}
-
-p {
-    font-size: 24px;
-}
-
-button {
-    cursor: pointer;
-    border: transparent;
-}
-
-input {
-    background-color: transparent; 
-    border: transparent;
-}
-
-input::placeholder {
-    opacity: 0.33;
-}
+/* Item container element */
 
 .ItemContainer {
     width: 100%;
