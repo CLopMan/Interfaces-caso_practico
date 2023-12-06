@@ -1,7 +1,7 @@
 // Adds the header/navigation menu
 $("body").prepend(`<header>
     CATfé
-    <img src="TODO: missing image" alt="CATfé logo">
+    <img src="image 2.png" alt="CATfé logo">
     <div id="nav-button-container"><button type="button" id="nav-menu-button" onclick="toggle_menu()">☰</button></div>
 </header>
 <nav id="nav-menu">
@@ -19,7 +19,7 @@ $("body").prepend(`<header>
 $("#nav-menu").hide();
 
 // State of the hamburger menu
-menu_shown = false
+let menu_shown = false
 
 /**
  * Toggles the hamburger menu visibility with an animation
