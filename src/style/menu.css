@@ -1,0 +1,45 @@
+.hidden {
+    display: none;
+}
+
+
+#menu {
+
+}
+
+    #menu > .types {
+
+    }
+
+        .types > .title {
+
+        }
+
+        .types > .buttons {
+
+        }
+
+            .but {
+
+            }
+
+    #menu > hr {
+
+    }
+
+    .prodSec {
+
+    }
+
+        .prodSec > .prods {
+
+        }
+
+            .prods > .pr {
+
+            }
+
+
+#pedido {
+
+}
