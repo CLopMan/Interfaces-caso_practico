@@ -163,31 +163,30 @@ nav > * {
     font-family: Inter;
     font-size: 32px;
     font-weight: bold;
-    margin-bottom: 10px;
 }
 
-.ItemContainer > * {
+.ItemContainer > .ItemContainerContent {
+    padding: 10px 0px 0px 0px;
+}
+
+.ItemContainer > .ItemContainerContent > .ItemLabelContainer {
+    padding: 15px 25px 0px 25px;
+    float: left;
     width: 100%;
 }
 
-.ItemContainer > .ItemLabelContainer {
-    padding: 0 25px 0 25px;
-    margin-top: 15px;
-    float: left;
-}
-
-.ItemContainer > .ItemLabelContainer > .ItemLabel {
+.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel {
     font-family: Inter;
     font-size: 22px;
     margin-bottom: 10px;
-    display:inline-block
+    display: inline-block
 }
 
-form.ItemContainer > .ItemLabelContainer > .ItemLabel > span {
+form.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel > span {
     color: red;
 }
 
-.ItemContainer > .ItemLabelContainer > .Item {
+.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item {
     display: flex;
     padding: 25px;
     align-items: center; 
@@ -196,21 +195,21 @@ form.ItemContainer > .ItemLabelContainer > .ItemLabel > span {
     background: #FFF; 
 }
 
-.ItemContainer > .ItemLabelContainer > .Item.FixedSize {
+.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item.FixedSize {
     height: 70px;
 }
 
-.ItemContainer > .ItemLabelContainer > .Item > textarea {
+.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item > textarea {
     min-height: 50px;
 }
 
-.ItemContainer > .ItemLabelContainer > .Item > .ItemText {
+.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item > .ItemText {
     font-family: Inter;
     font-size: 20px;
     width: 100%;
 }
 
-.ItemContainer::after {
+.ItemContainer > .ItemContainerContent::after {
     content: "";
     clear: both;
     display: table;
@@ -225,21 +224,24 @@ form.ItemContainer > .ItemLabelContainer > .ItemLabel > span {
     font-family: Inter;
     font-size: 16px;
     font-weight: bold;
+    width: 100%;
 }
 
-.ItemContainer > button > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.ItemContainer > button > div:not(:first-child) { 
+    width: 32px;
+    font-size: 20px;
     height: 32px;
 }
 
-.ItemContainer > button > .ButtonText {
-    float: left;
+/* Split container element: aligns the first element to the left and the second to the right, side by side */
+
+.SplitContainer {
+    display: flex;
+    justify-content: space-between;
 }
 
-.ItemContainer > button > .ButtonArrow {
-    float: right;
-    width: 32px;
-    font-size: 20px;
+.SplitContainer > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

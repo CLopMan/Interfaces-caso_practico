@@ -40,8 +40,10 @@ function generate_form(elem, title, fields, next) {
     let form = $(elem);
     form.addClass("ItemContainer");
     form.append(`<header>${title}</header>`);
+    form.append(`<div class="ItemContainerContent"></div>`);
+    let content = form.children("div");
     for (const field of fields) {
-        form.append(`
+        content.append(`
         <div id="${field.name}-item" class="ItemLabelContainer">
             ${field.hide_name? "" : `<label id="${field.name}-label" class="ItemLabel" for="${field.name}-input">${field.name} <span>*</span></label>`}
             <div id="${field.name}-input-container" class="Item ${field.type === "textarea"? "" : "FixedSize"}">
@@ -51,8 +53,8 @@ function generate_form(elem, title, fields, next) {
         `);
     }
     if (!next) { return; }
-    form.append(`<button type="button"><div class="ButtonText">${next.name}</div><div class="ButtonArrow">🡢</div></button>`);
-    form.find("button").click(() => {
+    form.append(`<button type="button" class="SplitContainer"><div>${next.name}</div><div>🡢</div></button>`);
+    form.children("button").click(() => {
         validate_form(
             document.forms[form.attr("id")],
             fields.map(x => {return {valid: x.valid, name: `${x.name}-input`}}),
