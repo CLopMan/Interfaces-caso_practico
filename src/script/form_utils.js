@@ -30,10 +30,10 @@ function clear_form(form) {
 
 /**
  * Generates a form with the given fields
- * @param {string} form Form ID of the form in which to include the fields
- * @param {string} title Form title
- * @param {{name: string, hide_name: boolean=, valid: Class, placeholder: string, type: string=}[]} fields Array with the field name and validation class
- * @param {{name: string, serialize: Class, fun: function}} [next] Content, serialization class, and callback of the next button
+ * @param {string} form Form ID of the form in which to include the fields, as a CSS selector
+ * @param {string} title Form title. Can include HTML
+ * @param {{name: string, valid: Class, placeholder: string, hide_name: boolean=, type: string=}[]} fields Array with the field information (name/ID, validation class, placeholder text, whether to hide the label, and the `input` tag type (can additionally be `textarea` for multiline comments))
+ * @param {{name: string, serialize: Class, callback: function}} [next] Content, serialization class, and callback of the next button
  * @public
  */
 function generate_form(elem, title, fields, next) {
@@ -58,6 +58,6 @@ function generate_form(elem, title, fields, next) {
             fields.map(x => {return {valid: x.valid, name: `${x.name}-input`}}),
             next.serialize
         )
-        next.fun();
+        next.callback();
     })
 }

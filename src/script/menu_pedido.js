@@ -8,5 +8,5 @@ generate_form(
         {name: "Teléfono",   valid: Phone,    placeholder: "+34766666666"},
         {name: "Contraseña", valid: Password, placeholder: "Introduzca un mínimo de 8 caracteres", type: "password"},
     ],
-    {name: "Datos de envío", serialize: User, fun: () => {}}
+    {name: "Datos de envío", serialize: User, callback: () => {}}
 )
