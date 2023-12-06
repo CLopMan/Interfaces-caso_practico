@@ -200,6 +200,10 @@ form.ItemContainer > .ItemLabelContainer > .ItemLabel > span {
     height: 70px;
 }
 
+.ItemContainer > .ItemLabelContainer > .Item > textarea {
+    min-height: 50px;
+}
+
 .ItemContainer > .ItemLabelContainer > .Item > .ItemText {
     font-family: Inter;
     font-size: 20px;
