@@ -3,7 +3,7 @@ main {
     display: flex;
     flex-flow: column nowrap;
     height: 250vh;
-    background-color: darkturquoise;
+    background-color: #EEEBE7;
 }
     .sec {
         display: flex;
@@ -11,24 +11,26 @@ main {
         margin: 20px 60px 10px 60px;
         flex-flow: column nowrap;
         flex: 1 1 auto;
-        background-color: blue;
-        border: red thin solid;
+
         justify-content: center;
         height: 20%;
     }
         .sec > .Title {
-            flex: 1 1 2vh;
-            font-size: 2em;
-            background-color: red;
-            text-align: left;
+            flex: 1 1 20%;
+            font-size: 3em;
+            display: flex;
         }
             .Title > p {
-                align-self: center;
-                margin-top: 20px;
-                height: 100%;
+                flex: 1 1 auto;
+                text-align: start;
+
+                align-self: flex-end;
+                height: 9vh;
             }
         .sec > hr {
-            color: black;
+            color: #6C461A;
+            height: 2px;
+            width: 98%;
         }
         .sec > .Content {
             display: flex;
@@ -39,7 +41,6 @@ main {
             .Content > ul {
                 flex: 1 1 auto;
                 width: 100%;
-                background-color: purple;
                 display: flex;
                 flex-flow: column nowrap;
             }
@@ -54,24 +55,31 @@ main {
                 }
                 ul > .Down {
                     margin-left: 4vw;
+                    font-size: 1.5em;
                 }
 
             .Content > .Packs {
                 flex: 1 1 auto;
-                background-color: blanchedalmond;
+                background-color: #EEEBE7;
                 margin: 20px;
                 align-items: center;
             }
 
             .Content > .info {
-                background-color: red;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
             }
-
+                .Content > .info > p {
+                    flex: 1 1 auto;
+                    font-size: 2.7em;
+                    padding: 20px;
+                    justify-content: center;
+                }
 
             .Content > .img {
                 width: auto;
-                background-color: blueviolet;
-
                 height: 100%;
                 display: flex;
 
@@ -80,11 +88,15 @@ main {
                     flex: 1 1 auto;
                 }
 
+                .Content > .Packs {
+                    margin-top: 40px;
+                }
+
                 .Packs > .Pack {
                     background-color: #F9F8F6;
-                    border: purple 2px solid;
+                    border: grey 2px solid;
                     height: 100%;
-                    margin: 0 4%;
+                    margin: 0 4% 0 4%;
                     border-radius: 30px;
                     padding: 0;
                     overflow: auto;
@@ -103,7 +115,7 @@ main {
                         .Pack > .head > p {
                             flex: 1 1 auto;
                             font-weight: bold;
-                            font-size: 1.7em;
+                            font-size: 1.9em;
                             text-shadow: darkgray 1px 2px 5px;
                         }
 
@@ -116,12 +128,13 @@ main {
                             height: 25%;
                             text-align: center;
                             padding: 10px 30px;
-                            font-size: 0.8em;
+                            font-size: 0.9em;
                         }
 
                         .Pack > .body > .offers {
                             height: 50%;
                             overflow: auto;
+                            font-size: 1.3em;
                         }
                             .Pack > .body > .offers > p {
                                 padding: 0 20px;
@@ -143,12 +156,13 @@ main {
                         }
                             .Pack > .body > .price > .ammount {
                                 height: 55%;
-                                font-size: 1.5em;
+                                font-size: 2em;
                                 font-weight: bold;
+                                color: #6C461A;
                             }
 
                             .Pack > .body > .price > .note {
                                 height: 45%;
-                                font-size: 0.8em;
+                                font-size: 0.9em;
                             }
 
