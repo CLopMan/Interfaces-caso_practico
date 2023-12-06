@@ -1,12 +1,8 @@
-header {
-    height: 100px;
-    background-color: green;
-}
 
 main {
     display: flex;
     flex-flow: column nowrap;
-    height: 150vh;
+    height: 250vh;
     background-color: darkturquoise;
 }
     .sec {
@@ -63,6 +59,22 @@ main {
                 margin: 20px;
                 align-items: center;
             }
+
+            .Content > .info {
+                background-color: red;
+            }
+            .Content > .img {
+                width: auto;
+                background-color: blueviolet;
+
+                height: 100%;
+
+                display: flex;
+            }
+                .Content > .img > img {
+                    flex: 1 1 auto;
+                }
+
                 .Packs > .Pack {
                     background-color: #F9F8F6;
                     border: purple 2px solid;
