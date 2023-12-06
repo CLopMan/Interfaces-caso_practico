@@ -81,14 +81,16 @@ button {
     border: transparent;
 }
 
-input {
+input, textarea {
     background-color: transparent; 
     border: transparent;
 }
 
-input::placeholder {
+input::placeholder, textarea::placeholder {
     opacity: 0.33;
 }
+
+textarea { resize: vertical; }
 
 /* Page header with logo */
 body > header {
@@ -187,12 +189,15 @@ form.ItemContainer > .ItemLabelContainer > .ItemLabel > span {
 
 .ItemContainer > .ItemLabelContainer > .Item {
     display: flex;
-    height: 70px;
     padding: 25px;
     align-items: center; 
     border-radius: 25px;
     border: 2px solid var(--bordes);
     background: #FFF; 
+}
+
+.ItemContainer > .ItemLabelContainer > .Item.FixedSize {
+    height: 70px;
 }
 
 .ItemContainer > .ItemLabelContainer > .Item > .ItemText {

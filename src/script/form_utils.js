@@ -44,8 +44,8 @@ function generate_form(elem, title, fields, next) {
         form.append(`
         <div id="${field.name}-item" class="ItemLabelContainer">
             ${field.hide_name? "" : `<label id="${field.name}-label" class="ItemLabel" for="${field.name}-input">${field.name} <span>*</span></label>`}
-            <div id="${field.name}-input-container" class="Item">
-                <input type="${field.type? field.type : "text"}" id="${field.name}-input" class="ItemText" name="${field.name}-input" placeholder="${field.placeholder}">
+            <div id="${field.name}-input-container" class="Item ${field.type === "textarea"? "" : "FixedSize"}">
+                <${field.type === "textarea"? "textarea" : "input"} type="${field.type? field.type : "text"}" id="${field.name}-input" class="ItemText" name="${field.name}-input" placeholder="${field.placeholder}">${field.type === "textarea"? "</textarea>" : ""}
             </div>
         </div>
         `);
