@@ -50,6 +50,17 @@ class DNI extends Attribute {
 
 /**
  * @class
+ * @classdesc Arbitrary text Attribute class
+ */
+class Text extends Attribute {
+    validate(value) {
+        if (value != "") { throw "formato de nombre incorrecto"; }
+        return value;
+    }
+}
+
+/**
+ * @class
  * @classdesc Name Attribute class
  */
 class Name extends Attribute {
