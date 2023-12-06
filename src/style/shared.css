@@ -119,8 +119,13 @@ h2 {
     font-weight: initial;
 }
 
+h3 {
+    font-size: 40px;
+    font-weight: initial;
+}
+
 p {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 button {
