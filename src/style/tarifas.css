@@ -40,11 +40,14 @@ main {
                 flex: 1 1 auto;
                 width: 100%;
                 background-color: purple;
+                display: flex;
+                flex-flow: column nowrap;
             }
                 ul > li {
                     padding: 20px 0 0 0;
                     margin-left: 3vw;
                     justify-content: center;
+                    flex: 1 1 auto;
                 }
                 ul > .Up {
                     font-size: 2.5em;
@@ -63,13 +66,15 @@ main {
             .Content > .info {
                 background-color: red;
             }
+
+
             .Content > .img {
                 width: auto;
                 background-color: blueviolet;
 
                 height: 100%;
-
                 display: flex;
+
             }
                 .Content > .img > img {
                     flex: 1 1 auto;
