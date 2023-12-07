@@ -2,132 +2,229 @@
     display: none;
 }
 
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background-color: #eeebe7;
+}
 
 #menu {
-
+    width: 100%;
+    height: 300%;
+    align-items: center;
 }
 
     #menu > .types {
-
+        display: flex;
+        flex-flow: row wrap;
+        padding: 20px 50px;
+        border: red 3px solid;
     }
 
         .types > .title {
-
+            flex: 1 1 auto;
+            border: blue 3px solid;
         }
             .types > .title > p {
-
+                font-size: 2.5em;
             }
 
         .types > .buttons {
-
+            flex: 3 1 auto;
+            flex-flow: row wrap;
+            border: blue 3px solid;
+            display: flex;
+            margin-left: 20%;
+            margin-right: 20%;
         }
 
             .but {
+                flex: 1 1 auto;
+                float: left;
+                padding: 5px 10px;
+                margin: 10px 20px;
+                border: none;
+                box-shadow: 0 5px 7px 0 grey;
+                font-weight: bold;
+                border-radius: 50px;
+                cursor: pointer;
+                background-color: #f9f8f6;
 
+            }
+
+            .but:hover {
+                background-color: lightgrey;
             }
 
     #menu > hr {
-
+        margin: 0 50px;
+        color: #6c461a;
     }
 
     .prodSec {
-
+        margin-top: 30px;
+        width: 100%;
+        height: auto;
+        border: blueviolet 3px solid;
     }
 
-        .prodSec > .prods {
-
+        .prodSec > .prodDiv {
+            border: orange 3px solid;
         }
 
-            .pr {
-
+            .prodDiv > .prods {
+                border: violet 3px solid;
+                justify-content: space-between;
+                display: flex;
+                flex-flow: row wrap;
+                overflow: hidden;
             }
-                .pr > .prev {
 
+                .pr {
+                    border: red 1px solid;
+                    display: flex;
+                    flex: 1 1 50%;
+                    flex-flow: column nowrap;
+                    background-color: #f9f8f6;
+                    border-radius: 20px;
                 }
-                    .prev > img {
-
+                    .pr > .prev {
+                        flex: 3 1 auto;
+                        overflow: hidden;
+                        border-top-left-radius: 20px;
+                        border-top-right-radius: 20px;
                     }
-
-                .pr > .content {
-
-                }
-                    .pr > .content > .ops {
-
-                    }
-                        .ops > .op {
-
-                        }
-                            .op > p {
-
-                            }
-                            .op > .ammount {
-
-                            }
-                                .ammount > .but {
-
-                                }
-                                .ammount > p {
-
-                                }
-
-                        .ops > .price {
-
-                        }
-                            .ops > .price > p{
-
-                            }
-
-                            .ops > .price > .ingredients {
-
-                            }
-                                .price > .ingredients > img {
-
-                                }
-
-                    .pr > .content > .descr {
-
-                    }
-                        .pr > .content > .descr > p {
-
+                        .prev > img {
+                            height: auto;
+                            width: auto;
                         }
 
-    #menu > .result {
+                    .pr > .content {
+                        margin-bottom: 10px;
+                        flex: 1 1 auto;
+                        display: flex;
+                        flex-flow: column nowrap;
+                    }
+                        .pr > .content > .ops {
+                            flex: 1 1 auto;
+                            display: flex;
+                            flex-flow: column nowrap;
+                        }
+                            .ops > .op {
+                                flex: 1 1 auto;
+                                display: flex;
+                                flex-flow: row wrap;
+                                align-items: center;
+                            }
+                                .op > p {
+                                    font-weight: bold;
+                                    font-size: 1.5em;
+                                    padding-left: 3.5%;
+                                    flex: 1 1 50%;
+                                }
+                                .op > .ammount {
+                                    flex: 1 1 50%;
+                                    display: flex;
+                                    align-items: center;
+                                }
+                                    .ammount > .but {
+                                        flex: 1 1 auto;
+                                        background-color: lightgrey;
+                                    }
+                                    .ammount > p {
+                                        flex: 3 1 auto;
+                                        text-align: center;
+                                        background-color: #f7f7f5;
+                                        border: lightgrey 2px solid;
+                                        border-radius: 10px;
+                                    }
 
-    }
-        .result > .title {
+                            .ops > .price {
+                                flex: 1 1 auto;
+                                display: flex;
+                            }
+                                .ops > .price > p{
+                                    flex: 1 1 auto;
+                                    margin-left: 3.5%;
+                                    border: #6c461a thin solid;
+                                }
 
+                                .ops > .price > .ingredients {
+                                    flex: 5 1 auto;
+                                }
+                                    .price > .ingredients > img {
+
+                                    }
+
+                        .pr > .content > .descr {
+                            flex: 1 1 auto;
+                            margin-top: 3.5%;
+                            margin-left: 3.5%;
+                        }
+                            .pr > .content > .descr > p {
+                                font-size: 0.8em;
+                                color: grey;
+                            }
+
+        .prodSec > .result {
+            height: 100%;
+            margin-top: 15px;
+            background-color: #f9f8f6;
+            border-radius: 20px;
+            display: flex;
+            flex-flow: column nowrap;
         }
-            .result > .title > p {
-
+            .result > .title {
+                align-items: center;
+                flex: 1 1 auto;
+                border: blueviolet 3px solid;
             }
-            .result > .title > .sum {
+                .result > .title > p {
+                    height: 100%;
+                    padding: 20px 20px 20px 0;
+                    font-size: 1.7em;
+                    font-weight: bold;
+                    border: red 3px solid;
+                }
+                .result > .title > .sum {
+                    border: red 3px solid;
+                }
+                    #sum-am, .sum > p {
+                        text-align: right;
+                        padding-right: 0;
+                    }
+                    .sum > p {
+                        padding-left: 5px;
+                        text-align: left;
+                    }
 
+            #list-prods {
+                flex: 3 1 auto;
+                border: pink 3px solid;
             }
-                #sum-am .sum > p {
 
-                }
-                .sum > p {
-
-                }
-        #list-prods {
-
-        }
-        .result > .order {
-
-        }
-            .order > .subtotal {
-
+            .result > .order {
+                flex: 1 1 auto;
             }
-                .order > .subtotal > p {
-
+                .order > .subtotal {
+                    font-weight: bold;
+                    border: violet 3px solid;
                 }
-                #order-total, .order > .subtotal > p {
+                    .order > .subtotal > p {
+                        text-align: left;
+                        border: blue 3px solid;
+                    }
+                    #order-total {
+                        text-align: right;
+                        border: blue 3px solid;
+                    }
 
+                .order > button {
+                    width: 100%;
                 }
-
-            .order > button {
-
-            }
 
 #pedido {
 
