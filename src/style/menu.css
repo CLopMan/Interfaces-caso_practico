@@ -14,6 +14,9 @@
         .types > .title {
 
         }
+            .types > .title > p {
+
+            }
 
         .types > .buttons {
 
@@ -35,10 +38,96 @@
 
         }
 
-            .prods > .pr {
+            .pr {
 
             }
+                .pr > .prev {
 
+                }
+                    .prev > img {
+
+                    }
+
+                .pr > .content {
+
+                }
+                    .pr > .content > .ops {
+
+                    }
+                        .ops > .op {
+
+                        }
+                            .op > p {
+
+                            }
+                            .op > .ammount {
+
+                            }
+                                .ammount > .but {
+
+                                }
+                                .ammount > p {
+
+                                }
+
+                        .ops > .price {
+
+                        }
+                            .ops > .price > p{
+
+                            }
+
+                            .ops > .price > .ingredients {
+
+                            }
+                                .price > .ingredients > img {
+
+                                }
+
+                    .pr > .content > .descr {
+
+                    }
+                        .pr > .content > .descr > p {
+
+                        }
+
+    #menu > .result {
+
+    }
+        .result > .title {
+
+        }
+            .result > .title > p {
+
+            }
+            .result > .title > .sum {
+
+            }
+                #sum-am .sum > p {
+
+                }
+                .sum > p {
+
+                }
+        #list-prods {
+
+        }
+        .result > .order {
+
+        }
+            .order > .subtotal {
+
+            }
+                .order > .subtotal > p {
+
+                }
+                #order-total, .order > .subtotal > p {
+
+                }
+
+            .order > button {
+
+            }
 
 #pedido {
 
