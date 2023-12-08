@@ -138,6 +138,7 @@ nav {
     height: 100%;
     width: 100%;
     background-color: var(--page-bg);
+    z-index: 90;
 }
 
 nav > * {
