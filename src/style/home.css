@@ -231,8 +231,154 @@ section{
 /*----------------------GATOS-------------*/
 
 #gatos > .decoracion_rectangulo {
-    right: 5%;
+    right: 7%;
     height: 80%;
     padding: 0;
     margin-top: 0%;
 }
+
+#img_home_gatos_1 {
+    float:right;
+    padding: 0;
+    height: 75%;
+    object-fit: cover;
+    object-position: top;
+    top:8%;
+    right: 5%;
+}
+
+#img_home_gatos_2 {
+    padding: 0;
+    top:32%;
+    left: 17%;
+}
+
+#todo_lo{
+    top: 30%;
+    margin: 2%;
+}
+
+#gatos > h1 {
+    text-align: center;
+    top:10%;
+}
+
+#boton_info_gatos {
+    top:75%;
+}
+
+/*--------------------------LOCAL---------------------*/
+
+#rect3 {
+    float: right;
+    right: 10%;
+    height: 71%;
+    padding: 0;
+}
+
+#rect4 {
+    left: 5%;
+    height: 63%;
+    margin-top: 13%;
+    border: 2px solid #EEEBE7;
+}
+
+#local > .titulo_seccion {
+    top:5%;
+    left:19%;
+    text-align: center;
+}
+
+#local > #rect4 > .textos {
+    left: 10%;
+}
+#local > #rect3 > .textos {
+    left: 55%;
+    top: 35%;
+}
+
+#img_home_local_1 {
+    padding: 0;
+    left: 5%;
+    top: 5%;
+}
+
+#img_home_local_2 {
+    float: right; 
+    padding: 0;
+    left: 10%;
+    top: 5%;
+}
+
+#img_home_local_3 {
+    float: right; 
+    padding: 0;
+    left: 20%;
+    top: 30%;
+}
+
+#boton_localizacion {
+    padding-left: 3%;
+    top:85%;
+    right: 15%;
+}
+
+#boton_info_local {
+    top:68%;
+    left: 23%;
+}
+
+
+/*---------------------------------REDES------------------------*/
+#redes {
+    height: 50vh;
+}
+
+#rect5 {
+    margin-left: 4%;
+    height: 50%;
+}
+
+#rect6 {
+    margin-top: 6%;
+    left:50%;
+    height: 30%;
+    border: 2px solid #EEEBE7;
+}
+
+#redes > .titulo_seccion {
+    top: 10%;
+}
+
+#rect6 > .textos {
+    top:30%;
+    left: 5%;
+    line-height:150%;
+}
+
+#img_home_redes_insta {
+    padding: 0;
+    box-shadow: none;
+    top:35%;
+    left:4%;
+}
+
+#img_home_redes_tumblr {
+    padding: 0;
+    box-shadow: none;
+    top:35%;
+    left:10%;
+}
+
+#boton_redes {
+    top:77%;
+}
+
+
+/*---------------------FOOTER----------------------*/
+footer {
+    height: 30vh;
+    background-color: #6C461A;
+    margin-top: 5%;
+}
+
