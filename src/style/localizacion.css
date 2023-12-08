@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.est_title {
+    font-family: 'Serif';
+    font-size: 70px;
+
+}
+
+.est_text {
+    font-family: 'Serif';
+    font-size: 24px;
+    margin:1%;
+    padding: 1%;
+    text-align: justify;
+}
+
+
+#direccion {
+    font-family: 'Serif';
+    font-size: 36px;
+    margin:1%;
+    padding: 1%;
+    text-align: left;
+    float:left;
+    width: 40%;
+}
+
+
+#Map {
+    float:right;
+    margin-right: 10%;
+    margin-top:4%;
+}
+
+#contact {
+    font-size: 18px;
+}

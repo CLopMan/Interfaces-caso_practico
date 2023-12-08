@@ -203,26 +203,58 @@ Taikit destaca sobre todo por su menú a domicilio, caracterizado por la simplic
 (CatCafé)[https://catmocha.jp/] mocha es un franquicia de cat-cafés japonesa, caracterizada por su estética minimalista. 
 
 ### Página principal 
+
 Destaca el diseño *minimalista*, sobrio y elegante; basado en tonos marrones y blancos. De nuevo, aparece un vídeo promocional acompañado de un indicativo para que aquella persona que visite la web entienda que puede hacer scroll. Además, arriba a la izquierda contamos con la posibilidad de *cambiar el idioma* entre inglés, coreano, japonés y chino. También existe un *header* fijo que nos da acceso al menú de navegación (de tipo hamburguesa), la funcionalidad de cambio de idioma y el logo de la marca. 
 La página principal está dividida en secciones diferenciadas por separadores (cambio de color de fondo o imágenes): 
 - Información: en esta sección se da información a usuarios sobre qué es un catcafé, qué se puede hacer allí e información para nuevos visitantes. Cada uno de estos textos viene acompañado de un enlace "read more...", que te dirige a otra página donde con la información más detallada.
 - Shoplist: se detalla la localización de distintos establecimientos. Cada una de las localizaciones es un enlace a una página donde se habla específicamente de ese local. 
-- Noticias y media
+- Noticias y redes sociales.
 - Enlaces sobre la compañía, empleo y tratamiento de los gatos.
-- Contacto
+- Contacto.
+
 ### Localizaciones y actividades
+
+En la página "shoplist" se detallan distintos establecimientos con los que cuenta la franquicia. A través de un menú de pestañas podemos seleccionar la ciudad que deseemos para conocer los locales en dicha ciudad, cada uno acompañado de una breve descripción y una leyenda que indica la cercanía a estaciones de transporte público cercanas. Además, cada uno de los establecimientos es clickable, dirigiéndonos a una página dedicada a dicho local. 
+
+También existe una página con actividades que desarrollar en la cafetería. Esto sirve de guía informaitva tanto para nuevos clientes como para clientes experimentados; ofreciendo distintas fuentes de entretenimiento para cualquier que visite un cat Café de la franquicia. Las actividades se describen de forma breve, siguiendo con el minimalismo que arropa toda la página; y se acompañan de una foto que sirve como ejemplo. Al final de la página podemos encontrar vídeos donde el propio personal del local desarrolla estas actividades para que la persona que visite la página pueda ver el comportamiento de los gatos y la forma de interactuar con ellos. 
 
 ### Otros aspectos funcionales
 
+La web cuenta con una página de pregutnas frecuentes que actúan en forma de desplegable. Esto sirve para que una persona pueda desplegar sólo aquellas preguntas de las que quiera saber la respuesta, evitando sobrecargarla de información. Además, las preguntas están organizadas por categorías, a las que podemos acceder a través de un menú de pestañas similar al de la página de "shoplist. También existe otra página que actúa a modo de "conócenos", en la que podemos ver diferentes eslóganes que representan a la marca. Esto permite que una persona entienda la idiosincrasia de la empresa de forma fácil, sin necesidad de leer textos muy largos. 
+
+Todas las páginas mantienen la cabecera y el pie de página. 
+
+### Conclusiones 
+El estilo minimalista y elegante se mantiene en toda la web, y los elementos similares en distintas páginas conservan la misma estructura. Esto le da un **coherencia** a la web que facilita su uso, haciéndola más intuitiva y amigable a toda clase de usuarios. 
+
+A lo largo de toda la web destaca el uso de elementos muy visuales (imágenes, vídeos e iconos) que permiten entender la mayoría de la información aún existiendo la barrera del lenguaje. No obstante, esta barrera se reduce gracias a la posibilidad de cambiar el idioma. 
+
 ## CatFé Santander
+[CatFé Santander](https://catfe.es/) es uana cafetería española que actúa además como refugio de animales, especializado en gatos. 
 
 ### Página principal 
 
+De forma similar a Catfe Mocha, encontramos un gif con un enlace directo a la reserva de una mesa. Si hacemos scroll vemos secciones diferenciadas en las que encontramos una breve explicación, una galería de imágenes que desliza la imagen cada pocos segundos y un enlace a su página dedicada. Destaca la existencia de una tienda de *merchandising*, complementaria a los servicios de hostelería. Se puede navegar entre páginas a través de los enlaces en las secciones o un menú hamburguesa de despliegue vertical. En el pie de página encontramos enlaces de interés para una persona que visite la página (contacto, política de privacidad y política de cookies) y una flecha que te permite volver al inicio de la página. 
+
+En cuanto a la estética, destaca un dijseño sobrio basado en tonos marrones.
+
 ### Página de reserva 
+
+El proceso de reserva tiene su propia página dedicada. Esta se hace mediante un menú que, con una barra de progreso, guía a la persona durante el proceso de reserva. Además, mediante flechas podremos navegar hacia alante y atrás entre pasos que hayamos completado para modificar los campos. Si deseamos ampliar los campos a rellenar podremos colapsar la barra de progreso para dejar más espacio a lo demás. El paso en el que se encuentra el usuario se muestra mediante un círculo azul, mientras que los pasos completados cuentan con un tick verde. 
+
+Destaca el uso de un calendario para poder seleccionar la fecha de reserva. Lo que permite al usuario seleccionar la fecha sin confusiones y evitar errores en el campo de entrada. 
 
 ### Otros aspectos funcionales 
 
+Aunque no tenga que ver directamente con la hostelería, destaca la tienda on-line de la web. Los productos se muestran en forma de matriz, con una foto y un título, además de un botón que permite añadirlo al carrito. También, cada una de las fotos es clickable, llevándote a una página dedicada al producto. También destaca el blog del local, donde podemos ver distintos consejos sobre el cuidado de gatos.
+
+Existe además un contador en la página de "Conócenos", donde se detalla el número de gatos resctados gracias a CatFé Santander. 
+
 ## Conclusiones
+
+La estética hogareña y el tono de la página, además del enfasis en el rescate de gatos y el cuidado de los mismos permiten transmitir una imagen de cercanía y confianza hacia la marca. 
+
+El proceso de reserva es muy cómodo gracias a la barra de proceso y la guía se da durante el proceso. 
 
 # 4. Diseño del prototipo 
 ## 4.1. Requisitos funcionales 
@@ -240,7 +272,7 @@ Teniendo en cuenta tanto los escenarios del [apartado 2](#2-personas-y-escenario
 | Fun8 | Indicador que incite al usuario a hacer scroll en la página | En las páginas con scroll vertical se incluirá un icono que indique al usuario la dirección del mismo | 
 | Fun9 | Página de contacto | Debe existir una página con iformación de contacto, preguntas frecuentes y un formulario de contacto | 
 | Fun10 | Página con actividades | Debe exsistir una página que describa qué tipo de actividades se pueden llevar a cabo en el establecimiento | 
-| Fun 11 | Localización del local | Debe existir una página o sección que incluya un mapa con la ubicación del local, así como informació relativa a paradas cercanas de transporte público o similares |
+| Fun11 | Localización del local | Debe existir una página o sección que incluya un mapa con la ubicación del local, así como informació relativa a paradas cercanas de transporte público o similares |
 
 
 ## 4.2. Prototipo 

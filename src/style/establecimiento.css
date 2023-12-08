@@ -11,7 +11,7 @@ body {
 
 .est_title {
     font-family: 'Serif';
-    font-size: 64px;
+    font-size: 70px;
 
 }
 
@@ -42,14 +42,16 @@ body {
 
 .est_text {
     font-family: 'Serif';
-    font-size: 24px;
-    margin:1%;
+    font-size: 50px;
+    margin:0%;
+    padding: 1%;
     text-align: justify;
 }
 
 #who {
     float:left;
     width: 70%;
+    margin-top:2.5%;
 }
 
 #cuchara {
