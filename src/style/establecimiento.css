@@ -1,18 +1,5 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-
-body {
-    background-color: #EEEBE7;
-}
-
 .est_title {
-    font-family: 'Serif';
     font-size: 70px;
-
 }
 
 #est_galeria {
@@ -21,8 +8,6 @@ body {
     float:left;
     white-space: nowrap;
     overflow-x: hidden;
-
-
 }
 
 .est_img_gall {
@@ -41,11 +26,7 @@ body {
 }
 
 .est_text {
-    font-family: 'Serif';
     font-size: 50px;
-    margin:0%;
-    padding: 1%;
-    text-align: justify;
 }
 
 #who {
