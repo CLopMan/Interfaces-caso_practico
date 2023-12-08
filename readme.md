@@ -6,7 +6,7 @@ CatFe
 
 |   Tarea                |    estado   | quién lo hace |     descripción                    |
 | :--------------------: | :---------: | :-----------: | ---------------------------------- |
-| Memoria                | Sin empezar | César & CO    | Redacción completa                 |
+| Memoria                | parte 1     | César & CO    | Redacción completa                 |
 | Estructura básica HTML | Sin empezar | Todos         | Html básico                        |
 | home                   | Sin empezar | Paula         | **Html** + **css** + js            |
 | Actividades            | Sin empezar | Paula         | **Html** + **css**                 |
