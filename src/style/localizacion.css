@@ -1,41 +1,46 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+
 
 .est_title {
     font-family: 'Serif';
-    font-size: 70px;
+    font-size: 64px;
+    margin:0;
 
 }
 
 .est_text {
     font-family: 'Serif';
-    font-size: 24px;
+    font-size: 18px;
     margin:1%;
     padding: 1%;
     text-align: justify;
+    margin:0;
 }
 
+.img-list > ul {
+    margin-left:1%;
+}
 
 #direccion {
     font-family: 'Serif';
-    font-size: 36px;
+    font-size: 24px;
     margin:1%;
     padding: 1%;
     text-align: left;
-    float:left;
     width: 40%;
+    margin:0;
+
 }
 
-
 #Map {
-    float:right;
-    margin-right: 10%;
-    margin-top:4%;
+    float:left;
+    margin-top:5%;
+    margin-left:5%;
 }
 
 #contact {
-    font-size: 18px;
+    font-size: 16px;
+    text-align:center;
+    padding:0;
+    margin-top:0;
+    margin-bottom: 0;
 }
