@@ -193,7 +193,9 @@ Además de lo antes mencionado, otras funcionalidades destacables de taikit son 
 - Página de contacto.
 - Localización de locales.
 
-#### Conclusiones
+### Conclusiones 
+
+Taikit destaca sobre todo por su menú a domicilio, caracterizado por la simplicidad y la estética común a toda la página. Su funcionalidad intuitiva, la disposición de elementos y la información que se mantiene accesible al usuario en todo momento hacen de la experiencia de pedir a domicilio algo *sencillo* para todo tipo de personas. 
 
 Taikit destaca sobre todo por su menú a domicilio, caracterizado por la simplicidad y la estética común a toda la página. Su funcionalidad intuitiva, la disposición de elementos y la información que se mantiene accesible al usuario en todo momento hacen de la experiencia de pedir a domicilio algo sencillo para todo tipo de personas.
 
@@ -225,7 +227,9 @@ La web cuenta con una página de preguntas frecuentes que actúan en forma de de
 
 Todas las páginas mantienen la cabecera y el pie de página.
 
-#### Conclusiones
+### Conclusiones 
+
+El estilo minimalista y elegante se mantiene en toda la web, y los elementos similares en distintas páginas conservan la misma estructura. Esto le da una *coherencia* a la web que facilita su uso, haciéndola más intuitiva y amigable a toda clase de usuarios. 
 
 El estilo minimalista y elegante se mantiene en toda la web, y los elementos similares en distintas páginas conservan la misma estructura. Esto le da un **coherencia** a la web que facilita su uso, haciéndola más intuitiva y amigable a toda clase de usuarios.
 
@@ -255,11 +259,13 @@ Existe además un contador en la página de "Conócenos", donde se detalla el n�
 
 #### Conclusiones
 
-La estética hogareña y el tono de la página, además del énfasis en el rescate de gatos y el cuidado de los mismos permiten transmitir una imagen de cercanía y confianza hacia la marca.
+La estética hogareña y el tono de la página, además del enfasis en el rescate de gatos y el cuidado de los mismos permiten transmitir una *imagen de cercanía y confianza* hacia la marca. 
 
-El proceso de reserva es muy cómodo gracias a la barra de proceso y la guía se da durante el proceso.
+El proceso de reserva es muy cómodo gracias a la *barra de proceso y la guía se da durante el proceso*. 
 
-\clearpage
+# 4. Diseño del prototipo 
+## 4.1. Requisitos funcionales 
+Teniendo en cuenta tanto los escenarios de la [sección 2](#2-personas-y-escenarios) y el análisis de la [sección 3](#3-análisis-de-otras-webs), se han determinado 11 funcionalidades que deben estar implementadas en nuestra web. Estas se recogen a continuación en la siguiente tabla: 
 
 ## 4. Diseño del prototipo
 
@@ -300,6 +306,9 @@ Teniendo en cuenta tanto los escenarios del [apartado 2](#apartado-2) y el anál
 
 Hemos desarrollado un prototipo mediante la herramienta Figma que pretende representar con una alta fidelidad visual y funcional nuestra web. En él se puede experimentar cómo un usuario ejecutaría las acciones descritas en el escenario de la sección 2.3.
 
+## 4.2. Prototipo 
+
+Hemos desarrollado un prototipo mediante la herramienta Figma que pretende representar con una alta fidelidad visual y funcional nuestra web. En él se puede experimentar cómo una persona ejecutaría las acciones descritas en el escenario de la [sección 2.3](#23-josé-daniel-expósito). 
 [[Enlace a figma]]
 
 [[Foto del prototipo]]
