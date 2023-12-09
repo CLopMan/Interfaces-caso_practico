@@ -169,16 +169,17 @@ nav > * {
     font-family: Inter;
     font-size: 32px;
     font-weight: bold;
-}
-
-.ItemContainer > .ItemContainerContent {
-    padding: 10px 0px 0px 0px;
+    margin-bottom: 25px;
 }
 
 .ItemContainer > .ItemContainerContent > .ItemLabelContainer {
-    padding: 15px 25px 0px 25px;
+    padding: 0px 25px 0px 25px;
     float: left;
     width: 100%;
+}
+
+.ItemContainer > .ItemContainerContent > .ItemLabelContainer:not(:first-child) {
+    padding-top: 15px;
 }
 
 .ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel {
