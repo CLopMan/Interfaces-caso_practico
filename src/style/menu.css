@@ -86,7 +86,7 @@ html {
                 .pr {
                     border: red 1px solid;
                     display: flex;
-                    flex: 1 1 50%;
+                    flex: 0 1 50%;
                     flex-flow: column nowrap;
                     background-color: #f9f8f6;
                     border-radius: 20px;
@@ -121,7 +121,7 @@ html {
                             }
                                 .op > p {
                                     font-weight: bold;
-                                    font-size: 1.5em;
+                                    font-size: 1.3em;
                                     padding-left: 3.5%;
                                     flex: 1 1 50%;
                                 }
