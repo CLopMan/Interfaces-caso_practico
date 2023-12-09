@@ -65,17 +65,20 @@ h1 {
 h2 {
     font-size: 40px;
     font-weight: initial;
+    line-height: 150%;
 }
 
 h3 {
     font-size: 40px;
     font-weight: initial;
+    line-height: 150%;
 }
 
 p {
     font-size: 24px;
     text-align: justify;
     font-family: Newsreader;
+    line-height: 150%;
 }
 
 button {
