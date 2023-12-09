@@ -54,7 +54,7 @@ class DNI extends Attribute {
  */
 class Text extends Attribute {
     validate(value) {
-        if (value != "") { throw "formato de nombre incorrecto"; }
+        if (value != "") { throw "campo de texto vacío"; }
         return value;
     }
 }
