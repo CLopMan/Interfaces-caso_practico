@@ -376,9 +376,48 @@ section{
 
 
 /*---------------------FOOTER----------------------*/
-footer {
+footer{
     height: 30vh;
     background-color: #6C461A;
     margin-top: 5%;
 }
 
+a {
+    background: none;
+    color:#DDD8D1;
+    text-decoration: none;
+}
+
+#footer_home {
+    position: relative;
+    top:35%;
+    left: 5%;
+    font-size: 3vw;
+}
+
+#footer_politica {
+    position: relative;
+    top:25%;
+    text-align: center;
+    font-size: 3vw;
+}
+
+ul {
+    position: relative;
+    background: none;
+    top: 5%;
+}
+
+#lista_1 {
+    left: 5%;
+}
+#lista_2 {
+    left: 5%;
+}
+
+li {
+    background: none;
+    color: #DDD8D1;
+    font-size: 2vw;
+    line-height: 150%;
+}
