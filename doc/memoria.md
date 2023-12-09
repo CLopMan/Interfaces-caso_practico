@@ -28,7 +28,7 @@ header-includes: |
 
 \clearpage
 
-## 1. Introducción
+## 1. Introducción {#apartado-1}
 
 En este documento se recoge el desarrollo del caso práctico de la asignatura Interfaces de Usuario. El proyecto consiste en el diseño e implementación de una página web de un restaurante que permita consultar información sobre el establecimiento, reserva de mesa y pedidos a domicilio.
 
@@ -66,7 +66,7 @@ Para la especificación de las personas se ha diseñado una plantilla en forma d
     \end{tabular}
 }
 
-### 2.1. Jana Pérez
+### 2.1. Jana Pérez {#apartado-21}
 
 \makebox[\textwidth][c]{
     \begin{tabular}{p{3cm}p{12cm}}
@@ -94,7 +94,7 @@ Para la especificación de las personas se ha diseñado una plantilla en forma d
 2. Consulta la información acerca del local
 3. Reserva desde su *móvil*. Como su grupo de amigos es numeroso, decide pagar en persona en vez de a través de la web.
 
-### 2.2. Emmanuel García-Ruíz
+### 2.2. Emmanuel García-Ruíz {#apartado-22}
 
 \makebox[\textwidth][c]{
     \begin{tabular}{p{3cm}p{12cm}}
@@ -124,7 +124,7 @@ Para la especificación de las personas se ha diseñado una plantilla en forma d
 4. Para cada alimento, comprueba los alérgenos a través de la leyenda.
 5. Realiza el pedido mediante la secuencia de pasos, guiado por el sistema.
 
-### 2.3. José Daniel Expósito
+### 2.3. José Daniel Expósito {#apartado-23}
 
 \makebox[\textwidth][c]{
     \begin{tabular}{p{3cm}p{12cm}}
@@ -158,7 +158,7 @@ Para la especificación de las personas se ha diseñado una plantilla en forma d
 
 De forma complementaria al diseño de personas, se han analizado tres páginas web de otros restaurantes para lograr una mayor especificación de funcionalidades para nuestra web. Para cada página web, se han analizado la página principal, la funcionalidad más destacada dentro de la web y otros aspectos funcionales notables.
 
-### 3.1. Taikit
+### 3.1. Taikit {#apartado-31}
 
 [Taikit](https://teikit.es/) es una franquicia de restaurantes especializado en sushi con posibilidad de pedir a domicilio.
 
@@ -193,13 +193,13 @@ Además de lo antes mencionado, otras funcionalidades destacables de taikit son 
 - Página de contacto.
 - Localización de locales.
 
-### Conclusiones 
+#### Conclusiones
 
-Taikit destaca sobre todo por su menú a domicilio, caracterizado por la simplicidad y la estética común a toda la página. Su funcionalidad intuitiva, la disposición de elementos y la información que se mantiene accesible al usuario en todo momento hacen de la experiencia de pedir a domicilio algo *sencillo* para todo tipo de personas. 
+Taikit destaca sobre todo por su menú a domicilio, caracterizado por la simplicidad y la estética común a toda la página. Su funcionalidad intuitiva, la disposición de elementos y la información que se mantiene accesible al usuario en todo momento hacen de la experiencia de pedir a domicilio algo *sencillo* para todo tipo de personas.
 
 Taikit destaca sobre todo por su menú a domicilio, caracterizado por la simplicidad y la estética común a toda la página. Su funcionalidad intuitiva, la disposición de elementos y la información que se mantiene accesible al usuario en todo momento hacen de la experiencia de pedir a domicilio algo sencillo para todo tipo de personas.
 
-### 3.2. CatCafe Mocha
+### 3.2. CatCafe Mocha {#apartado-32}
 
 [CatCafé](https://catmocha.jp/) mocha es un franquicia de cat-cafés japonesa, caracterizada por su estética minimalista.
 
@@ -227,7 +227,7 @@ La web cuenta con una página de preguntas frecuentes que actúan en forma de de
 
 Todas las páginas mantienen la cabecera y el pie de página.
 
-### Conclusiones 
+#### Conclusiones
 
 El estilo minimalista y elegante se mantiene en toda la web, y los elementos similares en distintas páginas conservan la misma estructura. Esto le da una *coherencia* a la web que facilita su uso, haciéndola más intuitiva y amigable a toda clase de usuarios. 
 
@@ -235,7 +235,7 @@ El estilo minimalista y elegante se mantiene en toda la web, y los elementos sim
 
 A lo largo de toda la web destaca el uso de elementos muy visuales (imágenes, vídeos e iconos) que permiten entender la mayoría de la información aún existiendo la barrera del lenguaje. No obstante, esta barrera se reduce gracias a la posibilidad de cambiar el idioma.
 
-### CatFé Santander
+### 3.3. CatFé Santander {#apartado-33}
 
 [CatFé Santander](https://catfe.es/) es una cafetería española que actúa además como refugio de animales, especializado en gatos.
 
@@ -259,17 +259,13 @@ Existe además un contador en la página de "Conócenos", donde se detalla el n�
 
 #### Conclusiones
 
-La estética hogareña y el tono de la página, además del enfasis en el rescate de gatos y el cuidado de los mismos permiten transmitir una *imagen de cercanía y confianza* hacia la marca. 
+La estética hogareña y el tono de la página, además del enfasis en el rescate de gatos y el cuidado de los mismos permiten transmitir una *imagen de cercanía y confianza* hacia la marca.
 
-El proceso de reserva es muy cómodo gracias a la *barra de proceso y la guía se da durante el proceso*. 
+El proceso de reserva es muy cómodo gracias a la *barra de proceso y la guía se da durante el proceso*.
 
-# 4. Diseño del prototipo 
-## 4.1. Requisitos funcionales 
-Teniendo en cuenta tanto los escenarios de la [sección 2](#2-personas-y-escenarios) y el análisis de la [sección 3](#3-análisis-de-otras-webs), se han determinado 11 funcionalidades que deben estar implementadas en nuestra web. Estas se recogen a continuación en la siguiente tabla: 
+## 4. Diseño del prototipo {#apartado-4}
 
-## 4. Diseño del prototipo
-
-### 4.1. Requisitos funcionales
+### 4.1. Requisitos funcionales {#apartado-41}
 
 Teniendo en cuenta tanto los escenarios del [apartado 2](#apartado-2) y el análisis del [apartado 3](#apartado-3), se han determinado 11 funcionalidades que deben estar implementadas en nuestra web. Estas se recogen a continuación en la siguiente tabla:
 
@@ -302,35 +298,32 @@ Teniendo en cuenta tanto los escenarios del [apartado 2](#apartado-2) y el anál
     \end{tabular}
 }
 
-### 4.2. Prototipo
+### 4.2. Prototipo {#apartado-42}
 
-Hemos desarrollado un prototipo mediante la herramienta Figma que pretende representar con una alta fidelidad visual y funcional nuestra web. En él se puede experimentar cómo un usuario ejecutaría las acciones descritas en el escenario de la sección 2.3.
+Hemos desarrollado un prototipo mediante la herramienta Figma que pretende representar con una alta fidelidad visual y funcional nuestra web. En él se puede experimentar cómo un usuario ejecutaría las acciones descritas en el escenario de la [sección 2.3](#apartado-23).
 
-## 4.2. Prototipo 
-
-Hemos desarrollado un prototipo mediante la herramienta Figma que pretende representar con una alta fidelidad visual y funcional nuestra web. En él se puede experimentar cómo una persona ejecutaría las acciones descritas en el escenario de la [sección 2.3](#23-josé-daniel-expósito). 
 [[Enlace a figma]]
 
 [[Foto del prototipo]]
 
 \clearpage
 
-## 5. Diseño final
+## 5. Diseño final {#apartado-5}
 
 [[Comparación entre original y final]]
 
 \clearpage
 
-## 6. Informe de accesibilidad
+## 6. Informe de accesibilidad {#apartado-6}
 
 \clearpage
 
-## 7. Descripción de herramientas utilizadas
+## 7. Descripción de herramientas utilizadas {#apartado-7}
 
 \clearpage
 
-## 8. Evaluación SUS
+## 8. Evaluación SUS {#apartado-8}
 
 \clearpage
 
-## 9. Conclusiones
+## 9. Conclusiones {#apartado-9}
