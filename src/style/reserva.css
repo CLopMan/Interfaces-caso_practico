@@ -1,15 +1,12 @@
-#normas {
-    margin-bottom: 30px;
-}
-
 #reserve-window {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 45% 55%;
     justify-content: space-between;
     padding: 0;
-}
-
-#reserve-window > * {
+    width: 60%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 60px;
 }
 
 #progress {
@@ -29,12 +26,23 @@
     font-weight: bold;
 }
 
-#progress .SplitContainer > div:not(:first-child) {
+.ProgressIcon {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    border: 2px solid var(--marron-base);
+
+    font-size: 24px;
+
+    border: 2px solid rgba(0, 0, 0, 0.06);
     background: var(--page-bg);
+}
+
+.ProgressIcon.Completed {
+    background: var(--verde-confirmar); 
+}
+
+.ProgressIcon.Current {
+    border-color: var(--marron-base); 
 }
 
 #menu {
@@ -43,10 +51,6 @@
 form {
     float: right;
     border: none !important;
-}
-
-form:not(:first-child) {
-    display: none !important;
 }
 
 form > .ItemContainerContent {

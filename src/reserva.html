@@ -9,9 +9,8 @@
     <link rel="stylesheet" href="style/reserva.css">
 </head>
 <body>
-    <!-- Elemento principal de la página (requerido) -->
     <main>
-    <section id="normas">
+    <section>
         <h1>Reserva antes de llegar</h1>
         <h2>Antes de reservar, comprueba las normas del estableciemiento:</h2>
         <h3>1. No intentes coger a los gatos</h3>
@@ -27,27 +26,27 @@
     <div id="reserve-window" class="ItemContainer row">
         <div id="progress" class="ItemContainer ItemContainerContent">
             <div class="ItemLabelContainer">
-                <div class="Item SplitContainer">
+                <div id="asistentes" class="Item SplitContainer">
                     <div>Asistentes</div>
-                    <div></div>
+                    <div class="ProgressIcon Current"></div>
                 </div>
             </div>
             <div class="ItemLabelContainer">
-                <div class="Item SplitContainer">
+                <div id="fecha" class="Item SplitContainer">
                     <div>Fecha</div>
-                    <div></div>
+                    <div class="ProgressIcon"></div>
                 </div>
             </div>
             <div class="ItemLabelContainer">
-                <div class="Item SplitContainer">
+                <div id="informacion-personal" class="Item SplitContainer">
                     <div>Información Personal</div>
-                    <div></div>
+                    <div class="ProgressIcon"></div>
                 </div>
             </div>
             <div class="ItemLabelContainer">
-                <div class="Item SplitContainer">
+                <div id="pago" class="Item SplitContainer">
                     <div>Pago</div>
-                    <div></div>
+                    <div class="ProgressIcon"></div>
                 </div>
             </div>
         </div>
