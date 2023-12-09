@@ -163,6 +163,9 @@ nav > * {
     padding: 25px;
     border-radius: 25px;
     border: 2px solid var(--bordes);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .ItemContainer > header {
@@ -170,6 +173,10 @@ nav > * {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 25px;
+}
+
+.ItemContainer > .ItemContainerContent {
+    flex-grow: 1
 }
 
 .ItemContainer > .ItemContainerContent > .ItemLabelContainer {
