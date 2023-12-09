@@ -4,6 +4,7 @@
  * @param {{name: string, valid: Class}[]} validation Array with the field name and validation class
  * @param {Class} serializarion Serialization class for the result
  * @param {boolean} alert_ok Whether to display an alert message if successful
+ * @returns {boolean} Whether the validation succeeded or not
  * @public
  */
 function validate_form(form, validation, serialization, alert_ok) {
@@ -13,8 +14,10 @@ function validate_form(form, validation, serialization, alert_ok) {
         // Shows a message and clears the form
         if (alert_ok) { alert("Ok"); }
         clear_form(form);
+        return true
     } catch (err) { // If there was any validation error, display an error message
         alert("Error de validación: " + err);
+        return false
     }
 }
 
@@ -56,12 +59,13 @@ function generate_form(elem, title, fields, next) {
     if (!next) { return; }
     form.append(`<button type="button" class="SplitContainer"><div>${next.name}</div><div>🡢</div></button>`);
     form.children("button").click(() => {
-        validate_form(
+        if (validate_form(
             document.forms[form.attr("id")],
             fields.map(x => {return {valid: x.valid, name: `${x.name}-input`}}),
             next.serialize,
             next.alert_ok
-        )
-        next.callback();
+        )) {
+            next.callback();
+        }
     })
 }
