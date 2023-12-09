@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Carga de estilos compartidos -->
+    <link rel="stylesheet" href="style/shared.css">
+    <!-- Carga de estilos de la página -->
+    <link rel="stylesheet" href="style/reserva.css">
+</head>
+<body>
+    <!-- Elemento principal de la página (requerido) -->
+    <main>
+    <section id="normas">
+        <h1>Reserva antes de llegar</h1>
+        <h2>Antes de reservar, comprueba las normas del estableciemiento:</h2>
+        <h3>1. No intentes coger a los gatos</h3>
+        <p>Nuestros gatos son animales muy cariñosos y amigables, pero no olvides que tú eres el invitado en su casa. Disfruta de tu café y ellos se acercarán para que puedas acariciarlos.</p>
+        <h3>2. No des de comer a los gatos</h3>
+        <p>Desde CatFé tratamos de que nuestros gatos disfruten de una vida sana y activa, por eso les comida adecuada a su peso y características individuales.</p>
+        <h3>3. Fotos sin flash</h3>
+        <p>Nuestros gatos son preciosos, lo sabemos, tómate una foto con ellos! Sin embargo, el flash es un elemento que puede estresarles y asustarles. Evítalo en todo momento.</p>
+        <h3>4. No molestes a los gatos que están comiendo</h3>
+        <p>Tenemos muchos gatos, seguro que alguno tiene ganas de mimos, no molestes al que está comiendo.</p>
+    </section>
+
+    <div id="reserve-window" class="ItemContainer row">
+        <div id="progress" class="ItemContainer ItemContainerContent">
+            <div class="ItemLabelContainer">
+                <div class="Item SplitContainer">
+                    <div>Asistentes</div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="ItemLabelContainer">
+                <div class="Item SplitContainer">
+                    <div>Fecha</div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="ItemLabelContainer">
+                <div class="Item SplitContainer">
+                    <div>Información Personal</div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="ItemLabelContainer">
+                <div class="Item SplitContainer">
+                    <div>Pago</div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="menu">
+        <form id="form-asistentes"></form>
+        <form id="form-fecha"></form>
+        <form id="form-informacion-personal"></form>
+        <form id="form-pago"></form>
+        </div>
+    </div>
+    </main>
+    <!-- Carga de utilidades de JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script/attributes.js"></script>
+    <script src="script/user.js"></script> 
+    <script src="script/form_utils.js"></script> 
+    <script src="script/shared.js"></script> 
+    <!-- Carga del JS de la página -->
+    <script src="script/reserva.js"></script> 
+</body>
+</html>

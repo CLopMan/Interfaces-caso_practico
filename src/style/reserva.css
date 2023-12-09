@@ -1,0 +1,56 @@
+#normas {
+    margin-bottom: 30px;
+}
+
+#reserve-window {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    justify-content: space-between;
+    padding: 0;
+}
+
+#reserve-window > * {
+}
+
+#progress {
+    height: 100%;
+    background-color: var(--marron-base);
+    border: none;
+}
+
+#progress > * {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#progress .SplitContainer > div:first-child {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#progress .SplitContainer > div:not(:first-child) {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid var(--marron-base);
+    background: var(--page-bg);
+}
+
+#menu {
+}
+
+form {
+    float: right;
+    border: none !important;
+}
+
+form:not(:first-child) {
+    display: none !important;
+}
+
+form > .ItemContainerContent {
+}
+
+form > button {
+}
