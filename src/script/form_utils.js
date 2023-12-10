@@ -9,7 +9,7 @@
  */
 function validate_form(form, validation, serialization, alert_ok) {
     try {
-        // Stores the user
+        // Validates the data and stores it on a cookie
         document.cookie = new serialization(...validation.map(field => new field.valid(form[field.name].value))).serialize();
         // Shows a message and clears the form
         if (alert_ok) { alert("Ok"); }
@@ -43,6 +43,13 @@ function generate_form_element(field) {
         <button type="button" class="NumberButton ItemText" onclick="$(this).next()[0].stepDown()">-</button>
         <input type="number" ${attrs} min="1" max="50" size="3" onkeydown="return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) || (!isNaN(Number(event.key)) && event.code!=='Space')">
         <button type="button" class="NumberButton ItemText" onclick="$(this).prev()[0].stepUp()">+</button>
+        `
+    }
+    if (field.type === "select") {
+        return `
+        <select ${attrs}>
+            ${`<option hidden disabled selected value>${field.placeholder}</option>` + field.options.map((x) => `<option value="${x}">${x}</option>`).join("\n")}
+        </select>
         `
     }
     return `<input type="${field.type? field.type : "text"}" ${attrs}">`
