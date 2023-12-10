@@ -18,7 +18,7 @@ generate_form(
     "#form-asistentes",
     "Asistentes",
     [
-        {name: "Asistentes", valid: Name, placeholder: "Asistentes", hide_name: true},
+        {name: "Asistentes", valid: PositiveInteger, placeholder: "1", hide_name: true, type: "number"},
     ],
     { name: "Continuar", serialize: Test, callback: function() {
         $("#form-asistentes").fadeOut("slow", () => { $("#form-fecha").fadeIn(); });

@@ -32,6 +32,22 @@ function clear_form(form) {
     }
 }
 
+function generate_form_element(field) {
+    let attrs = `id="${field.name}-input" class="ItemText" name="${field.name}-input" placeholder="${field.placeholder}"`
+    if (field.type === "textarea") {
+        return `<textarea ${attrs}></textarea>`
+    }
+    if (field.type === "number") {
+        return `
+        ${field.hide_name? `<label id="${field.name}-label" class="ItemLabel" for="${field.name}-input">${field.name}</label>` : ""}
+        <button type="button" class="NumberButton ItemText" onclick="$(this).next()[0].stepDown()">-</button>
+        <input type="number" ${attrs} min="1" max="50" size="3" onkeydown="return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) || (!isNaN(Number(event.key)) && event.code!=='Space')">
+        <button type="button" class="NumberButton ItemText" onclick="$(this).prev()[0].stepUp()">+</button>
+        `
+    }
+    return `<input type="${field.type? field.type : "text"}" ${attrs}">`
+}
+
 /**
  * Generates a form with the given fields
  * @param {string} form Form ID of the form in which to include the fields, as a CSS selector
@@ -51,7 +67,7 @@ function generate_form(elem, title, fields, next) {
         <div id="${field.name}-item" class="ItemLabelContainer">
             ${field.hide_name? "" : `<label id="${field.name}-label" class="ItemLabel" for="${field.name}-input">${field.name} <span>*</span></label>`}
             <div id="${field.name}-input-container" class="Item ${field.type === "textarea"? "" : "FixedSize"}">
-                <${field.type === "textarea"? "textarea" : "input"} type="${field.type? field.type : "text"}" id="${field.name}-input" class="ItemText" name="${field.name}-input" placeholder="${field.placeholder}">${field.type === "textarea"? "</textarea>" : ""}
+                ${generate_form_element(field)}
             </div>
         </div>
         `);
