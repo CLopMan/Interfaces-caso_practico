@@ -21,12 +21,10 @@ html {
         display: flex;
         flex-flow: row wrap;
         padding: 20px 50px;
-        border: red 3px solid;
     }
 
         .types > .title {
             flex: 1 1 auto;
-            border: blue 3px solid;
         }
             .types > .title > p {
                 font-size: 2.5em;
@@ -35,7 +33,6 @@ html {
         .types > .buttons {
             flex: 3 1 auto;
             flex-flow: row wrap;
-            border: blue 3px solid;
             display: flex;
             margin-left: 20%;
             margin-right: 20%;
@@ -68,15 +65,11 @@ html {
         margin-top: 30px;
         width: 100%;
         height: auto;
-        border: blueviolet 3px solid;
     }
 
-        .prodSec > .prodDiv {
-            border: orange 3px solid;
-        }
+        .prodSec > .prodDiv {}
 
             .prodDiv > .prods {
-                border: violet 3px solid;
                 justify-content: space-between;
                 display: flex;
                 flex-flow: row wrap;
@@ -84,7 +77,6 @@ html {
             }
 
                 .pr {
-                    border: red 1px solid;
                     display: flex;
                     flex: 0 1 43%;
                     flex-flow: column nowrap;
@@ -97,12 +89,13 @@ html {
                         overflow: hidden;
                         border-top-left-radius: 20px;
                         border-top-right-radius: 20px;
-                        height: 200px;
+                        height: 250px;
                     }
                         .prev > img {
+                            transform: translateY(-90px);
                             height: auto;
                             width: 100%;
-                            position: relative;
+                            object-fit: cover;
                         }
 
                     .pr > .content {
@@ -152,7 +145,6 @@ html {
                                 .ops > .price > p{
                                     flex: 1 1 auto;
                                     margin-left: 3.5%;
-                                    border: #6c461a thin solid;
                                 }
 
                                 .ops > .price > .ingredients {
@@ -183,18 +175,14 @@ html {
             .result > .title {
                 align-items: center;
                 flex: 1 1 auto;
-                border: blueviolet 3px solid;
             }
                 .result > .title > p {
                     height: 100%;
                     padding: 20px 20px 20px 0;
                     font-size: 1.7em;
                     font-weight: bold;
-                    border: red 3px solid;
                 }
-                .result > .title > .sum {
-                    border: red 3px solid;
-                }
+                .result > .title > .sum {}
                     #sum-am, .sum > p {
                         text-align: right;
                         padding-right: 0;
@@ -206,7 +194,6 @@ html {
 
             #list-prods {
                 flex: 3 1 auto;
-                border: pink 3px solid;
                 padding: 20px;
             }
 
@@ -216,9 +203,7 @@ html {
                     border-radius: 20px;
                     margin-bottom: 20px;
                 }
-                    .preview > .title {
-                        border: red thin solid;
-                    }
+                    .preview > .title {}
                         .preview > .title > .t {
                             font-weight: bold;
                             font-size: 1.2em;
@@ -229,11 +214,8 @@ html {
                             text-align: left;
                             padding-left: 0;
                             color: #6c461a;
-                            border: blue thin solid;
                         }
-                    .preview > .price {
-                        border: red thin solid;
-                    }
+                    .preview > .price {}
                         .preview > .price > .x {
                             text-align: right;
                             padding-right: 0;
@@ -249,15 +231,12 @@ html {
             }
                 .order > .subtotal {
                     font-weight: bold;
-                    border: violet 3px solid;
                 }
                     .order > .subtotal > p {
                         text-align: left;
-                        border: blue 3px solid;
                     }
                     #order-total {
                         text-align: right;
-                        border: blue 3px solid;
                     }
 
                 .order > button {
