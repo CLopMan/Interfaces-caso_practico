@@ -7,13 +7,14 @@ function addProduct(nombre, ind, cantidad){
 
     cart.updateProduct("ammount-"+ind.toString(),cantidad);
     cart.updateTotalAmmount(ind,cantidad)
+    cart.updateTotalQuantity()
+
 
     cart.showProds();
 }
 
 function updateProduct(ind){
     let cantidad = cart.getProductAmmount(ind)
-
     let prodAmmount = document.getElementById("ammount-"+ind.toString())
     prodAmmount.innerText = String(cantidad)
 }

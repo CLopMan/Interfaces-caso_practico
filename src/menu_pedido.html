@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style/shared.css">
     <link rel="stylesheet" href="style/menu.css">
 </head>
-<body onload="ChangeState(1) ">
+<body onload="changeSection('menu');ChangeState(1) ">
 
     <!-- Space for the header -->
 
@@ -36,7 +36,7 @@
             <hr>
 
             <section class="prodSec row">
-                <!-- Div for products -->
+                <!-- Div for products. The products get appended dynamically with JS. -->
                 <div class="prodDiv col-8">
 
                     <!-- Content for category "Cafes" -->
@@ -65,7 +65,7 @@
                     </div>
 
                     <div id="list-prods">
-
+                        <!-- List of products added dinamically with javascript -->
                     </div>
 
                     <div class="order">
@@ -75,7 +75,7 @@
                             <p id="order-total" class="col-6">0.00€</p>
                         </div>
 
-                        <button>Revisar pedido y pagar</button>
+                        <button onclick="changeSection('pedido')">Revisar pedido y pagar</button>
                     </div>
                 </aside>
 

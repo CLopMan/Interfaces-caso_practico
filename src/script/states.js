@@ -1,7 +1,33 @@
 
+function changeSection(section){
+    let menu = document.getElementById("menu")
+    let pedido = document.getElementById("pedido")
+
+    if (section === "menu"){
+        menu.classList.remove("hidden")
+        pedido.classList.add("hidden")
+    } else if (section === "pedido"){
+        pedido.classList.remove("hidden")
+        menu.classList.add("hidden")
+    }
+
+}
+
 function ChangeState(state) {
     let prodsDiv = document.getElementsByClassName("prodDiv")[0]
+    let buttons = document.getElementsByClassName("but")
+
     if (state === 1) {
+
+        for (let i = 0; i < buttons.length; i++) {
+            if (i === state -1){
+                buttons[i].style.color = "#ffffff"
+                buttons[i].style.backgroundColor = "#6C461A"
+            } else {
+                buttons[i].style.backgroundColor = "#F9F8F6"
+                buttons[i].style.color = "#000000"
+            }
+        }
         console.log("State 1")
         prodsDiv.innerHTML = "<!-- Content for category \"Cafés\" -->\n" +
             "                    <div id=\"cafes\" class=\"prods\">\n" +
@@ -46,7 +72,7 @@ function ChangeState(state) {
             "                        <article id=\"pr-2\" class=\"pr\">\n" +
             "\n" +
             "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Capuccino\" src=\"\">\n" +
+            "                                <img alt=\"Image Capuccino\" src=\"/src/image/cappuccino.png\">\n" +
             "                            </div>\n" +
             "\n" +
             "                            <div class=\"content\">\n" +
@@ -83,7 +109,7 @@ function ChangeState(state) {
             "                        <article id=\"pr-3\" class=\"pr\">\n" +
             "\n" +
             "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Latte Macchiato\" src=\"\">\n" +
+            "                                <img alt=\"Image Latte Macchiato\" src=\"/src/image/latte_macchiato.png\">\n" +
             "                            </div>\n" +
             "\n" +
             "                            <div class=\"content\">\n" +
@@ -120,7 +146,7 @@ function ChangeState(state) {
             "                        <article id=\"pr-4\" class=\"pr\">\n" +
             "\n" +
             "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Expresso\" src=\"\">\n" +
+            "                                <img alt=\"Image Expresso\" src=\"/src/image/espresso.png\">\n" +
             "                            </div>\n" +
             "\n" +
             "                            <div class=\"content\">\n" +
@@ -157,7 +183,7 @@ function ChangeState(state) {
             "                        <article id=\"pr-5\" class=\"pr\">\n" +
             "\n" +
             "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Cafe con Leche\" src=\"\">\n" +
+            "                                <img alt=\"Image Cafe con Leche\" src=\"/src/image/fluffcoffee.png\">\n" +
             "                            </div>\n" +
             "\n" +
             "                            <div class=\"content\">\n" +
@@ -192,6 +218,17 @@ function ChangeState(state) {
             "                    </div>"
 
     } else if (state === 2) {
+
+        for (let i = 0; i < buttons.length; i++) {
+            if (i === state -1){
+                buttons[i].style.color = "#ffffff"
+                buttons[i].style.backgroundColor = "#6C461A"
+            } else {
+                buttons[i].style.backgroundColor = "#F9F8F6"
+                buttons[i].style.color = "#000000"
+            }
+        }
+
         console.log("State 2")
         prodsDiv.innerHTML = "<div id=\"bakes\" class=\"prods\">\n" +
             "\n" +
@@ -199,7 +236,7 @@ function ChangeState(state) {
             "                        <article id=\"pr-6\" class=\"pr\">\n" +
             "\n" +
             "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Donuts\" src=\"\">\n" +
+            "                                <img alt=\"Image Donuts\" src=\"/src/image/donutcat.png\">\n" +
             "                            </div>\n" +
             "\n" +
             "                            <div class=\"content\">\n" +
@@ -238,7 +275,7 @@ function ChangeState(state) {
             "                        <article id=\"pr-7\" class=\"pr\">\n" +
             "\n" +
             "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Cruasan\" src=\"\">\n" +
+            "                                <img alt=\"Image Cruasan\" src=\"/src/image/cruasan.png\">\n" +
             "                            </div>\n" +
             "\n" +
             "                            <div class=\"content\">\n" +
@@ -277,7 +314,7 @@ function ChangeState(state) {
             "                        <article id=\"pr-8\" class=\"pr\">\n" +
             "\n" +
             "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Napolitana\" src=\"\">\n" +
+            "                                <img alt=\"Image Napolitana\" src=\"/src/image/840_560.jpg\">\n" +
             "                            </div>\n" +
             "\n" +
             "                            <div class=\"content\">\n" +
@@ -316,7 +353,7 @@ function ChangeState(state) {
             "                        <article id=\"pr-9\" class=\"pr\">\n" +
             "\n" +
             "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Churros\" src=\"\">\n" +
+            "                                <img alt=\"Image Churros\" src=\"/src/image/churro.jpg\">\n" +
             "                            </div>\n" +
             "\n" +
             "                            <div class=\"content\">\n" +
@@ -352,13 +389,24 @@ function ChangeState(state) {
             "                        </article>\n" +
             "                    </div>"
     } else if (state === 3) {
+
+        for (let i = 0; i < buttons.length; i++) {
+            if (i === state -1){
+                buttons[i].style.color = "#ffffff"
+                buttons[i].style.backgroundColor = "#6C461A"
+            } else {
+                buttons[i].style.backgroundColor = "#F9F8F6"
+                buttons[i].style.color = "#000000"
+            }
+        }
+
         console.log("State 3")
         prodsDiv.innerHTML = "<div id=\"juices\" class=\"prods\">\n" +
             "                        <!-- Standard Format of products -->\n" +
             "                        <article id=\"pr-10\" class=\"pr\">\n" +
             "\n" +
             "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Orange Juice\" src=\"\">\n" +
+            "                                <img alt=\"Image Orange Juice\" src=\"/src/image/Orangejuice.jpg\">\n" +
             "                            </div>\n" +
             "\n" +
             "                            <div class=\"content\">\n" +
@@ -393,7 +441,7 @@ function ChangeState(state) {
             "                        <article id=\"pr-11\" class=\"pr\">\n" +
             "\n" +
             "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Apple Juice\" src=\"\">\n" +
+            "                                <img alt=\"Image Apple Juice\" src=\"/src/image/apple-juice-recipe.jpg\">\n" +
             "                            </div>\n" +
             "\n" +
             "                            <div class=\"content\">\n" +
@@ -428,7 +476,7 @@ function ChangeState(state) {
             "                        <article id=\"pr-12\" class=\"pr\">\n" +
             "\n" +
             "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Pineapple Juice\" src=\"\">\n" +
+            "                                <img alt=\"Image Pineapple Juice\" src=\"/src/image/Mambo_Triturar_Piñacolada_RRSS.jpg\">\n" +
             "                            </div>\n" +
             "\n" +
             "                            <div class=\"content\">\n" +
@@ -461,13 +509,23 @@ function ChangeState(state) {
             "\n" +
             "                    </div>"
     } else if (state === 4) {
+
+        for (let i = 0; i < buttons.length; i++) {
+            if (i === state -1){
+                buttons[i].style.color = "#ffffff"
+                buttons[i].style.backgroundColor = "#6C461A"
+            } else {
+                buttons[i].style.backgroundColor = "#F9F8F6"
+                buttons[i].style.color = "#000000"
+            }
+        }
         console.log("State 4")
         prodsDiv.innerHTML = "<div id=\"cakes\" class=\"prods\">\n" +
             "                        <!-- Standard Format of products -->\n" +
             "                        <article id=\"pr-13\" class=\"pr\">\n" +
             "\n" +
             "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Mini Chocolate Cake\" src=\"\">\n" +
+            "                                <img alt=\"Image Mini Chocolate Cake\" src=\"/src/image/HEADERkuroneko_halloween.jpg\">\n" +
             "                            </div>\n" +
             "\n" +
             "                            <div class=\"content\">\n" +
@@ -506,7 +564,7 @@ function ChangeState(state) {
             "                        <article id=\"pr-14\" class=\"pr\">\n" +
             "\n" +
             "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Tiramisú\" src=\"\">\n" +
+            "                                <img alt=\"Image Tiramisú\" src=\"/src/image/05COOKING-TIRAMISU1-threeByTwoMediumAt2X-v2.jpg\">\n" +
             "                            </div>\n" +
             "\n" +
             "                            <div class=\"content\">\n" +
@@ -545,7 +603,7 @@ function ChangeState(state) {
             "                        <article id=\"pr-15\" class=\"pr\">\n" +
             "\n" +
             "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Mini Chocolate Cake\" src=\"\">\n" +
+            "                                <img alt=\"Image Chocolate Cake\" src=\"/src/image/6d304afefe086879df26cb564115b39d.jpg\">\n" +
             "                            </div>\n" +
             "\n" +
             "                            <div class=\"content\">\n" +
@@ -584,7 +642,7 @@ function ChangeState(state) {
             "                        <article id=\"pr-16\" class=\"pr\">\n" +
             "\n" +
             "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Cheese-cake\" src=\"\">\n" +
+            "                                <img alt=\"Image Cheese-cake\" src=\"/src/image/nc-13.webp\">\n" +
             "                            </div>\n" +
             "\n" +
             "                            <div class=\"content\">\n" +
@@ -620,6 +678,16 @@ function ChangeState(state) {
             "                    </div>"
 
     } else if (state === 5) {
+
+        for (let i = 0; i < buttons.length; i++) {
+            if (i === state -1){
+                buttons[i].style.color = "#ffffff"
+                buttons[i].style.backgroundColor = "#6C461A"
+            } else {
+                buttons[i].style.backgroundColor = "#F9F8F6"
+                buttons[i].style.color = "#000000"
+            }
+        }
         console.log("State 5")
         prodsDiv.innerHTML = "<div id=\"bis\" class=\"prods\">\n" +
             "\n" +
@@ -627,7 +695,7 @@ function ChangeState(state) {
             "                        <article id=\"pr-17\" class=\"pr\">\n" +
             "\n" +
             "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Chocolate Bisquits\" src=\"\">\n" +
+            "                                <img alt=\"Image Chocolate Bisquits\" src=\"/src/image/catcookie.png\">\n" +
             "                            </div>\n" +
             "\n" +
             "                            <div class=\"content\">\n" +
@@ -666,7 +734,7 @@ function ChangeState(state) {
             "                        <article id=\"pr-18\" class=\"pr\">\n" +
             "\n" +
             "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Sugar Bisquits\" src=\"\">\n" +
+            "                                <img alt=\"Image Sugar Bisquits\" src=\"/src/image/kitty-cookies4-895x500.jpg\">\n" +
             "                            </div>\n" +
             "\n" +
             "                            <div class=\"content\">\n" +
@@ -705,7 +773,7 @@ function ChangeState(state) {
             "                        <article id=\"pr-19\" class=\"pr\">\n" +
             "\n" +
             "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Butter Bisquits\" src=\"\">\n" +
+            "                                <img alt=\"Image Butter Bisquits\" src=\"/src/image/images.jpeg\">\n" +
             "                            </div>\n" +
             "\n" +
             "                            <div class=\"content\">\n" +

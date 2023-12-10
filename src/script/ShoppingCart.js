@@ -22,6 +22,13 @@ class ShoppingCart {
 
     }
 
+    getProductsTotalAmmount(){
+        let total_ammount = 0
+        for (const prod of this.prods) {
+            total_ammount += prod.cantidad
+        }
+        return total_ammount
+    }
     getProductAmmount(ind){
         return this.prods[ind-1].cantidad
     }
@@ -29,9 +36,25 @@ class ShoppingCart {
         let listDiv = document.getElementById("list-prods");
         listDiv.innerHTML = "";
 
-        for (const product of this.prods) {
+        let truncar = (num,dec) => {
+            let s = num.toString()
+            let decimalLength = s.indexOf(".")+1
+            let numStr = s.substring(0,decimalLength + dec)
+            return Number(numStr)
+        }
+
+        for (const [i,product] of this.prods.entries()) {
             if (product.name !== "" && product.cantidad > 0) {
-                listDiv.innerHTML += "<p>Producto: "+product.name+", cantidad: "+product.cantidad+"</p>";
+                listDiv.innerHTML += "<div class=\"preview row\">\n" +
+                    "                            <div class=\"title row col-6\">\n" +
+                    "                                <p class=\"t col-6\">"+product.name+"</p>\n" +
+                    "                                <p class=\"p col-6\">"+this.prices[i]+"€</p>\n" +
+                    "                            </div>\n" +
+                    "                            <div class=\"price row col-6\">\n" +
+                    "                                <p class=\"x col-6\">x"+product.cantidad+"</p>\n" +
+                    "                                <p class=\"subtotal col-6\">"+truncar(this.sums[i],2)+"€</p>\n" +
+                    "                            </div>\n" +
+                    "                        </div>";
             }
         }
     }
@@ -69,6 +92,11 @@ class ShoppingCart {
             return Number(numStr)
         }
         result.innerText = String(truncar(totalPrice,2))+"€"
+    }
+
+    updateTotalQuantity(){
+        let total_quantity = document.getElementById("sum-am")
+        total_quantity.innerText = String(this.getProductsTotalAmmount())
     }
 
 }
