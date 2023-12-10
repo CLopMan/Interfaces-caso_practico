@@ -33,7 +33,7 @@ function clear_form(form) {
 }
 
 function generate_form_element(field) {
-    let attrs = `id="${field.name}-input" class="ItemText" name="${field.name}-input" placeholder="${field.placeholder}"`
+    let attrs = `id="${field.name}-input" class="ItemText ${field.type === "date"? "datepicker" : ""} ${field.type === "time"? "timepicker" : ""}" name="${field.name}-input" placeholder="${field.placeholder}"`
     if (field.type === "textarea") {
         return `<textarea ${attrs}></textarea>`
     }
@@ -73,12 +73,22 @@ function generate_form(elem, title, fields, next) {
         content.append(`
         <div id="${field.name}-item" class="ItemLabelContainer">
             ${field.hide_name? "" : `<label id="${field.name}-label" class="ItemLabel" for="${field.name}-input">${field.name} <span>*</span></label>`}
-            <div id="${field.name}-input-container" class="Item ${field.type === "textarea"? "" : "FixedSize"}">
+            <div id="${field.name}-input-container" class="Item ${field.type === "textarea"? "" : "FixedSize"} ${field.type === "select"? "select" : ""}">
                 ${generate_form_element(field)}
             </div>
         </div>
         `);
     }
+    form.find(".datepicker").pickadate({ hiddenName: true, min: true });
+    form.find(".timepicker").pickatime({
+        format: "HH:i",
+        interval: 15,
+        hiddenName: true,
+        disable: [
+            { from: [0,0], to: [7,45] },
+            { from: [22,0], to: [23,45] },
+        ]
+    });
     if (!next) { return; }
     form.append(`<button type="button" class="SplitContainer"><div>${next.name}</div><div>🡢</div></button>`);
     form.children("button").click(() => {

@@ -30,9 +30,9 @@ generate_form(
     "#form-fecha",
     "Fecha",
     [
-        {name: "Pack", valid: Name, placeholder: "Pack*", hide_name: true},
-        {name: "Fecha", valid: Name, placeholder: "Fecha*", hide_name: true},
-        {name: "Hora", valid: Name, placeholder: "Hora*", hide_name: true},
+        {name: "Pack", valid: Text, placeholder: "Pack*", hide_name: true, type: "select", options: ["30 Minutos", "1 Hora", "2 Horas", "Estudiante", "Amante de Gatos", "Grupo"]},
+        {name: "Fecha", valid: Text, placeholder: "Fecha*", hide_name: true, type: "date"},
+        {name: "Hora", valid: Text, placeholder: "Hora*", hide_name: true, type: "time"},
     ],
     { name: "Continuar", serialize: Test, callback: function() {
         $("#form-fecha").fadeOut("slow", () => { $("#form-informacion-personal").fadeIn(); });
