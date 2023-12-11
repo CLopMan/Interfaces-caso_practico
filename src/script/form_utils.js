@@ -79,16 +79,18 @@ function generate_form(elem, title, fields, next) {
         </div>
         `);
     }
-    form.find(".datepicker").pickadate({ hiddenName: true, min: true });
-    form.find(".timepicker").pickatime({
-        format: "HH:i",
-        interval: 15,
-        hiddenName: true,
-        disable: [
-            { from: [0,0], to: [7,45] },
-            { from: [22,0], to: [23,45] },
-        ]
-    });
+    if ((datepickers = form.find(".datepicker")).length) { datepickers.pickadate({ hiddenName: true, min: true }); }
+    if ((timepickers = form.find(".timepicker")).length) { 
+        timepickers.pickatime({
+            format: "HH:i",
+            interval: 15,
+            hiddenName: true,
+            disable: [
+                { from: [0,0], to: [7,45] },
+                { from: [22,0], to: [23,45] },
+            ]
+        });
+    }
     if (!next) { return; }
     form.append(`<button type="button" class="SplitContainer"><div>${next.name}</div><div>🡢</div></button>`);
     form.children("button").click(() => {
