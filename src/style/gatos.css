@@ -1,0 +1,67 @@
+*{
+    background: #EEEBE7;
+    margin: 0%;
+}
+
+header {
+    height: 10vh;
+}
+
+#line {
+    height: 0px; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    border: 2px #6C461A solid;
+    padding: 0;
+    margin-left: 7%;
+}
+
+h1 {
+    margin-left: 7%;
+    font-size: 3vw;
+    font-weight: 400;
+    padding: 1%;
+}
+
+#gatos {
+    margin: 1% 5%;
+}
+
+.gato {
+    box-sizing: border-box;
+    background: #F9F8F6;
+    height: 55vh;
+    float: left;
+    margin: 1% 2%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    padding: 0;
+}
+
+.nombre_gato {
+    text-align: center;
+    background: none;
+    padding: 3%;
+}
+
+.descripcion {
+    padding: 1px;
+    text-align: center;
+    background: none;
+    color:#6C461A;
+    font-weight: 600;
+}
+
+.caracteristicas {
+    padding: 1%;
+    text-align: center;
+    background: none;
+    color: #4F4F4F;
+}
+
+.gato >img {
+    height: 70%;
+    padding: 0;
+    border-bottom: 1px #6C461A solid;
+    object-fit: cover;
+    border-radius: 9px 9px 0px 0px;
+}

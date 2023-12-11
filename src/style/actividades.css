@@ -7,12 +7,40 @@ header {
     height: 10vh;
 }
 
+#line {
+    height: 0px; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    border: 2px #6C461A solid;
+    padding: 0;
+    margin-left: 7%;
+}
+
+h1 {
+    margin-left: 7%;
+    font-size: 3vw;
+    font-weight: 400;
+    padding: 1%;
+}
+
 .decoracion_rectangulo {
     z-index: 0;
     position: absolute;
     background: #DDD8D1;
     height: 90%;
     left: 8%;
+}
+
+.titulo_seccion {
+    position: relative;
+    background: #F9F8F6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 11px;
+    color: #6C461A;
+    font-weight: 600;
+    font-size: 2.7vw;
+    padding: 3% 0% 0% 0%;
+    text-align: center;
+    letter-spacing: -0.04em;
 }
 
 .boton_info {
@@ -38,19 +66,6 @@ header {
     font-size: 5vw;
 }
 
-.titulo_seccion {
-    position: relative;
-    background: #F9F8F6;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 11px;
-    color: #6C461A;
-    font-weight: 600;
-    font-size: 2.7vw;
-    padding: 3% 0% 0% 0%;
-    text-align: center;
-    letter-spacing: -0.04em;
-}
-
 .textos {
     position: relative;
     background: none;
@@ -62,31 +77,16 @@ header {
     color: #4F4F4F;
 }
 
-#line {
-    height: 0px; 
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
-    border: 2px #6C461A solid;
+#actividades {
+    position: absolute;
     padding: 0;
-    margin-left: 10%;
-}
-
-h1 {
-    margin-left: 10%;
-    font-size: 3vw;
-    font-weight: 400;
-    padding: 1%;
+    margin-top: 2%;
 }
 
 .actividad {
     height: 65vh;
     position: relative;
     float: left;
-}
-
-#actividades {
-    position: absolute;
-    padding: 0;
-    margin-top: 2%;
 }
 
 img {
