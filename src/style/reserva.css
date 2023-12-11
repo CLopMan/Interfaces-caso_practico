@@ -45,16 +45,65 @@
     border-color: var(--marron-base); 
 }
 
-#menu {
-}
-
-form {
+form, #confirmation {
     float: right;
     border: none !important;
 }
 
-form > .ItemContainerContent {
+form input[type="radio"] {
+  display: none;
 }
 
-form > button {
+#payment-method-input-container {
+    display: flex;
+}
+
+#payment-method-input-container > label {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    border: 2px solid var(--bordes);
+    background: #FFF; 
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    font-weight: bold;
+}
+
+#payment-method-input-container > label:first-of-type { margin-right: 10px; }
+
+#payment-method-input-container img {
+    width: 40px;
+    height: 40px;
+}
+
+#payment-method-input-container > input:checked + label {
+    border-color: var(--marron-base)
+}
+
+#expiry-date-item {
+    width: 67%;
+}
+
+#cvc-item {
+    width: 33%;
+    float: right;
+}
+
+#confirmation > .ItemContainerContent {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#confirmation p {
+    text-align: center;
+    font-weight: bold;
+}
+
+#confirmation p:first-child {
+    margin-bottom: 20px;
 }

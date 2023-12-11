@@ -20,7 +20,7 @@
         <h3>1. No intentes coger a los gatos</h3>
         <p>Nuestros gatos son animales muy cariñosos y amigables, pero no olvides que tú eres el invitado en su casa. Disfruta de tu café y ellos se acercarán para que puedas acariciarlos.</p>
         <h3>2. No des de comer a los gatos</h3>
-        <p>Desde CatFé tratamos de que nuestros gatos disfruten de una vida sana y activa, por eso les comida adecuada a su peso y características individuales.</p>
+        <p>Desde CatFé tratamos de que nuestros gatos disfruten de una vida sana y activa, por eso les damos comida adecuada a su peso y características individuales.</p>
         <h3>3. Fotos sin flash</h3>
         <p>Nuestros gatos son preciosos, lo sabemos, tómate una foto con ellos! Sin embargo, el flash es un elemento que puede estresarles y asustarles. Evítalo en todo momento.</p>
         <h3>4. No molestes a los gatos que están comiendo</h3>
@@ -59,7 +59,58 @@
         <form id="form-asistentes"></form>
         <form id="form-fecha"></form>
         <form id="form-informacion-personal"></form>
-        <form id="form-pago"></form>
+        <form id="form-pago" class="ItemContainer">
+            <header>Pago</header>
+            <div class="ItemContainerContent">
+                <div class="ItemLabelContainer">
+                    <div class="Item">
+                        <label id="precio-label" class="ItemLabel" for="precio-output">Total</label>
+                        <output name="precio-output" id="precio-output">-,-- €</output>
+                    </div>
+                </div>
+                <div id="payment-method-item" class="ItemLabelContainer">
+                    <label id="payment-method-label" class="ItemLabel" for="payment-method-input">Método de pago <span>*</span></label>
+                    <div id="payment-method-input-container">
+                        <input type="radio" id="en-sitio" name="payment-method" value="on-site" onclick="$('.CardPayment').slideUp()">
+                        <label for="en-sitio">
+                            <img src="image/map_icon.png" alt="Map icon">
+                            En sitio
+                        </label>
+                        <input type="radio" id="tarjeta" name="payment-method" value="credit-card" onclick="$('.CardPayment').slideDown()">
+                        <label for="tarjeta">
+                            <img src="image/credit_card_icon.png" alt="Credit card icon">
+                            Tarjeta
+                        </label>
+                    </div>
+                </div>
+                <div id="card-number-item" class="ItemLabelContainer CardPayment">
+                    <label id="card-number-label" class="ItemLabel" for="card-number-input">Número de tarjeta <span>*</span></label>
+                    <div id="card-number-input-container" class="Item FixedSize">
+                        <input type="text" id="card-number-input" class="ItemText" name="card-number-input" placeholder="1234 5678 1234 5678">
+                    </div>
+                </div>
+                <div id="expiry-date-item" class="ItemLabelContainer CardPayment">
+                    <label id="expiry-date-label" class="ItemLabel" for="expiry-date-input">Fecha de expiración <span>*</span></label>
+                    <div id="expiry-date-input-container" class="Item FixedSize">
+                        <input type="text" id="expiry-date-input" class="ItemText" name="expiry-date-input" placeholder="MM/AA">
+                    </div>
+                </div>
+                <div id="cvc-item" class="ItemLabelContainer CardPayment">
+                    <label id="cvc-label" class="ItemLabel" for="cvc-input">CVC <span>*</span></label>
+                    <div id="cvc-input-container" class="Item FixedSize">
+                        <input type="text" id="cvc-input" class="ItemText" name="cvc-input" placeholder="CVC">
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="SplitContainer"><div>Continuar</div><div>🡢</div></button>
+        </form>
+        <div id="confirmation" class="ItemContainer">
+            <header>Confirmación</header>
+            <div class="ItemContainerContent">
+                <p>¡Reserva realizada con éxito!</p>
+                <p>Se le ha enviado un email con el resguardo de la operación</p>
+            </div>
+        </div>
         </div>
     </div>
     </main>
@@ -79,3 +130,5 @@
     <script src="script/reserva.js"></script> 
 </body>
 </html>
+
+
