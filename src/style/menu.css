@@ -175,14 +175,15 @@ html {
             .result > .title {
                 align-items: center;
                 flex: 1 1 auto;
+                display: flex;
             }
                 .result > .title > p {
                     height: 100%;
-                    padding: 20px 20px 20px 0;
-                    font-size: 1.7em;
+                    padding: 20px 20px 20px 5%;
+                    font-size: 2em;
                     font-weight: bold;
                 }
-                .result > .title > .sum {}
+                .result > .title > .sum { color: #6c461a;}
                     #sum-am, .sum > p {
                         text-align: right;
                         padding-right: 0;
@@ -195,6 +196,8 @@ html {
             #list-prods {
                 flex: 3 1 auto;
                 padding: 20px;
+                overflow: auto;
+                max-height: 70vh;
             }
 
                 #list-prods > .preview {
@@ -202,22 +205,30 @@ html {
                     border: lightgrey 3px solid;
                     border-radius: 20px;
                     margin-bottom: 20px;
+                    display: flex;
                 }
-                    .preview > .title {}
+                    .preview > .title {
+                        align-items: center;
+                        display: flex;
+                    }
                         .preview > .title > .t {
                             font-weight: bold;
-                            font-size: 1.2em;
+                            font-size: 1.3em;
                             justify-content: center;
-                            padding-right: 0;
+                            padding: 5px 0 5px 5px;
                         }
                         .preview > .title > .p {
                             text-align: left;
                             padding-left: 0;
+                            margin-top: 15px;
                             color: #6c461a;
                         }
-                    .preview > .price {}
+                    .preview > .price {
+                        display: flex;
+                        align-items: center;
+                    }
                         .preview > .price > .x {
-                            text-align: right;
+                            text-align: center;
                             padding-right: 0;
                         }
                         .preview > .price > .subtotal {
@@ -231,6 +242,7 @@ html {
             }
                 .order > .subtotal {
                     font-weight: bold;
+                    font-size: 2em;
                 }
                     .order > .subtotal > p {
                         text-align: left;

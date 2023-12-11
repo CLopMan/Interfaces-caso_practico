@@ -653,9 +653,9 @@ function ChangeState(state) {
             "                                        <p>Tarta de Queso</p>\n" +
             "\n" +
             "                                        <div class=\"ammount\">\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Tarta de Queso\",15,Number(document.getElementById(\"ammount-16\").innerText) -1)'>-</button>\n" +
+            "                                            <button class=\"but\" onclick='addProduct(\"Tarta de Queso\",16,Number(document.getElementById(\"ammount-16\").innerText) -1)'>-</button>\n" +
             "                                            <p id=\"ammount-16\">0</p>\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Tarta de Queso\",15,Number(document.getElementById(\"ammount-16\").innerText) +1)'>+</button>\n" +
+            "                                            <button class=\"but\" onclick='addProduct(\"Tarta de Queso\",16,Number(document.getElementById(\"ammount-16\").innerText) +1)'>+</button>\n" +
             "                                        </div>\n" +
             "                                    </div>\n" +
             "\n" +

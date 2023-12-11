@@ -47,12 +47,12 @@ class ShoppingCart {
             if (product.name !== "" && product.cantidad > 0) {
                 listDiv.innerHTML += "<div class=\"preview row\">\n" +
                     "                            <div class=\"title row col-6\">\n" +
-                    "                                <p class=\"t col-6\">"+product.name+"</p>\n" +
-                    "                                <p class=\"p col-6\">"+this.prices[i]+"€</p>\n" +
+                    "                                <p class=\"t col-9\">"+product.name+"</p>\n" +
+                    "                                <p class=\"p col-3\">"+this.prices[i]+"€</p>\n" +
                     "                            </div>\n" +
                     "                            <div class=\"price row col-6\">\n" +
-                    "                                <p class=\"x col-6\">x"+product.cantidad+"</p>\n" +
-                    "                                <p class=\"subtotal col-6\">"+truncar(this.sums[i],2)+"€</p>\n" +
+                    "                                <p class=\"x col-5\">x"+product.cantidad+"</p>\n" +
+                    "                                <p class=\"subtotal col-7\">"+truncar(this.sums[i],2)+"€</p>\n" +
                     "                            </div>\n" +
                     "                        </div>";
             }
