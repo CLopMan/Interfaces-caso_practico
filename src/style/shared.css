@@ -90,6 +90,7 @@ button, select {
 input, textarea {
     background-color: transparent; 
     border: transparent;
+    cursor: pointer;
 }
 
 input::placeholder, textarea::placeholder {
@@ -239,12 +240,14 @@ form.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel > 
     height: 70px;
 }
 
-.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item > label { 
-    flex-grow: 1;
+.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item > label,
+.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item > output { 
     font-family: Inter;
     font-size: 20px;
     font-weight: bold;
 }
+
+.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item > label { flex-grow: 1; }
 
 .ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item > textarea {
     min-height: 50px;
