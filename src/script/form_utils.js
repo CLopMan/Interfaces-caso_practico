@@ -4,20 +4,21 @@
  * @param {{name: string, valid: Class}[]} validation Array with the field name and validation class
  * @param {Class} serializarion Serialization class for the result
  * @param {boolean} alert_ok Whether to display an alert message if successful
- * @returns {boolean} Whether the validation succeeded or not
+ * @returns {object=} The validated object
  * @public
  */
 function validate_form(form, validation, serialization, alert_ok) {
     try {
         // Validates the data and stores it on a cookie
-        document.cookie = new serialization(...validation.map(field => new field.valid(form[field.name].value))).serialize();
+        let result = new serialization(...validation.map(field => new field.valid(form[field.name].value)))
+        document.cookie = result.serialize();
         // Shows a message and clears the form
         if (alert_ok) { alert("Ok"); }
         clear_form(form);
-        return true
+        return result
     } catch (err) { // If there was any validation error, display an error message
         alert("Error de validación: " + err);
-        return false
+        return null
     }
 }
 
@@ -94,13 +95,14 @@ function generate_form(elem, title, fields, next) {
     if (!next) { return; }
     form.append(`<button type="button" class="SplitContainer"><div>${next.name}</div><div>🡢</div></button>`);
     form.children("button").click(() => {
-        if (validate_form(
+        let result = validate_form(
             document.forms[form.attr("id")],
             fields.map(x => {return {valid: x.valid, name: `${x.name}-input`}}),
             next.serialize,
             next.alert_ok
-        )) {
-            next.callback();
+        )
+        if (result !== null) {
+            next.callback(result);
         }
     })
 }
