@@ -1,16 +1,19 @@
 #reserve-window {
-    display: grid;
-    grid-template-columns: 45% 55%;
-    justify-content: space-between;
+    display: flex;
+    flex-flow: row;
     padding: 0;
-    width: 60%;
+    max-width: 1000px;
     margin: auto;
     margin-top: 30px;
     margin-bottom: 60px;
 }
 
+#menu {
+    flex: 0 1 60%;
+}
+
 #progress {
-    height: 100%;
+    flex: 0 1 40%;
     background-color: var(--marron-base);
     border: none;
 }
@@ -26,11 +29,15 @@
     font-weight: bold;
 }
 
+#progress .SplitContainer > .ProgressIcon {
+    flex-shrink: 0;
+}
+
 .ProgressIcon {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-
+    margin-left: 5px;
     font-size: 24px;
 
     border: 2px solid rgba(0, 0, 0, 0.06);
@@ -46,8 +53,8 @@
 }
 
 form, #confirmation {
-    float: right;
     border: none !important;
+    height: 100%;
 }
 
 form input[type="radio"] {
@@ -84,12 +91,15 @@ form input[type="radio"] {
 }
 
 #expiry-date-item {
-    width: 67%;
+    flex: 1 1 65%;
+}
+
+#expiry-date-label {
+    white-space: nowrap;
 }
 
 #cvc-item {
-    width: 33%;
-    float: right;
+    flex: 1 1 35%;
 }
 
 #confirmation > .ItemContainerContent {
@@ -106,4 +116,11 @@ form input[type="radio"] {
 
 #confirmation p:first-child {
     margin-bottom: 20px;
+}
+
+/* Tablet/mobile version */
+@media screen and (max-width: 768px) {
+    #reserve-window {
+        flex-flow: column;
+    }
 }
