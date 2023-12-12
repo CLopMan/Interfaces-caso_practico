@@ -73,7 +73,7 @@ function generate_form(elem, title, fields, next) {
         content.append(`
         <div id="${field.name}-item" class="ItemLabelContainer">
             ${field.hide_name? "" : `<label id="${field.name}-label" class="ItemLabel" for="${field.name}-input">${field.name} <span>*</span></label>`}
-            <div id="${field.name}-input-container" class="Item ${field.type === "textarea"? "" : "FixedSize"} ${field.type === "select"? "select" : ""}">
+            <div id="${field.name}-input-container" class="Item ${field.type === "textarea"? "ResizableHeight" : ""} ${field.type === "select"? "select" : ""}">
                 ${generate_form_element(field)}
             </div>
         </div>
