@@ -192,7 +192,6 @@ nav > * {
     border: 2px solid var(--bordes);
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
 .ItemContainer > header {
@@ -277,6 +276,8 @@ form.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel > 
     border: 2px solid rgba(0, 0, 0, 0.06);
     background: var(--page-bg); 
 }
+
+.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item > button.NumberButton:first-of-type { margin-left: 5px; }
 
 form.ItemContainer input[type="number"] {
     -webkit-appearance: textfield;
