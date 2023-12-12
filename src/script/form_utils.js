@@ -14,7 +14,6 @@ function validate_form(form, validation, serialization, alert_ok) {
         document.cookie = result.serialize();
         // Shows a message and clears the form
         if (alert_ok) { alert("Ok"); }
-        clear_form(form);
         return result
     } catch (err) { // If there was any validation error, display an error message
         alert("Error de validación: " + err);
@@ -103,6 +102,7 @@ function generate_form(elem, title, fields, next) {
         )
         if (result !== null) {
             next.callback(result);
+            clear_form(form);
         }
     })
 }
