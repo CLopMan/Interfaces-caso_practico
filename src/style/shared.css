@@ -176,6 +176,25 @@ nav > * {
     justify-content: center;
 }
 
+@media screen and (max-width: 1450px) {
+    nav > * {
+        font-size: 44px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    nav {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        grid-template-columns: auto;
+    }
+}
+
+
 /* Item container element */
 
 .ItemContainer {
