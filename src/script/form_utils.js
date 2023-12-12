@@ -4,15 +4,16 @@
  * @param {Object} form Form object
  * @param {{name: string, valid: Class}[]} validation Array with the field name and validation class
  * @param {Class} serializarion Serialization class for the result
+ * @param {boolean} [skip_serialize=false] Whether to store the validated object on a cookie or just return it
  * @param {boolean} [alert_ok=false] Whether to display an alert message if successful
  * @returns {Object|null} The validated object if the validation succeeded. The class will be the one passed as `serialization`
  * @public
  */
-function validate_form(form, validation, serialization, alert_ok) {
+function validate_form(form, validation, serialization, skip_serialize, alert_ok) {
     try {
         // Validates the data and stores it on a cookie
         let result = new serialization(...validation.map(field => new field.valid(form[field.name].value)))
-        document.cookie = result.serialize();
+        if (!skip_serialize) { document.cookie = result.serialize(); }
         // Shows a message and clears the form
         if (alert_ok) { alert("Ok"); }
         return result
@@ -94,7 +95,8 @@ function generate_form_element(field) {
  * @param {string} next.name Name/Text of the button
  * @param {Class} next.serialize Serialization class for the form
  * @param {formValidationCallback} next.callback Callback function to trigger after a correct validation
- * @param {boolean=} [next.alert_ok=false] Whether to display an alert message after a correct validation
+ * @param {boolean} [skip_serialize=false] Whether to store the validated object on a cookie or not
+ * @param {boolean} [next.alert_ok=false] Whether to display an alert message after a correct validation
  * @public
  */
 function generate_form(elem, title, fields, next) {
@@ -132,6 +134,7 @@ function generate_form(elem, title, fields, next) {
             document.forms[form.attr("id")],
             fields.map(x => {return {valid: x.valid, name: `${x.name}-input`}}),
             next.serialize,
+            next.skip_serialize,
             next.alert_ok
         )
         if (result !== null) {
