@@ -10,7 +10,7 @@ CatFe
 | Estructura básica HTML | Sin empezar | Todos         | Html básico                        |
 | home                   | Sin empezar | Paula         | **Html** + **css** + js            |
 | Actividades            | Sin empezar | Paula         | **Html** + **css**                 |
-| Reserva                | Sin empezar | Álvaro        | **Html** + **css** + js            |
+| Reserva                | Terminado   | Álvaro        | **Html** + **css** + js            |
 | Pedido + Menú          | Sin empezar | Adri          | **Html** + **css** + **js**        |
 | Contactanos            | Sin empezar |               | **Html** + **css** + js            |
 | Gatos                  | Sin empezar |               | **Html** + **css** + js[^1]        |
