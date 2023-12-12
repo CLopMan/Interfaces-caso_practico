@@ -1,10 +1,11 @@
 /**
- * Validates and stores the data of the register form
- * @param {object} form Form object
+ * Validates and stores the data of a form
+ *
+ * @param {Object} form Form object
  * @param {{name: string, valid: Class}[]} validation Array with the field name and validation class
  * @param {Class} serializarion Serialization class for the result
- * @param {boolean} alert_ok Whether to display an alert message if successful
- * @returns {object=} The validated object
+ * @param {boolean} [alert_ok=false] Whether to display an alert message if successful
+ * @returns {Object|null} The validated object if the validation succeeded. The class will be the one passed as `serialization`
  * @public
  */
 function validate_form(form, validation, serialization, alert_ok) {
@@ -23,7 +24,8 @@ function validate_form(form, validation, serialization, alert_ok) {
 
 /**
  * Clears a form
- * @param {object} form Form object
+ *
+ * @param {Object} form Form object
  * @public
  */
 function clear_form(form) {
@@ -32,6 +34,26 @@ function clear_form(form) {
     }
 }
 
+
+/**
+ * Form field parameters
+ *
+ * @typedef {Object} FieldParameters
+ * @property {string} name Name/ID of the field
+ * @property {Class} valid Validation class of the field
+ * @property {string} placeholder Placeholder of the field
+ * @property {boolean} [hide_name=false] Whether to hide the label of the field
+ * @property {string} [type=text] Type of the field. Can be any valid HTML `input` tag type value, or `textarea`
+ * @property {string[]} [options] If the type of the object is `select`, contains the available options
+ */
+
+/**
+ * Generates the HTML code for a form field with the given parameters
+ *
+ * @param {FieldParameters} field Parameters of the field
+ * @returns {string} The generated HTML code
+ * @public
+ */
 function generate_form_element(field) {
     let attrs = `id="${field.name}-input" class="ItemText ${field.type === "date"? "datepicker" : ""} ${field.type === "time"? "timepicker" : ""}" name="${field.name}-input" placeholder="${field.placeholder}"`
     if (field.type === "textarea") {
@@ -56,11 +78,23 @@ function generate_form_element(field) {
 }
 
 /**
+ * Function called after correctly validating a form
+ *
+ * @callback formValidationCallback
+ * @param {Object} Validated form object
+ */
+
+/**
  * Generates a form with the given fields
+ *
  * @param {string} form Form ID of the form in which to include the fields, as a CSS selector
  * @param {string} title Form title. Can include HTML
- * @param {{name: string, valid: Class, placeholder: string, hide_name: boolean=, type: string=}[]} fields Array with the field information (name/ID, validation class, placeholder text, whether to hide the label, and the `input` tag type (can additionally be `textarea` for multiline comments))
- * @param {{name: string, serialize: Class, callback: function, alert_ok: boolean=}} [next] Content, serialization class, callback of the next button, and whether to show an alert message if successful
+ * @param {FieldParameters[]} fields Array with the field parameters
+ * @param {Object} [next] Next button parameters. If not specified, no next button will be added
+ * @param {string} next.name Name/Text of the button
+ * @param {Class} next.serialize Serialization class for the form
+ * @param {formValidationCallback} next.callback Callback function to trigger after a correct validation
+ * @param {boolean=} [next.alert_ok=false] Whether to display an alert message after a correct validation
  * @public
  */
 function generate_form(elem, title, fields, next) {
