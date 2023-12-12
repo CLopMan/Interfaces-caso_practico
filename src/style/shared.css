@@ -292,6 +292,7 @@ form.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel > 
     border-radius: 50%;
     border: 2px solid rgba(0, 0, 0, 0.06);
     background: var(--page-bg); 
+    flex-shrink: 0;
 }
 
 .ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item > button.NumberButton:first-of-type { margin-left: 5px; }
