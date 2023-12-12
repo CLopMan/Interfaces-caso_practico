@@ -5,6 +5,7 @@
     <title>Menú y Pedidos</title>
     <link rel="stylesheet" href="style/shared.css">
     <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/pedido.css">
 </head>
 <body onload="changeSection('menu');ChangeState(1) ">
 
@@ -75,7 +76,7 @@
                             <p id="order-total" class="col-6">0.00€</p>
                         </div>
 
-                        <button onclick="changeSection('pedido')">Revisar pedido y pagar</button>
+                        <button onclick="changeSection('pedido');changeStep(1)">Revisar pedido y pagar</button>
                     </div>
                 </aside>
 
@@ -87,6 +88,69 @@
         <!-- Order Content -->
         <section id="pedido">
 
+            <!-- División para la barra de progreso -->
+            <div class="progress">
+                <div id="revission" class="circle">
+                    <p>Revisión del pedido</p>
+                </div>
+                <div id="t-1" class="trans"></div>
+                <div id="login" class="circle">
+                    <p>Login</p>
+                </div>
+                <div id="t-2" class="trans"></div>
+                <div id="shipment" class="circle">
+                    <p>Dirección y envío</p>
+                </div>
+                <div id="t-3" class="trans"></div>
+                <div id="payment" class="circle">
+                    <p>Pago</p>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <section id="step">
+
+                <!-- Sección de Carrito y resumen de pedido -->
+                <div class="result col-12">
+
+                    <div id="list-prods-order">
+                        <!-- List of products added dinamically with javascript -->
+
+                    </div>
+
+                    <div class="order">
+
+                        <div class="subtotal row">
+                            <p class="col-6">Subtotal: </p>
+                            <p id="order-total-prev" class="col-6">0.00€</p>
+                        </div>
+
+                        <button>Iniciar sesión</button>
+                    </div>
+                </div>
+
+                <!-- Login/Register Formulary -->
+                <div class="login hidden">
+
+                </div>
+
+                <!-- Input of Sending adress and confirmation -->
+                <div class="sending hidden">
+
+                </div>
+
+                <!-- Payment formulary -->
+                <div class="payment hidden">
+
+                </div>
+
+                <!-- Idle section for finishing the shipment -->
+                <div class="success hidden">
+
+                </div>
+            </section>
 
 
         </section>

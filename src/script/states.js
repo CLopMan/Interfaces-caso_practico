@@ -834,3 +834,102 @@ function updateSection(num){
         updateProduct(sectionInd)
     }
 }
+
+function changeStep(step){
+    let progressBar = [document.getElementById("revission"), document.getElementById("t-1"),
+        document.getElementById("login"), document.getElementById("t-2"),
+        document.getElementById("shipment"), document.getElementById("t-3"), document.getElementById("payment")
+    ]
+
+    let stepFrame = document.getElementById("step")
+    let frames = [stepFrame.getElementsByClassName("result")[0], stepFrame.getElementsByClassName("login")[0],
+        stepFrame.getElementsByClassName("sending")[0],stepFrame.getElementsByClassName("payment")[0],
+        stepFrame.getElementsByClassName("success")[0]
+    ]
+
+
+    switch (step){
+        case 1:
+            progressBar[0].style.backgroundColor = "#6c461a";
+            progressBar[0].style.color = "#ffffff";
+            for (let i = 1; i < progressBar.length; i++) {
+                progressBar[i].style.color = "#000000";
+                progressBar[i].style.backgroundColor = "lightgray";
+            }
+
+            for (let i = 0; i < frames.length; i++) {
+                if (i === 0){
+                    frames[i].classList.remove("hidden")
+                } else {
+                    frames[i].classList.add("hidden")
+                }
+            }
+            break
+        case 2:
+            for (let i = 0; i < progressBar.length; i++) {
+                if (i <= 2){
+                    progressBar[i].style.backgroundColor = "#6c461a";
+                    progressBar[i].style.color = "#ffffff";
+                } else {
+                    progressBar[i].style.color = "#000000";
+                    progressBar[i].style.backgroundColor = "lightgray";
+                }
+
+            }
+
+            for (let i = 0; i < frames.length; i++) {
+                if (i === 1){
+                    frames[i].classList.remove("hidden")
+                } else {
+                    frames[i].classList.add("hidden")
+                }
+            }
+            break
+        case 3:
+            for (let i = 0; i < progressBar.length; i++) {
+                if (i <= 4){
+                    progressBar[i].style.backgroundColor = "#6c461a";
+                    progressBar[i].style.color = "#ffffff";
+                } else {
+                    progressBar[i].style.color = "#000000";
+                    progressBar[i].style.backgroundColor = "lightgray";
+                }
+
+            }
+            for (let i = 0; i < frames.length; i++) {
+                if (i === 2){
+                    frames[i].classList.remove("hidden")
+                } else {
+                    frames[i].classList.add("hidden")
+                }
+            }
+            break
+        case 4:
+            for (let i = 0; i < progressBar.length; i++) {
+                progressBar[i].style.backgroundColor = "#6c461a";
+                progressBar[i].style.color = "#ffffff";
+            }
+
+            for (let i = 0; i < frames.length; i++) {
+                if (i === 3){
+                    frames[i].classList.remove("hidden")
+                } else {
+                    frames[i].classList.add("hidden")
+                }
+            }
+            break
+        case 5:
+            for (let i = 0; i < progressBar.length; i++) {
+                progressBar[i].style.backgroundColor = "#6c461a";
+                progressBar[i].style.color = "#ffffff";
+            }
+            for (let i = 0; i < frames.length; i++) {
+                if (i === 4){
+                    frames[i].classList.remove("hidden")
+                } else {
+                    frames[i].classList.add("hidden")
+                }
+            }
+            break
+    }
+}

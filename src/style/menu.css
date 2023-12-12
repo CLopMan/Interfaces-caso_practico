@@ -89,10 +89,9 @@ html {
                         overflow: hidden;
                         border-top-left-radius: 20px;
                         border-top-right-radius: 20px;
-                        height: 250px;
+                        max-height: 250px;
                     }
                         .prev > img {
-                            transform: translateY(-90px);
                             height: auto;
                             width: 100%;
                             object-fit: cover;
@@ -164,7 +163,7 @@ html {
                                 color: grey;
                             }
 
-        .prodSec > .result {
+        .result {
             height: 100%;
             margin-top: 15px;
             background-color: #f9f8f6;
@@ -243,6 +242,7 @@ html {
                 .order > .subtotal {
                     font-weight: bold;
                     font-size: 2em;
+                    border: red 3px solid;
                 }
                     .order > .subtotal > p {
                         text-align: left;
@@ -251,7 +251,7 @@ html {
                         text-align: right;
                     }
 
-                .order > button {
+                .prodSec > .result > .order > button {
                     width: 100%;
                     margin-top: 20px;
                     background-color: #6c461a;

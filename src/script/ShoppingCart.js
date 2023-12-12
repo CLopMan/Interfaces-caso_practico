@@ -34,7 +34,20 @@ class ShoppingCart {
     }
     showProds(){
         let listDiv = document.getElementById("list-prods");
+        let listOrder = document.getElementById("list-prods-order")
+        let collectionImages = ["/src/image/floatingcoffee.png","/src/image/cappuccino.png",
+            "/src/image/latte_macchiato.png", "/src/image/espresso.png",
+            "/src/image/fluffcoffee.png", "/src/image/donutcat.png",
+            "/src/image/cruasan.png", "/src/image/840_560.jpg",
+            "/src/image/churro.jpg", "/src/image/Orangejuice.jpg",
+            "/src/image/apple-juice-recipe.jpg", "/src/image/Mambo_Triturar_Piñacolada_RRSS.jpg",
+            "/src/image/HEADERkuroneko_halloween.jpg", "/src/image/05COOKING-TIRAMISU1-threeByTwoMediumAt2X-v2.jpg",
+            "/src/image/6d304afefe086879df26cb564115b39d.jpg", "/src/image/nc-13.webp",
+            "/src/image/catcookie.png", "/src/image/kitty-cookies4-895x500.jpg",
+            "/src/image/images.jpeg"
+        ]
         listDiv.innerHTML = "";
+        listOrder.innerHTML = "";
 
         let truncar = (num,dec) => {
             let s = num.toString()
@@ -51,6 +64,20 @@ class ShoppingCart {
                     "                                <p class=\"p col-3\">"+this.prices[i]+"€</p>\n" +
                     "                            </div>\n" +
                     "                            <div class=\"price row col-6\">\n" +
+                    "                                <p class=\"x col-5\">x"+product.cantidad+"</p>\n" +
+                    "                                <p class=\"subtotal col-7\">"+truncar(this.sums[i],2)+"€</p>\n" +
+                    "                            </div>\n" +
+                    "                        </div>";
+
+                listOrder.innerHTML += "<div class=\"preview row\">\n" +
+                    "                            <div class=\"image-prev\">\n" +
+                    "                                <img alt=\"Image Prev\" src="+collectionImages[i]+">\n" +
+                    "                            </div>\n" +
+                    "                            <div class=\"title col-7\">\n" +
+                    "                                <p class=\"t\">"+product.name+"</p>\n" +
+                    "                                <p class=\"p\">"+this.prices[i]+"€</p>\n" +
+                    "                            </div>\n" +
+                    "                            <div class=\"price row col-3\">\n" +
                     "                                <p class=\"x col-5\">x"+product.cantidad+"</p>\n" +
                     "                                <p class=\"subtotal col-7\">"+truncar(this.sums[i],2)+"€</p>\n" +
                     "                            </div>\n" +
@@ -77,6 +104,7 @@ class ShoppingCart {
     }
     updateTotalAmmount(ind,cantidad){
         let result = document.getElementById("order-total")
+        let res_prod = document.getElementById("order-total-prev")
 
         this.updateSum(ind,cantidad)
 
@@ -92,6 +120,7 @@ class ShoppingCart {
             return Number(numStr)
         }
         result.innerText = String(truncar(totalPrice,2))+"€"
+        res_prod.innerText = String(truncar(totalPrice,2))+"€"
     }
 
     updateTotalQuantity(){
