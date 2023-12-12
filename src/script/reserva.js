@@ -30,7 +30,7 @@ function next_step(prev_step, next_step) {
     next.addClass("Current");
     prev.addClass("Completed");
     prev.text("✓");
-    $(`#form-${prev_step}`).fadeOut("slow", () => { $(`#form-${next_step}`).fadeIn(); });
+    $(`#form-${prev_step}`).slideUp("slow", () => { $(`#form-${next_step}`).slideDown(); });
 }
 
 generate_form(
@@ -91,7 +91,7 @@ $("#form-pago").children("button").click(() => {
             Test,
         )) { return; }
     }
-    $("#form-pago").fadeOut("slow", () => { $("#confirmation").fadeIn(); });
+    $("#form-pago").slideUp("slow", () => { $("#confirmation").slideDown(); });
     $("#pago > .ProgressIcon").removeClass("Current").addClass("Completed").text("✓");
 })
 
