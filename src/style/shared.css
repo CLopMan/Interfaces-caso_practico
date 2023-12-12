@@ -154,7 +154,7 @@ body > header {
     padding-bottom: 15px;
 }
 
-nav {
+#nav-menu {
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: space-evenly;
@@ -167,7 +167,7 @@ nav {
     z-index: 90;
 }
 
-nav > * {
+#nav-menu > * {
     color: #000;
     font-family: Newsreader;
     font-size: 64px;
@@ -177,23 +177,22 @@ nav > * {
 }
 
 @media screen and (max-width: 1450px) {
-    nav > * {
+    #nav-menu > * {
         font-size: 44px;
     }
 }
 
 @media screen and (max-width: 1050px) {
-    nav {
+    #nav-menu {
         grid-template-columns: auto auto;
     }
 }
 
 @media screen and (max-width: 768px) {
-    nav {
+    #nav-menu {
         grid-template-columns: auto;
     }
 }
-
 
 /* Item container element */
 
