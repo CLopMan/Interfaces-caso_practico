@@ -1,32 +1,245 @@
+/* General */
+
 * {
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
-  }
-  
-  .row::after {
+}
+
+.row::after {
     content: "";
     clear: both;
     display: table;
-  }
-  
-  [class*="col-"] {
+}
+
+[class*="col-"] {
     float: left;
     padding: 15px;
-  }
-  
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
-  
-  html {
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+html {
     font-family: "Arial Sans", sans-serif;
-  }
-  
+}
+
+/* Colors used */
+:root {
+    --marron-base: #6C461A;
+    --producto-bg: #F9F8F6;
+    --bordes: #DDD8D1;
+    --page-bg: #EEEBE7;
+    --recuadros: #E6E6E6;
+    --verde-confirmar: #9ADE56;
+    --text: #000000;
+}
+
+body {
+    background-color: var(--page-bg);
+    color: var(--text);
+}
+
+main {
+    padding: 0 50px;
+}
+
+h1 {
+    border-bottom: 2px solid var(--marron-base);
+    padding-bottom: 10px;
+    font-family: Newsreader;
+    font-size: 64px;
+    font-weight: initial;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: initial;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: initial;
+}
+
+p {
+    font-size: 24px;
+    text-align: justify;
+    font-family: Newsreader;
+}
+
+button {
+    cursor: pointer;
+    border: transparent;
+}
+
+input, textarea {
+    background-color: transparent; 
+    border: transparent;
+}
+
+input::placeholder, textarea::placeholder {
+    opacity: 0.33;
+}
+
+textarea { resize: vertical; }
+
+/* Page header with logo */
+body > header {
+    border-bottom: 2px solid var(--bordes); 
+    height: 120px;
+    padding: 0 30px;
+}
+
+body > header > img {
+    height: 100%;
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: 600px) {
+    body > header > img { height: 80%; }
+}
+
+/* Navigation menu */
+
+#nav-button-container {
+    width: 80px;
+    height: 80px;
+}
+
+#nav-menu-button {
+    position: fixed;
+    z-index: 100;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--marron-base);
+    color: var(--recuadros);
+    font-size: 64px;
+    line-height: 0;
+    padding-bottom: 15px;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--page-bg);
+    z-index: 90;
+}
+
+nav > * {
+    color: #000;
+    font-family: Newsreader;
+    font-size: 64px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+/* Item container element */
+
+.ItemContainer {
+    width: 100%;
+    background-color: var(--producto-bg);
+    padding: 25px;
+    border-radius: 25px;
+    border: 2px solid var(--bordes);
+}
+
+.ItemContainer > header {
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.ItemContainer > .ItemContainerContent {
+    padding: 10px 0px 0px 0px;
+}
+
+.ItemContainer > .ItemContainerContent > .ItemLabelContainer {
+    padding: 15px 25px 0px 25px;
+    float: left;
+    width: 100%;
+}
+
+.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel {
+    font-family: Inter;
+    font-size: 22px;
+    margin-bottom: 10px;
+    display: inline-block
+}
+
+form.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel > span {
+    color: red;
+}
+
+.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item {
+    display: flex;
+    padding: 25px;
+    align-items: center; 
+    border-radius: 25px;
+    border: 2px solid var(--bordes);
+    background: #FFF; 
+}
+
+.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item.FixedSize {
+    height: 70px;
+}
+
+.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item > textarea {
+    min-height: 50px;
+}
+
+.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item > .ItemText {
+    font-family: Inter;
+    font-size: 20px;
+    width: 100%;
+}
+
+.ItemContainer > .ItemContainerContent::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.ItemContainer > button {
+    padding: 8px 24px; 
+    border-radius: 10px;
+    background-color: var(--marron-base);
+    margin-top: 25px;
+    color: var(--page-bg);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.ItemContainer > button > div:not(:first-child) { 
+    width: 32px;
+    font-size: 20px;
+    height: 32px;
+}
+
+/* Split container element: aligns the first element to the left and the second to the right, side by side */
+
+.SplitContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

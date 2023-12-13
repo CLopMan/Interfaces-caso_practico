@@ -1,0 +1,10 @@
+/* Múltiples columnas en el formulario */
+
+#Teléfono-item {
+    width: 50%;
+}
+
+#Contraseña-item {
+    width: 50%;
+    float: right;
+}

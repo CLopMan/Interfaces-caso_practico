@@ -1,0 +1,48 @@
+.est_title {
+    font-family: 'Serif';
+    font-size: 4vw;
+
+}
+
+#est_galeria {
+    padding: 1%;
+    width: 100%;
+    float:left;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+.est_img_gall {
+    width: 20%;
+    opacity: 60%;
+    margin-bottom: 2.5%;
+    margin-top: 2.5%;
+    cursor: pointer;
+}
+
+#img2 {
+    opacity: 100%;
+    width: 25%;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.est_text {
+    font-family: 'Serif';
+    font-size: 2.5vw;
+    margin:0%;
+    padding: 1%;
+    text-align: justify;
+}
+
+#who {
+    float:left;
+    width: 70%;
+    margin-top:2.5%;
+}
+
+#cuchara {
+    float:right;
+    margin: 2.5%;
+    width: 25%;
+}
