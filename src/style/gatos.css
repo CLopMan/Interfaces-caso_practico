@@ -3,30 +3,11 @@
     margin: 0%;
 }
 
-header {
-    height: 10vh;
-}
-
-#line {
-    height: 0px; 
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
-    border: 2px #6C461A solid;
-    padding: 0;
-    margin-left: 7%;
-}
-
-h1 {
-    margin-left: 7%;
-    font-size: 3vw;
-    font-weight: 400;
-    padding: 1%;
-}
-
 
 .gato {
     box-sizing: border-box;
     background: #F9F8F6;
-    height: 55vh;
+    height: 60vh;
     float: left;
     margin: 1% 0% 1% 5.9%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -37,7 +18,9 @@ h1 {
 .nombre_gato {
     text-align: center;
     background: none;
-    padding: 3%;
+    padding: 2%;
+    font-size: 2vw;
+    font-weight: 600;
 }
 
 .descripcion {
@@ -46,10 +29,12 @@ h1 {
     background: none;
     color:#6C461A;
     font-weight: 600;
+    font-size: 1.3vw;
 }
 
 .caracteristicas {
-    padding: 1%;
+    font-size: 1.4vw;
+    padding: 0.5%;
     text-align: center;
     background: none;
     color: #4F4F4F;
@@ -61,4 +46,59 @@ h1 {
     border-bottom: 1px #6C461A solid;
     object-fit: cover;
     border-radius: 9px 9px 0px 0px;
+}
+
+@media screen and (max-width: 900px) {
+    .col-3{
+        width: 40%;
+        height: 45vh;
+    }  
+
+    h1 {
+        font-size: 10vw;
+    }
+
+    .gato {
+        margin-top: 5% ;
+    }
+
+    .nombre_gato {
+        font-size: 200%;
+    }
+    
+    .descripcion {
+        font-size: 2.3vw;
+    }
+    
+    .caracteristicas {
+        font-size: 2vw;
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+    .col-3{
+        width: 90%;
+    }  
+
+    h1 {
+        font-size: 10vw;
+    }
+
+    .gato {
+        margin-top: 5% ;
+    }
+
+    .nombre_gato {
+        font-size: 200%;
+    }
+    
+    .descripcion {
+        font-size: 4.3vw;
+    }
+    
+    .caracteristicas {
+        font-size: 4vw;
+    }
 }
