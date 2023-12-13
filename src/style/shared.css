@@ -97,10 +97,11 @@ select {
     -webkit-appearance: none; /* safari */
 }
 
-.select {
+.dropdown {
     position: relative;
 }
-.select::after {
+
+.dropdown::after {
     content: "🮦";
     position: absolute;
     right: 25px;
@@ -241,7 +242,7 @@ form.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel > 
     color: red;
 }
 
-.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item {
+.Item {
     display: flex;
     padding: 0 25px 0;
     align-items: center; 
@@ -251,31 +252,30 @@ form.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel > 
     height: 70px;
 }
 
-.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item.ResizableHeight {
+.Item.ResizableHeight {
     height: unset;
 }
 
-.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item > label,
-.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item > output { 
+.Item > label, .Item > output { 
     font-family: Inter;
     font-size: 20px;
     font-weight: bold;
 }
 
-.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item > label { flex-grow: 1; }
+.Item > label { flex-grow: 1; }
 
-.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item > textarea {
+.Item > textarea {
     padding: 25px 0 25px;
     min-height: 150px;
 }
 
-.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item > .ItemText {
+.Item > .ItemText {
     font-family: Inter;
     font-size: 20px;
 }
 
-.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item > .ItemText:not([type="number"]):not(.NumberButton) { width: 100%; height: 100%; }
-.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item > input.ItemText[type="number"] {
+.Item > .ItemText:not([type="number"]):not(.NumberButton) { width: 100%; height: 100%; }
+.Item > input.ItemText[type="number"] {
     font-size: 16px;
     font-weight: bold;
     border-radius: 15px;
@@ -284,7 +284,7 @@ form.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel > 
     margin: 0 5px 0;
 }
 
-.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item > button.NumberButton {
+.Item > button.NumberButton {
     height: 25px;
     width: 25px;
     line-height: 0;
@@ -295,17 +295,17 @@ form.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel > 
     flex-shrink: 0;
 }
 
-.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item > button.NumberButton:first-of-type { margin-left: 5px; }
+.Item > button.NumberButton:first-of-type { margin-left: 5px; }
 
-form.ItemContainer input[type="number"] {
+.Item input[type="number"] {
     -webkit-appearance: textfield;
        -moz-appearance: textfield;
             appearance: textfield;
     text-align: center;
 }
 
-form.ItemContainer input[type=number]::-webkit-inner-spin-button, 
-form.ItemContainer input[type=number]::-webkit-outer-spin-button { 
+.Item input[type=number]::-webkit-inner-spin-button, 
+.Item input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none;
 }
 
