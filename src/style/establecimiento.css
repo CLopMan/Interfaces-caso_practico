@@ -1,5 +1,7 @@
 .est_title {
-    font-size: 70px;
+    font-family: 'Serif';
+    font-size: 4vw;
+
 }
 
 #est_galeria {
@@ -26,7 +28,11 @@
 }
 
 .est_text {
-    font-size: 50px;
+    font-family: 'Serif';
+    font-size: 2.5vw;
+    margin:0%;
+    padding: 1%;
+    text-align: justify;
 }
 
 #who {
