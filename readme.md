@@ -12,11 +12,11 @@ CatFe
 | Actividades            | Sin empezar | Paula         | **Html** + **css**                 |
 | Reserva                | Terminado   | Álvaro        | **Html** + **css** + js            |
 | Pedido + Menú          | Sin empezar | Adri          | **Html** + **css** + **js**        |
-| Contactanos            | Sin empezar |               | **Html** + **css** + js            |
+| Contactanos            | Terminado   | Álvaro        | **Html** + **css** + js            |
 | Gatos                  | Sin empezar |               | **Html** + **css** + js[^1]        |
-| Loacalización          | Responsive    | César         | Html + **css**                     |
+| Loacalización          | Responsive  | César         | Html + **css**                     |
 | Tarifas                | Sin empezar | Adri          | Html + **css**                     |
-| Establecimiento        | Responsive    | César         | Html + **css** + **js**            |
+| Establecimiento        | Responsive  | César         | Html + **css** + **js**            |
 | Utilizades             | Terminado   | Álvaro        | Headers, y demás cosas comunes     |
 
 [^1]: Agrandar la foto de un gato para poner más fotos (galería)
