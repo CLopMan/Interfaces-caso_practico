@@ -24,6 +24,10 @@
     margin-left:1%;
 }
 
+.img-list > img {
+    width: 125px;
+}
+
 #direccion {
     font-family: 'Serif';
     font-size: 2vw;
