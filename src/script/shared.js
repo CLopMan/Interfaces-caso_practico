@@ -1,7 +1,6 @@
 // Adds the header/navigation menu
-$("body").prepend(`<header>
-    CATfé
-    <img src="image 2.png" alt="CATfé logo">
+$("body").prepend(`<header class="SplitContainer">
+    <img src="./image/logo_menu.png" alt="CATfé logo">
     <div id="nav-button-container"><button type="button" id="nav-menu-button" onclick="toggle_menu()">☰</button></div>
 </header>
 <nav id="nav-menu">

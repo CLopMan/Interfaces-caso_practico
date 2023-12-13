@@ -96,25 +96,25 @@ textarea { resize: vertical; }
 
 /* Page header with logo */
 body > header {
-    color: var(--marron-base);
     border-bottom: 2px solid var(--bordes); 
-    font-size: 80px;
     height: 120px;
-    font-family: Newsreader;
-    line-height: 120px;
     padding: 0 30px;
+}
+
+body > header > img {
+    height: 100%;
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: 600px) {
+    body > header > img { height: 80%; }
 }
 
 /* Navigation menu */
 
 #nav-button-container {
-    float: right;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 100%;
     width: 80px;
-    top: 0px;
+    height: 80px;
 }
 
 #nav-menu-button {
@@ -241,10 +241,5 @@ form.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel > 
 .SplitContainer {
     display: flex;
     justify-content: space-between;
-}
-
-.SplitContainer > div {
-    display: flex;
     align-items: center;
-    justify-content: center;
 }
