@@ -261,6 +261,7 @@ html {
                     border: none;
                     box-shadow: 0 5px 7px 0 grey;
                     font-weight: bold;
+                    font-size: 1em;
                     cursor: pointer;
                 }
 

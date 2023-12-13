@@ -127,27 +127,81 @@
                             <p id="order-total-prev" class="col-6">0.00€</p>
                         </div>
 
-                        <button>Iniciar sesión</button>
+                        <button onclick="changeStep(2)">Iniciar sesión</button>
+                    </div>
+
+                    <div class="back">
+                        <button onclick="changeSection('menu')">Go Back</button>
                     </div>
                 </div>
 
                 <!-- Login/Register Formulary -->
-                <div class="login hidden">
-
+                <div class="login col-12">
+                    <div id="form-login" class="form">
+                        <!-- contenedor del formulario generado dinámicamente -->
+                    </div>
+                    <div class="back">
+                        <button onclick="changeStep(1)">Revisión de Pedido</button>
+                    </div>
                 </div>
 
-                <!-- Input of Sending adress and confirmation -->
-                <div class="sending hidden">
+                <!-- Input of Sending adresss and confirmation -->
+                <div class="sending col-12">
 
+                    <!-- Campo para introducir la calle -->
+                    <div id="form-sending" class="form">
+                        <label for="address">Dirección de Envío</label>
+                        <input id="address" type="text">
+                    </div>
+
+                    <!-- Container for adding shipment costs -->
+                    <div class="res-shipment">
+
+                    </div>
+
+                    <!-- Container for the back button -->
+                    <div class="back">
+                        <button onclick="changeStep(2)">Cambiar Usuario</button>
+                    </div>
                 </div>
 
                 <!-- Payment formulary -->
-                <div class="payment hidden">
+                <div class="payment col-12">
 
+                    <!-- Formulary of payment generated dynamically with JS -->
+                    <div id="form-payment" class="form">
+
+                    </div>
+
+                    <!-- Container for the back button -->
+                    <div class="back">
+                        <button onclick="changeStep(3)">Cambiar Dirección</button>
+                    </div>
                 </div>
 
                 <!-- Idle section for finishing the shipment -->
-                <div class="success hidden">
+                <div class="success col-12">
+
+                    <!-- Title container -->
+                    <div class="title">
+                        <p>Pedido Realizado con éxito!</p>
+                    </div>
+
+                    <!-- Body contnainer -->
+                    <div class="message">
+                        <p>Se ha enviado un email con el resguardo de la operación.</p>
+                        <p>Recibirá su comida en un máximo de 30 minutos.</p>
+                    </div>
+
+                    <!-- Gif container -->
+                    <div class="gif">
+
+                    </div>
+
+                    <!-- Container for the back button -->
+                    <div class="back">
+                        <button onclick="changeStep('menu')">Volver a la página de inicio</button>
+                    </div>
 
                 </div>
             </section>

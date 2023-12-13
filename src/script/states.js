@@ -859,12 +859,12 @@ function changeStep(step){
 
             for (let i = 0; i < frames.length; i++) {
                 if (i === 0){
-                    frames[i].classList.remove("hidden")
+                    frames[i].style.display = "block"
                 } else {
-                    frames[i].classList.add("hidden")
+                    frames[i].style.display = "none"
                 }
             }
-            break
+            break;
         case 2:
             for (let i = 0; i < progressBar.length; i++) {
                 if (i <= 2){
@@ -879,9 +879,10 @@ function changeStep(step){
 
             for (let i = 0; i < frames.length; i++) {
                 if (i === 1){
-                    frames[i].classList.remove("hidden")
+                    console.log("Show")
+                    frames[i].style.display = "block"
                 } else {
-                    frames[i].classList.add("hidden")
+                    frames[i].style.display = "none"
                 }
             }
             break
@@ -896,11 +897,12 @@ function changeStep(step){
                 }
 
             }
+
             for (let i = 0; i < frames.length; i++) {
                 if (i === 2){
-                    frames[i].classList.remove("hidden")
+                    frames[i].style.display = "block"
                 } else {
-                    frames[i].classList.add("hidden")
+                    frames[i].style.display = "none"
                 }
             }
             break
@@ -912,9 +914,9 @@ function changeStep(step){
 
             for (let i = 0; i < frames.length; i++) {
                 if (i === 3){
-                    frames[i].classList.remove("hidden")
+                    frames[i].style.display = "block"
                 } else {
-                    frames[i].classList.add("hidden")
+                    frames[i].style.display = "none"
                 }
             }
             break
@@ -923,11 +925,12 @@ function changeStep(step){
                 progressBar[i].style.backgroundColor = "#6c461a";
                 progressBar[i].style.color = "#ffffff";
             }
+
             for (let i = 0; i < frames.length; i++) {
                 if (i === 4){
-                    frames[i].classList.remove("hidden")
+                    frames[i].style.display = "block"
                 } else {
-                    frames[i].classList.add("hidden")
+                    frames[i].style.display = "none"
                 }
             }
             break
