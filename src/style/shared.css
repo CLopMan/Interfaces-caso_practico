@@ -101,6 +101,10 @@ select {
     position: relative;
 }
 
+.dropdown > *:first-child {
+    padding-right: 50px
+}
+
 .dropdown::after {
     content: "🮦";
     position: absolute;
