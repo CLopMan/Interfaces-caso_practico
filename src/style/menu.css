@@ -1,0 +1,270 @@
+.hidden {
+    display: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background-color: #eeebe7;
+}
+
+#menu {
+    width: 100%;
+    height: 300%;
+    align-items: center;
+}
+
+    #menu > .types {
+        display: flex;
+        flex-flow: row wrap;
+        padding: 20px 50px;
+    }
+
+        .types > .title {
+            flex: 1 1 auto;
+        }
+            .types > .title > p {
+                font-size: 2.5em;
+            }
+
+        .types > .buttons {
+            flex: 3 1 auto;
+            flex-flow: row wrap;
+            display: flex;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+
+            .but {
+                flex: 1 1 auto;
+                float: left;
+                padding: 5px 10px;
+                margin: 10px 20px;
+                border: none;
+                box-shadow: 0 5px 7px 0 grey;
+                font-weight: bold;
+                border-radius: 50px;
+                cursor: pointer;
+                background-color: #f9f8f6;
+
+            }
+
+            .but:hover {
+                background-color: lightgrey;
+            }
+
+    #menu > hr {
+        margin: 0 50px;
+        color: #6c461a;
+    }
+
+    .prodSec {
+        margin-top: 30px;
+        width: 100%;
+        height: auto;
+    }
+
+        .prodSec > .prodDiv {}
+
+            .prodDiv > .prods {
+                justify-content: space-between;
+                display: flex;
+                flex-flow: row wrap;
+                overflow: hidden;
+            }
+
+                .pr {
+                    display: flex;
+                    flex: 0 1 43%;
+                    flex-flow: column nowrap;
+                    background-color: #f9f8f6;
+                    border-radius: 20px;
+                    margin: 3%;
+                }
+                    .pr > .prev {
+                        flex: 3 1 auto;
+                        overflow: hidden;
+                        border-top-left-radius: 20px;
+                        border-top-right-radius: 20px;
+                        max-height: 250px;
+                    }
+                        .prev > img {
+                            height: auto;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+
+                    .pr > .content {
+                        margin-bottom: 10px;
+                        flex: 1 1 auto;
+                        display: flex;
+                        flex-flow: column nowrap;
+                    }
+                        .pr > .content > .ops {
+                            flex: 1 1 auto;
+                            display: flex;
+                            flex-flow: column nowrap;
+                        }
+                            .ops > .op {
+                                flex: 1 1 auto;
+                                display: flex;
+                                flex-flow: row wrap;
+                                align-items: center;
+                            }
+                                .op > p {
+                                    font-weight: bold;
+                                    font-size: 1.3em;
+                                    padding-left: 3.5%;
+                                    flex: 1 1 50%;
+                                }
+                                .op > .ammount {
+                                    flex: 1 1 50%;
+                                    display: flex;
+                                    align-items: center;
+                                }
+                                    .ammount > .but {
+                                        flex: 1 1 auto;
+                                        background-color: lightgrey;
+                                    }
+                                    .ammount > p {
+                                        flex: 3 1 auto;
+                                        text-align: center;
+                                        background-color: #f7f7f5;
+                                        border: lightgrey 2px solid;
+                                        border-radius: 10px;
+                                    }
+
+                            .ops > .price {
+                                flex: 1 1 auto;
+                                display: flex;
+                            }
+                                .ops > .price > p{
+                                    flex: 1 1 auto;
+                                    margin-left: 3.5%;
+                                }
+
+                                .ops > .price > .ingredients {
+                                    flex: 5 1 auto;
+                                }
+                                    .price > .ingredients > img {
+
+                                    }
+
+                        .pr > .content > .descr {
+                            flex: 1 1 auto;
+                            margin-top: 3.5%;
+                            margin-left: 3.5%;
+                        }
+                            .pr > .content > .descr > p {
+                                font-size: 0.8em;
+                                color: grey;
+                            }
+
+        .result {
+            height: 100%;
+            margin-top: 15px;
+            background-color: #f9f8f6;
+            border-radius: 20px;
+            display: flex;
+            flex-flow: column nowrap;
+        }
+            .result > .title {
+                align-items: center;
+                flex: 1 1 auto;
+                display: flex;
+            }
+                .result > .title > p {
+                    height: 100%;
+                    padding: 20px 20px 20px 5%;
+                    font-size: 2em;
+                    font-weight: bold;
+                }
+                .result > .title > .sum { color: #6c461a;}
+                    #sum-am, .sum > p {
+                        text-align: right;
+                        padding-right: 0;
+                    }
+                    .sum > p {
+                        padding-left: 5px;
+                        text-align: left;
+                    }
+
+            #list-prods {
+                flex: 3 1 auto;
+                padding: 20px;
+                overflow: auto;
+                max-height: 70vh;
+            }
+
+                #list-prods > .preview {
+                    background-color: #ffffff;
+                    border: lightgrey 3px solid;
+                    border-radius: 20px;
+                    margin-bottom: 20px;
+                    display: flex;
+                }
+                    .preview > .title {
+                        align-items: center;
+                        display: flex;
+                    }
+                        .preview > .title > .t {
+                            font-weight: bold;
+                            font-size: 1.3em;
+                            justify-content: center;
+                            padding: 5px 0 5px 5px;
+                        }
+                        .preview > .title > .p {
+                            text-align: left;
+                            padding-left: 0;
+                            margin-top: 15px;
+                            color: #6c461a;
+                        }
+                    .preview > .price {
+                        display: flex;
+                        align-items: center;
+                    }
+                        .preview > .price > .x {
+                            text-align: center;
+                            padding-right: 0;
+                        }
+                        .preview > .price > .subtotal {
+                            text-align: left;
+                            font-size: 1.5em;
+                            font-weight: bold;
+                        }
+
+            .result > .order {
+                flex: 1 1 auto;
+            }
+                .order > .subtotal {
+                    font-weight: bold;
+                    font-size: 2em;
+                    border: red 3px solid;
+                }
+                    .order > .subtotal > p {
+                        text-align: left;
+                    }
+                    #order-total {
+                        text-align: right;
+                    }
+
+                .prodSec > .result > .order > button {
+                    width: 100%;
+                    margin-top: 20px;
+                    background-color: #6c461a;
+                    color: #f9f8f6;
+                    padding: 20px;
+                    border-radius: 20px;
+                    border: none;
+                    box-shadow: 0 5px 7px 0 grey;
+                    font-weight: bold;
+                    font-size: 1em;
+                    cursor: pointer;
+                }
+
+#pedido {
+
+}
