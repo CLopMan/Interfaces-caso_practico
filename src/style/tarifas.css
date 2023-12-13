@@ -1,0 +1,181 @@
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 250vh;
+    background-color: #EEEBE7;
+}
+    .sec {
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 20px 60px 10px 60px;
+        flex-flow: column nowrap;
+        flex: 1 1 auto;
+
+        justify-content: center;
+        height: 20%;
+    }
+        .sec > .Title {
+            flex: 1 1 20%;
+            font-size: 3em;
+            display: flex;
+        }
+            .Title > p {
+                flex: 1 1 auto;
+                text-align: start;
+
+                align-self: flex-end;
+                height: 9vh;
+            }
+        .sec > hr {
+            color: #6C461A;
+            height: 2px;
+            width: 98%;
+        }
+        .sec > .Content {
+            display: flex;
+            flex: 1 1 80%;
+
+        }
+
+            .Content > ul {
+                flex: 1 1 auto;
+                width: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+            }
+                ul > li {
+                    padding: 20px 0 0 0;
+                    margin-left: 3vw;
+                    justify-content: center;
+                    flex: 1 1 auto;
+                }
+                ul > .Up {
+                    font-size: 2.5em;
+                }
+                ul > .Down {
+                    margin-left: 4vw;
+                    font-size: 1.5em;
+                }
+
+            .Content > .Packs {
+                flex: 1 1 auto;
+                background-color: #EEEBE7;
+                margin: 20px;
+                align-items: center;
+            }
+
+            .Content > .info {
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: center;
+            }
+                .Content > .info > p {
+                    flex: 1 1 auto;
+                    font-size: 2.7em;
+                    padding: 20px;
+                    justify-content: center;
+                }
+
+                .Content > .info > button {
+                    cursor: pointer;
+                    width: 25%;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 20px;
+                    background-color: #6C461A;
+                    font-weight: bold;
+                    font-size: 2em;
+                    color: white;
+                    align-self: end;
+                }
+
+            .Content > .img {
+                width: auto;
+                height: 100%;
+                display: flex;
+
+            }
+                .Content > .img > img {
+                    flex: 1 1 auto;
+                }
+
+                .Content > .Packs {
+                    margin-top: 40px;
+                }
+
+                .Packs > .Pack {
+                    background-color: #F9F8F6;
+                    border: grey 2px solid;
+                    height: 100%;
+                    margin: 0 4% 0 4%;
+                    border-radius: 30px;
+                    padding: 0;
+                    overflow: auto;
+                }
+
+                    .Pack > .head {
+                        width: 100%;
+                        height: 20%;
+                        background-color: #DDD8D1;
+                        border-top-right-radius: 30px;
+                        border-top-left-radius: 30px;
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                    }
+                        .Pack > .head > p {
+                            flex: 1 1 auto;
+                            font-weight: bold;
+                            font-size: 1.9em;
+                            text-shadow: darkgray 1px 2px 5px;
+                        }
+
+                    .Pack > .body {
+                        height: 80%;
+                    }
+
+                        .Pack > .body > .desciption {
+                            width: 100%;
+                            height: 25%;
+                            text-align: center;
+                            padding: 10px 30px;
+                            font-size: 0.9em;
+                        }
+
+                        .Pack > .body > .offers {
+                            height: 50%;
+                            overflow: auto;
+                            font-size: 1.3em;
+                        }
+                            .Pack > .body > .offers > p {
+                                padding: 0 20px;
+                                font-weight: bold;
+                            }
+                            .Pack > .body > .offers > ul {
+                                font-weight: bold;
+                                height: 80%;
+                            }
+                            .Pack > .body > .offers > ul > li {
+                                padding: 0 25px;
+                                margin: 5px 0;
+                            }
+
+
+                        .Pack > .body > .price {
+                            height: 25%;
+                            text-align: center;
+                        }
+                            .Pack > .body > .price > .ammount {
+                                height: 55%;
+                                font-size: 2em;
+                                font-weight: bold;
+                                color: #6C461A;
+                            }
+
+                            .Pack > .body > .price > .note {
+                                height: 45%;
+                                font-size: 0.9em;
+                            }
+
