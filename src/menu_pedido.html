@@ -1,25 +1,224 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú y Pedidos</title>
     <link rel="stylesheet" href="style/shared.css">
+    <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/pedido.css">
 </head>
-<body>
+<body onload="changeSection('menu');ChangeState(1) ">
+
+    <!-- Space for the header -->
+
     <main>
-    <h1>test</h1>
-    <h2>test test</h2>
-    <p>1</p>
-    <p>2</p>
-    <form id="form-register"></form>
+        <!-- Menú Content -->
+        <section id="menu">
+
+            <!-- Header for de subcategories -->
+            <header class="types">
+
+                <!-- Title division -->
+                <div class="title">
+                    <p>Menú</p>
+                </div>
+
+                <!-- Buttons division -->
+                <div class="buttons">
+                    <button class="but" onclick="ChangeState(1);updateSection(1)">Cafés</button>
+                    <button class="but" onclick="ChangeState(2);updateSection(2)">Bollería</button>
+                    <button class="but" onclick="ChangeState(3);updateSection(3)">Zumos</button>
+                    <button class="but" onclick="ChangeState(4);updateSection(4)">Tartas</button>
+                    <button class="but" onclick="ChangeState(5);updateSection(5)">Galletas</button>
+                </div>
+            </header>
+
+            <!-- Division line -->
+            <hr>
+
+            <section class="prodSec row">
+                <!-- Div for products. The products get appended dynamically with JS. -->
+                <div class="prodDiv col-8">
+
+                    <!-- Content for category "Cafes" -->
+
+                    <!-- Content for category "Bollería" -->
+
+
+                    <!-- Content for category "Zumos" -->
+
+                    <!-- Content for category "Tartas" -->
+
+                    <!-- Content for category "Galletas" -->
+
+                </div>
+
+                <!-- Sección de Carrito y resumen de pedido -->
+                <aside class="result col-3">
+
+                    <div class="title row">
+                        <p class="col-4">Carrito</p>
+
+                        <div class="sum col-8 row">
+                            <p id="sum-am" class="col-5">0</p>
+                            <p class="col-7"> productos</p>
+                        </div>
+                    </div>
+
+                    <div id="list-prods">
+                        <!-- List of products added dinamically with javascript -->
+                    </div>
+
+                    <div class="order">
+
+                        <div class="subtotal row">
+                            <p class="col-6">Subtotal: </p>
+                            <p id="order-total" class="col-6">0.00€</p>
+                        </div>
+
+                        <button onclick="changeSection('pedido');changeStep(1)">Revisar pedido y pagar</button>
+                    </div>
+                </aside>
+
+            </section>
+        </section>
+
+
+
+        <!-- Order Content -->
+        <section id="pedido">
+
+            <!-- División para la barra de progreso -->
+            <div class="progress">
+                <div id="revission" class="circle">
+                    <p>Revisión del pedido</p>
+                </div>
+                <div id="t-1" class="trans"></div>
+                <div id="login" class="circle">
+                    <p>Login</p>
+                </div>
+                <div id="t-2" class="trans"></div>
+                <div id="shipment" class="circle">
+                    <p>Dirección y envío</p>
+                </div>
+                <div id="t-3" class="trans"></div>
+                <div id="payment" class="circle">
+                    <p>Pago</p>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <section id="step">
+
+                <!-- Sección de Carrito y resumen de pedido -->
+                <div class="result col-12">
+
+                    <div id="list-prods-order">
+                        <!-- List of products added dinamically with javascript -->
+
+                    </div>
+
+                    <div class="order">
+
+                        <div class="subtotal row">
+                            <p class="col-6">Subtotal: </p>
+                            <p id="order-total-prev" class="col-6">0.00€</p>
+                        </div>
+
+                        <button onclick="changeStep(2)">Iniciar sesión</button>
+                    </div>
+
+                    <div class="back">
+                        <button onclick="changeSection('menu')">Go Back</button>
+                    </div>
+                </div>
+
+                <!-- Login/Register Formulary -->
+                <div class="login col-12">
+                    <div id="form-login" class="form">
+                        <!-- contenedor del formulario generado dinámicamente -->
+                    </div>
+                    <div class="back">
+                        <button onclick="changeStep(1)">Revisión de Pedido</button>
+                    </div>
+                </div>
+
+                <!-- Input of Sending adresss and confirmation -->
+                <div class="sending col-12">
+
+                    <!-- Campo para introducir la calle -->
+                    <div id="form-sending" class="form">
+                        <label for="address">Dirección de Envío</label>
+                        <input id="address" type="text">
+                    </div>
+
+                    <!-- Container for adding shipment costs -->
+                    <div class="res-shipment">
+
+                    </div>
+
+                    <!-- Container for the back button -->
+                    <div class="back">
+                        <button onclick="changeStep(2)">Cambiar Usuario</button>
+                    </div>
+                </div>
+
+                <!-- Payment formulary -->
+                <div class="payment col-12">
+
+                    <!-- Formulary of payment generated dynamically with JS -->
+                    <div id="form-payment" class="form">
+
+                    </div>
+
+                    <!-- Container for the back button -->
+                    <div class="back">
+                        <button onclick="changeStep(3)">Cambiar Dirección</button>
+                    </div>
+                </div>
+
+                <!-- Idle section for finishing the shipment -->
+                <div class="success col-12">
+
+                    <!-- Title container -->
+                    <div class="title">
+                        <p>Pedido Realizado con éxito!</p>
+                    </div>
+
+                    <!-- Body contnainer -->
+                    <div class="message">
+                        <p>Se ha enviado un email con el resguardo de la operación.</p>
+                        <p>Recibirá su comida en un máximo de 30 minutos.</p>
+                    </div>
+
+                    <!-- Gif container -->
+                    <div class="gif">
+
+                    </div>
+
+                    <!-- Container for the back button -->
+                    <div class="back">
+                        <button onclick="changeStep('menu')">Volver a la página de inicio</button>
+                    </div>
+
+                </div>
+            </section>
+
+
+        </section>
     </main>
+
+    <script src="script/ShoppingCart.js"></script>
+    <script src="script/listProds.js"></script>
+    <script src="script/states.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script/attributes.js"></script>
-    <script src="script/order.js"></script> 
+    <script src="script/order.js"></script>
     <script src="script/user.js"></script>
-    <script src="script/form_utils.js"></script> 
-    <script src="script/shared.js"></script> 
-    <script src="script/menu_pedido.js"></script> 
+    <script src="script/form_utils.js"></script>
+    <script src="script/shared.js"></script>
+    <script src="script/menu_pedido.js"></script>
 </body>
 </html>
