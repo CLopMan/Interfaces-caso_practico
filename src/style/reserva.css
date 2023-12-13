@@ -29,10 +29,6 @@
     font-weight: bold;
 }
 
-#progress .SplitContainer > .ProgressIcon {
-    flex-shrink: 0;
-}
-
 .ProgressIcon {
     width: 25px;
     height: 25px;

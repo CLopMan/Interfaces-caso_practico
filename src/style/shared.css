@@ -339,3 +339,7 @@ form.ItemContainer input[type=number]::-webkit-outer-spin-button {
     align-items: center;
     justify-content: center;
 }
+
+.SplitContainer > div:not(:first-child) {
+    flex-shrink: 0;
+}
