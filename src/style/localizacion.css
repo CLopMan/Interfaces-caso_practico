@@ -2,14 +2,18 @@
 
 .est_title {
     font-family: 'Serif';
-    font-size: 64px;
+    font-size: 4vw;
     margin:0;
 
 }
 
+.direccion_tx {
+    font-size: 2vw;
+}
+
 .est_text {
     font-family: 'Serif';
-    font-size: 18px;
+    font-size: 1.5vw;
     margin:1%;
     padding: 1%;
     text-align: justify;
@@ -22,7 +26,7 @@
 
 #direccion {
     font-family: 'Serif';
-    font-size: 24px;
+    font-size: 2vw;
     margin:1%;
     padding: 1%;
     text-align: left;
@@ -33,14 +37,45 @@
 
 #Map {
     float:left;
-    margin-top:5%;
+    margin-top:2.5%;
     margin-left:5%;
+    height: 80vh;
+}
+
+#Map > iframe {
+    width: 100%;
+    height: 100%;
+    border-width: 0;
 }
 
 #contact {
-    font-size: 16px;
+    font-size: 1vw;
     text-align:center;
     padding:0;
     margin-top:0;
     margin-bottom: 0;
 }
+
+@media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    #direccion {
+        width: 100%;
+    }
+
+    .img-list > img {
+        width: 40%;
+    }
+    .col1-1 {
+        width: 33%;
+    }
+    #Map > iframe {
+        width: 80vw;
+        height:49vw;
+    }
+    #Map {
+        width: 100vw;
+        margin: 0;
+        padding-left:7.5vw;
+    }
+
+  }

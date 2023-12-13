@@ -11,7 +11,7 @@ body {
 
 .est_title {
     font-family: 'Serif';
-    font-size: 70px;
+    font-size: 4vw;
 
 }
 
@@ -42,7 +42,7 @@ body {
 
 .est_text {
     font-family: 'Serif';
-    font-size: 50px;
+    font-size: 2.5vw;
     margin:0%;
     padding: 1%;
     text-align: justify;
@@ -59,3 +59,4 @@ body {
     margin: 2.5%;
     width: 25%;
 }
+
