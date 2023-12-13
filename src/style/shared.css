@@ -56,40 +56,70 @@ main {
 
 h1 {
     border-bottom: 2px solid var(--marron-base);
-    padding-bottom: 10px;
+    padding: 25px 0 10px;
+    margin-bottom: 25px;
     font-family: Newsreader;
     font-size: 64px;
     font-weight: initial;
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 48px;
     font-weight: initial;
+    line-height: 150%;
 }
 
 h3 {
     font-size: 40px;
     font-weight: initial;
+    line-height: 150%;
 }
 
 p {
     font-size: 24px;
     text-align: justify;
     font-family: Newsreader;
+    line-height: 150%;
 }
 
-button {
+button, select, input, textarea {
     cursor: pointer;
     border: transparent;
-}
-
-input, textarea {
-    background-color: transparent; 
-    border: transparent;
+    background-color: transparent;
 }
 
 input::placeholder, textarea::placeholder {
     opacity: 0.33;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none; /* safari */
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown > *:first-child {
+    padding-right: 50px
+}
+
+.dropdown::after {
+    content: "🮦";
+    position: absolute;
+    right: 25px;
+    pointer-events: none;
+    height: 40px;
+    width: 40px;
+    color: #4F4E4E;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.06);
+    background-color: var(--page-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20pt;
 }
 
 textarea { resize: vertical; }
@@ -130,7 +160,7 @@ body > header > img {
     padding-bottom: 15px;
 }
 
-nav {
+#nav-menu {
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: space-evenly;
@@ -143,13 +173,31 @@ nav {
     z-index: 90;
 }
 
-nav > * {
+#nav-menu > * {
     color: #000;
     font-family: Newsreader;
     font-size: 64px;
     text-decoration: none;
     display: flex;
     justify-content: center;
+}
+
+@media screen and (max-width: 1450px) {
+    #nav-menu > * {
+        font-size: 44px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    #nav-menu {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #nav-menu {
+        grid-template-columns: auto;
+    }
 }
 
 /* Item container element */
@@ -160,22 +208,31 @@ nav > * {
     padding: 25px;
     border-radius: 25px;
     border: 2px solid var(--bordes);
+    display: flex;
+    flex-direction: column;
 }
 
 .ItemContainer > header {
     font-family: Inter;
     font-size: 32px;
     font-weight: bold;
+    margin-bottom: 25px;
 }
 
 .ItemContainer > .ItemContainerContent {
-    padding: 10px 0px 0px 0px;
+    flex-grow: 1;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
 }
 
 .ItemContainer > .ItemContainerContent > .ItemLabelContainer {
-    padding: 15px 25px 0px 25px;
-    float: left;
+    padding: 0px 25px 0px 25px;
     width: 100%;
+}
+
+.ItemContainer > .ItemContainerContent > .ItemLabelContainer:not(:first-child) {
+    padding-top: 15px;
 }
 
 .ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel {
@@ -189,33 +246,71 @@ form.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel > 
     color: red;
 }
 
-.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item {
+.Item {
     display: flex;
-    padding: 25px;
+    padding: 0 25px 0;
     align-items: center; 
     border-radius: 25px;
     border: 2px solid var(--bordes);
     background: #FFF; 
-}
-
-.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item.FixedSize {
     height: 70px;
 }
 
-.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item > textarea {
-    min-height: 50px;
+.Item.ResizableHeight {
+    height: unset;
 }
 
-.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .Item > .ItemText {
+.Item > label, .Item > output { 
     font-family: Inter;
     font-size: 20px;
-    width: 100%;
+    font-weight: bold;
 }
 
-.ItemContainer > .ItemContainerContent::after {
-    content: "";
-    clear: both;
-    display: table;
+.Item > label { flex-grow: 1; }
+
+.Item > textarea {
+    padding: 25px 0 25px;
+    min-height: 150px;
+}
+
+.Item > .ItemText {
+    font-family: Inter;
+    font-size: 20px;
+}
+
+.Item > .ItemText:not([type="number"]):not(.NumberButton) { width: 100%; height: 100%; }
+.Item > input.ItemText[type="number"] {
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: 2px solid rgba(0, 0, 0, 0.06);
+    background: #F7F7F5;
+    margin: 0 5px 0;
+}
+
+.Item > button.NumberButton {
+    height: 25px;
+    width: 25px;
+    line-height: 0;
+    font-size: 24px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.06);
+    background: var(--page-bg); 
+    flex-shrink: 0;
+}
+
+.Item > button.NumberButton:first-of-type { margin-left: 5px; }
+
+.Item input[type="number"] {
+    -webkit-appearance: textfield;
+       -moz-appearance: textfield;
+            appearance: textfield;
+    text-align: center;
+}
+
+.Item input[type=number]::-webkit-inner-spin-button, 
+.Item input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
 }
 
 .ItemContainer > button {
@@ -242,4 +337,8 @@ form.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel > 
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.SplitContainer > div:not(:first-child) {
+    flex-shrink: 0;
 }

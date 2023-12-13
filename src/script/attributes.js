@@ -54,8 +54,21 @@ class DNI extends Attribute {
  */
 class Text extends Attribute {
     validate(value) {
-        if (value != "") { throw "formato de nombre incorrecto"; }
+        if (value == "") { throw "campo de texto vacío"; }
         return value;
+    }
+}
+
+/**
+ * @class
+ * @classdesc Positive integer Attribute class
+ */
+class PositiveInteger extends Attribute {
+    validate(value) {
+        let x = Number(value);
+        if (isNaN(x)) { throw "número no válido"; }
+        if (x <= 0) { throw "el número debe ser positivo"; }
+        return x;
     }
 }
 

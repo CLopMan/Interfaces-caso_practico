@@ -1,0 +1,122 @@
+#reserve-window {
+    display: flex;
+    flex-flow: row;
+    padding: 0;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+#menu {
+    flex: 0 1 60%;
+}
+
+#progress {
+    flex: 0 1 40%;
+    background-color: var(--marron-base);
+    border: none;
+}
+
+#progress > * {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#progress .SplitContainer > div:first-child {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ProgressIcon {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-left: 5px;
+    font-size: 24px;
+
+    border: 2px solid rgba(0, 0, 0, 0.06);
+    background: var(--page-bg);
+}
+
+.ProgressIcon.Completed {
+    background: var(--verde-confirmar); 
+}
+
+.ProgressIcon.Current {
+    border-color: var(--marron-base); 
+}
+
+form, #confirmation {
+    border: none !important;
+    height: 100%;
+}
+
+form input[type="radio"] {
+  display: none;
+}
+
+#payment-method-input-container {
+    display: flex;
+}
+
+#payment-method-input-container > label {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    border: 2px solid var(--bordes);
+    background: #FFF; 
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    font-weight: bold;
+}
+
+#payment-method-input-container > label:first-of-type { margin-right: 10px; }
+
+#payment-method-input-container img {
+    width: 40px;
+    height: 40px;
+}
+
+#payment-method-input-container > input:checked + label {
+    border-color: var(--marron-base)
+}
+
+#expiry-date-item {
+    flex: 1 1 65%;
+}
+
+#expiry-date-label {
+    white-space: nowrap;
+}
+
+#cvc-item {
+    flex: 1 1 35%;
+}
+
+#confirmation > .ItemContainerContent {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#confirmation p {
+    text-align: center;
+    font-weight: bold;
+}
+
+#confirmation p:first-child {
+    margin-bottom: 20px;
+}
+
+/* Tablet/mobile version */
+@media screen and (max-width: 768px) {
+    #reserve-window {
+        flex-flow: column;
+    }
+}
