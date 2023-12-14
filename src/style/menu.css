@@ -242,7 +242,6 @@ html {
                 .order > .subtotal {
                     font-weight: bold;
                     font-size: 2em;
-                    border: red 3px solid;
                 }
                     .order > .subtotal > p {
                         text-align: left;
@@ -264,7 +263,3 @@ html {
                     font-size: 1em;
                     cursor: pointer;
                 }
-
-#pedido {
-
-}
