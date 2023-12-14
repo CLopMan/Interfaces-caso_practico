@@ -55,31 +55,34 @@
                 </div>
 
                 <!-- Sección de Carrito y resumen de pedido -->
-                <aside class="result col-3">
+                <div class="col-3">
+                    <aside class="ItemContainer ">
+                        <header class="SplitContainer">
+                            <div>Carrito</div>
+                            <div class="SplitContainer prod-c">
+                                <p id="sum-am">0</p>
+                                <p> productos</p>
+                            </div>
+                        </header>
 
-                    <div class="title row">
-                        <p class="col-4">Carrito</p>
-
-                        <div class="sum col-8 row">
-                            <p id="sum-am" class="col-5">0</p>
-                            <p class="col-7"> productos</p>
-                        </div>
-                    </div>
-
-                    <div id="list-prods">
-                        <!-- List of products added dinamically with javascript -->
-                    </div>
-
-                    <div class="order">
-
-                        <div class="subtotal row">
-                            <p class="col-6">Subtotal: </p>
-                            <p id="order-total" class="col-6">0.00€</p>
+                        <div id="list-prods">
+                            <!-- List of products added dinamically with javascript -->
                         </div>
 
-                        <button onclick="changeSection('pedido');changeStep(1)">Revisar pedido y pagar</button>
-                    </div>
-                </aside>
+                        <div class="ItemLabelContainer">
+                            <div class="SplitContainer">
+                                <p class="col-6">Subtotal: </p>
+                                <p id="order-total">0.00€</p>
+                            </div>
+                        </div>
+
+                        <button class="SplitContainer" type="button" onclick="changeSection('pedido');changeStep(1)">
+                            <p>Revisar Pedido y Pagar</p>
+                            <p>🡢</p>
+                        </button>
+                    </aside>
+
+                </div>
 
             </section>
         </section>
