@@ -4,15 +4,15 @@ $("body").prepend(`<header class="SplitContainer">
     <div id="nav-button-container"><button type="button" id="nav-menu-button" onclick="toggle_menu()">☰</button></div>
 </header>
 <nav id="nav-menu">
-    <a class="Button" href="./home.html">Home</a>
-    <a class="Button" href="./menu_pedido.html">Haz un pedido</a>
-    <a class="Button" href="./actividades.html">Actividades</a>
-    <a class="Button" href="./tarifas.html">Productos</a>
-    <a class="Button" href="./gatos.html">Nuestros gatos</a>
-    <a class="Button" href="./establecimiento.html">Establecimiento</a>
-    <a class="Button" href="./reserva.html">Reserva</a>
-    <a class="Button" href="./localizacion.html">Dónde estamos</a>
-    <a class="Button" href="./contacto.html">Contacto</a>
+    <a href="./home.html">Home</a>
+    <a href="./menu_pedido.html">Haz un pedido</a>
+    <a href="./actividades.html">Actividades</a>
+    <a href="./tarifas.html">Productos</a>
+    <a href="./gatos.html">Nuestros gatos</a>
+    <a href="./establecimiento.html">Establecimiento</a>
+    <a href="./reserva.html">Reserva</a>
+    <a href="./localizacion.html">Dónde estamos</a>
+    <a href="./contacto.html">Contacto</a>
 </nav>
 `)
 $("#nav-menu").hide();
