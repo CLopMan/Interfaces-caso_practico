@@ -200,6 +200,12 @@ html {
             text-align: center;
         }
 
-    .gif {
+    .gif > img{
         border-radius: 50%;
+        overflow: hidden;
+    }
+
+    #clock {
+        margin-bottom: 5%;
+        transform: scale(120%);
     }

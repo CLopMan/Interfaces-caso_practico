@@ -986,6 +986,10 @@ generate_form(
         skip_serialize: true,
         callback: () => {
             changeStep(5)
+            $('#clock').timeTo({
+                seconds: 100,
+                displayHours: false
+            });
         },
         alert_ok: true
     }
