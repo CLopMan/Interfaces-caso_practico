@@ -78,7 +78,7 @@ main {
                     justify-content: center;
                 }
 
-                .Content > .info > button {
+                .Content > .info > .but {
                     cursor: pointer;
                     width: 25%;
                     padding: 10px;
@@ -89,6 +89,8 @@ main {
                     font-size: 2em;
                     color: white;
                     align-self: end;
+                    text-decoration: none;
+                    text-align: center;
                 }
 
             .Content > .img {
