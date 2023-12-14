@@ -87,30 +87,34 @@ class ShoppingCart {
 
         for (const [i,product] of this.prods.entries()) {
             if (product.name !== "" && product.cantidad > 0) {
-                listDiv.innerHTML += "<div class=\"preview row\">\n" +
-                    "                            <div class=\"title row col-6\">\n" +
-                    "                                <p class=\"t col-9\">"+product.name+"</p>\n" +
-                    "                                <p class=\"p col-3\">"+this.prices[i]+"€</p>\n" +
-                    "                            </div>\n" +
-                    "                            <div class=\"price row col-6\">\n" +
-                    "                                <p class=\"x col-5\">x"+product.cantidad+"</p>\n" +
-                    "                                <p class=\"subtotal col-7\">"+truncar(this.sums[i],2)+"€</p>\n" +
-                    "                            </div>\n" +
-                    "                        </div>";
+                listDiv.innerHTML += `
+                    <div class="preview row">
+                        <div class="title row col-6">
+                            <p class="t col-9">"+product.name+"</p>
+                            <p class="p col-3">"+this.prices[i]+"€</p>
+                        </div>
+                        <div class="price row col-6">
+                            <p class="x col-5">x"+product.cantidad+"</p>
+                            <p class="subtotal col-7">"+truncar(this.sums[i],2)+"€</p>
+                        </div>
+                    </div>"
+                `;
 
-                listOrder.innerHTML += "<div class=\"preview row\">\n" +
-                    "                            <div class=\"image-prev\">\n" +
-                    "                                <img alt=\"Image Prev\" src="+collectionImages[i]+">\n" +
-                    "                            </div>\n" +
-                    "                            <div class=\"title col-7\">\n" +
-                    "                                <p class=\"t\">"+product.name+"</p>\n" +
-                    "                                <p class=\"p\">"+this.prices[i]+"€</p>\n" +
-                    "                            </div>\n" +
-                    "                            <div class=\"price row col-3\">\n" +
-                    "                                <p class=\"x col-5\">x"+product.cantidad+"</p>\n" +
-                    "                                <p class=\"subtotal col-7\">"+truncar(this.sums[i],2)+"€</p>\n" +
-                    "                            </div>\n" +
-                    "                        </div>";
+                listOrder.innerHTML += `
+                    "<div class="preview row">
+                        <div class="image-prev">
+                            <img alt="Image Prev" src="+collectionImages[i]+">
+                        </div>
+                        <div class="title col-7">
+                            <p class="t">"+product.name+"</p>
+                            <p class="p">"+this.prices[i]+"€</p>
+                        </div>
+                        <div class="price row col-3">
+                            <p class="x col-5">x"+product.cantidad+"</p>
+                            <p class="subtotal col-7">"+truncar(this.sums[i],2)+"€</p>
+                        </div>
+                    </div>"
+                `;
             }
         }
     }
