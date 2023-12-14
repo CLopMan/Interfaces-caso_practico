@@ -1,4 +1,3 @@
-
 function changeSection(section){
     let menu = document.getElementById("menu")
     let pedido = document.getElementById("pedido")
@@ -11,6 +10,38 @@ function changeSection(section){
         menu.classList.add("hidden")
     }
 
+}
+
+function generate_product(id, title, img, price, description, ingredients) {
+    return `
+        <!-- Standard Format of products -->
+        <article id="pr-${id}" class="pr">
+            <div class="prev">
+                <img alt="Image ${title}" src="./image/${img}">
+            </div>
+            <div class="content">
+                <div class="ops">
+                    <div class="op">
+                        <p>${title}</p>
+                        <div class="ammount">
+                            <button class="but" onclick='addProduct("${title}",${id},Number(document.getElementById("ammount-${id}").innerText) - 1)'>-</button>
+                            <p id="ammount-${id}">0</p>
+                            <button class="but" onclick='addProduct("${title}",${id},Number(document.getElementById("ammount-${id}").innerText) + 1)'>+</button>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <p>${price}</p>
+                        <div class="ingredients">
+                            ${ingredients.map((x) => `<img alt="${x.alt}" src="${x.src}">`).join("\n")}
+                        </div>
+                    </div>
+                </div>
+                <div class="descr">
+                    <p>${description}</p>
+                </div>
+            </div>
+        </article>
+    `
 }
 
 function ChangeState(state) {
@@ -29,196 +60,19 @@ function ChangeState(state) {
             }
         }
         console.log("State 1")
-        prodsDiv.innerHTML = "<!-- Content for category \"Cafés\" -->\n" +
-            "                    <div id=\"cafes\" class=\"prods\">\n" +
-            "\n" +
-            "                        <!-- Standard Format of products -->\n" +
-            "                        <article id=\"pr-1\" class=\"pr\">\n" +
-            "\n" +
-            "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Café Solo\" src=\"/src/image/floatingcoffee.png\">\n" +
-            "                            </div>\n" +
-            "\n" +
-            "                            <div class=\"content\">\n" +
-            "\n" +
-            "                                <div class=\"ops\">\n" +
-            "\n" +
-            "                                    <div class=\"op\">\n" +
-            "                                        <p>Café Solo</p>\n" +
-            "\n" +
-            "                                        <div class=\"ammount\">\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Café Solo\",1,Number(document.getElementById(\"ammount-1\").innerText) -1)'>-</button>\n" +
-            "                                            <p id=\"ammount-1\">0</p>\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Café Solo\",1,Number(document.getElementById(\"ammount-1\").innerText) +1)'>+</button>\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "\n" +
-            "                                    <div class=\"price\">\n" +
-            "\n" +
-            "                                        <p>1.90€</p>\n" +
-            "\n" +
-            "                                        <div class=\"ingredients\"></div>\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "\n" +
-            "                                <div class=\"descr\">\n" +
-            "                                    <p>Granos de cafe arábica Harrar, Etiopía</p>\n" +
-            "                                </div>\n" +
-            "                            </div>\n" +
-            "\n" +
-            "                        </article>\n" +
-            "\n" +
-            "                        <!-- Standard Format of products -->\n" +
-            "                        <article id=\"pr-2\" class=\"pr\">\n" +
-            "\n" +
-            "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Capuccino\" src=\"/src/image/cappuccino.png\">\n" +
-            "                            </div>\n" +
-            "\n" +
-            "                            <div class=\"content\">\n" +
-            "\n" +
-            "                                <div class=\"ops\">\n" +
-            "\n" +
-            "                                    <div class=\"op\">\n" +
-            "                                        <p>Capuccino</p>\n" +
-            "\n" +
-            "                                        <div class=\"ammount\">\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Capuccino\",2,Number(document.getElementById(\"ammount-2\").innerText) -1)'>-</button>\n" +
-            "                                            <p id=\"ammount-2\">0</p>\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Capuccino\",2,Number(document.getElementById(\"ammount-2\").innerText) +1)'>+</button>\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "\n" +
-            "                                    <div class=\"price\">\n" +
-            "\n" +
-            "                                        <p>3.00€</p>\n" +
-            "\n" +
-            "                                        <div class=\"ingredients\">\n" +
-            "                                            <img alt=\"Milk\" src=\"\">\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "\n" +
-            "                                <div class=\"descr\">\n" +
-            "                                    <p>Granos de cafe arábica Moka, Etiopía</p>\n" +
-            "                                </div>\n" +
-            "                            </div>\n" +
-            "                        </article>\n" +
-            "\n" +
-            "                        <!-- Standard Format of products -->\n" +
-            "                        <article id=\"pr-3\" class=\"pr\">\n" +
-            "\n" +
-            "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Latte Macchiato\" src=\"/src/image/latte_macchiato.png\">\n" +
-            "                            </div>\n" +
-            "\n" +
-            "                            <div class=\"content\">\n" +
-            "\n" +
-            "                                <div class=\"ops\">\n" +
-            "\n" +
-            "                                    <div class=\"op\">\n" +
-            "                                        <p>Latte Macchiato</p>\n" +
-            "\n" +
-            "                                        <div class=\"ammount\">\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Macchiato\",3,Number(document.getElementById(\"ammount-3\").innerText) -1)'>-</button>\n" +
-            "                                            <p id=\"ammount-3\">0</p>\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Macchiato\",3,Number(document.getElementById(\"ammount-3\").innerText) +1)'>+</button>\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "\n" +
-            "                                    <div class=\"price\">\n" +
-            "\n" +
-            "                                        <p>3.50€</p>\n" +
-            "\n" +
-            "                                        <div class=\"ingredients\">\n" +
-            "                                            <img alt=\"Milk\" src=\"\">\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "\n" +
-            "                                <div class=\"descr\">\n" +
-            "                                    <p>Granos de cafe arábica Harrar, Etiopía</p>\n" +
-            "                                </div>\n" +
-            "                            </div>\n" +
-            "                        </article>\n" +
-            "\n" +
-            "                        <!-- Standard Format of products -->\n" +
-            "                        <article id=\"pr-4\" class=\"pr\">\n" +
-            "\n" +
-            "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Expresso\" src=\"/src/image/espresso.png\">\n" +
-            "                            </div>\n" +
-            "\n" +
-            "                            <div class=\"content\">\n" +
-            "\n" +
-            "                                <div class=\"ops\">\n" +
-            "\n" +
-            "                                    <div class=\"op\">\n" +
-            "                                        <p>Expresso</p>\n" +
-            "\n" +
-            "                                        <div class=\"ammount\">\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Expresso\",4,Number(document.getElementById(\"ammount-4\").innerText) -1)'>-</button>\n" +
-            "                                            <p id=\"ammount-4\">0</p>\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Expresso\",4,Number(document.getElementById(\"ammount-4\").innerText) +1)'>+</button>\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "\n" +
-            "                                    <div class=\"price\">\n" +
-            "\n" +
-            "                                        <p>1.40€</p>\n" +
-            "\n" +
-            "                                        <div class=\"ingredients\">\n" +
-            "\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "\n" +
-            "                                <div class=\"descr\">\n" +
-            "                                    <p>Granos de cafe arábica Moka, Etiopía</p>\n" +
-            "                                </div>\n" +
-            "                            </div>\n" +
-            "                        </article>\n" +
-            "\n" +
-            "                        <!-- Standard Format of products -->\n" +
-            "                        <article id=\"pr-5\" class=\"pr\">\n" +
-            "\n" +
-            "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Cafe con Leche\" src=\"/src/image/fluffcoffee.png\">\n" +
-            "                            </div>\n" +
-            "\n" +
-            "                            <div class=\"content\">\n" +
-            "\n" +
-            "                                <div class=\"ops\">\n" +
-            "\n" +
-            "                                    <div class=\"op\">\n" +
-            "                                        <p>Café con Leche</p>\n" +
-            "\n" +
-            "                                        <div class=\"ammount\">\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Cafe con Leche\",5,Number(document.getElementById(\"ammount-5\").innerText) -1)'>-</button>\n" +
-            "                                            <p id=\"ammount-5\">0</p>\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Cafe con Leche\",5,Number(document.getElementById(\"ammount-5\").innerText) +1)'>+</button>\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "\n" +
-            "                                    <div class=\"price\">\n" +
-            "\n" +
-            "                                        <p>2.00€</p>\n" +
-            "\n" +
-            "                                        <div class=\"ingredients\">\n" +
-            "                                            <img alt=\"Milk\" src=\"\">\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "\n" +
-            "                                <div class=\"descr\">\n" +
-            "                                    <p>Granos de cafe arábica Harrar, Etiopía</p>\n" +
-            "                                </div>\n" +
-            "                            </div>\n" +
-            "                        </article>\n" +
-            "                    </div>"
-
+        let items = [
+            [1, "Café Solo", "floatingcoffee.png", "1.90€", "Granos de cafe arábica Harrar, Etiopía", []],
+            [2, "Capuccino", "cappuccino.png", "3.00€", "Granos de cafe arábica Moka, Etiopía", [{alt: "Milk", src: ""}]],
+            [3, "Latte Macchiato", "latte_macchiato.png", "3.50€", "Granos de cafe arábica Harrar, Etiopía", [{alt: "Milk", src: ""}]],
+            [4, "Expresso", "espresso.png", "1.40€", "Granos de cafe arábica Moka, Etiopía", []],
+            [5, "Café con Leche", "fluffcoffee.png", "2.00€", "Granos de cafe arábica Harrar, Etiopía", [{alt: "Milk", src: ""}]],
+        ].map((x) => generate_product(...x)).join("\n")
+        prodsDiv.innerHTML = `
+            <!-- Content for category "Cafés" -->
+            <div id="cafes" class="prods">
+                ${items}
+        `;
     } else if (state === 2) {
-
         for (let i = 0; i < buttons.length; i++) {
             if (i === state -1){
                 buttons[i].style.color = "#ffffff"
@@ -230,166 +84,18 @@ function ChangeState(state) {
         }
 
         console.log("State 2")
-        prodsDiv.innerHTML = "<div id=\"bakes\" class=\"prods\">\n" +
-            "\n" +
-            "                        <!-- Standard Format of products -->\n" +
-            "                        <article id=\"pr-6\" class=\"pr\">\n" +
-            "\n" +
-            "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Donuts\" src=\"/src/image/donutcat.png\">\n" +
-            "                            </div>\n" +
-            "\n" +
-            "                            <div class=\"content\">\n" +
-            "\n" +
-            "                                <div class=\"ops\">\n" +
-            "\n" +
-            "                                    <div class=\"op\">\n" +
-            "                                        <p>Donnuts</p>\n" +
-            "\n" +
-            "                                        <div class=\"ammount\">\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Donnuts\",6,Number(document.getElementById(\"ammount-6\").innerText) -1)'>-</button>\n" +
-            "                                            <p id=\"ammount-6\">0</p>\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Donnuts\",6,Number(document.getElementById(\"ammount-6\").innerText) +1)'>+</button>\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "\n" +
-            "                                    <div class=\"price\">\n" +
-            "\n" +
-            "                                        <p>1.30€/ud</p>\n" +
-            "\n" +
-            "                                        <div class=\"ingredients\">\n" +
-            "                                            <img alt=\"Eggs\" src=\"\">\n" +
-            "                                            <img alt=\"Wheat\" src=\"\">\n" +
-            "                                            <img alt=\"Milk\" src=\"\">\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "\n" +
-            "                                <div class=\"descr\">\n" +
-            "                                    <p>Con masa hecha a mano de calidad.</p>\n" +
-            "                                </div>\n" +
-            "                            </div>\n" +
-            "                        </article>\n" +
-            "\n" +
-            "                        <!-- Standard Format of products -->\n" +
-            "                        <article id=\"pr-7\" class=\"pr\">\n" +
-            "\n" +
-            "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Cruasan\" src=\"/src/image/cruasan.png\">\n" +
-            "                            </div>\n" +
-            "\n" +
-            "                            <div class=\"content\">\n" +
-            "\n" +
-            "                                <div class=\"ops\">\n" +
-            "\n" +
-            "                                    <div class=\"op\">\n" +
-            "                                        <p>Cruasan</p>\n" +
-            "\n" +
-            "                                        <div class=\"ammount\">\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Cruasan\",7,Number(document.getElementById(\"ammount-7\").innerText) -1)'>-</button>\n" +
-            "                                            <p id=\"ammount-7\">0</p>\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Cruasan\",7,Number(document.getElementById(\"ammount-7\").innerText) +1)'>+</button>\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "\n" +
-            "                                    <div class=\"price\">\n" +
-            "\n" +
-            "                                        <p>2.00€/ud</p>\n" +
-            "\n" +
-            "                                        <div class=\"ingredients\">\n" +
-            "                                            <img alt=\"Eggs\" src=\"\">\n" +
-            "                                            <img alt=\"Wheat\" src=\"\">\n" +
-            "                                            <img alt=\"Milk\" src=\"\">\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "\n" +
-            "                                <div class=\"descr\">\n" +
-            "                                    <p>Masa e ingredientes de calidad</p>\n" +
-            "                                </div>\n" +
-            "                            </div>\n" +
-            "                        </article>\n" +
-            "\n" +
-            "                        <!-- Standard Format of products -->\n" +
-            "                        <article id=\"pr-8\" class=\"pr\">\n" +
-            "\n" +
-            "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Napolitana\" src=\"/src/image/840_560.jpg\">\n" +
-            "                            </div>\n" +
-            "\n" +
-            "                            <div class=\"content\">\n" +
-            "\n" +
-            "                                <div class=\"ops\">\n" +
-            "\n" +
-            "                                    <div class=\"op\">\n" +
-            "                                        <p>Napolitana</p>\n" +
-            "\n" +
-            "                                        <div class=\"ammount\">\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Napolitana\",8,Number(document.getElementById(\"ammount-8\").innerText) -1)'>-</button>\n" +
-            "                                            <p id=\"ammount-8\">0</p>\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Napolitana\",8,Number(document.getElementById(\"ammount-8\").innerText) +1)'>+</button>\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "\n" +
-            "                                    <div class=\"price\">\n" +
-            "\n" +
-            "                                        <p>1.90€/ud</p>\n" +
-            "\n" +
-            "                                        <div class=\"ingredients\">\n" +
-            "                                            <img alt=\"Eggs\" src=\"\">\n" +
-            "                                            <img alt=\"Wheat\" src=\"\">\n" +
-            "                                            <img alt=\"Milk\" src=\"\">\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "\n" +
-            "                                <div class=\"descr\">\n" +
-            "                                    <p>Rellena de chocolate cremoso</p>\n" +
-            "                                </div>\n" +
-            "                            </div>\n" +
-            "                        </article>\n" +
-            "\n" +
-            "                        <!-- Standard Format of products -->\n" +
-            "                        <article id=\"pr-9\" class=\"pr\">\n" +
-            "\n" +
-            "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Churros\" src=\"/src/image/churro.jpg\">\n" +
-            "                            </div>\n" +
-            "\n" +
-            "                            <div class=\"content\">\n" +
-            "\n" +
-            "                                <div class=\"ops\">\n" +
-            "\n" +
-            "                                    <div class=\"op\">\n" +
-            "                                        <p>Churros</p>\n" +
-            "\n" +
-            "                                        <div class=\"ammount\">\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Churros\",9,Number(document.getElementById(\"ammount-9\").innerText) -1)'>-</button>\n" +
-            "                                            <p id=\"ammount-9\">0</p>\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Churros\",9,Number(document.getElementById(\"ammount-9\").innerText) +1)'>+</button>\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "\n" +
-            "                                    <div class=\"price\">\n" +
-            "\n" +
-            "                                        <p>0.30€/ud</p>\n" +
-            "\n" +
-            "                                        <div class=\"ingredients\">\n" +
-            "                                            <img alt=\"Eggs\" src=\"\">\n" +
-            "                                            <img alt=\"Wheat\" src=\"\">\n" +
-            "                                            <img alt=\"Milk\" src=\"\">\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "\n" +
-            "                                <div class=\"descr\">\n" +
-            "                                    <p>Hechos a mano</p>\n" +
-            "                                </div>\n" +
-            "                            </div>\n" +
-            "                        </article>\n" +
-            "                    </div>"
+        let items = [
+            [6, "Donnuts", "donutcat.png", "1.30€/ud", "Con masa hecha a mano de calidad", [{alt: "Eggs", src: ""}, {alt: "Wheat", src: ""}, {alt: "Milk", stc: ""}]],
+            [7, "Cruasan", "cruasan.png", "2.00€/ud", "Masa e ingredientes de calidad", [{alt: "Eggs", src: ""}, {alt: "Wheat", src: ""}, {alt: "Milk", stc: ""}]],
+            [8, "Napolitana", "840_560.jpg", "1.90€/ud", "Rellena de chocolate cremoso", [{alt: "Eggs", src: ""}, {alt: "Wheat", src: ""}, {alt: "Milk", stc: ""}]],
+            [9, "Churros", "churro.jpg", "0.30€/ud", "Hechos a mano", [{alt: "Eggs", src: ""}, {alt: "Wheat", src: ""}, {alt: "Milk", stc: ""}]],
+        ].map((x) => generate_product(...x)).join("\n")
+        prodsDiv.innerHTML = `
+            <div id="bakes" class="prods">
+                ${items}
+            </div>
+        `;
     } else if (state === 3) {
-
         for (let i = 0; i < buttons.length; i++) {
             if (i === state -1){
                 buttons[i].style.color = "#ffffff"
@@ -401,115 +107,16 @@ function ChangeState(state) {
         }
 
         console.log("State 3")
-        prodsDiv.innerHTML = "<div id=\"juices\" class=\"prods\">\n" +
-            "                        <!-- Standard Format of products -->\n" +
-            "                        <article id=\"pr-10\" class=\"pr\">\n" +
-            "\n" +
-            "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Orange Juice\" src=\"/src/image/Orangejuice.jpg\">\n" +
-            "                            </div>\n" +
-            "\n" +
-            "                            <div class=\"content\">\n" +
-            "\n" +
-            "                                <div class=\"ops\">\n" +
-            "\n" +
-            "                                    <div class=\"op\">\n" +
-            "                                        <p>Zumo de Naranja</p>\n" +
-            "\n" +
-            "                                        <div class=\"ammount\">\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Zumo de Naranja\",10,Number(document.getElementById(\"ammount-10\").innerText) -1)'>-</button>\n" +
-            "                                            <p id=\"ammount-10\">0</p>\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Zumo de Naranja\",10,Number(document.getElementById(\"ammount-10\").innerText) +1)'>+</button>\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "\n" +
-            "                                    <div class=\"price\">\n" +
-            "\n" +
-            "                                        <p>1.00€</p>\n" +
-            "\n" +
-            "                                        <div class=\"ingredients\"></div>\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "\n" +
-            "                                <div class=\"descr\">\n" +
-            "                                    <p>Exprimido en el momento</p>\n" +
-            "                                </div>\n" +
-            "                            </div>\n" +
-            "                        </article>\n" +
-            "\n" +
-            "                        <!-- Standard Format of products -->\n" +
-            "                        <article id=\"pr-11\" class=\"pr\">\n" +
-            "\n" +
-            "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Apple Juice\" src=\"/src/image/apple-juice-recipe.jpg\">\n" +
-            "                            </div>\n" +
-            "\n" +
-            "                            <div class=\"content\">\n" +
-            "\n" +
-            "                                <div class=\"ops\">\n" +
-            "\n" +
-            "                                    <div class=\"op\">\n" +
-            "                                        <p>Zumo de Manzana</p>\n" +
-            "\n" +
-            "                                        <div class=\"ammount\">\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Zumo de Manzana\",11,Number(document.getElementById(\"ammount-11\").innerText) -1)'>-</button>\n" +
-            "                                            <p id=\"ammount-11\">0</p>\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Zumo de Manzana\",11,Number(document.getElementById(\"ammount-11\").innerText) +1)'>+</button>\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "\n" +
-            "                                    <div class=\"price\">\n" +
-            "\n" +
-            "                                        <p>2.00€</p>\n" +
-            "\n" +
-            "                                        <div class=\"ingredients\"></div>\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "\n" +
-            "                                <div class=\"descr\">\n" +
-            "                                    <p>Zumo de temporada</p>\n" +
-            "                                </div>\n" +
-            "                            </div>\n" +
-            "                        </article>\n" +
-            "\n" +
-            "                        <!-- Standard Format of products -->\n" +
-            "                        <article id=\"pr-12\" class=\"pr\">\n" +
-            "\n" +
-            "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Pineapple Juice\" src=\"/src/image/Mambo_Triturar_Piñacolada_RRSS.jpg\">\n" +
-            "                            </div>\n" +
-            "\n" +
-            "                            <div class=\"content\">\n" +
-            "\n" +
-            "                                <div class=\"ops\">\n" +
-            "\n" +
-            "                                    <div class=\"op\">\n" +
-            "                                        <p>Zumo de Piña</p>\n" +
-            "\n" +
-            "                                        <div class=\"ammount\">\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Zumo de Piña\",12,Number(document.getElementById(\"ammount-12\").innerText) -1)'>-</button>\n" +
-            "                                            <p id=\"ammount-12\">0</p>\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Zumo de Piña\",12,Number(document.getElementById(\"ammount-12\").innerText) +1)'>+</button>\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "\n" +
-            "                                    <div class=\"price\">\n" +
-            "\n" +
-            "                                        <p>1.50€</p>\n" +
-            "\n" +
-            "                                        <div class=\"ingredients\"></div>\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "\n" +
-            "                                <div class=\"descr\">\n" +
-            "                                    <p>Con un rico sabor</p>\n" +
-            "                                </div>\n" +
-            "                            </div>\n" +
-            "                        </article>\n" +
-            "\n" +
-            "                    </div>"
+        let items = [
+            [10, "Zumo de Naranja", "Orangejuice.jpg", "1.00€", "Exprimido en el momento", []],
+            [11, "Zumo de Manzana", "apple-juice-recipe.jpg", "2.00€", "Zumo de temporada", []],
+            [12, "Zumo de Piña", "Mambo_Triturar_Piñacolada_RRSS.jpg", "1.50€", "Con un rico sabor", []],
+        ].map((x) => generate_product(...x)).join("\n")
+        prodsDiv.innerHTML = `
+            <div id="juices" class="prods">
+                ${items}
+            </div>`
     } else if (state === 4) {
-
         for (let i = 0; i < buttons.length; i++) {
             if (i === state -1){
                 buttons[i].style.color = "#ffffff"
@@ -520,165 +127,18 @@ function ChangeState(state) {
             }
         }
         console.log("State 4")
-        prodsDiv.innerHTML = "<div id=\"cakes\" class=\"prods\">\n" +
-            "                        <!-- Standard Format of products -->\n" +
-            "                        <article id=\"pr-13\" class=\"pr\">\n" +
-            "\n" +
-            "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Mini Chocolate Cake\" src=\"/src/image/HEADERkuroneko_halloween.jpg\">\n" +
-            "                            </div>\n" +
-            "\n" +
-            "                            <div class=\"content\">\n" +
-            "\n" +
-            "                                <div class=\"ops\">\n" +
-            "\n" +
-            "                                    <div class=\"op\">\n" +
-            "                                        <p>Minitarta de Chocolate</p>\n" +
-            "\n" +
-            "                                        <div class=\"ammount\">\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Minitarta de Chocolate\",13,Number(document.getElementById(\"ammount-13\").innerText) -1)'>-</button>\n" +
-            "                                            <p id=\"ammount-13\">0</p>\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Minitarta de Chocolate\",13,Number(document.getElementById(\"ammount-13\").innerText) +1)'>+</button>\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "\n" +
-            "                                    <div class=\"price\">\n" +
-            "\n" +
-            "                                        <p>7.00€</p>\n" +
-            "\n" +
-            "                                        <div class=\"ingredients\">\n" +
-            "                                            <img alt=\"Eggs\" src=\"\">\n" +
-            "                                            <img alt=\"Wheat\" src=\"\">\n" +
-            "                                            <img alt=\"Milk\" src=\"\">\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "\n" +
-            "                                <div class=\"descr\">\n" +
-            "                                    <p>Chocolate Negro</p>\n" +
-            "                                </div>\n" +
-            "                            </div>\n" +
-            "                        </article>\n" +
-            "\n" +
-            "                        <!-- Standard Format of products -->\n" +
-            "                        <article id=\"pr-14\" class=\"pr\">\n" +
-            "\n" +
-            "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Tiramisú\" src=\"/src/image/05COOKING-TIRAMISU1-threeByTwoMediumAt2X-v2.jpg\">\n" +
-            "                            </div>\n" +
-            "\n" +
-            "                            <div class=\"content\">\n" +
-            "\n" +
-            "                                <div class=\"ops\">\n" +
-            "\n" +
-            "                                    <div class=\"op\">\n" +
-            "                                        <p>Tiramisú</p>\n" +
-            "\n" +
-            "                                        <div class=\"ammount\">\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Tiramisú\",14,Number(document.getElementById(\"ammount-14\").innerText) -1)'>-</button>\n" +
-            "                                            <p id=\"ammount-14\">0</p>\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Tiramisú\",14,Number(document.getElementById(\"ammount-14\").innerText) +1)'>+</button>\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "\n" +
-            "                                    <div class=\"price\">\n" +
-            "\n" +
-            "                                        <p>4.00€</p>\n" +
-            "\n" +
-            "                                        <div class=\"ingredients\">\n" +
-            "                                            <img alt=\"Eggs\" src=\"\">\n" +
-            "                                            <img alt=\"Wheat\" src=\"\">\n" +
-            "                                            <img alt=\"Milk\" src=\"\">\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "\n" +
-            "                                <div class=\"descr\">\n" +
-            "                                    <p>Una pieza con delicioso sabor a café</p>\n" +
-            "                                </div>\n" +
-            "                            </div>\n" +
-            "                        </article>\n" +
-            "\n" +
-            "                        <!-- Standard Format of products -->\n" +
-            "                        <article id=\"pr-15\" class=\"pr\">\n" +
-            "\n" +
-            "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Chocolate Cake\" src=\"/src/image/6d304afefe086879df26cb564115b39d.jpg\">\n" +
-            "                            </div>\n" +
-            "\n" +
-            "                            <div class=\"content\">\n" +
-            "\n" +
-            "                                <div class=\"ops\">\n" +
-            "\n" +
-            "                                    <div class=\"op\">\n" +
-            "                                        <p>Tarta de Chocolate</p>\n" +
-            "\n" +
-            "                                        <div class=\"ammount\">\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Tarta de Chocolate\",15,Number(document.getElementById(\"ammount-15\").innerText) -1)'>-</button>\n" +
-            "                                            <p id=\"ammount-15\">0</p>\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Tarta de Chocolate\",15,Number(document.getElementById(\"ammount-15\").innerText) +1)'>+</button>\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "\n" +
-            "                                    <div class=\"price\">\n" +
-            "\n" +
-            "                                        <p>20.00€</p>\n" +
-            "\n" +
-            "                                        <div class=\"ingredients\">\n" +
-            "                                            <img alt=\"Eggs\" src=\"\">\n" +
-            "                                            <img alt=\"Wheat\" src=\"\">\n" +
-            "                                            <img alt=\"Milk\" src=\"\">\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "\n" +
-            "                                <div class=\"descr\">\n" +
-            "                                    <p>Para compartir con amigos!</p>\n" +
-            "                                </div>\n" +
-            "                            </div>\n" +
-            "                        </article>\n" +
-            "\n" +
-            "                        <!-- Standard Format of products -->\n" +
-            "                        <article id=\"pr-16\" class=\"pr\">\n" +
-            "\n" +
-            "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Cheese-cake\" src=\"/src/image/nc-13.webp\">\n" +
-            "                            </div>\n" +
-            "\n" +
-            "                            <div class=\"content\">\n" +
-            "\n" +
-            "                                <div class=\"ops\">\n" +
-            "\n" +
-            "                                    <div class=\"op\">\n" +
-            "                                        <p>Tarta de Queso</p>\n" +
-            "\n" +
-            "                                        <div class=\"ammount\">\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Tarta de Queso\",16,Number(document.getElementById(\"ammount-16\").innerText) -1)'>-</button>\n" +
-            "                                            <p id=\"ammount-16\">0</p>\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Tarta de Queso\",16,Number(document.getElementById(\"ammount-16\").innerText) +1)'>+</button>\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "\n" +
-            "                                    <div class=\"price\">\n" +
-            "\n" +
-            "                                        <p>10.00€</p>\n" +
-            "\n" +
-            "                                        <div class=\"ingredients\">\n" +
-            "                                            <img alt=\"Eggs\" src=\"\">\n" +
-            "                                            <img alt=\"Milk\" src=\"\">\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "\n" +
-            "                                <div class=\"descr\">\n" +
-            "                                    <p>Con textura cremosa</p>\n" +
-            "                                </div>\n" +
-            "                            </div>\n" +
-            "                        </article>\n" +
-            "                    </div>"
-
+        let items = [
+            [13, "Minitarta de Chocolate", "HEADERkuroneko_halloween.jpg", "7.00€", "Chocolate Negro", [{alt: "Eggs", src: ""}, {alt: "Wheat", src: ""}, {alt: "Milk", stc: ""}]],
+            [14, "Tiramisú", "05COOKING-TIRAMISU1-threeByTwoMediumAt2X-v2.jpg", "4.00€", "Una pieza con delicioso sabor a café", [{alt: "Eggs", src: ""}, {alt: "Wheat", src: ""}, {alt: "Milk", stc: ""}]],
+            [15, "Tarta de Chocolate", "6d304afefe086879df26cb564115b39d.jpg", "20.00€", "Para compartir con amigos!", [{alt: "Eggs", src: ""}, {alt: "Wheat", src: ""}, {alt: "Milk", stc: ""}]],
+            [16, "Tarta de Queso", "nc-13.webp", "10.00€", "Con textura cremosa", [{alt: "Eggs", src: ""}, {alt: "Milk", stc: ""}]],
+        ].map((x) => generate_product(...x)).join("\n")
+        prodsDiv.innerHTML = `
+            <div id="cakes" class="prods">
+                ${items}
+            </div>
+        `
     } else if (state === 5) {
-
         for (let i = 0; i < buttons.length; i++) {
             if (i === state -1){
                 buttons[i].style.color = "#ffffff"
@@ -689,125 +149,16 @@ function ChangeState(state) {
             }
         }
         console.log("State 5")
-        prodsDiv.innerHTML = "<div id=\"bis\" class=\"prods\">\n" +
-            "\n" +
-            "                        <!-- Standard Format of products -->\n" +
-            "                        <article id=\"pr-17\" class=\"pr\">\n" +
-            "\n" +
-            "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Chocolate Bisquits\" src=\"/src/image/catcookie.png\">\n" +
-            "                            </div>\n" +
-            "\n" +
-            "                            <div class=\"content\">\n" +
-            "\n" +
-            "                                <div class=\"ops\">\n" +
-            "\n" +
-            "                                    <div class=\"op\">\n" +
-            "                                        <p>Galletas de Chocolate</p>\n" +
-            "\n" +
-            "                                        <div class=\"ammount\">\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Galletas de Chocolate\",17,Number(document.getElementById(\"ammount-17\").innerText) -1)'>-</button>\n" +
-            "                                            <p id=\"ammount-17\">0</p>\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Galletas de Chocolate\",17,Number(document.getElementById(\"ammount-17\").innerText) +1)'>+</button>\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "\n" +
-            "                                    <div class=\"price\">\n" +
-            "\n" +
-            "                                        <p>0.70€/ud</p>\n" +
-            "\n" +
-            "                                        <div class=\"ingredients\">\n" +
-            "                                            <img alt=\"Eggs\" src=\"\">\n" +
-            "                                            <img alt=\"Wheat\" src=\"\">\n" +
-            "                                            <img alt=\"Milk\" src=\"\">\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "\n" +
-            "                                <div class=\"descr\">\n" +
-            "                                    <p>Chocolate Negro y con leche.</p>\n" +
-            "                                </div>\n" +
-            "                            </div>\n" +
-            "                        </article>\n" +
-            "\n" +
-            "                        <!-- Standard Format of products -->\n" +
-            "                        <article id=\"pr-18\" class=\"pr\">\n" +
-            "\n" +
-            "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Sugar Bisquits\" src=\"/src/image/kitty-cookies4-895x500.jpg\">\n" +
-            "                            </div>\n" +
-            "\n" +
-            "                            <div class=\"content\">\n" +
-            "\n" +
-            "                                <div class=\"ops\">\n" +
-            "\n" +
-            "                                    <div class=\"op\">\n" +
-            "                                        <p>Galletas de Azucar</p>\n" +
-            "\n" +
-            "                                        <div class=\"ammount\">\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Galletas de Azucar\",18,Number(document.getElementById(\"ammount-18\").innerText) -1)'>-</button>\n" +
-            "                                            <p id=\"ammount-18\">0</p>\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Galletas de Azucar\",18,Number(document.getElementById(\"ammount-18\").innerText) +1)'>+</button>\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "\n" +
-            "                                    <div class=\"price\">\n" +
-            "\n" +
-            "                                        <p>1.00€/ud</p>\n" +
-            "\n" +
-            "                                        <div class=\"ingredients\">\n" +
-            "                                            <img alt=\"Eggs\" src=\"\">\n" +
-            "                                            <img alt=\"Wheat\" src=\"\">\n" +
-            "                                            <img alt=\"Milk\" src=\"\">\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "\n" +
-            "                                <div class=\"descr\">\n" +
-            "                                    <p>Con diseños hechos a mano</p>\n" +
-            "                                </div>\n" +
-            "                            </div>\n" +
-            "                        </article>\n" +
-            "\n" +
-            "                        <!-- Standard Format of products -->\n" +
-            "                        <article id=\"pr-19\" class=\"pr\">\n" +
-            "\n" +
-            "                            <div class=\"prev\">\n" +
-            "                                <img alt=\"Image Butter Bisquits\" src=\"/src/image/images.jpeg\">\n" +
-            "                            </div>\n" +
-            "\n" +
-            "                            <div class=\"content\">\n" +
-            "\n" +
-            "                                <div class=\"ops\">\n" +
-            "\n" +
-            "                                    <div class=\"op\">\n" +
-            "                                        <p>Galletas de Mantequilla</p>\n" +
-            "\n" +
-            "                                        <div class=\"ammount\">\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Galletas de Mantequilla\",19,Number(document.getElementById(\"ammount-19\").innerText) -1)'>-</button>\n" +
-            "                                            <p id=\"ammount-19\">0</p>\n" +
-            "                                            <button class=\"but\" onclick='addProduct(\"Galletas de Mantequilla\",19,Number(document.getElementById(\"ammount-19\").innerText) +1)'>+</button>\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "\n" +
-            "                                    <div class=\"price\">\n" +
-            "\n" +
-            "                                        <p>0.60€/ud</p>\n" +
-            "\n" +
-            "                                        <div class=\"ingredients\">\n" +
-            "                                            <img alt=\"Eggs\" src=\"\">\n" +
-            "                                            <img alt=\"Wheat\" src=\"\">\n" +
-            "                                            <img alt=\"Milk\" src=\"\">\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "\n" +
-            "                                <div class=\"descr\">\n" +
-            "                                    <p>Crujientes y deliciosas</p>\n" +
-            "                                </div>\n" +
-            "                            </div>\n" +
-            "                        </article>\n" +
-            "                    </div>"
+        let items = [
+            [17, "Galletas de Chocolate", "catcookie.png", "0.70€/ud", "Chocolate Negro y con leche", [{alt: "Eggs", src: ""}, {alt: "Wheat", src: ""}, {alt: "Milk", stc: ""}]],
+            [18, "Galletas de Azucar", "kitty-cookies4-895x500.jpg", "1.00€/ud", "Con diseños hechos a mano", [{alt: "Eggs", src: ""}, {alt: "Wheat", src: ""}, {alt: "Milk", stc: ""}]],
+            [19, "Galletas de Mantequilla", "images.jpeg", "0.60€/ud", "Crujientes y deliciosas", [{alt: "Eggs", src: ""}, {alt: "Wheat", src: ""}, {alt: "Milk", stc: ""}]],
+        ].map((x) => generate_product(...x)).join("\n")
+        prodsDiv.innerHTML = `
+            <div id="bis" class="prods">
+                ${items}
+            </div>
+        `
     }
 }
 
@@ -847,7 +198,6 @@ function changeStep(step){
         stepFrame.getElementsByClassName("success")[0]
     ]
 
-
     switch (step){
         case 1:
             progressBar[0].style.backgroundColor = "#6c461a";
@@ -874,7 +224,6 @@ function changeStep(step){
                     progressBar[i].style.color = "#000000";
                     progressBar[i].style.backgroundColor = "lightgray";
                 }
-
             }
 
             for (let i = 0; i < frames.length; i++) {
@@ -895,7 +244,6 @@ function changeStep(step){
                     progressBar[i].style.color = "#000000";
                     progressBar[i].style.backgroundColor = "lightgray";
                 }
-
             }
 
             for (let i = 0; i < frames.length; i++) {
@@ -936,3 +284,62 @@ function changeStep(step){
             break
     }
 }
+
+class Test{
+    constructor() {
+    }
+}
+
+generate_form(
+    "#register-form",
+    "Registro de Usuario",
+    [
+        {name: "Nombre ", valid: Name,placeholder: "Nombre de usuario"},
+        {name: "Apellidos ", valid: Name,placeholder: "Apellidos Completos"},
+        {name: "Email de contacto ", valid: Email, type: "email",placeholder: "Nombre de usuario"},
+        {name: "Número de teléfono ", valid: Phone, type: "tel",placeholder: "Teléfono"},
+        {name: "Contraseña ", valid: Password, type: "password",placeholder: "Contraseña de usuario"}
+    ],
+    {
+        name: "Datos de Envío",
+        serialize: Test,
+        skip_serialize: true,
+        callback: () => {
+            cart.updateMasterPrice(0,5)
+            changeStep(3)
+        },
+        alert_ok: true
+    }
+)
+
+generate_form(
+    "#sending-form",
+    "Envío",
+    [
+        {name: "Dirección de envío", valid: Name,placeholder: "Dirección"},
+    ],
+)
+
+generate_form(
+    "#form-payment",
+    "Información de Pago",
+    [
+        {name: "Nombre del Titular", valid: Name,placeholder: "Nombre"},
+        {name: "Número de targeta", valid: CreditCardNumber,placeholder: "Ej: 9999 9999 9999 9999"},
+        {name: "Fecha de Expiración", valid: CreditCardExpiryDate,placeholder: "MM / AA"},
+        {name: "CVC", valid: CreditCardCVC,placeholder: "CVC"},
+    ],
+    {
+        name: "Pagar",
+        serialize: Test,
+        skip_serialize: true,
+        callback: () => {
+            changeStep(5)
+            $('#clock').timeTo({
+                seconds: 1800,
+                displayHours: false
+            });
+        },
+        alert_ok: true
+    }
+)

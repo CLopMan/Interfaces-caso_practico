@@ -28,16 +28,17 @@ html {
     justify-content: space-around;
 }
     .progress > .circle {
-        height: 100px;
-        width: 100px;
+        height: 150px;
+        width: 150px;
         border-radius: 50%;
         background-color: lightgray;
+        justify-content: space-around;
         align-items: center;
-        text-align: center;
         display: flex;
-        padding: 20px;
+        padding: 2.5%;
     }
         .progress > .circle > p {
+            text-align: center;
             flex: 1 1 auto;
         }
 
@@ -46,7 +47,7 @@ html {
         background-color: lightgray;
         flex: 1 1 auto;
         align-items: center;
-        transform: translateY(45px);
+        transform: translateY(70px);
     }
 
 
@@ -86,7 +87,6 @@ html {
                 font-weight: bold;
                 font-size: 1.3em;
                 padding: 5px 0 5px 5px;
-                border: blue 3px solid;
                 display: flex;
                 text-align: right;
             }
@@ -158,7 +158,6 @@ html {
                 }
                 #order-total-prev {
                     text-align: right;
-                    border: blue 3px solid;
                 }
             #step > .result > .order > button {
                 width: 100%;
@@ -166,7 +165,7 @@ html {
                 color: #f9f8f6;
                 padding: 20px 0;
                 border-radius: 20px;
-                border: red 3px solid;
+
                 box-shadow: 0 5px 7px 0 grey;
                 font-weight: bold;
                 font-size: 1.5em;
@@ -175,6 +174,35 @@ html {
             }
 
 
-#step > .login {
-    border: violet 3px solid;
+#step > .login {}
+
+#step > .sending{}
+    .sending > .res-shipment{
+        border: lightgray 3px solid;
+        background-color: #f9f8f6;
+    }
+
+#step > .success {
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    align-items: center;
+    text-align: center;
 }
+    .success > .message {
+        align-items: center;
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
+    }
+        .message > p {
+            text-align: center;
+        }
+
+    .gif > img{
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    #clock {
+        margin-bottom: 5%;
+        transform: scale(120%);
+    }

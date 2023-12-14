@@ -3,12 +3,93 @@
 <html>
     <head>
         <title></title>
-        <link rel="stylesheet" href="style/index.css">
-        <link rel="shortcut icon" href="imagenes/logo.png"> <!--Imagen en la pestaña-->
+        <link rel="stylesheet" href="style/shared.css">
+        <link rel="stylesheet" href="style/home.css">
+        <link rel="shortcut icon" href="./image/logo.png"> <!--Imagen en la pestaña-->
         <meta charset="UTF-8">
+        <meta name="viewport" content="widthdevice-width, initial-scale=1">
     </head>
 
     <body>
-
+        <header class="col-12">
+            <img id="logo_home" class="col-6" src="image/Name.png" alt="Logo del Cat Café">
+            <article class="reserva_header col-7">
+                <p>Visitanos en nuestro Cat café en el centro de Madrid! </p>
+                <a href="reserva.html"><button class="col-9">Haz tu reserva</button></a>
+            </article>
+        </header>
+        <section id="actividades" class="col-12">
+            <div class="decoracion_rectangulo col-9">
+                <p class="textos col-7" id="primera_vez">¿Primera vez visitando un cat café?<br>Te contamos como disfrutar en nuestro local.</p>
+                <p class="textos col-8" id="juega_con">Juega con nuestros gatos, estudia mientras te tomas un café, pasa un buen rato con amigos o incluso duerme un rato! Todo es posible en el catfé. </p>
+            </div>
+            <a href="actividades.html"><button id="boton_info_act" class="boton_info col-4">Más información <p>→</p> </button></a>
+            <h1 class="titulo_seccion col-6">Qué hacer en CATfé</h1>
+            <img id="img_home_activ_1" class="col-3" src="image/catcafe2.png" alt="Gatos y mesas en la cafetería">
+            <img id="img_home_activ_2" class="col-4" src="image/catcafe1.png" alt="Personas hablando y torre de gatos">
+        </section>
+        <section id="productos" class="col-12">
+            <div id="rect2" class="decoracion_rectangulo col-6"></div>
+            <div id="rect1" class="decoracion_rectangulo col-7">
+                <p class="textos col-8" id="aprovecha_tu">Aprovecha tu tiempo al máximo con nuestras ofertas o realiza un pedido de comida casera tras un día largo.</p>
+            </div>
+            <h1 class="titulo_seccion col-6">Productos y precios</h1>
+            <a href="tarifas.html"><button id="boton_info_prod" class="boton_info col-4">Más información <p>→</p> </button></a>
+            <img id="img_home_prod_2" class="col-3" src="image/floatingcoffee.png" alt="café con espuma en forma de gato">
+            <img id="img_home_prod_1" class="col-3" src="image/images.jpeg" alt="galletas en forma de gato">
+            <a href="menu_pedido.html"><button id="boton_haz_pedido" class="boton_info col-3">Haz un pedido! <p>→</p> </button></a>
+        </section>
+        <section id="gatos" class="col-12">
+            <div class="decoracion_rectangulo col-10">
+                <img id="img_home_gatos_1" class="col-6" src="image/Kissa.png" alt="gato durmiendo">
+                <p class="textos col-5" id="todo_lo">Todo lo que necesitas saber de nuestros peludos amigos.</p>
+                <img id="img_home_gatos_2" class="col-4" src="image/catcafe4.png" alt="gato a rayas en una mesa">
+            </div>
+            <h1 class="titulo_seccion col-8">Conoce a nuestros gatos!</h1>
+            <a href="gatos.html"><button id="boton_info_gatos" class="boton_info col-4">Más información <p>→</p> </button></a>
+        </section>
+        <section id="local" class="col-12">
+            <div id="rect3" class="decoracion_rectangulo col-8">
+                <img id="img_home_local_2" class="col-6" src="image/catcafe3.png" alt="imagen de la cafetería con mesas y sillones">
+                <img id="img_home_local_3" class="col-4" src="image/catcafe6.png" alt="imagen de todo el local">
+                <p class="textos col-5">Acogedor y perfecto para relajarse.</p>
+            </div>
+            <div id="rect4" class="decoracion_rectangulo col-5">
+                <p class="textos col-9">Cerca de varias paradas de transporte público.</p>
+                <img id="img_home_local_1" class="col-10" src="image/catcafe7.png" alt="imagen de la entrada al local">
+            </div>
+            <h1 class="titulo_seccion col-5">Nuestro local</h1>
+            <a href="localizacion.html"><button id="boton_localizacion" class="boton_info col-4">Encuentranos <p>→</p> </button></a>
+            <a href="establecimiento.html"><button id="boton_info_local" class="boton_info col-4">Más información <p>→</p> </button></a>
+        </section>
+        <section id="redes" class="col-12">
+            <div id="rect5" class="decoracion_rectangulo col-8">
+                <img id="img_home_redes_insta" class="col-3" src="image/insta.png" alt="instagram">
+                <img id="img_home_redes_tumblr" class="col-3" src="image/tumblr.png" alt="tumblr">
+            </div>
+            <div id="rect6" class="decoracion_rectangulo col-5">
+                <p class="textos col-11">¿Buscas más información?<br>¿Tienes alguna pregunta?</p>
+            </div>
+            <h1 class="titulo_seccion col-7">Nuestras redes sociales</h1>
+            <a href="contacto.html"><button id="boton_redes" class="boton_info col-5">Contacta con nosotros <p>→</p> </button></a>
+        </section>
+        <footer class="col-12">
+            <a href="home.html" id="footer_home" class="col-3">Home</a>
+            <ul id="lista_1" class="col-3">
+                <li><a href="tarifas.html">Productos</a></li>
+                <li><a href="reserva.html">Reserva</a></li>
+                <li><a href="establecimiento.html">Local</a></li>
+                <li><a href="gatos.html">Gatos</a></li>
+            </ul>
+            <ul id="lista_2" class="col-3">
+                <li><a href="localizacion.html">Dirección</a></li>
+                <li><a href="contacto.html">FaQ</a></li>
+                <li><a href="tarifas.html">Precios</a></li>
+                <li><a href="#redes">Redes</a></li>
+            </ul>
+            <a href="" id="footer_politica" class="col-3">Politica de privacidad</a>
+        </footer>
     </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script/shared.js"></script>
 </html>

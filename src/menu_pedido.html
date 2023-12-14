@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style/shared.css">
     <link rel="stylesheet" href="style/menu.css">
     <link rel="stylesheet" href="style/pedido.css">
+    <link rel="stylesheet" href="lib/timeTo/timeTo.css">
 </head>
 <body onload="changeSection('menu');ChangeState(1) ">
 
@@ -54,31 +55,34 @@
                 </div>
 
                 <!-- Sección de Carrito y resumen de pedido -->
-                <aside class="result col-3">
+                <div class="col-3">
+                    <aside class="ItemContainer ">
+                        <header class="SplitContainer">
+                            <div>Carrito</div>
+                            <div class="SplitContainer prod-c">
+                                <p id="sum-am">0</p>
+                                <p> productos</p>
+                            </div>
+                        </header>
 
-                    <div class="title row">
-                        <p class="col-4">Carrito</p>
-
-                        <div class="sum col-8 row">
-                            <p id="sum-am" class="col-5">0</p>
-                            <p class="col-7"> productos</p>
-                        </div>
-                    </div>
-
-                    <div id="list-prods">
-                        <!-- List of products added dinamically with javascript -->
-                    </div>
-
-                    <div class="order">
-
-                        <div class="subtotal row">
-                            <p class="col-6">Subtotal: </p>
-                            <p id="order-total" class="col-6">0.00€</p>
+                        <div id="list-prods">
+                            <!-- List of products added dinamically with javascript -->
                         </div>
 
-                        <button onclick="changeSection('pedido');changeStep(1)">Revisar pedido y pagar</button>
-                    </div>
-                </aside>
+                        <div class="ItemLabelContainer">
+                            <div class="SplitContainer">
+                                <p class="col-6">Subtotal: </p>
+                                <p id="order-total">0.00€</p>
+                            </div>
+                        </div>
+
+                        <button class="SplitContainer" type="button" onclick="changeSection('pedido');changeStep(1)">
+                            <p>Revisar Pedido y Pagar</p>
+                            <p>🡢</p>
+                        </button>
+                    </aside>
+
+                </div>
 
             </section>
         </section>
@@ -120,14 +124,18 @@
 
                     </div>
 
-                    <div class="order">
-
-                        <div class="subtotal row">
-                            <p class="col-6">Subtotal: </p>
-                            <p id="order-total-prev" class="col-6">0.00€</p>
+                    <div class="ItemContainer">
+                        <div class="ItemLabelContainer">
+                            <div class="Item SplitContainer">
+                                <p>Subtotal: </p>
+                                <p id="order-total-prev">0.00€</p>
+                            </div>
                         </div>
 
-                        <button onclick="changeStep(2)">Iniciar sesión</button>
+                        <button class="SplitContainer" type="button" onclick="changeStep(2)">
+                            <p>Iniciar sesión</p>
+                            <p>🡢</p>
+                        </button>
                     </div>
 
                     <div class="back">
@@ -137,9 +145,9 @@
 
                 <!-- Login/Register Formulary -->
                 <div class="login col-12">
-                    <div id="form-login" class="form">
-                        <!-- contenedor del formulario generado dinámicamente -->
-                    </div>
+                    <form id="register-form">
+
+                    </form>
                     <div class="back">
                         <button onclick="changeStep(1)">Revisión de Pedido</button>
                     </div>
@@ -149,14 +157,35 @@
                 <div class="sending col-12">
 
                     <!-- Campo para introducir la calle -->
-                    <div id="form-sending" class="form">
-                        <label for="address">Dirección de Envío</label>
-                        <input id="address" type="text">
-                    </div>
+                    <form id="sending-form"></form>
 
                     <!-- Container for adding shipment costs -->
-                    <div class="res-shipment">
-
+                    <div class="ItemContainer">
+                        <header>Resumen</header>
+                        <div class="ItemContainerContent">
+                            <div class="ItemLabelContainer">
+                                <div class="Item SplitContainer">
+                                    <p>Subtotal</p>
+                                    <p id="total-am">12.90</p>
+                                </div>
+                            </div>
+                            <div class="ItemLabelContainer">
+                                <div class="Item SplitContainer">
+                                    <p>Gastos de Envío</p>
+                                    <p id="shipment-cost">1.00€</p>
+                                </div>
+                            </div>
+                            <div class="ItemLabelContainer">
+                                <div class="SplitContainer">
+                                    <p>Total</p>
+                                    <p id="master-price">13.90€</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="SplitContainer" type="button" onclick="changeStep(4)">
+                            <p>Pago</p>
+                            <p>🡢</p>
+                        </button>
                     </div>
 
                     <!-- Container for the back button -->
@@ -169,9 +198,9 @@
                 <div class="payment col-12">
 
                     <!-- Formulary of payment generated dynamically with JS -->
-                    <div id="form-payment" class="form">
+                    <form id="form-payment" class="form">
 
-                    </div>
+                    </form>
 
                     <!-- Container for the back button -->
                     <div class="back">
@@ -180,12 +209,12 @@
                 </div>
 
                 <!-- Idle section for finishing the shipment -->
-                <div class="success col-12">
+                <div class="success col-12 ItemContainer">
 
                     <!-- Title container -->
-                    <div class="title">
-                        <p>Pedido Realizado con éxito!</p>
-                    </div>
+                    <h3>
+                        Pedido Realizado con éxito!
+                    </h3>
 
                     <!-- Body contnainer -->
                     <div class="message">
@@ -193,14 +222,17 @@
                         <p>Recibirá su comida en un máximo de 30 minutos.</p>
                     </div>
 
+                    <!-- Countdown from Jquery plugins -->
+                    <div id="clock" class=""></div>
+
                     <!-- Gif container -->
                     <div class="gif">
-
+                        <img src="./image/gif-kitty.gif" alt="Gif kitty">
                     </div>
 
                     <!-- Container for the back button -->
                     <div class="back">
-                        <button onclick="changeStep('menu')">Volver a la página de inicio</button>
+                        <button onclick="changeSection('menu')">Volver a la página de inicio</button>
                     </div>
 
                 </div>
@@ -210,15 +242,19 @@
         </section>
     </main>
 
-    <script src="script/ShoppingCart.js"></script>
-    <script src="script/listProds.js"></script>
-    <script src="script/states.js"></script>
+    <!-- Libraries and utils -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="script/attributes.js"></script>
+    <script src="lib/timeTo/jquery.time-to.js"></script>
     <script src="script/order.js"></script>
     <script src="script/user.js"></script>
     <script src="script/form_utils.js"></script>
+    <script src="script/attributes.js"></script>
     <script src="script/shared.js"></script>
+
+    <!-- Especific functionalities -->
+    <script src="script/ShoppingCart.js"></script>
+    <script src="script/listProds.js"></script>
+    <script src="script/states.js"></script>
     <script src="script/menu_pedido.js"></script>
 </body>
 </html>
