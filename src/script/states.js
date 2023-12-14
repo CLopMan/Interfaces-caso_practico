@@ -957,6 +957,7 @@ generate_form(
         serialize: Test,
         skip_serialize: true,
         callback: () => {
+            cart.updateMasterPrice(0,5)
             changeStep(3)
         },
         alert_ok: true

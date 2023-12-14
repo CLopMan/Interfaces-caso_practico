@@ -20,7 +20,36 @@ class ShoppingCart {
             };
         }
 
+        this.shipment_cost = 0
+        this.masterPrice = 0
+
     }
+
+    updateMasterPrice(min, max) {
+
+        let truncar = (num,dec) => {
+            let s = num.toString()
+            let decimalLength = s.indexOf(".")+1
+            let numStr = s.substring(0,decimalLength + dec)
+            return Number(numStr)
+        }
+
+        // Random shipment cost
+        this.shipment_cost = Math.random() * (max - min) + min;
+
+        // Update Master Price with shipment costs
+        this.masterPrice = this.shipment_cost + this.getProductsTotalAmmount()
+
+        // Update the Master Price fields on HTML
+        let ship_cost = document.getElementById("shipment-cost")
+        let total_prods_am = document.getElementById("total-am")
+        let master_price = document.getElementById("master-price")
+
+        ship_cost.innerText = String(truncar(this.shipment_cost,2)) +" €"
+        total_prods_am.innerText = String(truncar(this.getProductsTotalAmmount(),2)) + " €"
+        master_price.innerText = String(truncar(this.masterPrice,2))+" €"
+    }
+
 
     getProductsTotalAmmount(){
         let total_ammount = 0
