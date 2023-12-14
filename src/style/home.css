@@ -1,9 +1,4 @@
-*{
-    background: #EEEBE7;
-    margin: 0%;
-}
-
-img{
+img {
     position: relative;
     background: none;
     padding: 0;
@@ -16,6 +11,22 @@ h1 {
 }
 
 /*----------------HEADER--------------------*/
+
+header:first-child {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+}
+
+header:first-child > img {
+    opacity: 0;
+}
+
+#nav-button-container {
+    background-color: transparent;
+}
+
 header.col-12 {
     height: 100vh;
     background-image: url("../image/catcafe5.png");
@@ -34,7 +45,7 @@ body > header > img {
     position: relative;
     bottom: 10%;
     background: none;
-    color: #EEEBE7;
+    color: var(--page-bg);
 }
 
 .reserva_header > p {
@@ -51,10 +62,10 @@ body > header > img {
     font-weight: 600;
     font-size: 2.5vw;
     letter-spacing: 0.05em;
-    color: #EEEBE7;
+    color: var(--page-bg);
     padding: 1.5%;
-    background: #6C461A;
-    border: 1px solid #EEEBE7;
+    background: var(--marron-base);
+    border: 1px solid var(--page-bg);
     border-radius: 32px;
 }
 
@@ -71,7 +82,7 @@ section{
 .decoracion_rectangulo {
     z-index: 0;
     position: absolute;
-    background: #DDD8D1;
+    background: var(--bordes);
 }
 
 #actividades > .decoracion_rectangulo {
@@ -83,8 +94,8 @@ section{
 
 .boton_info {
     position: relative;
-    color: #F9F8F6;
-    background: #6C461A;
+    color: var(--producto-bg);
+    background: var(--marron-base);
     border-radius: 11px;
     font-weight: 600;
     font-size: 3vw;
@@ -111,7 +122,7 @@ section{
 
 .titulo_seccion {
     position: relative;
-    background: #F9F8F6;
+    background: var(--producto-bg);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 11px;
     color: rgb(44, 34, 27);
@@ -170,7 +181,7 @@ section{
     right: 6%;
     height: 60%;
     margin-top: 2.5%;
-    border: 2px solid #EEEBE7;
+    border: 2px solid var(--page-bg);
 }
 
 #productos > #rect2 {
@@ -269,7 +280,7 @@ section{
     left: 5%;
     height: 63%;
     margin-top: 13%;
-    border: 2px solid #EEEBE7;
+    border: 2px solid var(--page-bg);
 }
 
 #local > .titulo_seccion {
@@ -332,7 +343,7 @@ section{
     margin-top: 6%;
     left:50%;
     height: 30%;
-    border: 2px solid #EEEBE7;
+    border: 2px solid var(--page-bg);
 }
 
 #redes > .titulo_seccion {
@@ -367,13 +378,13 @@ section{
 /*---------------------FOOTER----------------------*/
 footer{
     height: 30vh;
-    background-color: #6C461A;
+    background-color: var(--marron-base);
     margin-top: 5%;
 }
 
-a {
+a:not(nav > *) {
     background: none;
-    color:#DDD8D1;
+    color: var(--bordes);
     text-decoration: none;
 }
 
@@ -406,7 +417,7 @@ ul {
 
 li {
     background: none;
-    color: #DDD8D1;
+    color: var(--bordes);
     font-size: 2vw;
     line-height: 150%;
 }
