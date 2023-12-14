@@ -178,3 +178,11 @@ html {
 #step > .login {
     border: violet 3px solid;
 }
+
+#step > .sending{
+
+}
+    .sending > .res-shipment{
+        border: lightgray 3px solid;
+        background-color: #f9f8f6;
+    }

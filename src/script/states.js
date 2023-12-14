@@ -962,3 +962,31 @@ generate_form(
         alert_ok: true
     }
 )
+
+generate_form(
+    "#sending-form",
+    "Envío",
+    [
+        {name: "Dirección de envío", valid: Name,placeholder: "Dirección"},
+    ],
+)
+
+generate_form(
+    "#form-payment",
+    "Información de Pago",
+    [
+        {name: "Nombre del Titular", valid: Name,placeholder: "Nombre"},
+        {name: "Número de targeta", valid: CreditCardNumber,placeholder: "Ej: 9999 9999 9999 9999"},
+        {name: "Fecha de Expiración", valid: CreditCardExpiryDate,placeholder: "MM / AA"},
+        {name: "CVC", valid: CreditCardCVC,placeholder: "CVC"},
+    ],
+    {
+        name: "Pagar",
+        serialize: Test,
+        skip_serialize: true,
+        callback: () => {
+            changeStep(5)
+        },
+        alert_ok: true
+    }
+)

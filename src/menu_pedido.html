@@ -149,14 +149,35 @@
                 <div class="sending col-12">
 
                     <!-- Campo para introducir la calle -->
-                    <div id="form-sending" class="form">
-                        <label for="address">Dirección de Envío</label>
-                        <input id="address" type="text">
-                    </div>
+                    <form id="sending-form"></form>
 
                     <!-- Container for adding shipment costs -->
-                    <div class="res-shipment">
-
+                    <div class="ItemContainer">
+                        <header>Resumen</header>
+                        <div class="ItemContainerContent">
+                            <div class="ItemLabelContainer">
+                                <div class="Item SplitContainer">
+                                    <p>Subtotal</p>
+                                    <p id="total-am">12.90</p>
+                                </div>
+                            </div>
+                            <div class="ItemLabelContainer">
+                                <div class="Item SplitContainer">
+                                    <p>Gastos de Envío</p>
+                                    <p>1.00€</p>
+                                </div>
+                            </div>
+                            <div class="ItemLabelContainer">
+                                <div class="SplitContainer">
+                                    <p>Total</p>
+                                    <p>13.90€</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="SplitContainer" type="button" onclick="changeStep(4)">
+                            <p>Pago</p>
+                            <p>🡢</p>
+                        </button>
                     </div>
 
                     <!-- Container for the back button -->
@@ -169,9 +190,9 @@
                 <div class="payment col-12">
 
                     <!-- Formulary of payment generated dynamically with JS -->
-                    <div id="form-payment" class="form">
+                    <form id="form-payment" class="form">
 
-                    </div>
+                    </form>
 
                     <!-- Container for the back button -->
                     <div class="back">
@@ -200,7 +221,7 @@
 
                     <!-- Container for the back button -->
                     <div class="back">
-                        <button onclick="changeStep('menu')">Volver a la página de inicio</button>
+                        <button onclick="changeSection('menu')">Volver a la página de inicio</button>
                     </div>
 
                 </div>
@@ -210,6 +231,7 @@
         </section>
     </main>
 
+    <!-- Libraries and utils -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script/order.js"></script>
     <script src="script/user.js"></script>
@@ -217,6 +239,7 @@
     <script src="script/attributes.js"></script>
     <script src="script/shared.js"></script>
 
+    <!-- Especific functionalities -->
     <script src="script/ShoppingCart.js"></script>
     <script src="script/listProds.js"></script>
     <script src="script/states.js"></script>
