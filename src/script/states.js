@@ -987,7 +987,7 @@ generate_form(
         callback: () => {
             changeStep(5)
             $('#clock').timeTo({
-                seconds: 100,
+                seconds: 1800,
                 displayHours: false
             });
         },
