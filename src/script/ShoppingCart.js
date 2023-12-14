@@ -64,16 +64,16 @@ class ShoppingCart {
     showProds(){
         let listDiv = document.getElementById("list-prods");
         let listOrder = document.getElementById("list-prods-order")
-        let collectionImages = ["/src/image/floatingcoffee.png","/src/image/cappuccino.png",
-            "/src/image/latte_macchiato.png", "/src/image/espresso.png",
-            "/src/image/fluffcoffee.png", "/src/image/donutcat.png",
-            "/src/image/cruasan.png", "/src/image/840_560.jpg",
-            "/src/image/churro.jpg", "/src/image/Orangejuice.jpg",
-            "/src/image/apple-juice-recipe.jpg", "/src/image/Mambo_Triturar_Piñacolada_RRSS.jpg",
-            "/src/image/HEADERkuroneko_halloween.jpg", "/src/image/05COOKING-TIRAMISU1-threeByTwoMediumAt2X-v2.jpg",
-            "/src/image/6d304afefe086879df26cb564115b39d.jpg", "/src/image/nc-13.webp",
-            "/src/image/catcookie.png", "/src/image/kitty-cookies4-895x500.jpg",
-            "/src/image/images.jpeg"
+        let collectionImages = ["./image/floatingcoffee.png","./image/cappuccino.png",
+            "./image/latte_macchiato.png", "./image/espresso.png",
+            "./image/fluffcoffee.png", "./image/donutcat.png",
+            "./image/cruasan.png", "./image/840_560.jpg",
+            "./image/churro.jpg", "./image/Orangejuice.jpg",
+            "./image/apple-juice-recipe.jpg", "./image/Mambo_Triturar_Piñacolada_RRSS.jpg",
+            "./image/HEADERkuroneko_halloween.jpg", "./image/05COOKING-TIRAMISU1-threeByTwoMediumAt2X-v2.jpg",
+            "./image/6d304afefe086879df26cb564115b39d.jpg", "./image/nc-13.webp",
+            "./image/catcookie.png", "./image/kitty-cookies4-895x500.jpg",
+            "./image/images.jpeg"
         ]
         listDiv.innerHTML = "";
         listOrder.innerHTML = "";
@@ -156,5 +156,4 @@ class ShoppingCart {
         let total_quantity = document.getElementById("sum-am")
         total_quantity.innerText = String(this.getProductsTotalAmmount())
     }
-
 }
