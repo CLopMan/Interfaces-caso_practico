@@ -130,6 +130,7 @@ main {
                             font-weight: bold;
                             font-size: 1.9em;
                             text-shadow: darkgray 1px 2px 5px;
+                            text-align: center;
                         }
 
                     .Pack > .body {
@@ -172,10 +173,12 @@ main {
                                 font-size: 2em;
                                 font-weight: bold;
                                 color: #6C461A;
+                                text-align: center;
                             }
 
                             .Pack > .body > .price > .note {
                                 height: 45%;
                                 font-size: 0.9em;
+                                text-align: center;
                             }
 
