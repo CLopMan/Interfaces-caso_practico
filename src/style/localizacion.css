@@ -24,6 +24,10 @@
     margin-left:1%;
 }
 
+.img-list > img {
+    width: 100px;
+}
+
 #direccion {
     font-family: 'Serif';
     font-size: 2vw;
@@ -54,6 +58,12 @@
     padding:0;
     margin-top:0;
     margin-bottom: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .img-list > img {
+        width: 75px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
