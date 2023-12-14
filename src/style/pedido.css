@@ -28,16 +28,17 @@ html {
     justify-content: space-around;
 }
     .progress > .circle {
-        height: 100px;
-        width: 100px;
+        height: 150px;
+        width: 150px;
         border-radius: 50%;
         background-color: lightgray;
+        justify-content: space-around;
         align-items: center;
-        text-align: center;
         display: flex;
-        padding: 20px;
+        padding: 2.5%;
     }
         .progress > .circle > p {
+            text-align: center;
             flex: 1 1 auto;
         }
 
@@ -46,7 +47,7 @@ html {
         background-color: lightgray;
         flex: 1 1 auto;
         align-items: center;
-        transform: translateY(45px);
+        transform: translateY(70px);
     }
 
 
@@ -173,13 +174,9 @@ html {
             }
 
 
-#step > .login {
-    border: violet 3px solid;
-}
+#step > .login {}
 
-#step > .sending{
-
-}
+#step > .sending{}
     .sending > .res-shipment{
         border: lightgray 3px solid;
         background-color: #f9f8f6;
