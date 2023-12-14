@@ -936,3 +936,29 @@ function changeStep(step){
             break
     }
 }
+
+class Test{
+    constructor() {
+    }
+}
+
+generate_form(
+    "#register-form",
+    "Registro de Usuario",
+    [
+        {name: "Nombre ", valid: Name,placeholder: "Nombre de usuario"},
+        {name: "Apellidos ", valid: Name,placeholder: "Apellidos Completos"},
+        {name: "Email de contacto ", valid: Email, type: "email",placeholder: "Nombre de usuario"},
+        {name: "Número de teléfono ", valid: Phone, type: "tel",placeholder: "Teléfono"},
+        {name: "Contraseña ", valid: Password, type: "password",placeholder: "Contraseña de usuario"}
+    ],
+    {
+        name: "Datos de Envío",
+        serialize: Test,
+        skip_serialize: true,
+        callback: () => {
+            changeStep(3)
+        },
+        alert_ok: true
+    }
+)
