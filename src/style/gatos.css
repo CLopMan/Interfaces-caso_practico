@@ -6,7 +6,6 @@
 .gato {
     box-sizing: border-box;
     background: #F9F8F6;
-    height: 60vh;
     float: left;
     margin: 1% 0% 1% 5.9%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -39,8 +38,8 @@
     color: #4F4F4F;
 }
 
-.gato >img {
-    height: 70%;
+.gato > img {
+    height: 350px;
     padding: 0;
     border-bottom: 1px #6C461A solid;
     object-fit: cover;
@@ -50,7 +49,6 @@
 @media screen and (max-width: 900px) {
     .col-3{
         width: 40%;
-        height: 45vh;
     }  
 
     h1 {
