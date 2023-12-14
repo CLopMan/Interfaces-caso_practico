@@ -25,7 +25,7 @@
 }
 
 .img-list > img {
-    width: 125px;
+    width: 100px;
 }
 
 #direccion {
@@ -58,6 +58,12 @@
     padding:0;
     margin-top:0;
     margin-bottom: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .img-list > img {
+        width: 75px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
