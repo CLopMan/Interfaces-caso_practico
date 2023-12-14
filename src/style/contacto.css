@@ -1,0 +1,24 @@
+form {
+    margin-bottom: 60px;
+}
+
+#faq > .Item {
+    padding: 0;
+    display: block;
+    margin-top: 25px;
+    min-height: 70px;
+}
+
+#faq > .Item > .Item {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+#faq .dropdown > .ItemText {
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#faq p { padding-bottom: 25px; }
