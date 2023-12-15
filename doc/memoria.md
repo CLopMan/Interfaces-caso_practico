@@ -302,9 +302,27 @@ Teniendo en cuenta tanto los escenarios del [apartado 2](#apartado-2) y el anál
 
 Hemos desarrollado un prototipo mediante la herramienta Figma que pretende representar con una alta fidelidad visual y funcional nuestra web. En él se puede experimentar cómo un usuario ejecutaría las acciones descritas en el escenario de la [sección 2.3](#apartado-23).
 
-[[Enlace a figma]]
+Puede consultar el prototipo siguiento el este [enlace](https://www.figma.com/proto/oiuQy7r7wn6Hb3JY99RUGq/Prototipo?node-id=1-2&starting-point-node-id=1%3A2&scaling=scale-down-width&mode=design&t=CFaFBGQ1qCeq90HY-1)
 
-[[Foto del prototipo]]
+El prototipo incluye todas las páginas de la web, permitiéndote navegar entre ellas a través de distintos botones tal y cómo se hará en el diseño final.
+
+#### Página Home
+
+#### Página de actividades
+
+#### Página de contacto
+
+#### Página establecimiento
+
+#### Página gatos 
+
+#### Página localización 
+
+#### Página menú
+
+#### Página reserva 
+
+#### Página tarifas
 
 \clearpage
 

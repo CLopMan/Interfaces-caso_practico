@@ -73,10 +73,10 @@
     }
 
     .img-list > img {
-        width: 40%;
+        width: 100px;
     }
     .col1-1 {
-        width: 33%;
+        width: 100%;
     }
     #Map > iframe {
         width: 80vw;
@@ -86,6 +86,13 @@
         width: 100vw;
         margin: 0;
         padding-left:7.5vw;
+    }
+
+    .est_text {
+        font-size: 20px;
+    }
+    #contact {
+        font-size: 16px;
     }
 
   }
