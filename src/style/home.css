@@ -1,0 +1,423 @@
+img {
+    position: relative;
+    background: none;
+    padding: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+}
+
+h1 {
+    border-bottom: none;
+}
+
+/*----------------HEADER--------------------*/
+
+header:first-child {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+}
+
+header:first-child > img {
+    opacity: 0;
+}
+
+#nav-button-container {
+    background-color: transparent;
+}
+
+header.col-12 {
+    height: 100vh;
+    background-image: url("../image/catcafe5.png");
+    background-position: 50%;
+    background-size: 100%;
+    padding: 0;
+}
+
+body > header > img {
+    height: auto;
+    box-shadow: none;
+    object-fit: cover;
+}
+
+.reserva_header {
+    position: relative;
+    bottom: 10%;
+    background: none;
+    color: var(--page-bg);
+}
+
+.reserva_header > p {
+    font-weight: 600;
+    font-size: 3.5vw;
+    line-height: 130%;
+    margin: 10% 4% 2%;
+    background: none;
+    text-align: left;
+}
+
+.reserva_header > a > button {
+    float: right;
+    font-weight: 600;
+    font-size: 2.5vw;
+    letter-spacing: 0.05em;
+    color: var(--page-bg);
+    padding: 1.5%;
+    background: var(--marron-base);
+    border: 1px solid var(--page-bg);
+    border-radius: 32px;
+}
+
+/*--------------------ACTIVIDADES-------------------*/
+section{
+    float: left;
+    height: 90vh;
+    margin-bottom: 1%;
+}
+#actividades {
+    padding: 0;
+}
+
+.decoracion_rectangulo {
+    z-index: 0;
+    position: absolute;
+    background: var(--bordes);
+}
+
+#actividades > .decoracion_rectangulo {
+    right: 5%;
+    height: 80%;
+    padding: 0;
+    margin-top: 2.5%;
+}
+
+.boton_info {
+    position: relative;
+    color: var(--producto-bg);
+    background: var(--marron-base);
+    border-radius: 11px;
+    font-weight: 600;
+    font-size: 3vw;
+    line-height: 120%;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: -0.02em;
+    padding: 0.5%;
+    padding-left: 1%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+}
+
+.boton_info > p {
+    margin: 0% 0% 1% 6%;
+    background: none;
+    font-size: 5vw;
+}
+
+#boton_info_act {
+    left: 65%;
+    top: 90%;
+}
+
+.titulo_seccion {
+    position: relative;
+    background: var(--producto-bg);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 11px;
+    color: rgb(44, 34, 27);
+    font-weight: 600;
+    font-size: 4vw;
+}
+
+#actividades > .titulo_seccion {
+    right: 20%;
+    top: 10%;
+}
+
+.textos {
+    position: relative;
+    padding: 0%;
+    background: none;
+    font-weight: 500;
+    font-size: 2.3vw;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #4F4F4F;
+}
+ 
+#primera_vez {
+    left: 10%;
+    top: 25%;
+}
+
+#juega_con {
+    float: right;
+    right:5%;
+    top: 35%;
+}
+
+#img_home_activ_1{
+    float: right;
+    right: 2%;
+    padding: 0;
+}
+
+#img_home_activ_2{
+    float: left;
+    left: 5%;
+    top: 37%;
+    padding: 0;
+}
+
+/*-------------------PRODUCTOS------------------*/
+#productos {
+    padding: 0;
+    height: 85vh;
+}
+
+#productos > #rect1 {
+    right: 6%;
+    height: 60%;
+    margin-top: 2.5%;
+    border: 2px solid var(--page-bg);
+}
+
+#productos > #rect2 {
+    left: 5%;
+    height: 55%;
+    margin-top: 15%;
+}
+
+#productos > .titulo_seccion {
+    float: right;
+    right: 4%;
+    top: 7%;
+}
+
+#aprovecha_tu {
+    float: right;
+    right: 10%;
+    top: 30%;
+}
+
+#boton_info_prod {
+    float: right;
+    left: 47%;
+    top: 58%;
+}
+
+#boton_haz_pedido {
+    right: 47%;
+    top: 72%;
+    font-size: 2.6vw;
+}
+
+#img_home_prod_1 {
+    height: 30%;
+    object-fit: cover;
+    padding: 0;
+    right: 22%;
+    top:22%;
+}
+
+#img_home_prod_2 {
+    padding:0;
+    top:37%;
+    left:20%;
+}
+
+/*----------------------GATOS-------------*/
+
+#gatos > .decoracion_rectangulo {
+    right: 7%;
+    height: 80%;
+    padding: 0;
+    margin-top: 0%;
+}
+
+#img_home_gatos_1 {
+    float:right;
+    padding: 0;
+    height: 75%;
+    object-fit: cover;
+    object-position: top;
+    top:8%;
+    right: 5%;
+}
+
+#img_home_gatos_2 {
+    padding: 0;
+    top:32%;
+    left: 17%;
+}
+
+#todo_lo{
+    top: 30%;
+    margin: 2%;
+}
+
+#gatos > h1 {
+    text-align: center;
+    top:10%;
+}
+
+#boton_info_gatos {
+    top:75%;
+}
+
+/*--------------------------LOCAL---------------------*/
+
+#rect3 {
+    float: right;
+    right: 10%;
+    height: 71%;
+    padding: 0;
+}
+
+#rect4 {
+    left: 5%;
+    height: 63%;
+    margin-top: 13%;
+    border: 2px solid var(--page-bg);
+}
+
+#local > .titulo_seccion {
+    top:5%;
+    left:19%;
+    text-align: center;
+}
+
+#local > #rect4 > .textos {
+    left: 10%;
+}
+#local > #rect3 > .textos {
+    left: 55%;
+    top: 34%;
+}
+
+#img_home_local_1 {
+    padding: 0;
+    left: 5%;
+    top: 5%;
+}
+
+#img_home_local_2 {
+    float: right; 
+    padding: 0;
+    left: 10%;
+    top: 5%;
+}
+
+#img_home_local_3 {
+    float: right; 
+    padding: 0;
+    left: 20%;
+    top: 30%;
+}
+
+#boton_localizacion {
+    padding-left: 3%;
+    top:85%;
+    right: 15%;
+}
+
+#boton_info_local {
+    top:70%;
+    left: 23%;
+}
+
+
+/*---------------------------------REDES------------------------*/
+#redes {
+    height: 50vh;
+}
+
+#rect5 {
+    margin-left: 4%;
+    height: 50%;
+}
+
+#rect6 {
+    margin-top: 6%;
+    left:50%;
+    height: 30%;
+    border: 2px solid var(--page-bg);
+}
+
+#redes > .titulo_seccion {
+    top: 10%;
+}
+
+#rect6 > .textos {
+    top:30%;
+    left: 5%;
+    line-height:150%;
+}
+
+#img_home_redes_insta {
+    padding: 0;
+    box-shadow: none;
+    top:35%;
+    left:4%;
+}
+
+#img_home_redes_tumblr {
+    padding: 0;
+    box-shadow: none;
+    top:35%;
+    left:10%;
+}
+
+#boton_redes {
+    top:77%;
+}
+
+
+/*---------------------FOOTER----------------------*/
+footer{
+    height: 30vh;
+    background-color: var(--marron-base);
+    margin-top: 5%;
+}
+
+a:not(nav > *) {
+    background: none;
+    color: var(--bordes);
+    text-decoration: none;
+}
+
+#footer_home {
+    position: relative;
+    top:35%;
+    left: 5%;
+    font-size: 3vw;
+}
+
+#footer_politica {
+    position: relative;
+    top:25%;
+    text-align: center;
+    font-size: 3vw;
+}
+
+ul {
+    position: relative;
+    background: none;
+    top: 5%;
+}
+
+#lista_1 {
+    left: 5%;
+}
+#lista_2 {
+    left: 5%;
+}
+
+li {
+    background: none;
+    color: var(--bordes);
+    font-size: 2vw;
+    line-height: 150%;
+}

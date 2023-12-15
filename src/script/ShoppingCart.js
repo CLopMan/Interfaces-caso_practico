@@ -20,7 +20,36 @@ class ShoppingCart {
             };
         }
 
+        this.shipment_cost = 0
+        this.masterPrice = 0
+
     }
+
+    updateMasterPrice(min, max) {
+
+        let truncar = (num,dec) => {
+            let s = num.toString()
+            let decimalLength = s.indexOf(".")+1
+            let numStr = s.substring(0,decimalLength + dec)
+            return Number(numStr)
+        }
+
+        // Random shipment cost
+        this.shipment_cost = Math.random() * (max - min) + min;
+
+        // Update Master Price with shipment costs
+        this.masterPrice = this.shipment_cost + this.getProductsTotalAmmount()
+
+        // Update the Master Price fields on HTML
+        let ship_cost = document.getElementById("shipment-cost")
+        let total_prods_am = document.getElementById("total-am")
+        let master_price = document.getElementById("master-price")
+
+        ship_cost.innerText = String(truncar(this.shipment_cost,2)) +" €"
+        total_prods_am.innerText = String(truncar(this.getProductsTotalAmmount(),2)) + " €"
+        master_price.innerText = String(truncar(this.masterPrice,2))+" €"
+    }
+
 
     getProductsTotalAmmount(){
         let total_ammount = 0
@@ -35,16 +64,16 @@ class ShoppingCart {
     showProds(){
         let listDiv = document.getElementById("list-prods");
         let listOrder = document.getElementById("list-prods-order")
-        let collectionImages = ["/src/image/floatingcoffee.png","/src/image/cappuccino.png",
-            "/src/image/latte_macchiato.png", "/src/image/espresso.png",
-            "/src/image/fluffcoffee.png", "/src/image/donutcat.png",
-            "/src/image/cruasan.png", "/src/image/840_560.jpg",
-            "/src/image/churro.jpg", "/src/image/Orangejuice.jpg",
-            "/src/image/apple-juice-recipe.jpg", "/src/image/Mambo_Triturar_Piñacolada_RRSS.jpg",
-            "/src/image/HEADERkuroneko_halloween.jpg", "/src/image/05COOKING-TIRAMISU1-threeByTwoMediumAt2X-v2.jpg",
-            "/src/image/6d304afefe086879df26cb564115b39d.jpg", "/src/image/nc-13.webp",
-            "/src/image/catcookie.png", "/src/image/kitty-cookies4-895x500.jpg",
-            "/src/image/images.jpeg"
+        let collectionImages = ["./image/floatingcoffee.png","./image/cappuccino.png",
+            "./image/latte_macchiato.png", "./image/espresso.png",
+            "./image/fluffcoffee.png", "./image/donutcat.png",
+            "./image/cruasan.png", "./image/840_560.jpg",
+            "./image/churro.jpg", "./image/Orangejuice.jpg",
+            "./image/apple-juice-recipe.jpg", "./image/Mambo_Triturar_Piñacolada_RRSS.jpg",
+            "./image/HEADERkuroneko_halloween.jpg", "./image/05COOKING-TIRAMISU1-threeByTwoMediumAt2X-v2.jpg",
+            "./image/6d304afefe086879df26cb564115b39d.jpg", "./image/nc-13.webp",
+            "./image/catcookie.png", "./image/kitty-cookies4-895x500.jpg",
+            "./image/images.jpeg"
         ]
         listDiv.innerHTML = "";
         listOrder.innerHTML = "";
@@ -58,30 +87,34 @@ class ShoppingCart {
 
         for (const [i,product] of this.prods.entries()) {
             if (product.name !== "" && product.cantidad > 0) {
-                listDiv.innerHTML += "<div class=\"preview row\">\n" +
-                    "                            <div class=\"title row col-6\">\n" +
-                    "                                <p class=\"t col-9\">"+product.name+"</p>\n" +
-                    "                                <p class=\"p col-3\">"+this.prices[i]+"€</p>\n" +
-                    "                            </div>\n" +
-                    "                            <div class=\"price row col-6\">\n" +
-                    "                                <p class=\"x col-5\">x"+product.cantidad+"</p>\n" +
-                    "                                <p class=\"subtotal col-7\">"+truncar(this.sums[i],2)+"€</p>\n" +
-                    "                            </div>\n" +
-                    "                        </div>";
+                listDiv.innerHTML += `
+                    <div class="preview row">
+                        <div class="title row col-6">
+                            <p class="t col-9">"+product.name+"</p>
+                            <p class="p col-3">"+this.prices[i]+"€</p>
+                        </div>
+                        <div class="price row col-6">
+                            <p class="x col-5">x"+product.cantidad+"</p>
+                            <p class="subtotal col-7">"+truncar(this.sums[i],2)+"€</p>
+                        </div>
+                    </div>"
+                `;
 
-                listOrder.innerHTML += "<div class=\"preview row\">\n" +
-                    "                            <div class=\"image-prev\">\n" +
-                    "                                <img alt=\"Image Prev\" src="+collectionImages[i]+">\n" +
-                    "                            </div>\n" +
-                    "                            <div class=\"title col-7\">\n" +
-                    "                                <p class=\"t\">"+product.name+"</p>\n" +
-                    "                                <p class=\"p\">"+this.prices[i]+"€</p>\n" +
-                    "                            </div>\n" +
-                    "                            <div class=\"price row col-3\">\n" +
-                    "                                <p class=\"x col-5\">x"+product.cantidad+"</p>\n" +
-                    "                                <p class=\"subtotal col-7\">"+truncar(this.sums[i],2)+"€</p>\n" +
-                    "                            </div>\n" +
-                    "                        </div>";
+                listOrder.innerHTML += `
+                    "<div class="preview row">
+                        <div class="image-prev">
+                            <img alt="Image Prev" src="+collectionImages[i]+">
+                        </div>
+                        <div class="title col-7">
+                            <p class="t">"+product.name+"</p>
+                            <p class="p">"+this.prices[i]+"€</p>
+                        </div>
+                        <div class="price row col-3">
+                            <p class="x col-5">x"+product.cantidad+"</p>
+                            <p class="subtotal col-7">"+truncar(this.sums[i],2)+"€</p>
+                        </div>
+                    </div>"
+                `;
             }
         }
     }
@@ -127,5 +160,4 @@ class ShoppingCart {
         let total_quantity = document.getElementById("sum-am")
         total_quantity.innerText = String(this.getProductsTotalAmmount())
     }
-
 }
