@@ -1,7 +1,7 @@
 
 
 let index = 2
-let source = ["image//IMG_6940.jpeg", "image//cat-cafe.jpg", "image//1.png", "image//mocha.jpg", "image//mocha (1).jpg"]
+let source = ["image//IMG_6940.jpeg", "image//cat-cafe.jpg", "image//1.png", "image//mocha.jpg", "image//mocha(1).jpg"]
 
 function center_new_img(n, n_elems, slides) {
     for (i = 0; i < n_elems; ++i) {
