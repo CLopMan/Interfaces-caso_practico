@@ -2,30 +2,28 @@
 main {
     display: flex;
     flex-flow: column nowrap;
-    height: 250vh;
+
     background-color: #EEEBE7;
 }
     .sec {
         display: flex;
         flex-flow: column nowrap;
-        margin: 20px 60px 10px 60px;
+        margin: 10% 10% 5% 10%;
         flex-flow: column nowrap;
         flex: 1 1 auto;
-
+        border: red 3px solid;
         justify-content: center;
         height: 20%;
     }
         .sec > .Title {
             flex: 1 1 20%;
-            font-size: 3em;
-            display: flex;
+            font-size: calc(1em + 1vw);
         }
             .Title > p {
-                flex: 1 1 auto;
                 text-align: start;
 
                 align-self: flex-end;
-                height: 9vh;
+                font-size: calc(1em + 1vw);
             }
         .sec > hr {
             color: #6C461A;
@@ -34,8 +32,7 @@ main {
         }
         .sec > .Content {
             display: flex;
-            flex: 1 1 80%;
-
+            align-items: center;
         }
 
             .Content > ul {
@@ -51,86 +48,44 @@ main {
                     flex: 1 1 auto;
                 }
                 ul > .Up {
-                    font-size: 2.5em;
+                    font-size: calc(1em + 1vw);
+                    line-height: 1em;
                 }
                 ul > .Down {
-                    margin-left: 4vw;
-                    font-size: 1.5em;
+                    margin-left: 10%;
+                    font-size: calc(0.5em + 1vw);
                 }
 
             .Content > .Packs {
                 flex: 1 1 auto;
                 background-color: #EEEBE7;
-                margin: 20px;
-                align-items: center;
-            }
-
-            .Content > .info {
                 display: flex;
-                flex-flow: column nowrap;
-                align-items: center;
-                justify-content: center;
+                flex-flow: row wrap;
             }
-                .Content > .info > p {
-                    flex: 1 1 auto;
-                    font-size: 2.7em;
-                    padding: 20px;
-                    justify-content: center;
-                }
-
-                .Content > .info > .but {
-                    cursor: pointer;
-                    width: 25%;
-                    padding: 10px;
-                    border: none;
-                    border-radius: 20px;
-                    background-color: #6C461A;
-                    font-weight: bold;
-                    font-size: 2em;
-                    color: white;
-                    align-self: end;
-                    text-decoration: none;
-                    text-align: center;
-                }
-
-            .Content > .img {
-                width: auto;
-                height: 100%;
-                display: flex;
-
-            }
-                .Content > .img > img {
-                    flex: 1 1 auto;
-                }
-
-                .Content > .Packs {
-                    margin-top: 40px;
-                }
 
                 .Packs > .Pack {
                     background-color: #F9F8F6;
                     border: grey 2px solid;
-                    height: 100%;
+                    flex: 3 1 20%;
                     margin: 0 4% 0 4%;
-                    border-radius: 30px;
-                    padding: 0;
-                    overflow: auto;
+                    border-radius: 25px;
                 }
 
                     .Pack > .head {
                         width: 100%;
                         height: 20%;
                         background-color: #DDD8D1;
-                        border-top-right-radius: 30px;
-                        border-top-left-radius: 30px;
+                        border-top-right-radius: 25px;
+                        border-top-left-radius: 25px;
                         display: flex;
                         align-items: center;
                         text-align: center;
+                        font-size: calc(1.5em + 1vw);
                     }
                         .Pack > .head > p {
+                            font-size: calc(0.2em + 1vw);
                             flex: 1 1 auto;
                             font-weight: bold;
-                            font-size: 1.9em;
                             text-shadow: darkgray 1px 2px 5px;
                             text-align: center;
                         }
@@ -141,46 +96,149 @@ main {
 
                         .Pack > .body > .desciption {
                             width: 100%;
-                            height: 25%;
+                            height: 20%;
                             text-align: center;
-                            padding: 10px 30px;
-                            font-size: 0.9em;
+                            padding: 0 10%;
+                            font-size: calc(0.1em + 1vw);
+                            overflow: auto;
                         }
 
                         .Pack > .body > .offers {
                             height: 50%;
                             overflow: auto;
-                            font-size: 1.3em;
                         }
                             .Pack > .body > .offers > p {
-                                padding: 0 20px;
+                                padding: 0 7%;
                                 font-weight: bold;
+                                font-size: calc(0.4em + 1vw);
                             }
                             .Pack > .body > .offers > ul {
                                 font-weight: bold;
                                 height: 80%;
                             }
                             .Pack > .body > .offers > ul > li {
-                                padding: 0 25px;
-                                margin: 5px 0;
+                                padding: 0 10%;
+                                margin: 2.5% 0;
+                                font-size: calc(0.3em + 1vw);
+                                overflow: hidden;
                             }
 
 
                         .Pack > .body > .price {
-                            height: 25%;
+                            height: 30%;
                             text-align: center;
                         }
                             .Pack > .body > .price > .ammount {
                                 height: 55%;
-                                font-size: 2em;
                                 font-weight: bold;
                                 color: #6C461A;
                                 text-align: center;
+                                font-size: calc(0.5em + 1vw);
                             }
 
                             .Pack > .body > .price > .note {
                                 height: 45%;
-                                font-size: 0.9em;
+                                font-size: calc(0.9vw);
                                 text-align: center;
                             }
 
+
+.Content > .info {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.Content > .info > p {
+    flex: 1 1 auto;
+    font-size: calc(1em + 1vw);
+    padding: 20px;
+    justify-content: center;
+}
+
+.Content > .info > .but {
+    cursor: pointer;
+    width: 25%;
+    padding: 5%;
+    border: none;
+    border-radius: 25px;
+    background-color: #6C461A;
+    font-weight: bold;
+    font-size: 2em;
+    color: white;
+    align-self: end;
+    text-decoration: none;
+    text-align: center;
+}
+
+.Content > .img {
+    width: auto;
+    height: 100%;
+    display: flex;
+
+}
+.Content > .img > img {
+    flex: 1 1 auto;
+}
+
+/*Breakpoint for Mobile Phones*/
+@media only screen and (max-width: 650px){
+    .Content > .Packs {
+        flex: 1 1 auto;
+        background-color: #EEEBE7;
+        align-items: center;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .Packs > .Pack {
+        background-color: #F9F8F6;
+        border: grey 2px solid;
+        width: 100%;
+        flex: 3 1 auto;
+        margin: 0 4% 5% 4%;
+        border-radius: 25px;
+    }
+
+    .sec {
+        margin: 10% 0 5% 0;
+    }
+
+}
+
+/*Breakpoint extra for aligning the titles and organizing the images.*/
+@media only screen and (max-width: 1477px){
+
+    h1 {
+        text-align: center;
+    }
+
+    .Content {
+        flex-flow: column nowrap;
+    }
+
+}
+/* Breakpoint for medium devices.*/
+@media only screen and (max-width: 768px){
+    .Content > .Packs {
+        flex: 1 1 auto;
+        background-color: #EEEBE7;
+        align-items: center;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .Packs > .Pack {
+        background-color: #F9F8F6;
+        border: grey 2px solid;
+        width: 100%;
+        flex: 3 1 auto;
+        margin: 0 4% 5% 4%;
+        border-radius: 25px;
+        overflow: auto;
+    }
+    .Content {
+        flex-flow: column nowrap;
+    }
+}
