@@ -394,6 +394,28 @@ Cada uno de estos errores ha sido corregido. El menú de navegación se ha susti
 
 ## 6. Informe de accesibilidad {#apartado-6}
 
+Para realizar el análisis de accesibilidad, en este caso se ha optado por comprobar el aspecto de las páginascon una herramienta llamada _"WAVE"_. Esta utilidad nos permite analizar el prototipo en busca de consejos o errores para mejorar en este aspecto.
+
+En el análisis, se encuentran los siguientes errores:
+
+- Errores de contraste: Adventencias debido a que el contraste entre el color del texto para algunos párrafos ( Ej. descripciones de productos ) y el fondo de la página web es demasiado bajo.
+
+- Falta de inclusión de etiquetas de título en algunas secciones ( Ej. h1,h2,h3,...): Hay párafos con estilo de títulos que no lo son.
+
+- Largos bloques de información justificados plenamente puede perjudicar la lectura de las páginas.
+
+- Algúnas etiquetas no estaban asociadas a ningún elemento en los formularios
+
+Para corregir los errores y advertencias mencionadas, se han aplicado las siguentes soluciones:
+
+- Modificar el campo _"for"_ de algunas etiquetas en los formularios.
+
+- Justificar bloques no muy grandes de texto.
+
+- Inclusión de elementos h1 y h2 con el estilo estandard definido por la página como elementos.
+
+
+
 \clearpage
 
 ## 7. Descripción de herramientas utilizadas {#apartado-7}
