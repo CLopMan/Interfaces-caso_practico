@@ -1,3 +1,4 @@
+/*=================================================ESTILOS COMPARTIDOS==========================================================*/
 img:not(header img) {
     position: relative;
     background: none;
@@ -10,6 +11,64 @@ h1 {
     border-bottom: none;
 }
 
+.BrownButton > div:not(:first-child) { 
+    font-size: 70px;
+    margin-right: 2%;
+    line-height: 50%;
+}
+
+.mas_info {
+    width: 33.3%;
+}
+
+.boton_info {
+    position: relative;
+    color: var(--producto-bg);
+    background: var(--marron-base);
+    border-radius: 11px;
+    font-weight: 600;
+    font-size: 2.5vw;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+}
+
+.decoracion_rectangulo {
+    position: relative;
+    z-index: 0;
+    background: var(--bordes);
+}
+
+.titulo_seccion {
+    position: relative;
+    background: var(--producto-bg);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 11px;
+    color: rgb(44, 34, 27);
+    font-weight: 600;
+    font-size: 4vw;
+}
+
+.textos {
+    position: relative;
+    padding: 0%;
+    background: none;
+    font-weight: 500;
+    font-size: 2.3vw;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #4F4F4F;
+}
+
+section {
+    float: left;
+    height: 800px;
+    margin-bottom: 3%;
+}
+
+section.col-12 {
+    padding: 0;
+}
 /*----------------HEADER--------------------*/
 
 header:first-child {
@@ -31,8 +90,8 @@ header.col-12 {
     height: 100vh;
     background-image: url("../image/catcafe5.png");
     background-position: 50%;
-    background-size: 100%;
-    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 body > header > img {
@@ -54,9 +113,10 @@ body > header > img {
     margin: 10% 4% 2%;
     background: none;
     text-align: left;
+    text-shadow: 2px 0 var(--marron-base), 0 -2px var(--marron-base);
 }
 
-.reserva_header > a > button {
+.reserva_header > button {
     float: right;
     font-weight: 600;
     font-size: 2.5vw;
@@ -69,83 +129,30 @@ body > header > img {
 }
 
 /*--------------------ACTIVIDADES-------------------*/
-section{
-    float: left;
-    height: 90vh;
-    margin-bottom: 1%;
-}
 #actividades {
-    padding: 0;
-}
-
-.decoracion_rectangulo {
-    z-index: 0;
     position: absolute;
-    background: var(--bordes);
+    height: 100%;
+    padding: 0;
+    float: left;
 }
 
 #actividades > .decoracion_rectangulo {
-    right: 5%;
+    left: 18%;
     height: 80%;
     padding: 0;
     margin-top: 2.5%;
 }
 
-.boton_info {
-    position: relative;
-    color: var(--producto-bg);
-    background: var(--marron-base);
-    border-radius: 11px;
-    font-weight: 600;
-    font-size: 3vw;
-    line-height: 120%;
-    display: flex;
-    align-items: flex-end;
-    letter-spacing: -0.02em;
-    padding: 0.5%;
-    padding-left: 1%;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border: none;
-}
-
-.boton_info > p {
-    margin: 0% 0% 1% 6%;
-    background: none;
-    font-size: 5vw;
-}
-
 #boton_info_act {
     left: 65%;
-    top: 90%;
-}
-
-.titulo_seccion {
-    position: relative;
-    background: var(--producto-bg);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 11px;
-    color: rgb(44, 34, 27);
-    font-weight: 600;
-    font-size: 4vw;
+    bottom: 7%;
 }
 
 #actividades > .titulo_seccion {
-    right: 20%;
-    top: 10%;
+    left: 10%;
+    bottom: 83%;
 }
 
-.textos {
-    position: relative;
-    padding: 0%;
-    background: none;
-    font-weight: 500;
-    font-size: 2.3vw;
-    line-height: 140%;
-    text-align: center;
-    letter-spacing: -0.02em;
-    color: #4F4F4F;
-}
- 
 #primera_vez {
     left: 10%;
     top: 25%;
@@ -160,24 +167,26 @@ section{
 #img_home_activ_1{
     float: right;
     right: 2%;
+    bottom: 80%;
     padding: 0;
 }
 
 #img_home_activ_2{
-    float: left;
-    left: 5%;
-    top: 37%;
+    left: 2%;
+    bottom: 57%;
     padding: 0;
 }
 
 /*-------------------PRODUCTOS------------------*/
 #productos {
     padding: 0;
-    height: 85vh;
+    height: 100%;
+    position: absolute;
 }
 
 #productos > #rect1 {
-    right: 6%;
+    left: 36%;
+    bottom: 70%;
     height: 60%;
     margin-top: 2.5%;
     border: 2px solid var(--page-bg);
@@ -192,7 +201,7 @@ section{
 #productos > .titulo_seccion {
     float: right;
     right: 4%;
-    top: 7%;
+    bottom: 127%;
 }
 
 #aprovecha_tu {
@@ -204,10 +213,11 @@ section{
 #boton_info_prod {
     float: right;
     left: 47%;
-    top: 58%;
+    bottom: 88%;
 }
 
 #boton_haz_pedido {
+    width: 30%;
     right: 47%;
     top: 72%;
     font-size: 2.6vw;
@@ -218,22 +228,26 @@ section{
     object-fit: cover;
     padding: 0;
     right: 22%;
-    top:22%;
+    bottom: 122%;
 }
 
 #img_home_prod_2 {
     padding:0;
-    top:37%;
+    bottom:110%;
     left:20%;
 }
 
 /*----------------------GATOS-------------*/
+#gatos {
+    position: absolute;
+    height: 100%;
+}
 
 #gatos > .decoracion_rectangulo {
-    right: 7%;
+    left: 15%;
     height: 80%;
     padding: 0;
-    margin-top: 0%;
+    top: 5%;
 }
 
 #img_home_gatos_1 {
@@ -259,32 +273,37 @@ section{
 
 #gatos > h1 {
     text-align: center;
-    top:10%;
+    bottom: 70%;
 }
 
 #boton_info_gatos {
-    top:75%;
+    bottom:5%;
 }
 
 /*--------------------------LOCAL---------------------*/
+#local {
+    position:absolute;
+    height: 100%;
+}
 
 #rect3 {
     float: right;
     right: 10%;
-    height: 71%;
+    height: 80%;
+    top: 7%;
     padding: 0;
 }
 
 #rect4 {
-    left: 5%;
+    left: 3%;
     height: 63%;
-    margin-top: 13%;
+    bottom: 50%;
     border: 2px solid var(--page-bg);
 }
 
 #local > .titulo_seccion {
-    top:5%;
-    left:19%;
+    bottom:65%;
+    right:23%;
     text-align: center;
 }
 
@@ -316,37 +335,35 @@ section{
     top: 30%;
 }
 
-#boton_localizacion {
-    padding-left: 3%;
-    top:85%;
-    right: 15%;
-}
-
 #boton_info_local {
-    top:70%;
-    left: 23%;
+    top:80%;
+    left: 43%;
 }
 
 
 /*---------------------------------REDES------------------------*/
 #redes {
-    height: 50vh;
+    height: 100%;
+    position: absolute;
 }
 
 #rect5 {
     margin-left: 4%;
-    height: 50%;
+    height: 70%;
+    top: 10%;
 }
 
 #rect6 {
     margin-top: 6%;
     left:50%;
-    height: 30%;
+    height: 35%;
+    bottom: 50%;
     border: 2px solid var(--page-bg);
 }
 
 #redes > .titulo_seccion {
-    top: 10%;
+    bottom: 55%;
+    right: 20%;
 }
 
 #rect6 > .textos {
@@ -370,7 +387,10 @@ section{
 }
 
 #boton_redes {
-    top:77%;
+    bottom:7%;
+    left: 10%;
+    box-sizing: border-box;
+    width: 40%;
 }
 
 
@@ -378,7 +398,7 @@ section{
 footer{
     height: 30vh;
     background-color: var(--marron-base);
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 a:not(nav > *) {
