@@ -90,30 +90,30 @@ class ShoppingCart {
                 listDiv.innerHTML += `
                     <div class="preview row">
                         <div class="title row col-6">
-                            <p class="t col-9">"+product.name+"</p>
-                            <p class="p col-3">"+this.prices[i]+"€</p>
+                            <p class="t col-9">`+product.name+`</p>
+                            <p class="p col-3">`+this.prices[i]+`€</p>
                         </div>
                         <div class="price row col-6">
-                            <p class="x col-5">x"+product.cantidad+"</p>
-                            <p class="subtotal col-7">"+truncar(this.sums[i],2)+"€</p>
+                            <p class="x col-5">x`+product.cantidad+`</p>
+                            <p class="subtotal col-7">`+truncar(this.sums[i],2)+`€</p>
                         </div>
-                    </div>"
+                    </div>
                 `;
 
                 listOrder.innerHTML += `
-                    "<div class="preview row">
+                    <div class="preview row">
                         <div class="image-prev">
                             <img alt="Image Prev" src="+collectionImages[i]+">
                         </div>
                         <div class="title col-7">
-                            <p class="t">"+product.name+"</p>
-                            <p class="p">"+this.prices[i]+"€</p>
+                            <p class="t">`+product.name+`</p>
+                            <p class="p">`+this.prices[i]+`€</p>
                         </div>
                         <div class="price row col-3">
-                            <p class="x col-5">x"+product.cantidad+"</p>
-                            <p class="subtotal col-7">"+truncar(this.sums[i],2)+"€</p>
+                            <p class="x col-5">x`+product.cantidad+`</p>
+                            <p class="subtotal col-7">`+truncar(this.sums[i],2)+`€</p>
                         </div>
-                    </div>"
+                    </div>
                 `;
             }
         }
