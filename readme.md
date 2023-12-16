@@ -13,13 +13,14 @@ CatFe
 | Reserva                | Terminado   | Álvaro        | **Html** + **css** + js            |
 | Pedido + Menú          | Revisar CSS | Adri          | **Html** + **css** + **js**        |
 | Contactanos            | Terminado   | Álvaro        | **Html** + **css** + js            |
-| Gatos                  | Empezado    | Paula         | **Html** + **css** + js[^1]        |
+| Gatos                  | Terminado[^2] | Paula       | **Html** + **css** + js[^1]        |
 | Loacalización          | Terminado   | César         | Html + **css**                     |
 | Tarifas                | Terminado   | Adri          | Html + **css**                     |
 | Establecimiento        | Terminado   | César         | Html + **css** + **js**            |
 | Utilizades             | Terminado   | Álvaro        | Headers, y demás cosas comunes     |
 
 [^1]: Agrandar la foto de un gato para poner más fotos (galería)
+[^2]: Se podría añadir que se hagan grande los gatos al hacerles click
 
 ### Memoria
 
