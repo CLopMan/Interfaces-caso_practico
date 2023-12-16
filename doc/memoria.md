@@ -302,33 +302,92 @@ Teniendo en cuenta tanto los escenarios del [apartado 2](#apartado-2) y el anál
 
 Hemos desarrollado un prototipo mediante la herramienta Figma que pretende representar con una alta fidelidad visual y funcional nuestra web. En él se puede experimentar cómo un usuario ejecutaría las acciones descritas en el escenario de la [sección 2.3](#apartado-23).
 
-Puede consultar el prototipo siguiento el este [enlace](https://www.figma.com/proto/oiuQy7r7wn6Hb3JY99RUGq/Prototipo?node-id=1-2&starting-point-node-id=1%3A2&scaling=scale-down-width&mode=design&t=CFaFBGQ1qCeq90HY-1)
+Puede consultar el prototipo siguiento [enlace](https://www.figma.com/proto/oiuQy7r7wn6Hb3JY99RUGq/Prototipo?node-id=1-2&starting-point-node-id=1%3A2&scaling=scale-down-width&mode=design&t=CFaFBGQ1qCeq90HY-1)
 
 El prototipo incluye todas las páginas de la web, permitiéndote navegar entre ellas a través de distintos botones tal y cómo se hará en el diseño final.
 
+![imagen del prototipo completo desarrollado en figma](img_memoria/prototipo.png){width=\textwidth}
+
 #### Página Home
+
+Esta página cuenta con distintas secciones donde se pueede consultar un poco de información sobre el establecimiento. En cada sección existe un botón que llevará a la persona a la página en específico donde pueda consultar de forma más detallada aquel aspecto que le interese. Además, al igual que en el resto de páginas, tendremos una cabecera común con el nombre y logo del restaurante, así cómo el acceso al menú hambuguesa. A las secciones se accede mediante scroll vertical. 
 
 #### Página de actividades
 
+Esta págian está destinada a la gente que no conozca qué es un cat café. Contiene una serie de sugerencias sobre actividades que se pueden llevar acabo en este tipo de locales. Además, aquellas actividades relacionadas con los gatos o la comida cuentan con un enlace a la página sobre los gatos y el menú respectivamente. Cada una de las activiades se describe a través de una foto y un breve texto. 
+
 #### Página de contacto
+
+En esta págian existen 3 secciones, separadas por un título y una línea horizontal. 
+
+La primera sección cuenta con el número de teléfono y el correo electrónico del restaurante. De esta forma, cualquier cliente puede acceder rápidamente a una forma de comunicación directa con el establecimiento. 
+
+La segunda sección cuenta con varios desplegables, cada uno con una pregunta general sobre el establecimiento. Estas son dudas comunes que suelen tener clientes de esta clase de establecimientos.
+
+La tercerca es un formulario de contacto a través del cual, una persona puede mandar su duda o inquietud al restaurante. 
 
 #### Página establecimiento
 
+En esta sección funcioan como un "quiénes somos". En ella se describe el tipo de local y servicio que se ofrece, así cómo los objetivos e ideales de la marca. Esto se hace en dos secciones diferenciadas, de nuevo, por un título y una línea horizontal. 
+
 #### Página gatos 
+
+En esta página podemos consultar información acerca de los gatos. Esto es información de interés para aquellas personas amantes de esta clase de animales.
+
+Cada gato tiene su propio cuadro donde podemos consultar nombre, actitud, edad y sexo. 
 
 #### Página localización 
 
+En esta página podemos consultar dónde se encuentra el establecimiento, así cómo su cercanía a distintas estaciones de transporte público. También existe un enlace a la página de contacto. 
+
 #### Página menú
+
+En esta página se puede consultar la carta, donde los productos están separados por categorías. Por defecto se mostrará la categoría de cafés, aunque se puede acceder a caulquier otra clickando en algunos de los botones de la parte superior. La categoría seleccionada tendrá un color marrón, mientras que el resto de categorías aparecerán en blanco. 
+
+También, se pueden seleccionar productos para hacer un pedido. Los productos seleccionados (a través del botón '+') aparecerán instantáneamente en el carrito, desde donde los podremos eliminar o añadir unidades; esta funcionalidad también se puede hacer desde cada producto. Una vez terminado el pedido podremos revisar y efectuar el pedido a través de botón "Revisar y pagar".
+
+Para revisar y pagar el pedido se nos llevará a una página con una barra de progreso. Siguiendo los cuatro pasos podremos efectuar el pedido y aparecerá una pequeña animación indicando al cliente que su pedido se ha llevado a cabo. 
 
 #### Página reserva 
 
+En esta página podremos efectuar una reserva de una mesa en el local. Primero, se especifican las normas del establecimiento; a continuación, existe un contenedor con 4 pasos para poder hacer la reserva. El proceso se guía a través de una pequeña caja redonda junto a cada paso que, una vez completado, se rellena con un tick verde. 
+
 #### Página tarifas
+
+Las cafeterías de este estilo suelen ofrecer planes por tiempo en el local. En esta página se pueden consultar los precios y contenidos de estos planes, así como un pequeño resmen del tipo de productos que se ofrecen. 
 
 \clearpage
 
+### Patrones y heurísticas
+
+A la hora de hacer el diseño y prototipado se han aplicado las siguientes heurísticas: 
+
+- Consistencia y estandarización: se aplica el mismo patrón de diseño para los bloques de contenido con botones.
+- Minimalismo: el diseño está adaptado para no sobrecargar a la persona de información. Se aprecia fácilmente en los formularios de registro de usuario. 
+- Visibilidad del estado del sistema: se da reotralimentación al usuario a través de mensajes de confirmación para los pedidos a domicilio y reserva de mesas. 
+- Control de usuario y libertad: en el pedido a domicilio y la reserva de mesa existen botones para avanzar y retroceder. 
+
+Además aplicamos los siguientes patrones: 
+
+- Site Branding (E1): todas las páginas contienen el logo en la esquina superior derecha. 
+- Botón de acción (K4): Se usan botones para activar acciones. 
+- Barra de progreso (H13): el proceso de realizar un pedido se acompaña de una barra de progreso que indica los pasos anteriores, el paso actual y los pasos siguientes.
+- Prevención de errores (K12): los formularios aportan pistas sobre cómo se deben rellenar para evitar errores por el formato de entrada. 
+- Plantillas de páginas (D1): todas las páginas usan una plantilla global con cabecera (que incluye el botón para acceder al menú de hamburguesa) y plantillas individuales para cada tipo de página. 
+- Carrito de compra (F3): en el proceso de hacer un pedido, existe un carrito de compra donde se pueden consultar en tiempo real los productos seleccionados hasta el momento. 
+
 ## 5. Diseño final {#apartado-5}
 
-[[Comparación entre original y final]]
+El diseño final cuenta con 8 páginas, 9 hojas de estilo y 13 scripts de *javaScript*. Para los elementos compartidos como la cabecera se ha empleado un script de *javaScript* para incluirlo en cada página con el mismo formato, permitiéndonos modificar la cabecera en un único sitio. Además, existe una hoja de estilos *shared.css* que contiene los estilos compartidos para todas las páginas como los encabezados, el texto o la distribución de columnas. 
+
+En cuanto al comportamiento *responsive* se ha decidido usar una aproximación de diseño por columnas. Se ha dividido el espacio de la página horizontalmente en 12 columnas y a cada elemento se le asigna un tamaño en número de columnas. De esta forma, se facilita la distribución de elementos por la página. Además, para dispositivos de disnto tamaño se varía el tamaño de las columnas o, en su defecto, de los objetos de forma que permite un código más limpio con un buen resultado. 
+
+Comparando el prototipo con el diseño final, destacamos 3 errores que recibimos durante la defensa:
+- El menú de navegación contaba con demasiadas páginas y su uso en pantalla completa podría llegar a desorientar, perdiéndo la referencia sobre en qué página se encuentra uno actualmente.
+- Existen demasiadas páginas, algunas de ellas con información redudante. 
+- El indicativo para hacer scroll era un elemento innecesario y que ropía la estética de la página. 
+
+Cada uno de estos errores ha sido corregido. El menú de navegación se ha sustituído por un menú lateral que ocupa aproximadamente un cuarto del ancho de la pantalla. Las páginas de localización y establecimiento se han combinado ya que contenían información fácilmente acoplable, reduciendo el número de páginas. 
 
 \clearpage
 
