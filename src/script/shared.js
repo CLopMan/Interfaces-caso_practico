@@ -11,8 +11,7 @@ $("body").prepend(`<header class="SplitContainer">
     <a href="./gatos.html">Nuestros gatos</a>
     <a href="./establecimiento.html">Establecimiento</a>
     <a href="./reserva.html">Reserva</a>
-    <a href="./localizacion.html">Dónde estamos</a>
-    <a href="./contacto.html">Contacto</a>
+    <a href="./contacto.html">Sobre nosotros</a>
 </nav>
 `)
 
