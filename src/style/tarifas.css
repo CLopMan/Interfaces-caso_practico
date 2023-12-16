@@ -1,244 +1,130 @@
+.Content > * { padding-top: 0; }
 
-main {
-    display: flex;
-    flex-flow: column nowrap;
-
-    background-color: #EEEBE7;
+.Content > ul {
 }
-    .sec {
-        display: flex;
-        flex-flow: column nowrap;
-        margin: 10% 10% 5% 10%;
-        flex-flow: column nowrap;
-        flex: 1 1 auto;
-        border: red 3px solid;
-        justify-content: center;
-        height: 20%;
+    ul > li {
+        padding: 20px 0 0 0;
     }
-        .sec > .Title {
-            flex: 1 1 20%;
-            font-size: calc(1em + 1vw);
-        }
-            .Title > p {
-                text-align: start;
+    ul > .Up {
+        font-size: calc(1em + 1vw);
+        line-height: 1em;
+    }
+    ul > .Down {
+        margin-left: 5vw;
+        font-size: calc(0.5em + 1vw);
+    }
 
-                align-self: flex-end;
-                font-size: calc(1em + 1vw);
-            }
-        .sec > hr {
-            color: #6C461A;
-            height: 2px;
-            width: 98%;
-        }
-        .sec > .Content {
+#Packs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+    #Packs > .Pack {
+        background-color: var(--producto-bg);
+        border: 2px solid var(--bordes);
+        flex: 1 1 20%;
+        margin: 0 30px 0;
+        border-radius: 25px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .Pack > header {
+            background-color: var(--bordes);
             display: flex;
             align-items: center;
+            justify-content: center;
+            padding: 20px 10px;
+        }
+            .Pack > header > p {
+                font-weight: bold;
+                text-align: center;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+            }
+
+        .Pack > .body {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
 
-            .Content > ul {
-                flex: 1 1 auto;
-                width: 100%;
+            .Pack > .body > .description {
+                padding: 10px 30px;
+                font-size: 16px;
                 display: flex;
-                flex-flow: column nowrap;
-            }
-                ul > li {
-                    padding: 20px 0 0 0;
-                    margin-left: 3vw;
-                    justify-content: center;
-                    flex: 1 1 auto;
-                }
-                ul > .Up {
-                    font-size: calc(1em + 1vw);
-                    line-height: 1em;
-                }
-                ul > .Down {
-                    margin-left: 10%;
-                    font-size: calc(0.5em + 1vw);
-                }
-
-            .Content > .Packs {
-                flex: 1 1 auto;
-                background-color: #EEEBE7;
-                display: flex;
-                flex-flow: row wrap;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: grey;
             }
 
-                .Packs > .Pack {
-                    background-color: #F9F8F6;
-                    border: grey 2px solid;
-                    flex: 3 1 20%;
-                    margin: 0 4% 0 4%;
-                    border-radius: 25px;
+            .Pack > .body > .offers {
+                padding: 0 20px;
+                font-weight: bold;
+                flex-grow: 1;
+            }
+                .Pack > .body > .offers > ul {
+                    margin-left: 25px;
                 }
 
-                    .Pack > .head {
-                        width: 100%;
-                        height: 20%;
-                        background-color: #DDD8D1;
-                        border-top-right-radius: 25px;
-                        border-top-left-radius: 25px;
-                        display: flex;
-                        align-items: center;
-                        text-align: center;
-                        font-size: calc(1.5em + 1vw);
-                    }
-                        .Pack > .head > p {
-                            font-size: calc(0.2em + 1vw);
-                            flex: 1 1 auto;
-                            font-weight: bold;
-                            text-shadow: darkgray 1px 2px 5px;
-                            text-align: center;
-                        }
+                .Pack > .body > .offers > ul > li {
+                    padding: 0 10px;
+                    margin: 8px 0;
+                    font-size: 20px;
+                }
 
-                    .Pack > .body {
-                        height: 80%;
-                    }
+            .Pack > .body > .price {
+                padding-bottom: 10px;
+            }
+                .Pack > .body > .price > * { text-align: center; }
 
-                        .Pack > .body > .desciption {
-                            width: 100%;
-                            height: 20%;
-                            text-align: center;
-                            padding: 0 10%;
-                            font-size: calc(0.1em + 1vw);
-                            overflow: auto;
-                        }
+                .Pack > .body > .price > .amount {
+                    font-weight: bold;
+                    color: var(--marron-base);
+                }
 
-                        .Pack > .body > .offers {
-                            height: 50%;
-                            overflow: auto;
-                        }
-                            .Pack > .body > .offers > p {
-                                padding: 0 7%;
-                                font-weight: bold;
-                                font-size: calc(0.4em + 1vw);
-                            }
-                            .Pack > .body > .offers > ul {
-                                font-weight: bold;
-                                height: 80%;
-                            }
-                            .Pack > .body > .offers > ul > li {
-                                padding: 0 10%;
-                                margin: 2.5% 0;
-                                font-size: calc(0.3em + 1vw);
-                                overflow: hidden;
-                            }
+                .Pack > .body > .price > .note {
+                    font-size: 14px;
+                    color: grey;
+                }
 
-
-                        .Pack > .body > .price {
-                            height: 30%;
-                            text-align: center;
-                        }
-                            .Pack > .body > .price > .ammount {
-                                height: 55%;
-                                font-weight: bold;
-                                color: #6C461A;
-                                text-align: center;
-                                font-size: calc(0.5em + 1vw);
-                            }
-
-                            .Pack > .body > .price > .note {
-                                height: 45%;
-                                font-size: calc(0.9vw);
-                                text-align: center;
-                            }
-
-
-.Content > .info {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+#check > .info {
     text-align: center;
-    justify-content: center;
 }
-.Content > .info > p {
-    flex: 1 1 auto;
-    font-size: calc(1em + 1vw);
+
+#check > .info > p {
+    font-size: 32px;
     padding: 20px;
-    justify-content: center;
 }
 
-.Content > .info > .but {
-    cursor: pointer;
-    width: 25%;
-    padding: 5%;
-    border: none;
-    border-radius: 25px;
-    background-color: #6C461A;
-    font-weight: bold;
-    font-size: 2em;
-    color: white;
-    align-self: end;
-    text-decoration: none;
-    text-align: center;
+#check > .info > .BrownButton {
+    width: 100%;
+    display: block;
 }
 
-.Content > .img {
-    width: auto;
-    height: 100%;
-    display: flex;
+#check > img { float: right; }
 
-}
-.Content > .img > img {
-    flex: 1 1 auto;
-}
-
-/*Breakpoint for Mobile Phones*/
-@media only screen and (max-width: 650px){
-    .Content > .Packs {
-        flex: 1 1 auto;
-        background-color: #EEEBE7;
+@media screen and (max-width: 1000px) {
+    #Packs {
         align-items: center;
-        display: flex;
         flex-flow: column nowrap;
+        justify-content: initial;
     }
 
-    .Packs > .Pack {
-        background-color: #F9F8F6;
-        border: grey 2px solid;
+    #Packs > .Pack {
         width: 100%;
-        flex: 3 1 auto;
-        margin: 0 4% 5% 4%;
-        border-radius: 25px;
-    }
-
-    .sec {
-        margin: 10% 0 5% 0;
-    }
-
-}
-
-/*Breakpoint extra for aligning the titles and organizing the images.*/
-@media only screen and (max-width: 1477px){
-
-    h1 {
-        text-align: center;
-    }
-
-    .Content {
-        flex-flow: column nowrap;
-    }
-
-}
-/* Breakpoint for medium devices.*/
-@media only screen and (max-width: 768px){
-    .Content > .Packs {
-        flex: 1 1 auto;
-        background-color: #EEEBE7;
-        align-items: center;
-        display: flex;
-        flex-flow: column nowrap;
-    }
-
-    .Packs > .Pack {
-        background-color: #F9F8F6;
-        border: grey 2px solid;
-        width: 100%;
-        flex: 3 1 auto;
-        margin: 0 4% 5% 4%;
-        border-radius: 25px;
+        margin-bottom: 5%;
         overflow: auto;
     }
-    .Content {
-        flex-flow: column nowrap;
-    }
+}
+
+@media screen and (min-width: 768px) {
+    #check > .info > p { padding-top: 0; }
+}
+
+/* Breakpoint for medium devices.*/
+@media only screen and (max-width: 768px){
+    #check > * { width: 100%; }
 }

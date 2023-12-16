@@ -10,21 +10,12 @@
     <title>Tarifas</title>
 </head>
 <body>
-
-
-
     <!-- Principal contents of the page -->
     <main>
-
         <!-- information about the prices -->
-        <section class="sec">
-
+        <section>
             <!-- title section -->
-            <h1>
-                Conoce Nuestras Tarifas
-            </h1>
-
-
+            <h1>Conoce Nuestras Tarifas</h1>
             <!-- contents section -->
             <div class="Content">
                 <ul>
@@ -43,124 +34,95 @@
                         <div>10€</div>
                     <li class="Down">Incluye dos consumiciones</li>
                 </ul>
-
             </div>
-
         </section>
 
         <!-- Prices packs -->
-        <section class="sec">
-
+        <section>
             <!-- title section -->
             <h1>Packs Especiales</h1>
-
             <!-- contents section -->
-            <div class="Content">
+            <div id="Packs" class="Content">
+                <article class="Pack">
+                    <header><p>Estudiantes</p></header>
+                    <div class="body">
+                        <p class="description">Pack para aquellos estudiantes* que quieran pasar la tarde trabajando bien acompañados</p>
 
-                <div class="Packs">
-                    <article class="Pack">
-                        <div class="head">
-                            <p>Estudiantes</p>
+                        <div class="offers">
+                            <p>Incluye: </p>
+                            <ul>
+                                <li>4 Cafés</li>
+                                <li>Un bollo, tarta o plato de galletas</li>
+                                <li>6 horas de estancia.</li>
+                            </ul>
                         </div>
-                        <div class="body">
-                            <p class="desciption">Pack para aquellos estudiantes* que quieran pasar la tarde
-                            trabajando bien acompañados</p>
 
-                            <div class="offers">
-                                <p>Incluye: </p>
-                                <ul class="offers">
-                                    <li>· 4 Cafés</li>
-                                    <li>· Un bollo, tarta o plato de galletas</li>
-                                    <li>· 6 horas de estancia.</li>
-                                </ul>
-                            </div>
-
-                            <div class="price">
-                                <p class="ammount">25€</p>
-                                <p class="note">*Necesario presentar prueba de estudiante</p>
-                            </div>
-
+                        <div class="price">
+                            <p class="amount">25€</p>
+                            <p class="note">*Necesario presentar prueba de estudiante</p>
                         </div>
-                    </article>
+                    </div>
+                </article>
 
-                    <article class="Pack">
-                        <div class="head">
-                            <p>Amante de gatos</p>
+                <article class="Pack">
+                    <header><p>Amante de gatos</p></header>
+                    <div class="body">
+                        <p class="description">Para los amantes de gatos que quieran pasar mucho tiempo acompañados de nuestros animales</p>
+
+                        <div class="offers">
+                            <p>Incluye:</p>
+                            <ul>
+                                <li>1 bebida</li>
+                                <li>Un bollo, tarta o plato de galletas</li>
+                                <li>4 horas de estancia.</li>
+                            </ul>
                         </div>
-                        <div class="body">
-                            <p class="desciption">Para los amantes de gatos que quieran pasar mucho tiempo acompañados de nuestros animales</p>
 
-                            <div class="offers">
-                                <p>Incluye:</p>
-                                <ul class="offers">
-                                    <li>· 1 bebida</li>
-                                    <li>· Un bollo, tarta o plato de galletas</li>
-                                    <li>· 4 horas de estancia.</li>
-                                </ul>
-                            </div>
-
-                            <div class="price">
-                                <p class="ammount">17€</p>
-                            </div>
-
+                        <div class="price">
+                            <p class="amount">17€</p>
                         </div>
-                    </article>
+                    </div>
+                </article>
 
-                    <article class="Pack">
-                        <div class="head">
-                            <p>Grupo</p>
+                <article class="Pack">
+                    <header><p>Grupo</p></header>
+                    <div class="body">
+                        <p class="description">Packs para grupos grandes* con un precio especial</p>
+
+                        <div class="offers">
+                            <p>Incluye:</p>
+                            <ul>
+                                <li>2 bebidas</li>
+                                <li>Un bollo, tarta o plato de galletas</li>
+                                <li>3 horas de estancia.</li>
+                            </ul>
                         </div>
-                        <div class="body">
-                            <p class="desciption">Packs para grupos grandes* con un precio especial</p>
 
-                            <div class="offers">
-                                <p>Incluye:</p>
-                                <ul class="offers">
-                                    <li>· 2 bebidas</li>
-                                    <li>· Un bollo, tarta o plato de galletas</li>
-                                    <li>· 3 horas de estancia.</li>
-                                </ul>
-                            </div>
-
-                            <div class="price">
-                                <p class="ammount">15€/persona</p>
-                                <p class="note">*Mínimo de 10 personas</p>
-                            </div>
-
+                        <div class="price">
+                            <p class="amount">15€/persona</p>
+                            <p class="note">*Mínimo de 10 personas</p>
                         </div>
-                    </article>
-                </div>
-
+                    </div>
+                </article>
             </div>
         </section>
 
         <!-- General information section -->
-        <section class="sec">
-
+        <section>
             <!-- title section -->
             <h1>Consulta nuestro menú o realiza un pedido</h1>
-
             <!-- contents section -->
-            <div class="Content row">
-                <div class="info col-9">
+            <div id="check" class="Content row">
+                <img src="./image/espresso.png" class="col-6" alt="Imagen Cafe">
+                <div class="info col-6">
                     <p>Todos nuestros productos son hechos a mano con ingredientes de calidad por nuestros baristas especializados. El dinero se usa para que los gatos tengan el mejor trato posible y para que estén siempre sanos.
                         Para consultar el menú o realizar un pedido puede visitar:</p>
-                    <a href="menu_pedido.html" class="BrownButton" >Nuestro Menú</a>
-                </div>
-                <div class="img col-3">
-                    <img src="./image/espresso.png" class="col-5" height=auto width=auto alt="Imagen Cafe">
+                    <a href="menu_pedido.html" class="BrownButton">Nuestro Menú</a>
                 </div>
             </div>
-
         </section>
-
-
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="script/order.js"></script>
-    <script src="script/user.js"></script>
-    <script src="script/form_utils.js"></script>
-    <script src="script/attributes.js"></script>
     <script src="script/shared.js"></script>
 </body>
 </html>
