@@ -52,9 +52,7 @@ html {
 
             }
 
-            .but:hover {
-                background-color: lightgrey;
-            }
+
 
     #menu > hr {
         margin: 0 50px;
@@ -162,7 +160,7 @@ html {
                         }
                             .pr > .content > .descr > p {
                                 font-size: 0.8em;
-                                color: grey;
+
                             }
 
         .result {
@@ -250,4 +248,7 @@ html {
                     font-weight: bold;
                     font-size: 1em;
                     cursor: pointer;
+                }
+                .content > .ops > .descr {
+                    color: black;
                 }

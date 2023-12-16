@@ -23,13 +23,13 @@
     padding-right: 0;
 }
 
-#progress .SplitContainer > div:first-child {
+#progress .SplitContainer > span:first-child {
     font-family: Inter;
     font-size: 20px;
     font-weight: bold;
 }
 
-.ProgressIcon {
+.ProgressIcon.ProgressIcon {
     width: 25px;
     height: 25px;
     border-radius: 50%;
