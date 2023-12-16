@@ -62,10 +62,10 @@ function ChangeState(state) {
         console.log("State 1")
         let items = [
             [1, "Café Solo", "floatingcoffee.png", "1.90€", "Granos de cafe arábica Harrar, Etiopía", []],
-            [2, "Capuccino", "cappuccino.png", "3.00€", "Granos de cafe arábica Moka, Etiopía", [{alt: "Milk", src: ""}]],
-            [3, "Latte Macchiato", "latte_macchiato.png", "3.50€", "Granos de cafe arábica Harrar, Etiopía", [{alt: "Milk", src: ""}]],
+            [2, "Capuccino", "cappuccino.png", "3.00€", "Granos de cafe arábica Moka, Etiopía", [{alt: "Milk", src: "./image/milk.png"}]],
+            [3, "Latte Macchiato", "latte_macchiato.png", "3.50€", "Granos de cafe arábica Harrar, Etiopía", [{alt: "Milk", src: "./image/milk.png"}]],
             [4, "Expresso", "espresso.png", "1.40€", "Granos de cafe arábica Moka, Etiopía", []],
-            [5, "Café con Leche", "fluffcoffee.png", "2.00€", "Granos de cafe arábica Harrar, Etiopía", [{alt: "Milk", src: ""}]],
+            [5, "Café con Leche", "fluffcoffee.png", "2.00€", "Granos de cafe arábica Harrar, Etiopía", [{alt: "Milk", src: "./image/milk.png"}]],
         ].map((x) => generate_product(...x)).join("\n")
         prodsDiv.innerHTML = `
             <!-- Content for category "Cafés" -->
@@ -85,10 +85,10 @@ function ChangeState(state) {
 
         console.log("State 2")
         let items = [
-            [6, "Donnuts", "donutcat.png", "1.30€/ud", "Con masa hecha a mano de calidad", [{alt: "Eggs", src: ""}, {alt: "Wheat", src: ""}, {alt: "Milk", stc: ""}]],
-            [7, "Cruasan", "cruasan.png", "2.00€/ud", "Masa e ingredientes de calidad", [{alt: "Eggs", src: ""}, {alt: "Wheat", src: ""}, {alt: "Milk", stc: ""}]],
-            [8, "Napolitana", "840_560.jpg", "1.90€/ud", "Rellena de chocolate cremoso", [{alt: "Eggs", src: ""}, {alt: "Wheat", src: ""}, {alt: "Milk", stc: ""}]],
-            [9, "Churros", "churro.jpg", "0.30€/ud", "Hechos a mano", [{alt: "Eggs", src: ""}, {alt: "Wheat", src: ""}, {alt: "Milk", stc: ""}]],
+            [6, "Donnuts", "donutcat.png", "1.30€/ud", "Con masa hecha a mano de calidad", [{alt: "Eggs", src: "./image/huevos.png"}, {alt: "Wheat", src: "./image/trigo.png"}, {alt: "Milk", src: "./image/milk.png"}]],
+            [7, "Cruasan", "cruasan.png", "2.00€/ud", "Masa e ingredientes de calidad", [{alt: "Eggs", src: "./image/huevos.png"}, {alt: "Wheat", src: "./image/trigo.png"}, {alt: "Milk", src: "./image/milk.png"}]],
+            [8, "Napolitana", "840_560.jpg", "1.90€/ud", "Rellena de chocolate cremoso", [{alt: "Eggs", src: "./image/huevos.png"}, {alt: "Wheat", src: "./image/trigo.png"}, {alt: "Milk", src: "./image/milk.png"}]],
+            [9, "Churros", "churro.jpg", "0.30€/ud", "Hechos a mano", [{alt: "Eggs", src: "./image/huevos.png"}, {alt: "Wheat", src: "./image/trigo.png"}, {alt: "Milk", src: "./image/milk.png"}]],
         ].map((x) => generate_product(...x)).join("\n")
         prodsDiv.innerHTML = `
             <div id="bakes" class="prods">
@@ -128,10 +128,10 @@ function ChangeState(state) {
         }
         console.log("State 4")
         let items = [
-            [13, "Minitarta de Chocolate", "HEADERkuroneko_halloween.jpg", "7.00€", "Chocolate Negro", [{alt: "Eggs", src: ""}, {alt: "Wheat", src: ""}, {alt: "Milk", stc: ""}]],
-            [14, "Tiramisú", "05COOKING-TIRAMISU1-threeByTwoMediumAt2X-v2.jpg", "4.00€", "Una pieza con delicioso sabor a café", [{alt: "Eggs", src: ""}, {alt: "Wheat", src: ""}, {alt: "Milk", stc: ""}]],
-            [15, "Tarta de Chocolate", "6d304afefe086879df26cb564115b39d.jpg", "20.00€", "Para compartir con amigos!", [{alt: "Eggs", src: ""}, {alt: "Wheat", src: ""}, {alt: "Milk", stc: ""}]],
-            [16, "Tarta de Queso", "nc-13.png", "10.00€", "Con textura cremosa", [{alt: "Eggs", src: ""}, {alt: "Milk", stc: ""}]],
+            [13, "Minitarta de Chocolate", "HEADERkuroneko_halloween.jpg", "7.00€", "Chocolate Negro", [{alt: "Eggs", src: "./image/huevos.png"}, {alt: "Wheat", src: "./image/trigo.png"}, {alt: "Milk", src: "./image/milk.png"}]],
+            [14, "Tiramisú", "05COOKING-TIRAMISU1-threeByTwoMediumAt2X-v2.jpg", "4.00€", "Una pieza con delicioso sabor a café", [{alt: "Eggs", src: "./image/huevos.png"}, {alt: "Wheat", src: "./image/trigo.png"}, {alt: "Milk", src: "./image/milk.png"}]],
+            [15, "Tarta de Chocolate", "6d304afefe086879df26cb564115b39d.jpg", "20.00€", "Para compartir con amigos!", [{alt: "Eggs", src: "./image/huevos.png"}, {alt: "Wheat", src: "./image/trigo.png"}, {alt: "Milk", src: "./image/milk.png"}]],
+            [16, "Tarta de Queso", "nc-13.png", "10.00€", "Con textura cremosa", [{alt: "Eggs", src: "./image/huevos.png"}, {alt: "Milk", src: "./image/milk.png"}]],
         ].map((x) => generate_product(...x)).join("\n")
         prodsDiv.innerHTML = `
             <div id="cakes" class="prods">
@@ -150,9 +150,9 @@ function ChangeState(state) {
         }
         console.log("State 5")
         let items = [
-            [17, "Galletas de Chocolate", "catcookie.png", "0.70€/ud", "Chocolate Negro y con leche", [{alt: "Eggs", src: ""}, {alt: "Wheat", src: ""}, {alt: "Milk", stc: ""}]],
-            [18, "Galletas de Azucar", "kitty-cookies4-895x500.jpg", "1.00€/ud", "Con diseños hechos a mano", [{alt: "Eggs", src: ""}, {alt: "Wheat", src: ""}, {alt: "Milk", stc: ""}]],
-            [19, "Galletas de Mantequilla", "images.jpeg", "0.60€/ud", "Crujientes y deliciosas", [{alt: "Eggs", src: ""}, {alt: "Wheat", src: ""}, {alt: "Milk", stc: ""}]],
+            [17, "Galletas de Chocolate", "catcookie.png", "0.70€/ud", "Chocolate Negro y con leche", [{alt: "Eggs", src: "./image/huevos.png"}, {alt: "Wheat", src: "./image/trigo.png"}, {alt: "Milk", src: "./image/milk.png"}]],
+            [18, "Galletas de Azucar", "kitty-cookies4-895x500.jpg", "1.00€/ud", "Con diseños hechos a mano", [{alt: "Eggs", src: "./image/huevos.png"}, {alt: "Wheat", src: "./image/trigo.png"}, {alt: "Milk", src: "./image/milk.png"}]],
+            [19, "Galletas de Mantequilla", "images.jpeg", "0.60€/ud", "Crujientes y deliciosas", [{alt: "Eggs", src: "./image/huevos.png"}, {alt: "Wheat", src: "./image/trigo.png"}, {alt: "Milk", src: "./image/milk.png"}]],
         ].map((x) => generate_product(...x)).join("\n")
         prodsDiv.innerHTML = `
             <div id="bis" class="prods">

@@ -121,7 +121,7 @@ class ShoppingCart {
 
     updateProduct(id, cantidad) {
         let product = document.getElementById(id);
-        if (cantidad > 0){
+        if (cantidad >= 0){
             product.innerText = cantidad;
         } else {
             product.innerText = "0";
@@ -139,7 +139,9 @@ class ShoppingCart {
         let result = document.getElementById("order-total")
         let res_prod = document.getElementById("order-total-prev")
 
-        this.updateSum(ind,cantidad)
+        if (cantidad >= 0){
+            this.updateSum(ind,cantidad)
+        }
 
         let totalPrice = 0
         for (const sum of this.sums) {
@@ -158,6 +160,7 @@ class ShoppingCart {
 
     updateTotalQuantity(){
         let total_quantity = document.getElementById("sum-am")
+
         total_quantity.innerText = String(this.getProductsTotalAmmount())
     }
 }

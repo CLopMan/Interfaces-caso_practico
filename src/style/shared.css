@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+.hidden { display: none !important; }
+
 .row::after {
     content: "";
     clear: both;
@@ -54,7 +56,7 @@ main {
     padding: 0 50px;
 }
 
-h1 {
+h2 {
     border-bottom: 2px solid var(--marron-base);
     padding: 25px 0 10px;
     margin-bottom: 25px;
@@ -63,13 +65,13 @@ h1 {
     font-weight: initial;
 }
 
-h2 {
+h3 {
     font-size: 48px;
     font-weight: initial;
     line-height: 150%;
 }
 
-h3 {
+h4 {
     font-size: 40px;
     font-weight: initial;
     line-height: 150%;
@@ -83,13 +85,16 @@ p {
 }
 
 @media screen and (max-width: 600px) {
-    h1 { font-size: 48px; }
-    h2 { font-size: 40px; }
-    h3 { font-size: 32px; }
+    h2 { font-size: 48px; }
+    h3 { font-size: 40px; }
+    h4 { font-size: 32px; }
 }
 
 button, select, input, textarea {
     cursor: pointer;
+}
+
+button, select, input, textarea, fieldset {
     border: transparent;
     background-color: transparent;
 }
@@ -165,7 +170,10 @@ body > header > img {
     justify-content: center;
 }
 
-#nav-menu-button > img { height: 60%; }
+#nav-menu-button > img { 
+    height: 60%;
+    background: transparent;
+}
 
 #nav-menu {
     transition: .4s ease;
@@ -323,7 +331,7 @@ form.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel > 
     width: 100%;
 }
 
-.BrownButton > div:not(:first-child) { 
+.BrownButton > span:not(:first-child) { 
     width: 32px;
     font-size: 20px;
     height: 32px;
@@ -337,6 +345,10 @@ form.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel > 
     align-items: center;
 }
 
-.SplitContainer > div:not(:first-child) {
+.SplitContainer > span {
+    display: block;
+}
+
+.SplitContainer > span:not(:first-child) {
     flex-shrink: 0;
 }
