@@ -87,7 +87,7 @@ header:first-child > img {
 }
 
 header.col-12 {
-    height: 100vh;
+    height: 1000px;
     background-image: url("../image/catcafe5.png");
     background-position: 50%;
     background-size: cover;
