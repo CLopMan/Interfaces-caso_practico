@@ -92,6 +92,9 @@ p {
 
 button, select, input, textarea {
     cursor: pointer;
+}
+
+button, select, input, textarea, fieldset {
     border: transparent;
     background-color: transparent;
 }
