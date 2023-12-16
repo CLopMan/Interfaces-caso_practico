@@ -131,7 +131,7 @@ function ChangeState(state) {
             [13, "Minitarta de Chocolate", "HEADERkuroneko_halloween.jpg", "7.00€", "Chocolate Negro", [{alt: "Eggs", src: ""}, {alt: "Wheat", src: ""}, {alt: "Milk", stc: ""}]],
             [14, "Tiramisú", "05COOKING-TIRAMISU1-threeByTwoMediumAt2X-v2.jpg", "4.00€", "Una pieza con delicioso sabor a café", [{alt: "Eggs", src: ""}, {alt: "Wheat", src: ""}, {alt: "Milk", stc: ""}]],
             [15, "Tarta de Chocolate", "6d304afefe086879df26cb564115b39d.jpg", "20.00€", "Para compartir con amigos!", [{alt: "Eggs", src: ""}, {alt: "Wheat", src: ""}, {alt: "Milk", stc: ""}]],
-            [16, "Tarta de Queso", "nc-13.webp", "10.00€", "Con textura cremosa", [{alt: "Eggs", src: ""}, {alt: "Milk", stc: ""}]],
+            [16, "Tarta de Queso", "nc-13.png", "10.00€", "Con textura cremosa", [{alt: "Eggs", src: ""}, {alt: "Milk", stc: ""}]],
         ].map((x) => generate_product(...x)).join("\n")
         prodsDiv.innerHTML = `
             <div id="cakes" class="prods">

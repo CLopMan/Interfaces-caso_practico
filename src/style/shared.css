@@ -161,43 +161,34 @@ body > header > img {
 }
 
 #nav-menu {
+    transition: .4s ease;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto;
     justify-content: space-evenly;
     align-content: space-evenly;
     position: fixed;
     top: 0;
-    height: 100%;
-    width: 100%;
+    right: 0;
+    transform: translateX(200%);
+    height: 100vh;
     background-color: var(--page-bg);
     z-index: 90;
+    box-shadow: 0 0 20vw 10vw #000000A0;
+}
+
+#nav-menu.ShowNav {
+    transition: .4s ease;
+    transform: translateX(0%);
 }
 
 #nav-menu > * {
     color: #000;
     font-family: Newsreader;
-    font-size: 64px;
+    font-size: 44px;
+    padding: 0 20px 0;
     text-decoration: none;
     display: flex;
     justify-content: center;
-}
-
-@media screen and (max-width: 1450px) {
-    #nav-menu > * {
-        font-size: 44px;
-    }
-}
-
-@media screen and (max-width: 1050px) {
-    #nav-menu {
-        grid-template-columns: auto auto;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    #nav-menu {
-        grid-template-columns: auto;
-    }
 }
 
 /* Item container element */

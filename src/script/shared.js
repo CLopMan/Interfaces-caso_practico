@@ -11,11 +11,9 @@ $("body").prepend(`<header class="SplitContainer">
     <a href="./gatos.html">Nuestros gatos</a>
     <a href="./establecimiento.html">Establecimiento</a>
     <a href="./reserva.html">Reserva</a>
-    <a href="./localizacion.html">Dónde estamos</a>
-    <a href="./contacto.html">Contacto</a>
+    <a href="./contacto.html">Sobre nosotros</a>
 </nav>
 `)
-$("#nav-menu").hide();
 
 // State of the hamburger menu
 let menu_shown = false
@@ -26,13 +24,11 @@ let menu_shown = false
  */
 function toggle_menu() {
     if (menu_shown === true) {
-        $("body").css({overflow: ""});
-        $("#nav-menu").fadeOut(250);
+        $("#nav-menu").removeClass("ShowNav");
         $("#nav-menu-button").text("☰");
         menu_shown = false
     } else {
-        $("body").css({overflow: "hidden"});
-        $("#nav-menu").fadeIn(250);
+        $("#nav-menu").addClass("ShowNav")
         $("#nav-menu-button").text("🗙");
         menu_shown = true
     }
