@@ -128,7 +128,7 @@ function generate_form(elem, title, fields, next) {
         });
     }
     if (!next) { return; }
-    form.append(`<button type="button" class="BrownButton SplitContainer"><div>${next.name}</div><div>🡢</div></button>`);
+    form.append(`<button type="button" class="BrownButton SplitContainer"><span>${next.name}</span><span>🡢</span></button>`);
     form.children("button").click(() => {
         let result = validate_form(
             document.forms[form.attr("id")],

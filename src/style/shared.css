@@ -328,7 +328,7 @@ form.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel > 
     width: 100%;
 }
 
-.BrownButton > div:not(:first-child) { 
+.BrownButton > span:not(:first-child) { 
     width: 32px;
     font-size: 20px;
     height: 32px;
@@ -342,6 +342,10 @@ form.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel > 
     align-items: center;
 }
 
-.SplitContainer > div:not(:first-child) {
+.SplitContainer > span {
+    display: block;
+}
+
+.SplitContainer > span:not(:first-child) {
     flex-shrink: 0;
 }

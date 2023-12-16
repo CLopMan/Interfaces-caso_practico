@@ -23,7 +23,7 @@
     padding-right: 0;
 }
 
-#progress .SplitContainer > div:first-child {
+#progress .SplitContainer > span:first-child {
     font-family: Inter;
     font-size: 20px;
     font-weight: bold;
