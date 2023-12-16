@@ -82,6 +82,12 @@ p {
     line-height: 150%;
 }
 
+@media screen and (max-width: 600px) {
+    h1 { font-size: 48px; }
+    h2 { font-size: 40px; }
+    h3 { font-size: 32px; }
+}
+
 button, select, input, textarea {
     cursor: pointer;
     border: transparent;
@@ -154,11 +160,12 @@ body > header > img {
     height: 80px;
     border-radius: 50%;
     background-color: var(--marron-base);
-    color: var(--recuadros);
-    font-size: 64px;
-    line-height: 0;
-    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+#nav-menu-button > img { height: 60%; }
 
 #nav-menu {
     transition: .4s ease;
