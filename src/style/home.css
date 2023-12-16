@@ -11,7 +11,7 @@ h1 {
     border-bottom: none;
 }
 
-.BrownButton > div:not(:first-child) { 
+.SplitContainer > span:not(:first-child) { 
     font-size: 70px;
     margin-right: 2%;
     line-height: 50%;
