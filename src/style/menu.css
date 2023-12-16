@@ -13,26 +13,25 @@ html {
 
 #menu {
     width: 100%;
-    height: 300%;
     align-items: center;
 }
 
     #menu > .types {
         display: flex;
-        flex-flow: row wrap;
-        padding: 20px 50px;
+        flex-flow: row nowrap;
+        padding: 2.5% 10%;
     }
 
         .types > .title {
             flex: 1 1 auto;
         }
             .types > .title > p {
-                font-size: 2.5em;
+                font-size: calc(2em + 1vw);
             }
 
         .types > .buttons {
             flex: 3 1 auto;
-            flex-flow: row wrap;
+            flex-flow: row nowrap;
             display: flex;
             margin-left: 20%;
             margin-right: 20%;
@@ -41,8 +40,8 @@ html {
             .but {
                 flex: 1 1 auto;
                 float: left;
-                padding: 5px 10px;
-                margin: 10px 20px;
+                padding: 2.5% 5%;
+                margin: 5% 5%;
                 border: none;
                 box-shadow: 0 5px 7px 0 grey;
                 font-weight: bold;
@@ -52,19 +51,14 @@ html {
 
             }
 
-            .but:hover {
-                background-color: lightgrey;
-            }
-
     #menu > hr {
-        margin: 0 50px;
+        margin: 0 5%;
         color: #6c461a;
     }
 
     .prodSec {
-        margin-top: 30px;
+        margin-top: 5%;
         width: 100%;
-        height: auto;
     }
 
         .prodSec > .prodDiv {
@@ -84,6 +78,8 @@ html {
                     background-color: #f9f8f6;
                     border-radius: 20px;
                     margin: 3%;
+                    font-size: calc(.5em + 1vw);
+                    height: 60%;
                 }
                     .pr > .prev {
                         flex: 3 1 auto;
@@ -99,7 +95,7 @@ html {
                         }
 
                     .pr > .content {
-                        margin-bottom: 10px;
+                        margin-bottom: 5%;
                         flex: 1 1 auto;
                         display: flex;
                         flex-flow: column nowrap;
@@ -117,7 +113,7 @@ html {
                             }
                                 .op > p {
                                     font-weight: bold;
-                                    font-size: 1.3em;
+                                    font-size: calc(.7em + 1vw);
                                     padding-left: 3.5%;
                                     flex: 1 1 50%;
                                 }
@@ -145,10 +141,12 @@ html {
                                 .ops > .price > p{
                                     flex: 1 1 auto;
                                     margin-left: 3.5%;
+                                    font-size: calc(.7em + 1vw);
                                 }
 
                                 .ops > .price > .ingredients {
                                     flex: 5 1 auto;
+                                    font-size: calc(.5em + 1vw);
                                 }
                                     .price > .ingredients > img {
 
@@ -160,7 +158,7 @@ html {
                             margin-left: 3.5%;
                         }
                             .pr > .content > .descr > p {
-                                font-size: 0.8em;
+                                font-size: calc(.1em + 1vw);
                                 color: grey;
                             }
 
@@ -176,12 +174,11 @@ html {
                 margin-right: 5%;
             }
             .prod-c {
-                padding: 5px;
+                padding: 2.5%;
             }
 
             #list-prods {
                 flex: 3 1 auto;
-                padding: 20px;
                 overflow: auto;
                 max-height: 70vh;
             }
@@ -192,6 +189,8 @@ html {
                     border-radius: 20px;
                     margin-bottom: 20px;
                     display: flex;
+                    font-size: calc(.5em + 1vw);
+
                 }
                     .preview > .title {
                         align-items: center;
@@ -199,14 +198,16 @@ html {
                     }
                         .preview > .title > .t {
                             font-weight: bold;
-                            font-size: 1.3em;
+                            font-size: calc(.7em);
                             justify-content: center;
-                            padding: 5px 0 5px 5px;
+                            text-justify: distribute-center-last;
+                            padding: 2.5% 0 2.5% 2.5%;
                         }
                         .preview > .title > .p {
                             text-align: left;
                             padding-left: 0;
-                            transform: translateY(20px);
+                            transform: translateY(60%);
+                            font-size: calc(.9em);
                             color: #6c461a;
                         }
                     .preview > .price {
@@ -216,10 +217,11 @@ html {
                         .preview > .price > .x {
                             text-align: center;
                             padding-right: 0;
+                            font-size: calc(.9em);
                         }
                         .preview > .price > .subtotal {
                             text-align: left;
-                            font-size: 1.5em;
+                            font-size: calc(.7em);
                             font-weight: bold;
                         }
 
@@ -250,3 +252,82 @@ html {
                     font-size: 1em;
                     cursor: pointer;
                 }
+
+/*Extra breakpoint for reubicating the small cart*/
+@media only screen and (max-width: 1615px){
+
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+/*Breakpoint for movilephones*/
+@media only screen and (max-width: 600px) {
+
+    .prodDiv > .prods {
+        justify-content: space-between;
+        display: flex;
+        flex-flow: column nowrap;
+        overflow: hidden;
+    }
+    .preview > .title > .t {
+        font-size: calc(1em);
+    }
+    .preview > .title > .p {
+        font-size: calc(1em);
+    }
+    .preview > .price > .x {
+        font-size: calc(1.5em);
+    }
+    .preview > .price > .subtotal {
+        font-size: calc(1.5em);
+    }
+
+    .col-3 > .ItemContainer > .SplitContainer {
+        flex-flow: column nowrap;
+    }
+}
+
+/* Brakpoint for tablets*/
+@media only screen and (max-width: 1063px) {
+    #menu > .types {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 0;
+    }
+
+    .types > .buttons {
+        flex: 1 1 auto;
+        flex-flow: row nowrap;
+        display: flex;
+        width: 100%;
+        border: red 3px solid;
+    }
+    .but {
+        flex: 1 1 auto;
+        padding: 2.5% 0;
+        margin: 5% 2.5%;
+        border: none;
+        box-shadow: 0 5px 7px 0 grey;
+        font-size: calc(.8em);
+        font-weight: bold;
+        border-radius: 50px;
+        cursor: pointer;
+        background-color: #f9f8f6;
+    }
+
+    .preview > .title > .t {
+        font-size: calc(1em);
+    }
+    .preview > .title > .p {
+        font-size: calc(1em);
+    }
+    .preview > .price > .x {
+        font-size: calc(1.5em);
+    }
+    .preview > .price > .subtotal {
+        font-size: calc(1.5em);
+    }
+}
+

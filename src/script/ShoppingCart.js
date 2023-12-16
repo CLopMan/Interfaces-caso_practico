@@ -103,7 +103,7 @@ class ShoppingCart {
                 listOrder.innerHTML += `
                     <div class="preview row">
                         <div class="image-prev">
-                            <img alt="Image Prev" src="+collectionImages[i]+">
+                            <img alt="Image Prev" src=`+collectionImages[i]+`>
                         </div>
                         <div class="title col-7">
                             <p class="t">`+product.name+`</p>
