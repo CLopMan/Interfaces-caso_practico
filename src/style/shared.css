@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+.hidden { display: none !important; }
+
 .row::after {
     content: "";
     clear: both;
