@@ -2,66 +2,36 @@
     display: none;
 }
 
-* {
-    padding: 0;
-    margin: 0;
-}
-
-html {
-    background-color: #eeebe7;
-}
-
 #menu {
-    width: 100%;
-    align-items: center;
 }
 
     #menu > .types {
         display: flex;
-        flex-flow: row nowrap;
-        padding: 2.5% 10%;
+        align-items: center;
     }
 
-        .types > .title {
-            flex: 1 1 auto;
-        }
-            .types > .title > p {
-                font-size: calc(2em + 1vw);
-            }
-
         .types > .buttons {
-            flex: 3 1 auto;
-            flex-flow: row nowrap;
+            flex: 1 1 auto;
             display: flex;
-            margin-left: 20%;
-            margin-right: 20%;
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
         }
 
             .but {
-                flex: 1 1 auto;
-                float: left;
-                padding: 2.5% 5%;
-                margin: 5% 5%;
-                border: none;
+                flex: 0 0 8%;
+                padding: 10px;
+                margin: 0 20px;
                 box-shadow: 0 5px 7px 0 grey;
                 font-weight: bold;
                 border-radius: 50px;
-                cursor: pointer;
-                background-color: #f9f8f6;
-
+                background-color: var(--producto-bg);
             }
 
-    #menu > hr {
-        margin: 0 5%;
-        color: #6c461a;
-    }
-
     .prodSec {
-        margin-top: 5%;
-        width: 100%;
     }
 
         .prodSec > .prodDiv {
+            padding: 0;
         }
 
             .prodDiv > .prods {
