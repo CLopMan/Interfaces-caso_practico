@@ -53,7 +53,7 @@ h1 {
     padding: 0%;
     background: none;
     font-weight: 500;
-    font-size: 40px;
+    font-size: 2.3vw;
     line-height: 140%;
     text-align: center;
     letter-spacing: -0.02em;
@@ -87,7 +87,7 @@ header:first-child > img {
 }
 
 header.col-12 {
-    height: 1000px;
+    height: 100vh;
     background-image: url("../image/catcafe5.png");
     background-position: 50%;
     background-size: cover;
@@ -108,7 +108,7 @@ body > header > img {
 
 .reserva_header > p {
     font-weight: 600;
-    font-size: 8vh;
+    font-size: 3.5vw;
     line-height: 130%;
     margin: 10% 4% 2%;
     background: none;
@@ -131,26 +131,26 @@ body > header > img {
 /*--------------------ACTIVIDADES-------------------*/
 #actividades {
     position: absolute;
-    height: 800px;
+    height: 100%;
     padding: 0;
     float: left;
 }
 
 #actividades > .decoracion_rectangulo {
     left: 18%;
-    height: 700px;
+    height: 80%;
     padding: 0;
     margin-top: 2.5%;
 }
 
 #boton_info_act {
     left: 65%;
-    bottom: 30px;
+    bottom: 7%;
 }
 
 #actividades > .titulo_seccion {
     left: 10%;
-    bottom: 740px;
+    bottom: 83%;
 }
 
 #primera_vez {
@@ -167,13 +167,13 @@ body > header > img {
 #img_home_activ_1{
     float: right;
     right: 2%;
-    bottom: 700px;
+    bottom: 80%;
     padding: 0;
 }
 
 #img_home_activ_2{
     left: 2%;
-    bottom: 570px;
+    bottom: 57%;
     padding: 0;
 }
 
@@ -396,7 +396,7 @@ body > header > img {
 
 /*---------------------FOOTER----------------------*/
 footer{
-    min-height: 30vh;
+    height: 30vh;
     background-color: var(--marron-base);
     margin-top: 3%;
 }
