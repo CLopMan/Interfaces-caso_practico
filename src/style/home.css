@@ -131,26 +131,26 @@ body > header > img {
 /*--------------------ACTIVIDADES-------------------*/
 #actividades {
     position: absolute;
-    height: 100%;
+    height: 800px;
     padding: 0;
     float: left;
 }
 
 #actividades > .decoracion_rectangulo {
     left: 18%;
-    height: 80%;
+    height: 700px;
     padding: 0;
     margin-top: 2.5%;
 }
 
 #boton_info_act {
     left: 65%;
-    bottom: 7%;
+    bottom: 30px;
 }
 
 #actividades > .titulo_seccion {
     left: 10%;
-    bottom: 83%;
+    bottom: 740px;
 }
 
 #primera_vez {
@@ -167,13 +167,13 @@ body > header > img {
 #img_home_activ_1{
     float: right;
     right: 2%;
-    bottom: 80%;
+    bottom: 700px;
     padding: 0;
 }
 
 #img_home_activ_2{
     left: 2%;
-    bottom: 57%;
+    bottom: 570px;
     padding: 0;
 }
 
@@ -396,7 +396,7 @@ body > header > img {
 
 /*---------------------FOOTER----------------------*/
 footer{
-    height: 30vh;
+    min-height: 30vh;
     background-color: var(--marron-base);
     margin-top: 3%;
 }
