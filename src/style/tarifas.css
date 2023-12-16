@@ -87,6 +87,7 @@
                 .Pack > .body > .price > .note {
                     font-size: 14px;
                     color: black;
+                    padding: 0 10px;
                 }
 
 #check > .info {
