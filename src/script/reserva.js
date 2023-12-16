@@ -63,7 +63,7 @@ function next_step(prev_step, next_step) {
     prev.removeClass("Current");
     next.addClass("Current");
     prev.addClass("Completed");
-    prev.text("✓");
+    prev.append("<img src='./image/icon-checkmark.svg' alt='Checkmark icon'></img>");
     $(`#form-${prev_step}`).slideUp("slow", () => { $(`#form-${next_step}`).slideDown(); });
 }
 
@@ -131,7 +131,7 @@ $("#form-pago").children("button").click(() => {
         if (payment === null) { return; }
     }
     $("#form-pago").slideUp("slow", () => { $("#confirmation").slideDown(); });
-    $("#pago > .ProgressIcon").removeClass("Current").addClass("Completed").text("✓");
+    $("#pago > .ProgressIcon").removeClass("Current").addClass("Completed").append("<img src='./image/icon-checkmark.svg' alt='Checkmark icon'></img>");
     document.cookie = new Reserve(asistentes, reserve_date, user, payment).serialize();
 })
 
