@@ -62,8 +62,8 @@ h1 {
 
 section {
     float: left;
-    height: 800px;
-    margin-bottom: 3%;
+    height: 100vh;
+    margin-bottom: 5vh;
 }
 
 section.col-12 {
@@ -130,7 +130,6 @@ body > header > img {
 
 /*--------------------ACTIVIDADES-------------------*/
 #actividades {
-    position: absolute;
     height: 100%;
     padding: 0;
     float: left;
@@ -181,7 +180,6 @@ body > header > img {
 #productos {
     padding: 0;
     height: 100%;
-    position: absolute;
 }
 
 #productos > #rect1 {
@@ -239,7 +237,6 @@ body > header > img {
 
 /*----------------------GATOS-------------*/
 #gatos {
-    position: absolute;
     height: 100%;
 }
 
@@ -282,7 +279,6 @@ body > header > img {
 
 /*--------------------------LOCAL---------------------*/
 #local {
-    position:absolute;
     height: 100%;
 }
 
@@ -344,7 +340,6 @@ body > header > img {
 /*---------------------------------REDES------------------------*/
 #redes {
     height: 100%;
-    position: absolute;
 }
 
 #rect5 {
