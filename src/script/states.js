@@ -23,10 +23,10 @@ function generate_product(id, title, img, price, description, ingredients) {
                 <div class="ops">
                     <div class="op">
                         <p>${title}</p>
-                        <div class="ammount">
-                            <button class="but" onclick='addProduct("${title}",${id},Number(document.getElementById("ammount-${id}").innerText) - 1)'>-</button>
-                            <p id="ammount-${id}">0</p>
-                            <button class="but" onclick='addProduct("${title}",${id},Number(document.getElementById("ammount-${id}").innerText) + 1)'>+</button>
+                        <div class="amount">
+                            <button class="but" onclick='addProduct("${title}",${id},Number(document.getElementById("amount-${id}").innerText) - 1)'>-</button>
+                            <p id="amount-${id}">0</p>
+                            <button class="but" onclick='addProduct("${title}",${id},Number(document.getElementById("amount-${id}").innerText) + 1)'>+</button>
                         </div>
                     </div>
                     <div class="price">

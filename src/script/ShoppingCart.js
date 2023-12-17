@@ -1,10 +1,10 @@
 class ShoppingCart {
     constructor() {
         this.prices = [1.90, 3.00, 3.50, 1.40, 2.00,
-            1.30, 2.00, 1.90, 0.30,
-            1.00, 2.00, 1.50,
-            7.00, 4.00, 20.00, 10.00,
-            0.70, 1.00, 0.60 ];
+                       1.30, 2.00, 1.90, 0.30,
+                       1.00, 2.00, 1.50,
+                       7.00, 4.00, 20.00, 10.00,
+                       0.70, 1.00, 0.60];
 
         this.sums = []
         for (let i = 0; i < this.prices.length; i++) {
@@ -22,7 +22,6 @@ class ShoppingCart {
 
         this.shipment_cost = 0
         this.masterPrice = 0
-
     }
 
     updateMasterPrice(min, max) {
@@ -38,7 +37,7 @@ class ShoppingCart {
         this.shipment_cost = Math.random() * (max - min) + min;
 
         // Update Master Price with shipment costs
-        this.masterPrice = this.shipment_cost + this.getProductsTotalAmmount()
+        this.masterPrice = this.shipment_cost + this.getProductsTotalAmount()
 
         // Update the Master Price fields on HTML
         let ship_cost = document.getElementById("shipment-cost")
@@ -46,21 +45,22 @@ class ShoppingCart {
         let master_price = document.getElementById("master-price")
 
         ship_cost.innerText = String(truncar(this.shipment_cost,2)) +" €"
-        total_prods_am.innerText = String(truncar(this.getProductsTotalAmmount(),2)) + " €"
+        total_prods_am.innerText = String(truncar(this.getProductsTotalAmount(),2)) + " €"
         master_price.innerText = String(truncar(this.masterPrice,2))+" €"
     }
 
-
-    getProductsTotalAmmount(){
-        let total_ammount = 0
+    getProductsTotalAmount(){
+        let total_amount = 0
         for (const prod of this.prods) {
-            total_ammount += prod.cantidad
+            total_amount += prod.cantidad
         }
-        return total_ammount
+        return total_amount
     }
-    getProductAmmount(ind){
+
+    getProductAmount(ind){
         return this.prods[ind-1].cantidad
     }
+
     showProds(){
         let listDiv = document.getElementById("list-prods");
         let listOrder = document.getElementById("list-prods-order")
@@ -135,7 +135,7 @@ class ShoppingCart {
             this.sums[ind-1] = 0
         }
     }
-    updateTotalAmmount(ind,cantidad){
+    updateTotalAmount(ind,cantidad){
         let result = document.getElementById("order-total")
         let res_prod = document.getElementById("order-total-prev")
 
@@ -158,6 +158,6 @@ class ShoppingCart {
 
     updateTotalQuantity(){
         let total_quantity = document.getElementById("sum-am")
-        total_quantity.innerText = String(this.getProductsTotalAmmount())
+        total_quantity.innerText = String(this.getProductsTotalAmount())
     }
 }

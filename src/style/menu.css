@@ -87,16 +87,16 @@
                                     padding-left: 3.5%;
                                     flex: 1 1 50%;
                                 }
-                                .op > .ammount {
+                                .op > .amount {
                                     flex: 1 1 50%;
                                     display: flex;
                                     align-items: center;
                                 }
-                                    .ammount > .but {
+                                    .amount > .but {
                                         flex: 1 1 auto;
                                         background-color: lightgrey;
                                     }
-                                    .ammount > p {
+                                    .amount > p {
                                         flex: 3 1 auto;
                                         text-align: center;
                                         background-color: #f7f7f5;
