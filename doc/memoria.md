@@ -515,7 +515,7 @@ $$N_i = 2,5\cdot\sum_{n=1}^{10} v_n, \text{ donde } v_n =
 
 \end{array}\right.$$
 
-De esta forma, obtenemos la evaluación para cada uno de los cuestionarios: 
+De esta forma, obtenemos la evaluación para cada uno de los evaluadores: 
 
 $$\begin{array}{|c|c|}
     \hline
