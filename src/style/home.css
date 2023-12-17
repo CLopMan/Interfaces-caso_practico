@@ -608,46 +608,38 @@ li {
     }
 
 /*redes*/
+    #rect5 {
+        margin-left: 4%;
+        height: 60%;
+        top: 0%;
+    }
+    #rect6 {
+        left:4%;
+        height: 25%;
+        bottom: 27%;
+    }
+    #redes > .titulo_seccion {
+        bottom: 100%;
+        right: -10%;
+    }
+    #rect6 > .textos {
+        top:10%;
+    }
+    #img_home_redes_insta {
+        top:10%;
+        left:20%;
+    }
+    #img_home_redes_tumblr {
+        top:10%;
+        left:30%;
+    }
+    #boton_redes {
+        bottom:45%;
+        left: 25%;
+        width: 50%;
+    }
 
-#rect5 {
-    margin-left: 4%;
-    height: 60%;
-    top: 0%;
-}
-
-#rect6 {
-    left:4%;
-    height: 25%;
-    bottom: 27%;
-}
-
-#redes > .titulo_seccion {
-    bottom: 100%;
-    right: -10%;
-}
-
-#rect6 > .textos {
-    top:10%;
-}
-
-#img_home_redes_insta {
-    top:10%;
-    left:20%;
-}
-
-#img_home_redes_tumblr {
-    top:10%;
-    left:30%;
-}
-
-#boton_redes {
-    bottom:45%;
-    left: 25%;
-    width: 50%;
-}
-
-
-/*---------------------FOOTER----------------------*/
+/*footer*/
     footer{
         height: auto;
         margin-top: -10%;
