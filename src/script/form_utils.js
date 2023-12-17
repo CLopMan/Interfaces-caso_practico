@@ -130,8 +130,9 @@ function generate_form(elem, title, fields, next) {
     if (!next) { return; }
     form.append(`<button type="button" class="BrownButton SplitContainer"><span>${next.name}</span><span>🡢</span></button>`);
     form.children("button").click(() => {
+        let form_elem = document.forms[form.attr("id")];
         let result = validate_form(
-            document.forms[form.attr("id")],
+            form_elem,
             fields.map(x => {return {valid: x.valid, name: `${x.name}-input`}}),
             next.serialize,
             next.skip_serialize,
@@ -139,7 +140,7 @@ function generate_form(elem, title, fields, next) {
         )
         if (result !== null) {
             next.callback(result);
-            clear_form(form);
+            clear_form(form_elem);
         }
     })
 }

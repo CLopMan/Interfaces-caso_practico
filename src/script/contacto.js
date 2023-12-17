@@ -20,7 +20,7 @@ generate_form(
         {name: "Tema", valid: Text, placeholder: "Mensaje" },
         {name: "Mensaje", valid: Text, placeholder: "Mensaje", type: "textarea"},
     ],
-    { name: "Enviar mensaje", serialize: ContactMessaje, callback: () => {} }
+    { name: "Enviar mensaje", serialize: ContactMessaje, callback: () => {}, alert_ok: true }
 )
 
 $("#faq button").click(function() {
