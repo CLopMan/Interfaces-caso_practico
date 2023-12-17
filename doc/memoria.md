@@ -378,7 +378,7 @@ Además aplicamos los siguientes patrones:
 
 ## 5. Diseño final {#apartado-5}
 
-El diseño final cuenta con 8 páginas, 9 hojas de estilo y 13 scripts de `javaScript`. Para los elementos compartidos como la cabecera se ha empleado un script de `javaScript` para incluirlo en cada página con el mismo formato, permitiéndonos modificar la cabecera en un único sitio. Además, existe una hoja de estilos `shared.css` que contiene los estilos compartidos para todas las páginas como los encabezados, el texto o la distribución de columnas.
+El diseño final cuenta con 8 páginas, 10 hojas de estilo y 13 scripts de `javaScript`. Para los elementos compartidos como la cabecera se ha empleado un script de `javaScript` para incluirlo en cada página con el mismo formato, permitiéndonos modificar la cabecera en un único sitio. Además, existe una hoja de estilos `shared.css` que contiene los estilos compartidos para todas las páginas como los encabezados, el texto o la distribución de columnas.
 
 En cuanto al comportamiento *responsive*, se ha decidido usar una aproximación de diseño por columnas. Se ha dividido el espacio de la página horizontalmente en 12 columnas y a cada elemento se le asigna un tamaño en número de columnas. De esta forma, se facilita la distribución de elementos por la página. Además, para dispositivos de distinto tamaño se varía el tamaño de las columnas o, en su defecto, de los objetos de forma que permite un código más limpio con un buen resultado.
 
@@ -406,11 +406,8 @@ Para realizar el análisis de accesibilidad, en este caso se ha optado por compr
 En el análisis, se encuentran los siguientes errores:
 
 - Errores de contraste: Advertencias debido a que el contraste entre el color del texto para algunos párrafos (Ej. descripciones de productos) y el fondo de la página web es demasiado bajo.
-
-- Falta de inclusión de etiquetas de título en algunas secciones ( Ej. `h1`, `h2`, `h3`, ...): Hay párrafos con estilo de títulos que no lo son.
-
+- Falta de inclusión de etiquetas de título en algunas secciones (Ej. `h1`, `h2`, `h3`, ...): Hay párrafos con estilo de títulos que no lo son.
 - Largos bloques de información justificados plenamente puede perjudicar la lectura de las páginas.
-
 - Algunas etiquetas no estaban asociadas a ningún elemento en los formularios
 
 ### Errores de Contraste
@@ -504,30 +501,30 @@ El tercer cuestionario se rellenará con el fin de evaluar la tarea: "Haz un ped
 Con estos resultados, calculamos la nota media del cuestionario SUS para nuestra web:
 
 Sea $N_i$ la nota resultante de la evaluación del evaluador $i$:
-$$N_i = 2.5 \cdot \sum_{n=1}^{10} v_n, \text{ donde } v_n = \begin{cases}
+$$N_i = 2.5 \cdot \sum_{n=1}^{10} v_n, \quad \text{donde } v_n = \begin{cases}
     \text{valorPregunta}_n - 1 & \text{si n es impar}\\
     5 - \text{valorPregunta}_n & \text{si n es par}\\
 \end{cases}$$
 
 De esta forma, obtenemos la evaluación para cada uno de los evaluadores:
 
-$$\begin{array}{|c|c|}
-    \hline
-    \text{Evaluador} & \text{Evaluación}\\
-    \hline
-    1 & 82,5 \\
-    \hline
-    2 & 90 \\
-    \hline
-    3 & 85 \\
-    \hline
-\end{array}$$
+\hspace{-\parindent}
+\makebox[\textwidth][c]{
+    \begin{tabular}{cc}
+        \toprule
+        Evaluador & Evaluación \\
+        \midrule
+        1 & 82.5 \\
+        2 & 90 \\
+        3 & 85 \\
+        \bottomrule
+    \end{tabular}
+}
 
 De forma global, obtendremos el resultado de la evaluación SUS como la media aritmética de los 3 valores:
+$$\hat{N} = \frac{N_1 + N_2 + N_3}{3} = \frac{82.5 + 90 + 85}{3} = 85.83$$
 
-$$\overline N = \frac{N_1 + N_2 + N_3}{3} = \frac{82,5 + 90 + 85}{3} = 85,83$$
-
-Obtenemos un resultado de $85,83$ en la evaluación SUS, lo que se corresponde con una calificación A. Esto nos lleva a concluir que la usabilidad de nuestra web es alta y que las personas con perfiles similares al de los evaluadores encuentran la web agradable y la recomendarían a sus allegados.
+Obtenemos un resultado de $85.83$ en la evaluación SUS, lo que se corresponde con una calificación A. Esto nos lleva a concluir que la usabilidad de nuestra web es alta y que las personas con perfiles similares al de los evaluadores encuentran la web agradable y la recomendarían a sus allegados.
 
 \clearpage
 
