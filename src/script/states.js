@@ -187,7 +187,7 @@ function updateSection(num){
 }
 
 function changeStep(step){
-    let progressBar = [document.getElementById("revission"), document.getElementById("t-1"),
+    let progressBar = [document.getElementById("revision"), document.getElementById("t-1"),
         document.getElementById("login"), document.getElementById("t-2"),
         document.getElementById("shipment"), document.getElementById("t-3"), document.getElementById("payment")
     ]
