@@ -381,7 +381,7 @@ Además aplicamos los siguientes patrones:
 
 ## 5. Diseño final {#apartado-5}
 
-El diseño final cuenta con 8 páginas, 10 hojas de estilo y 13 scripts de `javaScript`. Para los elementos compartidos como la cabecera se ha empleado un script de `javaScript` para incluirlo en cada página con el mismo formato, permitiéndonos modificar la cabecera en un único sitio. Además, existe una hoja de estilos `shared.css` que contiene los estilos compartidos para todas las páginas como los encabezados, el texto o la distribución de columnas.
+El diseño final cuenta con 8 páginas, 10 hojas de estilo y 11 scripts de `javaScript`. Para los elementos compartidos como la cabecera se ha empleado un script de `javaScript` para incluirlo en cada página con el mismo formato, permitiéndonos modificar la cabecera en un único sitio. Además, existe una hoja de estilos `shared.css` que contiene los estilos compartidos para todas las páginas como los encabezados, el texto o la distribución de columnas.
 
 En cuanto al comportamiento *responsive*, se ha decidido usar una aproximación de diseño por columnas. Se ha dividido el espacio de la página horizontalmente en 12 columnas y a cada elemento se le asigna un tamaño en número de columnas. De esta forma, se facilita la distribución de elementos por la página. Además, para dispositivos de distinto tamaño se varía el tamaño de las columnas o, en su defecto, de los objetos de forma que permite un código más limpio con un buen resultado.
 

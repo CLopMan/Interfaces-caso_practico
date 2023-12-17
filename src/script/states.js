@@ -301,7 +301,7 @@ generate_form(
     ],
     {
         name: "Datos de Envío",
-        serialize: User,
+        serialize: Test,
         callback: () => {
             cart.updateMasterPrice()
             changeStep(3)

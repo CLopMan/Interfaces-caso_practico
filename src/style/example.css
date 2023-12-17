@@ -1,9 +1,0 @@
-/* Múltiples columnas en el formulario */
-
-#Teléfono-item {
-    flex-basis: 50%;
-}
-
-#Contraseña-item {
-    flex-basis: 50%;
-}
