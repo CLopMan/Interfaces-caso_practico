@@ -54,7 +54,7 @@ section > header {
     }
 
 
-#menu > section, .prodDiv {
+#menu > div, .prodDiv {
     padding: 0;
 }
 
