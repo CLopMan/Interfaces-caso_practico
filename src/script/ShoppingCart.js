@@ -36,9 +36,9 @@ class ShoppingCart {
         let total_prods_am = document.getElementById("total-am")
         let master_price = document.getElementById("master-price")
 
-        ship_cost.innerText = String(this.shipment_cost.toFixed(2)) +" €"
-        total_prods_am.innerText = String(this.getProductsTotalAmount().toFixed(2)) + " €"
-        master_price.innerText = String(this.masterPrice.toFixed(2))+" €"
+        ship_cost.innerText = String(this.shipment_cost.toFixed(2)) + "€"
+        total_prods_am.innerText = String(this.getProductsTotalAmount().toFixed(2)) + "€"
+        master_price.innerText = String(this.masterPrice.toFixed(2)) + "€"
     }
 
     getProductsTotalAmount(){
@@ -74,14 +74,14 @@ class ShoppingCart {
             if (product.name !== "" && product.cantidad > 0) {
                 listDiv.innerHTML += `
                     <div class="ItemLabelContainer">
-                        <div class="Item SplitContainer">
+                        <div class="Item SplitContainer ResizableHeight">
                             <span class="ItemText">
                                 <span class="ProductName">${product.name}</span>
-                                <sub class="ProductPrice">${this.prices[i].toFixed(2)} €</sub>
+                                <sub class="ProductPrice">${this.prices[i].toFixed(2)}€</sub>
                             </span>
                             <span class="ItemText">
                                 <span class="ProductQuantity">x${product.cantidad}</span>
-                                <span class="ProductCost">${this.sums[i].toFixed(2)} €</span>
+                                <span class="ProductCost">${this.sums[i].toFixed(2)}€</span>
                             </span>
                         </div>
                     </div>
@@ -93,11 +93,11 @@ class ShoppingCart {
                         <div class="SplitContainer">
                             <div class="ItemText">
                                 <p class="ProductName">${product.name}</p>
-                                <p class="ProductPrice">${this.prices[i].toFixed(2)} €</p>
+                                <p class="ProductPrice">${this.prices[i].toFixed(2)}€</p>
                             </div>
                             <div class="ItemText">
                                 <span class="ProductQuantity">x${product.cantidad}</span>
-                                <span class="ProductCost">${this.sums[i].toFixed(2)} €</span>
+                                <span class="ProductCost">${this.sums[i].toFixed(2)}€</span>
                             </div>
                         </div>
                     </div>
@@ -133,8 +133,8 @@ class ShoppingCart {
             totalPrice += sum
         }
 
-        result.innerText = String(totalPrice.toFixed(2))+"€"
-        res_prod.innerText = String(totalPrice.toFixed(2))+"€"
+        result.innerText = String(totalPrice.toFixed(2)) + "€"
+        res_prod.innerText = String(totalPrice.toFixed(2)) + "€"
     }
 
     updateTotalQuantity(){

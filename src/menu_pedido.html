@@ -17,7 +17,7 @@
         <section id="menu">
 
             <!-- Header for de subcategories -->
-            <header class="types">
+            <header id="types">
                 <!-- Title division -->
                 Menú
 
@@ -31,12 +31,12 @@
                 </div>
             </header>
 
-            <section class="prodSec row">
+            <section>
                 <!-- Div for products. The products get appended dynamically with JS. -->
                 <div class="prodDiv col-8"></div>
 
                 <!-- Sección de Carrito y resumen de pedido -->
-                <div class="col-4">
+                <div id="Carrito" class="col-4">
                     <aside class="ItemContainer DisplayContainer">
                         <header class="SplitContainer">
                             <div>Carrito</div>
@@ -96,21 +96,20 @@
                         </button>
                     </div>
 
-                    <div class="back">
-                        <button class="SplitContainer BrownButton" type="button" onclick="changeSection('menu')">
-                            <p>Go Back</p>
+                    <div class="BackButtonContainer">
+                        <button class="SplitContainer BrownButton Back" type="button" onclick="changeSection('menu')">
+                            <p>Atrás</p>
                             <p>🡠</p>
                         </button>
                     </div>
                 </div>
 
                 <!-- Login/Register Formulary -->
-                <div class="login col-12">
-                    <form id="register-form">
+                <div class="login">
+                    <form id="register-form"></form>
 
-                    </form>
-                    <div class="back">
-                        <button class="SplitContainer BrownButton" type="button" onclick="changeStep(1)">
+                    <div class="BackButtonContainer">
+                        <button class="SplitContainer BrownButton Back" type="button" onclick="changeStep(1)">
                             <p>Revisión de Pedido</p>
                             <p>🡠</p>
                         </button>
@@ -152,8 +151,8 @@
                         </button>
                     </div>
 
-                    <div class="back">
-                        <button class="SplitContainer BrownButton" type="button" onclick="changeStep(2)">
+                    <div class="BackButtonContainer">
+                        <button class="SplitContainer BrownButton Back" type="button" onclick="changeStep(2)">
                             <p>Cambiar Usuario</p>
                             <p>🡠</p>
                         </button>
@@ -164,13 +163,11 @@
                 <div class="payment col-12">
 
                     <!-- Formulary of payment generated dynamically with JS -->
-                    <form id="form-payment" class="form">
-
-                    </form>
+                    <form id="form-payment" class="form"></form>
 
                     <!-- Container for the back button -->
-                    <div class="back">
-                        <button class="SplitContainer BrownButton" type="button" onclick="changeStep(3)">
+                    <div class="BackButtonContainer">
+                        <button class="SplitContainer BrownButton Back" type="button" onclick="changeStep(3)">
                             <p>Cambiar Dirección</p>
                             <p>🡠</p>
                         </button>
@@ -181,9 +178,7 @@
                 <div class="success col-12 ItemContainer">
 
                     <!-- Title container -->
-                    <h3>
-                        Pedido Realizado con éxito!
-                    </h3>
+                    <h3>Pedido Realizado con éxito!</h3>
 
                     <!-- Body contnainer -->
                     <div class="message">
@@ -200,17 +195,14 @@
                     </div>
 
                     <!-- Container for the back button -->
-                    <div class="back">
+                    <div class="BackButtonContainer">
                         <button class="SplitContainer BrownButton" type="button" onclick="changeSection('menu')">
                             <p>Volver a la página de inicio</p>
                             <p>🡠</p>
                         </button>
                     </div>
-
                 </div>
             </section>
-
-
         </section>
     </main>
 

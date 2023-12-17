@@ -15,30 +15,22 @@ function changeSection(section){
 function generate_product(id, title, img, price, description, ingredients) {
     return `
         <!-- Standard Format of products -->
-        <article id="pr-${id}" class="pr">
-            <div class="prev">
-                <img alt="Image ${title}" src="./image/${img}">
-            </div>
-            <div class="content">
-                <div class="ops">
-                    <div class="op">
-                        <p>${title}</p>
-                        <div class="amount">
-                            <button class="but" onclick='addProduct("${title}",${id},Number(document.getElementById("amount-${id}").innerText) - 1)'>-</button>
-                            <p id="amount-${id}">0</p>
-                            <button class="but" onclick='addProduct("${title}",${id},Number(document.getElementById("amount-${id}").innerText) + 1)'>+</button>
-                        </div>
-                    </div>
-                    <div class="price">
-                        <p>${price}</p>
-                        <div class="ingredients">
-                            ${ingredients.map((x) => `<img alt="${x.alt}" src="${x.src}">`).join("\n")}
-                        </div>
+        <article id="pr-${id}" class="product Item ResizableHeight DisplayContainer">
+            <div class="ImagePreview"><img alt="Image ${title}" src="./image/${img}"></div>
+            <div class="Content">
+                <div class="title SplitContainer">
+                    <p class="ItemText">${title}</p>
+                    <button class="NumberButton ItemText" onclick='addProduct("${title}",${id},Number(document.getElementById("amount-${id}").innerText) - 1)'>-</button>
+                    <p id="amount-${id}" class="ItemText NumberValue">0</p>
+                    <button class="NumberButton ItemText" onclick='addProduct("${title}",${id},Number(document.getElementById("amount-${id}").innerText) + 1)'>+</button>
+                </div>
+                <div class="price SplitContainer">
+                    <p class="ProductPrice">${price}</p>
+                    <div class="ingredients">
+                        ${ingredients.map((x) => `<img alt="${x.alt}" src="${x.src}">`).join("\n")}
                     </div>
                 </div>
-                <div class="descr">
-                    <p>${description}</p>
-                </div>
+                <p class="description">${description}</p>
             </div>
         </article>
     `

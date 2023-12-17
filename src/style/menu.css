@@ -2,180 +2,15 @@
     display: none;
 }
 
-#menu {
-}
-
-    #menu > .types {
-        display: flex;
-        align-items: center;
-    }
-
-        .types > .buttons {
-            flex: 1 1 auto;
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-evenly;
-        }
-
-            .but {
-                flex: 0 0 8%;
-                padding: 10px;
-                margin: 0 20px;
-                box-shadow: 0 5px 7px 0 grey;
-                font-weight: bold;
-                border-radius: 50px;
-                background-color: var(--producto-bg);
-            }
-
-    .prodSec {
-    }
-
-        .prodSec > .prodDiv {
-            padding: 0;
-        }
-
-            .prodDiv > .prods {
-                justify-content: space-between;
-                display: flex;
-                flex-flow: row wrap;
-                overflow: hidden;
-            }
-
-                .pr {
-                    display: flex;
-                    flex: 0 1 43%;
-                    flex-flow: column nowrap;
-                    background-color: #f9f8f6;
-                    border-radius: 20px;
-                    margin: 3%;
-                    font-size: calc(.5em + 1vw);
-                    height: 60%;
-                }
-                    .pr > .prev {
-                        flex: 3 1 auto;
-                        overflow: hidden;
-                        border-top-left-radius: 20px;
-                        border-top-right-radius: 20px;
-                        max-height: 250px;
-                    }
-                        .prev > img {
-                            height: auto;
-                            width: 100%;
-                            object-fit: cover;
-                        }
-
-                    .pr > .content {
-                        margin-bottom: 5%;
-                        flex: 1 1 auto;
-                        display: flex;
-                        flex-flow: column nowrap;
-                    }
-                        .pr > .content > .ops {
-                            flex: 1 1 auto;
-                            display: flex;
-                            flex-flow: column nowrap;
-                        }
-                            .ops > .op {
-                                flex: 1 1 auto;
-                                display: flex;
-                                flex-flow: row wrap;
-                                align-items: center;
-                            }
-                                .op > p {
-                                    font-weight: bold;
-                                    font-size: calc(.7em + 1vw);
-                                    padding-left: 3.5%;
-                                    flex: 1 1 50%;
-                                }
-                                .op > .amount {
-                                    flex: 1 1 50%;
-                                    display: flex;
-                                    align-items: center;
-                                }
-                                    .amount > .but {
-                                        flex: 1 1 auto;
-                                        background-color: lightgrey;
-                                    }
-                                    .amount > p {
-                                        flex: 3 1 auto;
-                                        text-align: center;
-                                        background-color: #f7f7f5;
-                                        border: lightgrey 2px solid;
-                                        border-radius: 10px;
-                                    }
-
-                            .ops > .price {
-                                flex: 1 1 auto;
-                                display: flex;
-                            }
-                                .ops > .price > p{
-                                    flex: 1 1 auto;
-                                    margin-left: 3.5%;
-                                    font-size: calc(.7em + 1vw);
-                                }
-
-                                .ops > .price > .ingredients {
-                                    flex: 5 1 auto;
-                                    font-size: calc(.5em + 1vw);
-                                }
-                                    .price > .ingredients > img {
-
-                                    }
-
-                        .pr > .content > .descr {
-                            flex: 1 1 auto;
-                            margin-top: 3.5%;
-                            margin-left: 3.5%;
-                        }
-                            .pr > .content > .descr > p {
-                                font-size: calc(.1em + 1vw);
-                                color: grey;
-                            }
-
-        .result {
-            height: 100%;
-            margin-top: 15px;
-            background-color: #f9f8f6;
-            border-radius: 20px;
-            display: flex;
-            flex-flow: column nowrap;
-        }
-
-                #TotalProducts > span { font-size: 24px; }
-
-                #list-prods > .preview {
-                }
-                        .ItemText > .ProductPrice {
-                            font-size: 14px;
-                            color: var(--marron-base);
-                        }
-                        .ItemText > .ProductQuantity { padding-right: 30px; }
-
-                .prodSec > .result > .order > button {
-                    width: 100%;
-                    margin-top: 20px;
-                    background-color: #6c461a;
-                    color: #f9f8f6;
-                    padding: 20px;
-                    border-radius: 20px;
-                    border: none;
-                    box-shadow: 0 5px 7px 0 grey;
-                    font-weight: bold;
-                    font-size: 1em;
-                    cursor: pointer;
-                }
-
-#subtotal { 
-    margin-top: 25px;
-}
-
-#subtotal > * {
-    font-size: 20px;
-    font-weight: bold;
-}
-
 .DisplayContainer .ItemText {
     font-weight: bold;
+}
+
+.ItemText.NumberValue { padding: 0 25px; }
+
+.ProductPrice {
+    font-size: 14px;
+    color: var(--marron-base);
 }
 
 section > header {
@@ -187,80 +22,129 @@ section > header {
     font-weight: initial;
 }
 
+.ImagePreview {
+    object-fit: cover;
+}
+
+
+#types {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+    #types > .buttons {
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #types > .buttons > .but {
+        flex: 0 0 8%;
+        padding: 10px;
+        margin: 0 10px;
+        box-shadow: 0 5px 7px 0 grey;
+        font-weight: bold;
+        border-radius: 50px;
+        background-color: var(--producto-bg);
+    }
+
+#menu > section, .prodDiv {
+    padding: 0;
+}
+
+.prodDiv > .prods {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+.product {
+    padding: 0;
+    margin: 25px;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: stretch;
+}
+    .product > .ImagePreview {
+        overflow: hidden;
+        max-height: 250px;
+    }
+    .product > .ImagePreview > img {
+        height: auto;
+        width: 100%;
+    }
+
+    .product > .Content {
+        flex-grow: 1;
+        padding: 25px
+    }
+    .product > .Content > .title > *:first-child { flex-grow: 1; }
+
+    .product > .Content > .price > *:not(:first-child) { flex-grow: 1; }
+
+    .product .ProductPrice {
+        font-size: 20px;
+        font-weight: bold;
+        padding-right: 15px;
+    }
+
+    .product > .Content > .description {
+        font-size: 16px;
+        color: grey;
+        margin-top: 10px;
+    }
+
+#TotalProducts > span { font-size: 24px; }
+
+#list-prods .Item > .ItemText:first-child {
+    padding-right: 10px;
+    text-align: left;
+}
+
+#list-prods .Item > .ItemText:not(:first-child) { text-align: right; }
+
+.ItemText > .ProductCost { padding-left: 30px; }
+
+#Carrito .Item.ResizableHeight {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#subtotal { 
+    margin-top: 25px;
+}
+
+#subtotal > * {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 /*Extra breakpoint for reubicating the small cart*/
-@media only screen and (max-width: 1615px){
+@media only screen and (max-width: 1500px){
     [class*="col-"] {
         width: 100%;
     }
+
+    #carrito {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
-/*Breakpoint for movilephones*/
-@media only screen and (max-width: 600px) {
-
+@media screen and (max-width: 900px) {
     .prodDiv > .prods {
-        justify-content: space-between;
-        display: flex;
-        flex-flow: column nowrap;
-        overflow: hidden;
-    }
-    .preview > .title > .t {
-        font-size: calc(1em);
-    }
-    .preview > .title > .p {
-        font-size: calc(1em);
-    }
-    .preview > .price > .x {
-        font-size: calc(1.5em);
-    }
-    .preview > .price > .subtotal {
-        font-size: calc(1.5em);
+        grid-template-columns: auto;
     }
 
-    .col-3 > .ItemContainer > .SplitContainer {
-        flex-flow: column nowrap;
+    .product {
+        margin-right: 0;
+        margin-left: 0;
     }
 }
 
-/* Brakpoint for tablets*/
-@media only screen and (max-width: 1063px) {
-    #menu > .types {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        padding: 0;
-    }
-
-    .types > .buttons {
-        flex: 1 1 auto;
-        flex-flow: row nowrap;
-        display: flex;
-        width: 100%;
-        border: red 3px solid;
-    }
-    .but {
-        flex: 1 1 auto;
-        padding: 2.5% 0;
-        margin: 5% 2.5%;
-        border: none;
-        box-shadow: 0 5px 7px 0 grey;
-        font-size: calc(.8em);
-        font-weight: bold;
-        border-radius: 50px;
-        cursor: pointer;
-        background-color: #f9f8f6;
-    }
-
-    .preview > .title > .t {
-        font-size: calc(1em);
-    }
-    .preview > .title > .p {
-        font-size: calc(1em);
-    }
-    .preview > .price > .x {
-        font-size: calc(1.5em);
-    }
-    .preview > .price > .subtotal {
-        font-size: calc(1.5em);
+@media screen and (max-width: 600px) {
+    #types > .buttons > .but {
+        margin: 0 5px;
     }
 }
-

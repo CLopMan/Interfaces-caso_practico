@@ -1,9 +1,15 @@
-#pedido > hr {
-    margin-top: 20px;
-    color: #6c461a;
+.BackButtonContainer {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
 }
 
-#pedido > #progress {
+.BackButtonContainer > .Back {
+    width: 40vw;
+    min-width: 350px;
+}
+
+#progress {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
@@ -38,72 +44,25 @@
 }
 
 #list-prods-order > .Item { align-items: stretch; }
+
 #list-prods-order > .Item > .SplitContainer { flex-grow: 1; }
 
-.ImagePreview {
-    max-width: 20%;
+#list-prods-order > .Item > .SplitContainer > *:first-child {
+    flex-grow: 1;
+    padding-right: 10px;
+}
+
+#list-prods-order > .Item > .SplitContainer > *:not(:first-child) {
+    flex-shrink: 1;
+    text-align: right;
+}
+
+#list-prods-order .ImagePreview {
+    width: 20%;
     margin-right: 15px;
-    object-fit: cover;
 }
 
 #sending-form {margin-bottom: 15px; }
-
-#step > .result {
-    height: 100%;
-    margin-top: 15px;
-    border-radius: 20px;
-    display: flex;
-    flex-flow: column nowrap;
-    background: transparent;
-}
-
-        .back {
-            align-items: center;
-            margin: 30px 30% 0 30%;
-            display: flex;
-        }
-
-
-        #step > .result > .order {
-            flex: 1 1 auto;
-            background-color: white;
-            border-radius: 20px;
-            padding: 15px
-        }
-            #step > .result > .order > .subtotal {
-                font-weight: bold;
-                font-size: 2em;
-            }
-                #step > .result > .order > .subtotal > p {
-                    text-align: left;
-                }
-                #order-total-prev {
-                    text-align: right;
-                }
-            #step > .result > .order > button {
-                width: 100%;
-                background-color: #6c461a;
-                color: #f9f8f6;
-                padding: 20px 0;
-                border-radius: 20px;
-
-                box-shadow: 0 5px 7px 0 grey;
-                font-weight: bold;
-                font-size: 1.5em;
-                cursor: pointer;
-                margin-right: 50px;
-            }
-
-
-#step > .login {
-    align-items: center;
-}
-
-#step > .sending{}
-    .sending > .res-shipment{
-        border: lightgray 3px solid;
-        background-color: #f9f8f6;
-    }
 
 #step > .success {
     margin-top: 2.5%;
@@ -133,19 +92,20 @@
         transform: scale(120%);
     }
 
+@media screen and (max-width: 768px) {
+    #progress > .circle {
+        height: 100px;
+        width: 100px;
+        font-size: 16px;
+    }
+}
+
 /*Breakpoint for movilephones*/
-@media only screen and (max-width: 654px) {
-    #list-prods-order > .preview {
-        flex-flow: column nowrap;
+@media only screen and (max-width: 600px) {
+    #list-prods-order .ProductName {
+        font-size: 20px;
     }
-    #list-prods-order > .preview > .image-prev {
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 0;
-        border-top-right-radius: 20px;
-        max-width: 100%;
-    }
-    .BrownButton {
-        flex-flow: column nowrap;
-        font-size: calc(0.8em + 1vw);
+    .ItemText > .ProductCost {
+        padding-left: 5px;
     }
 }
