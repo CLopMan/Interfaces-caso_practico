@@ -459,7 +459,7 @@ Para corregir los errores y advertencias mencionadas, se han aplicado las siguen
 
 - Falta de inclusión de etiquetas de título: Se solucionaron añadiendo etiquetas h1 y h2 con el estilo estandard definido por la página como elementos.
 
-- Errores de contraste: Se ha modificado la paleta de colores estandard de la página para incluir texto de color negro en vez de gris claro en las descripciones de los productos.
+- Errores de contraste: Se ha modificado la paleta de colores _"standard"_ de la página para incluir texto de color negro en vez de gris claro en las descripciones de los productos.
 
 
 \clearpage

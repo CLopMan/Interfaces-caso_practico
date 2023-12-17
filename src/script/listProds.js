@@ -1,5 +1,7 @@
 let cart = new ShoppingCart();
 
+cart.setUpdateAutomatic()
+
 function addProduct(nombre, ind, cantidad){
     cart.prods[ind-1].name = nombre;
 

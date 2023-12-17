@@ -312,7 +312,7 @@ generate_form(
         serialize: Test,
         skip_serialize: true,
         callback: () => {
-            cart.updateMasterPrice(0,5)
+            cart.updateMasterPrice()
             changeStep(3)
         },
         alert_ok: true
@@ -323,7 +323,7 @@ generate_form(
     "#sending-form",
     "Envío",
     [
-        {name: "Dirección de envío", valid: Name,placeholder: "Dirección"},
+        {name: "direction", valid: Name,placeholder: "Dirección"},
     ],
 )
 
