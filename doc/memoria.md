@@ -150,7 +150,7 @@ Para la especificación de las personas se ha diseñado una plantilla en forma d
 
 1. José entra a la web y consulta la información sobre los gatos y actividades.
 2. Comprueba si en el establecimiento existe un área de trabajo.
-3. Reserva una mesa desde la web para una persona.  
+3. Reserva una mesa desde la web para una persona.
 
 \clearpage
 
@@ -390,32 +390,34 @@ Comparando el prototipo con el diseño final, destacamos 3 errores que recibimos
 
 Cada uno de estos errores ha sido corregido. El menú de navegación se ha sustituído por un menú lateral que ocupa aproximadamente un cuarto del ancho de la pantalla. Las páginas de localización y establecimiento se han combinado ya que contenían información fácilmente acoplable, reduciendo el número de páginas.
 
-También se han hecho algunas modificaciones por necesidades de implementación: 
-- Se han eliminado los puntos que enlazaban precio con productos en la página de tarifas.
-- Se han recolocado algunos botones en las páginas Home y activiades para su comportamiento responsive. 
+También se han hecho algunas modificaciones por necesidades de implementación:
 
-Teniendo todo lo anterior en cuenta, el diseño final se mantiene fiel al prototipo, aunque con leves variaciones que mejoran el producto final. 
+- Se han eliminado los puntos que enlazaban precio con productos en la página de tarifas.
+- Se han recolocado algunos botones en las páginas Home y actividades para su comportamiento responsive.
+
+Teniendo todo lo anterior en cuenta, el diseño final se mantiene fiel al prototipo, aunque con leves variaciones que mejoran el producto final.
 
 \clearpage
 
 ## 6. Informe de accesibilidad {#apartado-6}
 
-Para realizar el análisis de accesibilidad, en este caso se ha optado por comprobar el aspecto de las páginascon una herramienta llamada _"WAVE"_. Esta utilidad nos permite analizar el prototipo en busca de consejos o errores para mejorar en este aspecto.
+Para realizar el análisis de accesibilidad, en este caso se ha optado por comprobar el aspecto de las páginas con una herramienta llamada *"WAVE"*. Esta utilidad nos permite analizar el prototipo en busca de consejos o errores para mejorar en este aspecto.
 
 En el análisis, se encuentran los siguientes errores:
 
-- Errores de contraste: Adventencias debido a que el contraste entre el color del texto para algunos párrafos (Ej. descripciones de productos) y el fondo de la página web es demasiado bajo.
+- Errores de contraste: Advertencias debido a que el contraste entre el color del texto para algunos párrafos (Ej. descripciones de productos) y el fondo de la página web es demasiado bajo.
 
-- Falta de inclusión de etiquetas de título en algunas secciones ( Ej. h1,h2,h3,...): Hay párafos con estilo de títulos que no lo son.
+- Falta de inclusión de etiquetas de título en algunas secciones ( Ej. `h1`, `h2`, `h3`, ...): Hay párrafos con estilo de títulos que no lo son.
 
 - Largos bloques de información justificados plenamente puede perjudicar la lectura de las páginas.
 
-- Algúnas etiquetas no estaban asociadas a ningún elemento en los formularios
+- Algunas etiquetas no estaban asociadas a ningún elemento en los formularios
 
 ### Errores de Contraste
-En nuestro deseño del prototipo, se ha acordado utilizar colores claros de fondo y texto oscuro. Comprobamos que esa configuración de colores era la que mejor combinaba a la hora de crear el estilo de un Catcafé.
 
-La combinación de colores incluye: 
+En nuestro diseño del prototipo, se ha acordado utilizar colores claros de fondo y texto oscuro. Comprobamos que esa configuración de colores era la que mejor combinaba a la hora de crear el estilo de un Catcafé.
+
+La combinación de colores incluye:
 
 - Color marrón para títulos y fondos de botones de navegación
 - Blanco con tonalidad gris para el fondo de las páginas web
@@ -423,44 +425,39 @@ La combinación de colores incluye:
 - Color gris claro para la descripción de los productos y el fondo de botones de operaciones con los pedidos
 - Fondo blanco para los productos.
 
-Al validar la accesibilidad analizando las páginas con el plugin de _"WAVE"_, se mostraron bastantes errores mencionando que el contraste los colores del fondo del producto y el de las descripciones de los productos era bastante bajo. Esto impide la legibilidad a los productos en cuestión. 
+Al validar la accesibilidad analizando las páginas con el plugin de *"WAVE"*, se mostraron bastantes errores mencionando que el contraste los colores del fondo del producto y el de las descripciones de los productos era bastante bajo. Esto impide la legibilidad a los productos en cuestión.
 
 ### Falta de inclusión de etiquetas de título
 
-Siguiendo el diseño compartido del prototipo, a la hora de implementación algunos headers o Títulos primarios carecían de elementos H1, H3 o similares.
-Como consecuencia de esto, revisando la página con _"WAVE"_, se ha detectado esa carencia como advertencias de accesibilidad.
+Siguiendo el diseño compartido del prototipo, a la hora de implementación algunos headers o Títulos primarios carecían de elementos `H1`, `H3` o similares.
+Como consecuencia de esto, revisando la página con *"WAVE"*, se ha detectado esa carencia como advertencias de accesibilidad.
 
-Dichas advertencias se han localizado en algúnos encabezados de secciones como las de la página web de _"Tarifas"_.
+Dichas advertencias se han localizado en algunos encabezados de secciones como las de la página web de *"Tarifas"*.
 
-### Párrafos con apariencias H1 o H3 que no lo son
+### Párrafos con apariencias `H1` o `H3` que no lo son
 
-En la implementación de algunos bloques de textos en las páginas web, se ha optado por adoptar un tamaño de fuente más grande para mejorar la accesibilidad. Debido al grande tamaño del texto, el plugin de _"WAVE"_ detecta que tiene estilo de un título de alguna sección cuando en realidad no lo és.
+En la implementación de algunos bloques de textos en las páginas web, se ha optado por adoptar un tamaño de fuente más grande para mejorar la accesibilidad. Debido al grande tamaño del texto, el plugin de *"WAVE"* detecta que tiene estilo de un título de alguna sección cuando en realidad no lo es.
 Dicho texto se puede encontrar en la cantidad de artículos, el nombre de los artículos, en los títulos del carrito y los formularios (los cuales se han implementado como headers sin título).
 
 ### Justificación repetitiva de grandes bloques de texto
 
-Utilizar la justificación de textos de manera repetitiva en las páginas es considerado como un contra o defecto que afecta a la legibilidad de las páginas por el plugin de _"WAVE"_.
+Utilizar la justificación de textos de manera repetitiva en las páginas es considerado como un contra o defecto que afecta a la legibilidad de las páginas por el plugin de *"WAVE"*.
 
 Dicho defecto se ha encontrado por ejemplo en la página de menú de productos para todo el texto en ella.
 
 ### Etiquetas no asociadas a un campo
 
-En la implementación del proceso de reserva había algunas etiquetas o labels que no estaban asociadas a nada o marginadas. A la hora de la revisión, el plugin de accesibilidad _"WAVE"_ nos lo detectó como advertencias a la hora de reservar en nuestro Catcafé. 
+En la implementación del proceso de reserva había algunas etiquetas o labels que no estaban asociadas a nada o marginadas. A la hora de la revisión, el plugin de accesibilidad *"WAVE"* nos lo detectó como advertencias a la hora de reservar en nuestro Catcafé.
 
 ### Correcciones de los Errores y advertencias
 
-Para corregir los errores y advertencias mencionadas, se han aplicado las siguentes soluciones:
+Para corregir los errores y advertencias mencionadas, se han aplicado las siguientes soluciones:
 
-- Etiquetas no asociadas a un campo: Solucionamos estas advertencias modificando simplemente la propiedad _"for"_ de los objetos _"label"_ para que todas se refirieran a algo en la implementación del HTML de las páginas.
-
-- Justificación repetitiva de texto: Este tipo de advertencias se solventaron modificando el CSS o las clases de estilo de los textos para intercalar la propiedad de _"text-justify"_ y la de _"justify-content"_ en las páginas.
-
-- Apariencias en estilo de H1 o H3 en textos que no lo son: Este tipo de advertencias se ha dedicido ignorarla, ya que reducir el tamaño de la fuente en esos casos sería un problema aún mayor de visibilidad.
-
-- Falta de inclusión de etiquetas de título: Se solucionaron añadiendo etiquetas h1 y h2 con el estilo estandard definido por la página como elementos.
-
-- Errores de contraste: Se ha modificado la paleta de colores _"standard"_ de la página para incluir texto de color negro en vez de gris claro en las descripciones de los productos.
-
+- Etiquetas no asociadas a un campo: Solucionamos estas advertencias modificando simplemente la propiedad `for` de los objetos `label` para que todas se refirieran a algo en la implementación del `HTML` de las páginas.
+- Justificación repetitiva de texto: Este tipo de advertencias se solventaron modificando el `CSS` o las clases de estilo de los textos para intercalar la propiedad de `text-justify` y la de `justify-content` en las páginas.
+- Apariencias en estilo de `H1` o `H3` en textos que no lo son: Este tipo de advertencias se ha decidido ignorarla, ya que reducir el tamaño de la fuente en esos casos sería un problema aún mayor de visibilidad.
+- Falta de inclusión de etiquetas de título: Se solucionaron añadiendo etiquetas `h1` y `h2` con el estilo *estándar* definido por la página como elementos.
+- Errores de contraste: Se ha modificado la paleta de colores *estándar* de la página para incluir texto de color negro en vez de gris claro en las descripciones de los productos.
 
 \clearpage
 
@@ -468,27 +465,28 @@ Para corregir los errores y advertencias mencionadas, se han aplicado las siguen
 
 Durante el desarrollo de esta práctica hemos empleado distintas tecnologías con diversos fines.
 
-Durante la fase de documentación hemos hecho uso de la herramienta **inspeccionar**. Esta herramienta nos ha permitido analizar en profundidad la organización de contenido y los estilos de las páginas web analizadas en el [apartado 3](#apartado-3). Además, esta herramienta ha sido verdaderamente últil para el testeo del producto final y su comportamiento responsive. 
+Durante la fase de documentación hemos hecho uso de la herramienta **inspeccionar**. Esta herramienta nos ha permitido analizar en profundidad la organización de contenido y los estilos de las páginas web analizadas en el [apartado 3](#apartado-3). Además, esta herramienta ha sido verdaderamente útil para el testeo del producto final y su comportamiento responsive.
 
-Para el prototipado hemos empleado [**Figma**](https://www.figma.com/). Figma es una herramienta de diseño colaborativo que nos ha permitido trabajar en paralelo sobre un diseño común. Ademaś, una vez finalizado el prototipo, Figma nos ha permitido representar fielmente el comportamiento que esperábamos de nuestra web; lo que ha servido de punto de referencia durante todo el desarrollo. Esto ha permitido un flujo de trabajo cómodo en el que todos los integrantes del grupo han estado plenamente coordinados. 
+Para el prototipado hemos empleado [**Figma**](https://www.figma.com/). Figma es una herramienta de diseño colaborativo que nos ha permitido trabajar en paralelo sobre un diseño común. Además, una vez finalizado el prototipo, Figma nos ha permitido representar fielmente el comportamiento que esperábamos de nuestra web; lo que ha servido de punto de referencia durante todo el desarrollo. Esto ha permitido un flujo de trabajo cómodo en el que todos los integrantes del grupo han estado plenamente coordinados.
 
-Para implementar la página web se ha usado **html**, **css** y **javaScript**. Html es un lenguaje de etiquetado que se ha usado para organizar el contenido que queremos mostrar en la página, esto se ha hecho mediante etiquetas semánticas que estructuran la página web. Css permite la aplicación de estilos sobre los elementos definidos en el html. De esta forma, toda la estética de la página web, así como el comportamiento responsive queda definido en las hojas de estilo. JavaScript es un lenguaje de programación que permite dar funcionalidad a las páginas web y la introducción de elementos dinámicos. 
+Para implementar la página web se ha usado `HTML`, `CSS` y `javaScript`. `HTML` es un lenguaje de etiquetado que se ha usado para organizar el contenido que queremos mostrar en la página, esto se ha hecho mediante etiquetas semánticas que estructuran la página web. `CSS` permite la aplicación de estilos sobre los elementos definidos en el `HTML`. De esta forma, toda la estética de la página web, así como el comportamiento responsive queda definido en las hojas de estilo. `JavaScript` es un lenguaje de programación que permite dar funcionalidad a las páginas web y la introducción de elementos dinámicos.
 
-Desarrollando el uso de javascript, además de las funciones implementadas por nosotros hemos importado algunos módulos para ciertas funcionalidades. El más importante de ellos es **jquery**, una biblioteca que facilita el uso de javascript en las páginas web. También, se han importado algunos plugins de esta biblioteca: 
-- [TimeTo](https://plugins.jquery.com/timeTo) es un plugin que añade la funcionalidad de cuentas atrás. Lo hemos usado para la cuenta atrás en el apartado de pedidos. 
-- [picadate](https://amsul.ca/pickadate.js/) es un plugin que añade un gran abanico de funcionalidad para la selección de fechas. Nos ha permitido incluir entradas de usuario a tavés de calendarios y selectores de horas de manera sencilla en el apartado de reservas. 
+Desarrollando el uso de `javaScript`, además de las funciones implementadas por nosotros hemos importado algunos módulos para ciertas funcionalidades. El más importante de ellos es `jQuery`, una biblioteca que facilita el uso de `javaScript` en las páginas web. También, se han importado algunos plugins de esta biblioteca:
+
+- [`TimeTo`](https://plugins.jquery.com/timeTo) es un plugin que añade la funcionalidad de cuentas atrás. Lo hemos usado para la cuenta atrás en el apartado de pedidos.
+- [`pickadate`](https://amsul.ca/pickadate.js/) es un plugin que añade un gran abanico de funcionalidad para la selección de fechas. Nos ha permitido incluir entradas de usuario a través de calendarios y selectores de horas de manera sencilla en el apartado de reservas.
 
 \clearpage
 
 ## 8. Evaluación SUS {#apartado-8}
 
-Para la evaluación SUS se han facilitado 3 cuestionarios a un grupo de 3 evaluadores. El primero se trata de un cuestionario de consentimiento, el segundo para optener datos de la población de evaluadores y el tercero con las 10 preguntas propias del cuestionario SUS. 
+Para la evaluación SUS se han facilitado 3 cuestionarios a un grupo de 3 evaluadores. El primero se trata de un cuestionario de consentimiento, el segundo para obtener datos de la población de evaluadores y el tercero con las 10 preguntas propias del cuestionario SUS.
 
-En cuanto al primer y segundo cuestionario, contamos con el consentimiento de los 3 evaluadores para realizar el estudio. Además, sabemos que se trata de una población masculina, de entre 22 y 27 años y con grandes conocimientos en el ámbito de la tecnología. Estos datos son esperables puesto que se nos hallamos en el contexto de una clase de alumnos de informática. Es por esto que concluímos que para hacer una correcta evaluación SUS deberíamos ampliar el espectro de evaluadores para obtener datos de otra clase de poblaciones.
+En cuanto al primer y segundo cuestionario, contamos con el consentimiento de los 3 evaluadores para realizar el estudio. Además, sabemos que se trata de una población masculina, de entre 22 y 27 años y con grandes conocimientos en el ámbito de la tecnología. Estos datos son esperables puesto que se nos hallamos en el contexto de una clase de alumnos de informática. Es por esto que concluimos que para hacer una correcta evaluación SUS deberíamos ampliar el espectro de evaluadores para obtener datos de otra clase de poblaciones.
 
-El tercer cuestionario se rellenará con el fin de evaluar la tarea: "Haz un pedido y luego haz una reserva". Los resultados quedan recogidos en la siguiente tabla: 
+El tercer cuestionario se rellenará con el fin de evaluar la tarea: "Haz un pedido y luego haz una reserva". Los resultados quedan recogidos en la siguiente tabla:
 
-|   Pregunta  | Evaluador 1 | Evaluador 2 | Evaluador 3 | 
+|   Pregunta  | Evaluador 1 | Evaluador 2 | Evaluador 3 |
 | :---------: | :---------: | :---------: | :---------: |
 |      1      |      4      |      4      |      5      |
 |      2      |      2      |      1      |      2      |
@@ -503,23 +501,19 @@ El tercer cuestionario se rellenará con el fin de evaluar la tarea: "Haz un ped
 | comentarios positivos | La interfaz gráfica es muy agradable a la vista, además está muy bien organizada, de manera que no satura al usuario. | La estética es limpia, el proceso de realizar un pedido es intuitivo y cómodo. Aunque mi favorito es la reserva de mesa, las animaciones y popups hacen que casi sin darte cuenta ya tengas una mesa en CatFé a tu nombre | Estética sobria y elegante |
 | comentarios negativos |  Demasiadas fotos.           |      Nada      |    se podría mejorar el feedback de algunos elementos clickables      |
 
+Con estos resultados, calculamos la nota media del cuestionario SUS para nuestra web:
 
-Con estos resultados, calculamos la nota media del cuestionario SUS para nuestra web: 
-
-Sea $N_i$ la nota resultante de la evaluación del evaulador $i$: 
-$$N_i = 2,5\cdot\sum_{n=1}^{10} v_n, \text{ donde } v_n = 
-\left\{\begin{array}{ll}
+Sea $N_i$ la nota resultante de la evaluación del evaluador $i$:
+$$N_i = 2.5 \cdot \sum_{n=1}^{10} v_n, \text{ donde } v_n = \begin{cases}
     \text{valorPregunta}_n - 1 & \text{si n es impar}\\
-    \\
     5 - \text{valorPregunta}_n & \text{si n es par}\\
+\end{cases}$$
 
-\end{array}\right.$$
-
-De esta forma, obtenemos la evaluación para cada uno de los evaluadores: 
+De esta forma, obtenemos la evaluación para cada uno de los evaluadores:
 
 $$\begin{array}{|c|c|}
     \hline
-    \text{Evaluador} & \text{Evaluacion}\\
+    \text{Evaluador} & \text{Evaluación}\\
     \hline
     1 & 82,5 \\
     \hline
@@ -529,7 +523,7 @@ $$\begin{array}{|c|c|}
     \hline
 \end{array}$$
 
-De forma global, obtendremos el resultado de la evaluación SUS como la media aritmética de los 3 valores: 
+De forma global, obtendremos el resultado de la evaluación SUS como la media aritmética de los 3 valores:
 
 $$\overline N = \frac{N_1 + N_2 + N_3}{3} = \frac{82,5 + 90 + 85}{3} = 85,83$$
 
