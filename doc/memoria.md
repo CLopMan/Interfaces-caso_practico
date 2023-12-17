@@ -380,7 +380,7 @@ Además aplicamos los siguientes patrones:
 
 El diseño final cuenta con 8 páginas, 9 hojas de estilo y 13 scripts de `javaScript`. Para los elementos compartidos como la cabecera se ha empleado un script de `javaScript` para incluirlo en cada página con el mismo formato, permitiéndonos modificar la cabecera en un único sitio. Además, existe una hoja de estilos `shared.css` que contiene los estilos compartidos para todas las páginas como los encabezados, el texto o la distribución de columnas.
 
-En cuanto al comportamiento *responsive* se ha decidido usar una aproximación de diseño por columnas. Se ha dividido el espacio de la página horizontalmente en 12 columnas y a cada elemento se le asigna un tamaño en número de columnas. De esta forma, se facilita la distribución de elementos por la página. Además, para dispositivos de distinto tamaño se varía el tamaño de las columnas o, en su defecto, de los objetos de forma que permite un código más limpio con un buen resultado.
+En cuanto al comportamiento *responsive*, se ha decidido usar una aproximación de diseño por columnas. Se ha dividido el espacio de la página horizontalmente en 12 columnas y a cada elemento se le asigna un tamaño en número de columnas. De esta forma, se facilita la distribución de elementos por la página. Además, para dispositivos de distinto tamaño se varía el tamaño de las columnas o, en su defecto, de los objetos de forma que permite un código más limpio con un buen resultado.
 
 Comparando el prototipo con el diseño final, destacamos 3 errores que recibimos durante la defensa:
 
@@ -464,6 +464,39 @@ Para corregir los errores y advertencias mencionadas, se han aplicado las siguen
 
 ## 8. Evaluación SUS {#apartado-8}
 
+Para la evaluación SUS se han facilitado 3 cuestionarios a un grupo de 3 evaluadores. El primero se trata de un cuestionario de consentimiento, el segundo para optener datos de la población de evaluadores y el tercero con las 10 preguntas propias del cuestionario SUS. 
+
+En cuanto al primer y segundo cuestionario, contamos con el consentimiento de los 3 evaluadores para realizar el estudio. Además, sabemos que se trata de una población masculina, de entre 22 y 27 años y con grandes conocimientos en el ámbito de la tecnología. Estos datos son esperables puesto que se nos hallamos en el contexto de una clase de alumnos de informática. Es por esto que concluímos que para hacer una correcta evaluación SUS deberíamos ampliar el espectro de evaluadores para obtener datos de otra clase de poblaciones.
+
+El tercer cuestionario se rellenará con el fin de evaluar la tarea: "Haz un pedido y luego haz una reserva". Los resultados quedan recogidos en la siguiente tabla: 
+
+|   Pregunta  | Evaluador 1 | Evaluador 2 | Evaluador 3 | 
+| :---------: | :---------: | :---------: | :---------: |
+|      1      |      4      |      4      |      5      |
+|      2      |      2      |      1      |      2      |
+|      3      |      5      |      5      |      4      |
+|      4      |      1      |      1      |      1      |
+|      5      |      4      |      4      |      4      |
+|      6      |      1      |      1      |      1      |
+|      7      |      5      |      4      |      4      |
+|      8      |      2      |      1      |      1      |
+|      9      |      4      |      4      |      4      |
+|     10      |      3      |      1      |      2      |
+| comentarios positivos | La interfaz gráfica es muy agradable a la vista, además está muy bien organizada, de manera que no satura al usuario. | La estética es limpia, el proceso de realizar un pedido es intuitivo y cómodo. Aunque mi favorito es la reserva de mesa, las animaciones y popups hacen que casi sin darte cuenta ya tengas una mesa en CatFé a tu nombre | Estética sobria y elegante |
+| comentarios negativos |  Demasiadas fotos.           |      Nada      |    se podría mejorar el feedback de algunos elementos clickables      |
+
+
+Con estos resultados, calculamos la nota media del cuestionario SUS para nuestra web: 
+
+$$N_i = 2,5\cdot\sum_{n=1}^10 v_n, \text{donde } v_n = 
+\left\{\begin{array}{ll}
+    \text{valor_pregunta}_n - 1 & \text{si n es impar}\\
+    5 - \text{valor_pregunta}_n & \text{si n es par}
+\right.$$
+
+$$\overline N = \frac{N_1 + N_2 + N_3}{3} = \frac{82,5 + 90 + 85}{3} = 85,83$$
+
+Obtenemos un resultado de 85.83 en la evaluación SUS, lo que nos lleva a concluir que la usabilidad de nuestra web es alta
 \clearpage
 
 ## 9. Conclusiones {#apartado-9}
