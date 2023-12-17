@@ -13,7 +13,7 @@
     color: var(--marron-base);
 }
 
-section > header {
+#menu > header, #pedido > header {
     border-bottom: 2px solid var(--marron-base);
     padding: 25px 0 10px;
     margin-bottom: 25px;
