@@ -308,7 +308,6 @@ generate_form(
             cart.updateMasterPrice(0,5)
             changeStep(3)
         },
-        alert_ok: true
     }
 )
 
@@ -340,6 +339,5 @@ generate_form(
                 displayHours: false
             });
         },
-        alert_ok: true
     }
 )
