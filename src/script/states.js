@@ -294,16 +294,15 @@ generate_form(
     "#register-form",
     "Registro de Usuario",
     [
-        {name: "Nombre ", valid: Name,placeholder: "Nombre de usuario"},
-        {name: "Apellidos ", valid: Name,placeholder: "Apellidos Completos"},
-        {name: "Email de contacto ", valid: Email, type: "email",placeholder: "Nombre de usuario"},
-        {name: "Número de teléfono ", valid: Phone, type: "tel",placeholder: "Teléfono"},
-        {name: "Contraseña ", valid: Password, type: "password",placeholder: "Contraseña de usuario"}
+        {name: "Nombre",     valid: Name,     placeholder: "Nombre"},
+        {name: "Apellidos",  valid: Name,     placeholder: "Apellido1 Apellido2"},
+        {name: "Email",      valid: Email,    placeholder: "ejemplo@dominio.extensión", type: "email"},
+        {name: "Teléfono",   valid: Phone,    placeholder: "+34766666666"},
+        {name: "Contraseña", valid: Password, placeholder: "Introduzca un mínimo de 8 caracteres", type: "password"},
     ],
     {
         name: "Datos de Envío",
-        serialize: Test,
-        skip_serialize: true,
+        serialize: User,
         callback: () => {
             cart.updateMasterPrice(0,5)
             changeStep(3)
@@ -325,7 +324,7 @@ generate_form(
     [
         {name: "Nombre del Titular", valid: Name,placeholder: "Nombre"},
         {name: "Número de targeta", valid: CreditCardNumber,placeholder: "Ej: 9999 9999 9999 9999"},
-        {name: "Fecha de Expiración", valid: CreditCardExpiryDate,placeholder: "MM / AA"},
+        {name: "Fecha de Expiración", valid: CreditCardExpiryDate,placeholder: "MM/AA"},
         {name: "CVC", valid: CreditCardCVC,placeholder: "CVC"},
     ],
     {
