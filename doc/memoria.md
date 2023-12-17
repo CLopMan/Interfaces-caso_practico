@@ -390,6 +390,12 @@ Comparando el prototipo con el diseño final, destacamos 3 errores que recibimos
 
 Cada uno de estos errores ha sido corregido. El menú de navegación se ha sustituído por un menú lateral que ocupa aproximadamente un cuarto del ancho de la pantalla. Las páginas de localización y establecimiento se han combinado ya que contenían información fácilmente acoplable, reduciendo el número de páginas.
 
+También se han hecho algunas modificaciones por necesidades de implementación: 
+- Se han eliminado los puntos que enlazaban precio con productos en la página de tarifas.
+- Se han recolocado algunos botones en las páginas Home y activiades para su comportamiento responsive. 
+
+Teniendo todo lo anterior en cuenta, el diseño final se mantiene fiel al prototipo, aunque con leves variaciones que mejoran el producto final. 
+
 \clearpage
 
 ## 6. Informe de accesibilidad {#apartado-6}
@@ -458,7 +464,16 @@ Para corregir los errores y advertencias mencionadas, se han aplicado las siguen
 
 \clearpage
 
-## 7. Descripción de herramientas utilizadas {#apartado-7}
+## 7. Descripción de tecnologías utilizadas {#apartado-7}
+
+Durante el desarrollo de esta práctica hemos empleado distintas tecnologías con diversos fines.
+
+Durante la fase de documentación hemos hecho uso de la herramienta **inspeccionar**. Esta herramienta nos ha permitido analizar en profundidad la organización de contenido y los estilos de las páginas web analizadas en el [apartado 3](#apartado-3). Además, esta herramienta ha sido verdaderamente últil para el testeo del producto final y su comportamiento responsive. 
+
+Para el prototipado hemos empleado **Figma**. Figma es una herramienta de diseño colaborativo que nos ha permitido trabajar en paralelo sobre un diseño común. Ademaś, una vez finalizado el prototipo, Figma nos ha permitido representar fielmente el comportamiento que esperábamos de nuestra web; lo que ha servido de punto de referencia durante todo el desarrollo. Esto ha permitido un flujo de trabajo cómodo en el que todos los integrantes del grupo han estado plenamente coordinados. 
+
+
+
 
 \clearpage
 
@@ -488,15 +503,19 @@ El tercer cuestionario se rellenará con el fin de evaluar la tarea: "Haz un ped
 
 Con estos resultados, calculamos la nota media del cuestionario SUS para nuestra web: 
 
-$$N_i = 2,5\cdot\sum_{n=1}^10 v_n, \text{donde } v_n = 
+Sea $N_i$ la nota resultante de la evaluación del evaulador $i$: 
+$$N_i = 2,5\cdot\sum_{n=1}^{10} v_n, \text{ donde } v_n = 
 \left\{\begin{array}{ll}
-    \text{valor_pregunta}_n - 1 & \text{si n es impar}\\
-    5 - \text{valor_pregunta}_n & \text{si n es par}
-\right.$$
+    \text{valorPregunta}_n - 1 & \text{si n es impar}\\
+    \\
+    5 - \text{valorPregunta}_n & \text{si n es par}\\
+
+\end{array}\right.$$
 
 $$\overline N = \frac{N_1 + N_2 + N_3}{3} = \frac{82,5 + 90 + 85}{3} = 85,83$$
 
-Obtenemos un resultado de 85.83 en la evaluación SUS, lo que nos lleva a concluir que la usabilidad de nuestra web es alta
+Obtenemos un resultado de $85.83$ en la evaluación SUS, lo que se corresponde con una calificación A. Esto nos lleva a concluir que la usabilidad de nuestra web es alta y que las personas con perfiles similares al de los evaluadores encuentran la web agradable y la recomendarían a sus allegados.
+
 \clearpage
 
 ## 9. Conclusiones {#apartado-9}
