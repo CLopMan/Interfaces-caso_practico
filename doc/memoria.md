@@ -263,6 +263,8 @@ La estética hogareña y el tono de la página, además del énfasis en el resca
 
 El proceso de reserva es muy cómodo gracias a la *barra de proceso y la guía se da durante el proceso*.
 
+\clearpage
+
 ## 4. Diseño del prototipo {#apartado-4}
 
 ### 4.1. Requisitos funcionales {#apartado-41}
@@ -356,8 +358,6 @@ En esta página podremos efectuar una reserva de una mesa en el local. Primero, 
 
 Las cafeterías de este estilo suelen ofrecer planes por tiempo en el local. En esta página se pueden consultar los precios y contenidos de estos planes, así como un pequeño resumen del tipo de productos que se ofrecen.
 
-\clearpage
-
 ### Patrones y heurísticas
 
 A la hora de hacer el diseño y prototipado se han aplicado las siguientes heurísticas:
@@ -375,6 +375,8 @@ Además aplicamos los siguientes patrones:
 - Prevención de errores (K12): los formularios aportan pistas sobre cómo se deben rellenar para evitar errores por el formato de entrada.
 - Plantillas de páginas (D1): todas las páginas usan una plantilla global con cabecera (que incluye el botón para acceder al menú de hamburguesa) y plantillas individuales para cada tipo de página.
 - Carrito de compra (F3): en el proceso de hacer un pedido, existe un carrito de compra donde se pueden consultar en tiempo real los productos seleccionados hasta el momento.
+
+\clearpage
 
 ## 5. Diseño final {#apartado-5}
 
@@ -483,20 +485,28 @@ En cuanto al primer y segundo cuestionario, contamos con el consentimiento de lo
 
 El tercer cuestionario se rellenará con el fin de evaluar la tarea: "Haz un pedido y luego haz una reserva". Los resultados quedan recogidos en la siguiente tabla:
 
-|   Pregunta  | Evaluador 1 | Evaluador 2 | Evaluador 3 |
-| :---------: | :---------: | :---------: | :---------: |
-|      1      |      4      |      4      |      5      |
-|      2      |      2      |      1      |      2      |
-|      3      |      5      |      5      |      4      |
-|      4      |      1      |      1      |      1      |
-|      5      |      4      |      4      |      4      |
-|      6      |      1      |      1      |      1      |
-|      7      |      5      |      4      |      4      |
-|      8      |      2      |      1      |      1      |
-|      9      |      4      |      4      |      4      |
-|     10      |      3      |      1      |      2      |
-| comentarios positivos | La interfaz gráfica es muy agradable a la vista, además está muy bien organizada, de manera que no satura al usuario. | La estética es limpia, el proceso de realizar un pedido es intuitivo y cómodo. Aunque mi favorito es la reserva de mesa, las animaciones y popups hacen que casi sin darte cuenta ya tengas una mesa en CatFé a tu nombre | Estética sobria y elegante |
-| comentarios negativos |  Demasiadas fotos.           |      Nada      |    se podría mejorar el feedback de algunos elementos clickables      |
+\hspace{-\parindent}
+\makebox[\textwidth][c]{
+    \begin{tabular}{cp{4cm}p{4cm}p{4cm}}
+        \toprule
+        Pregunta & Evaluador 1 & Evaluador 2 & Evaluador 3 \\
+        \midrule
+         1 & 4 & 4 & 5 \\
+         2 & 2 & 1 & 2 \\
+         3 & 5 & 5 & 4 \\
+         4 & 1 & 1 & 1 \\
+         5 & 4 & 4 & 4 \\
+         6 & 1 & 1 & 1 \\
+         7 & 5 & 4 & 4 \\
+         8 & 2 & 1 & 1 \\
+         9 & 4 & 4 & 4 \\
+        10 & 3 & 1 & 2 \\
+        \midrule[0.03em]
+        Comentarios positivos & La interfaz gráfica es muy agradable a la vista, además está muy bien organizada, de manera que no satura al usuario. & La estética es limpia, el proceso de realizar un pedido es intuitivo y cómodo. Aunque mi favorito es la reserva de mesa, las animaciones y popups hacen que casi sin darte cuenta ya tengas una mesa en CatFé a tu nombre & Estética sobria y elegante \\
+        Comentarios negativos & Demasiadas fotos. & Nada & Se podría mejorar el feedback de algunos elementos clickables \\
+        \bottomrule
+    \end{tabular}
+}
 
 Con estos resultados, calculamos la nota media del cuestionario SUS para nuestra web:
 
