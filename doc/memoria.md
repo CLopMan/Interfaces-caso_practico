@@ -541,3 +541,13 @@ Obtenemos un resultado de $85.83$ en la evaluación SUS, lo que se corresponde c
 \clearpage
 
 ## 9. Conclusiones {#apartado-9}
+
+Esta práctica nos ha permitido profundizar en los conocimientos adquiridos acerca de `HTML`, `CSS` y `JavaScript` al enfrentarnos a un proyecto de mayor magnitud que los anteriores. Además, nos ha ayudado a introducirnos a nuevos conceptos como son el disñeo accesible o la evaluación de usabilidad.
+
+El diseño accesible se ha logrado a través del uso de la herramienta wave, lo que nos ha permitido observar detalles que a ninguno de los desarrolladores nos afectaba. Esto nos ha permitido añadir al diseño elementos útiles como textos alternativos, encabezados o semántica que a priori no habíamos contemplado.
+
+También, la documentación previa y el prototipado nos ha permitido valorar la importancia de tener un modelo de referencia en la implementación. El uso de un prototipo nos ha facilitado el trabajo en equipo, la organización de tareas, ya que ha actuado de punto común en el que todos los mienbros el equpo han participado y han mostrado su aprobación.
+
+En cuanto a la evaluación de usabilidad, hemos encontrado muy interesante el concepto del uso de evaluadores. Si bien nos habría gustado que esta parte se nos presentara con más tiempo para poder realizar una evaluación más extensa y no tan sesgada; y poder corregir posibles defectos detectados a través de esta técnica. Aun con todo, nos ha ayudado a comprender la importancia de evaluar el producto a través de personas ajenas al desarrollo.
+
+Con todo lo anterior, concluímos que el desarrollo de esta práctica nos ha ayudado a afianzar nuestros conocimientos sobre el diseño de interfaces web usando las tecnologías de `HTML`, `CSS` y `JavaScript`; además de permitirnos poner en práctica conceptos desarrollados en las clases de teoría. 
