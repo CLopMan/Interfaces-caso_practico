@@ -266,13 +266,13 @@ form.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel > 
     height: unset;
 }
 
-.Item > label, .Item > output { 
+.Item > p, .Item > output { 
     font-family: Inter;
     font-size: 20px;
     font-weight: bold;
 }
 
-.Item > label { flex-grow: 1; }
+.Item > p { flex-grow: 1; }
 
 .Item > textarea {
     padding: 25px 0 25px;

@@ -62,7 +62,7 @@ function generate_form_element(field) {
     }
     if (field.type === "number") {
         return `
-        ${field.hide_name? `<label id="${field.name}-label" class="ItemLabel" for="${field.name}-input">${field.name}</label>` : ""}
+        ${field.hide_name? `<p id="${field.name}-label" class="ItemLabel" for="${field.name}-input">${field.name}</p>` : ""}
         <button type="button" class="NumberButton ItemText" onclick="$(this).next()[0].stepDown()">-</button>
         <input type="number" ${attrs} min="1" max="50" size="3" onkeydown="return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) || (!isNaN(Number(event.key)) && event.code!=='Space')">
         <button type="button" class="NumberButton ItemText" onclick="$(this).prev()[0].stepUp()">+</button>
