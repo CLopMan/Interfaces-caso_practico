@@ -249,7 +249,7 @@ body > header > img {
 }
 
 form.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel > span {
-    color: red;
+    color: #A30000;
 }
 
 .Item {
