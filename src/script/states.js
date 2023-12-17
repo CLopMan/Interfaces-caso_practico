@@ -5,9 +5,11 @@ function changeSection(section){
     if (section === "menu"){
         menu.classList.remove("hidden")
         pedido.classList.add("hidden")
-    } else if (section === "pedido"){
+    } else if (section === "pedido" && cart.getProductsTotalAmmount() !== 0){
         pedido.classList.remove("hidden")
         menu.classList.add("hidden")
+    } else {
+        alert("El pedido no puede estar vacío!!!")
     }
 
 }
@@ -197,6 +199,11 @@ function changeStep(step){
         stepFrame.getElementsByClassName("sending")[0],stepFrame.getElementsByClassName("payment")[0],
         stepFrame.getElementsByClassName("success")[0]
     ]
+
+    if (step === 2 && cart.getProductsTotalAmmount() === 0){
+        alert("El pedido no puede estar vacío!!!")
+        return
+    }
 
     switch (step){
         case 1:
