@@ -71,7 +71,7 @@ generate_form(
     "#form-asistentes",
     "Asistentes",
     [
-        {name: "Asistentes", valid: PositiveInteger, placeholder: "1", hide_name: true, type: "number"},
+        {name: "Asistentes", valid: PositiveInteger, placeholder: "0", hide_name: true, type: "number"},
     ],
     { name: "Continuar", serialize: Asistentes, skip_serialize: true, callback: function(result) {
         asistentes = result.asistentes;
