@@ -269,7 +269,7 @@ form.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel > 
     font-size: 20px;
 }
 
-form .Item > .ItemText:not([type="number"]):not(.NumberButton) { width: 100%; height: 100%; }
+.Item > .ItemText:not([type="number"]):not(.NumberButton):not(span) { width: 100%; height: 100%; }
 form .Item > input.ItemText[type="number"] {
     font-size: 16px;
     font-weight: bold;
