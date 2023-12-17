@@ -284,8 +284,8 @@ form.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel > 
     font-size: 20px;
 }
 
-.Item > .ItemText:not([type="number"]):not(.NumberButton) { width: 100%; height: 100%; }
-.Item > input.ItemText[type="number"] {
+.Item > .ItemText:not(.NumberValue):not(.NumberButton):not(span) { width: 100%; height: 100%; }
+.ItemText.NumberValue {
     font-size: 16px;
     font-weight: bold;
     border-radius: 15px;
@@ -294,7 +294,7 @@ form.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel > 
     margin: 0 5px 0;
 }
 
-.Item > button.NumberButton {
+button.NumberButton {
     height: 25px;
     width: 25px;
     line-height: 0;
@@ -305,7 +305,10 @@ form.ItemContainer > .ItemContainerContent > .ItemLabelContainer > .ItemLabel > 
     flex-shrink: 0;
 }
 
-.Item > button.NumberButton:first-of-type { margin-left: 5px; }
+button.NumberButton:first-of-type {
+    margin-left: 5px;
+    padding-bottom: 5px;
+}
 
 .Item input[type="number"] {
     -webkit-appearance: textfield;

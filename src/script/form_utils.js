@@ -56,7 +56,7 @@ function clear_form(form) {
  * @public
  */
 function generate_form_element(field) {
-    let attrs = `id="${field.name}-input" class="ItemText ${field.type === "date"? "datepicker" : ""} ${field.type === "time"? "timepicker" : ""}" name="${field.name}-input" placeholder="${field.placeholder}"`
+    let attrs = `id="${field.name}-input" class="ItemText ${field.type === "date"? "datepicker" : ""} ${field.type === "time"? "timepicker" : ""} ${field.type === "number"? "NumberValue" : ""}" name="${field.name}-input" placeholder="${field.placeholder}"`
     if (field.type === "textarea") {
         return `<textarea ${attrs}></textarea>`
     }

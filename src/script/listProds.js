@@ -10,9 +10,8 @@ function addProduct(nombre, ind, cantidad){
     }
     cart.prods[ind-1].price =cart.prices[ind];
 
-
-    cart.updateProduct("ammount-"+ind.toString(),cantidad);
-    cart.updateTotalAmmount(ind,cantidad)
+    cart.updateProduct("amount-"+ind.toString(),cantidad);
+    cart.updateTotalAmount(ind,cantidad)
     cart.updateTotalQuantity()
 
 
@@ -20,7 +19,7 @@ function addProduct(nombre, ind, cantidad){
 }
 
 function updateProduct(ind){
-    let cantidad = cart.getProductAmmount(ind)
-    let prodAmmount = document.getElementById("ammount-"+ind.toString())
-    prodAmmount.innerText = String(cantidad)
+    let cantidad = cart.getProductAmount(ind)
+    let prodAmount = document.getElementById("amount-"+ind.toString())
+    prodAmount.innerText = String(cantidad)
 }

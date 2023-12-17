@@ -17,12 +17,9 @@
         <section id="menu">
 
             <!-- Header for de subcategories -->
-            <header class="types">
-
+            <header id="types">
                 <!-- Title division -->
-                <div class="title">
-                    <p>Menú</p>
-                </div>
+                Menú
 
                 <!-- Buttons division -->
                 <div class="buttons">
@@ -34,46 +31,28 @@
                 </div>
             </header>
 
-            <!-- Division line -->
-            <hr>
-
-            <section class="prodSec row">
+            <section>
                 <!-- Div for products. The products get appended dynamically with JS. -->
-                <div class="prodDiv col-8">
-
-                    <!-- Content for category "Cafes" -->
-
-                    <!-- Content for category "Bollería" -->
-
-
-                    <!-- Content for category "Zumos" -->
-
-                    <!-- Content for category "Tartas" -->
-
-                    <!-- Content for category "Galletas" -->
-
-                </div>
+                <div class="prodDiv col-8"></div>
 
                 <!-- Sección de Carrito y resumen de pedido -->
-                <div class="col-3">
-                    <aside class="ItemContainer ">
+                <div id="Carrito" class="col-4">
+                    <aside class="ItemContainer DisplayContainer">
                         <header class="SplitContainer">
                             <span>Carrito</span>
-                            <span class="SplitContainer prod-c">
+                            <span id="TotalProducts">
                                 <span id="sum-am">0</span>
                                 <span> productos</span>
                             </span>
                         </header>
 
-                        <div id="list-prods">
-                            <!-- List of products added dinamically with javascript -->
+                        <div id="list-prods" class="ItemContainerContent">
+                            <!-- List of products added dynamically with javascript -->
                         </div>
 
-                        <div class="ItemLabelContainer">
-                            <div class="SplitContainer">
-                                <span class="col-6">Subtotal: </span>
-                                <span id="order-total">0.00€</span>
-                            </div>
+                        <div id="subtotal" class="SplitContainer">
+                            <span>Subtotal:</span>
+                            <span id="order-total">0.00€</span>
                         </div>
 
                         <button class="SplitContainer BrownButton" type="button" onclick="changeSection('pedido');changeStep(1)">
@@ -81,55 +60,34 @@
                             <span>🡢</span>
                         </button>
                     </aside>
-
                 </div>
-
             </section>
         </section>
-
-
 
         <!-- Order Content -->
         <section id="pedido">
 
             <!-- División para la barra de progreso -->
-            <div class="progress">
-                <div id="revission" class="circle">
-                    <p>Revisión del pedido</p>
-                </div>
+            <header id="progress">
+                <div id="revision" class="circle">Revisión del pedido</div>
                 <div id="t-1" class="trans"></div>
-                <div id="login" class="circle">
-                    <p>Login</p>
-                </div>
+                <div id="login" class="circle">Login</div>
                 <div id="t-2" class="trans"></div>
-                <div id="shipment" class="circle">
-                    <p>Dirección y envío</p>
-                </div>
+                <div id="shipment" class="circle">Dirección y envío</div>
                 <div id="t-3" class="trans"></div>
-                <div id="payment" class="circle">
-                    <p>Pago</p>
-                </div>
-
-            </div>
-
-            <hr>
+                <div id="payment" class="circle">Pago</div>
+            </header>
 
             <section id="step">
-
                 <!-- Sección de Carrito y resumen de pedido -->
-                <div class="result col-12">
-
+                <div class="result col-12 DisplayContainer">
                     <div id="list-prods-order">
-                        <!-- List of products added dinamically with javascript -->
-
+                        <!-- List of products added dynamically with javascript -->
                     </div>
-
                     <div class="ItemContainer">
-                        <div class="ItemLabelContainer">
-                            <div class="Item SplitContainer">
-                                <span>Subtotal: </span>
-                                <span id="order-total-prev">0.00€</span>
-                            </div>
+                        <div class="Item SplitContainer">
+                            <span class="ItemText">Subtotal: </span>
+                            <span class="ItemText" id="order-total-prev">0.00€</span>
                         </div>
 
                         <button class="SplitContainer BrownButton" type="button" onclick="changeStep(2)">
@@ -138,53 +96,52 @@
                         </button>
                     </div>
 
-                    <div class="back">
-                        <button class="SplitContainer BrownButton" type="button" onclick="changeSection('menu')">
-                            <span>Go Back</span>
+                    <div class="BackButtonContainer">
+                        <button class="SplitContainer BrownButton Back" type="button" onclick="changeSection('menu')">
+                            <span>Atrás</span>
                             <span>🡠</span>
                         </button>
                     </div>
                 </div>
 
                 <!-- Login/Register Formulary -->
-                <div class="login col-12">
-                    <form id="register-form">
+                <div class="login">
+                    <form id="register-form"></form>
 
-                    </form>
-                    <div class="back">
-                        <button class="SplitContainer BrownButton" type="button" onclick="changeStep(1)">
+                    <div class="BackButtonContainer">
+                        <button class="SplitContainer BrownButton Back" type="button" onclick="changeStep(1)">
                             <span>Revisión de Pedido</span>
                             <span>🡠</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- Input of Sending adresss and confirmation -->
-                <div class="sending col-12" >
+                <!-- Input of Sending address and confirmation -->
+                <div class="sending col-12">
 
                     <!-- Campo para introducir la calle -->
                     <form id="sending-form"></form>
 
                     <!-- Container for adding shipment costs -->
-                    <div class="ItemContainer">
+                    <div class="ItemContainer DisplayContainer">
                         <header>Resumen</header>
                         <div class="ItemContainerContent">
                             <div class="ItemLabelContainer">
                                 <div class="Item SplitContainer">
-                                    <span>Subtotal</span>
-                                    <span id="total-am">12.90</span>
+                                    <span class="ItemText">Subtotal</span>
+                                    <span class="ItemText" id="total-am">12.90</span>
                                 </div>
                             </div>
                             <div class="ItemLabelContainer">
                                 <div class="Item SplitContainer">
-                                    <span>Gastos de Envío</span>
-                                    <span id="shipment-cost">1.00€</span>
+                                    <span class="ItemText">Gastos de Envío</span>
+                                    <span class="ItemText" id="shipment-cost">1.00€</span>
                                 </div>
                             </div>
                             <div class="ItemLabelContainer">
                                 <div class="SplitContainer">
-                                    <span>Total</span>
-                                    <span id="master-price">13.90€</span>
+                                    <span class="ItemText">Total</span>
+                                    <span class="ItemText" id="master-price">13.90€</span>
                                 </div>
                             </div>
                         </div>
@@ -194,8 +151,8 @@
                         </button>
                     </div>
 
-                    <div class="back">
-                        <button class="SplitContainer BrownButton" type="button" onclick="changeStep(2)">
+                    <div class="BackButtonContainer">
+                        <button class="SplitContainer BrownButton Back" type="button" onclick="changeStep(2)">
                             <span>Cambiar Usuario</span>
                             <span>🡠</span>
                         </button>
@@ -206,13 +163,11 @@
                 <div class="payment col-12">
 
                     <!-- Formulary of payment generated dynamically with JS -->
-                    <form id="form-payment" class="form">
-
-                    </form>
+                    <form id="form-payment" class="form"></form>
 
                     <!-- Container for the back button -->
-                    <div class="back">
-                        <button class="SplitContainer BrownButton" type="button" onclick="changeStep(3)">
+                    <div class="BackButtonContainer">
+                        <button class="SplitContainer BrownButton Back" type="button" onclick="changeStep(3)">
                             <span>Cambiar Dirección</span>
                             <span>🡠</span>
                         </button>
@@ -223,9 +178,7 @@
                 <div class="success col-12 ItemContainer">
 
                     <!-- Title container -->
-                    <h4>
-                        Pedido Realizado con éxito!
-                    </h4>
+                    <h4>Pedido Realizado con éxito!</h4>
 
                     <!-- Body contnainer -->
                     <div class="message">
@@ -237,22 +190,17 @@
                     <div id="clock" class=""></div>
 
                     <!-- Gif container -->
-                    <div class="gif">
-                        <img src="./image/gif-kitty.gif" alt="Gif kitty">
-                    </div>
+                    <div class="gif"><img src="./image/gif-kitty.gif" alt="Gif kitty"></div>
 
                     <!-- Container for the back button -->
-                    <div class="back">
+                    <div class="BackButtonContainer">
                         <button class="SplitContainer BrownButton" type="button" onclick="changeSection('menu')">
                             <span>Volver a la página de inicio</span>
                             <span>🡠</span>
                         </button>
                     </div>
-
                 </div>
             </section>
-
-
         </section>
     </main>
 
@@ -269,6 +217,5 @@
     <script src="script/states.js"></script>
     <script src="script/ShoppingCart.js"></script>
     <script src="script/listProds.js"></script>
-    <script src="script/menu_pedido.js"></script>
 </body>
 </html>

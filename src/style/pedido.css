@@ -1,175 +1,68 @@
-.hidden {
-    display: none;
+.BackButtonContainer {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
 }
 
-* {
-    padding: 0;
-    margin: 0;
+.BackButtonContainer > .Back {
+    width: 40vw;
+    min-width: 350px;
 }
 
-html {
-    background-color: #eeebe7;
-}
-
-#pedido {
-    padding: 0 10%;
-}
-
-#pedido > hr {
-    margin-top: 20px;
-    color: #6c461a;
-}
-
-
-#pedido > .progress {
-    margin-top: 10px;
+#progress {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
+    align-items: stretch;
 }
-    .progress > .circle {
-        height: 150px;
-        width: 150px;
+    #progress > .circle {
+        flex-shrink: 0;
         border-radius: 50%;
         background-color: lightgray;
-        justify-content: space-around;
-        align-items: center;
         display: flex;
-        padding: 2.5%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 15px;
+        font-size: 24px;
+        height: 150px;
+        width: 150px;
     }
-        .progress > .circle > p {
-            text-align: center;
-            flex: 1 1 auto;
-        }
 
-    .progress > .trans {
+    #progress > .trans {
         height: 10px;
         background-color: lightgray;
         flex: 1 1 auto;
-        align-items: center;
-        transform: translateY(70px);
+        align-self: center;
     }
 
-
-#list-prods-order {
-    flex: 3 1 auto;
-    padding: 20px;
-    overflow: auto;
-    max-height: 100vh;
-}
-    #list-prods-order > .preview {
-        background-color: #ffffff;
-        border: lightgrey 3px solid;
-        border-radius: 20px;
-        margin-bottom: 20px;
-        display: flex;
-    }
-        #list-prods-order > .preview > .image-prev {
-            flex: 1 1 auto;
-            border-top-left-radius: 20px;
-            border-bottom-left-radius: 20px;
-            overflow: hidden;
-            max-width: 200px;
-            max-height: 150px;
-        }
-            .image-prev > img {
-                width: 100%;
-            }
-        #list-prods-order > .preview > .title {
-            flex: 4 1 auto;
-            display: flex;
-            flex-flow: column nowrap;
-            text-align: left;
-            align-items: start;
-        }
-            #list-prods-order > .preview > .title > .t {
-                flex: 1 1 auto;
-                font-weight: bold;
-                font-size: 1.3em;
-                padding: 5px 0 5px 5px;
-                display: flex;
-                text-align: right;
-            }
-            #list-prods-order > .preview > .title > .p {
-                flex: 1 1 auto;
-                text-align: left;
-                padding-left: 0;
-                margin-top: 15px;
-                color: #6c461a;
-                font-weight: bold;
-            }
-        #list-prods-order > .preview > .price {
-            flex: 1 1 auto;
-            display: flex;
-            align-items: center;
-        }
-            .preview > .price > .x {
-                text-align: center;
-                padding-right: 0;
-            }
-            .preview > .price > .subtotal {
-                text-align: left;
-                font-size: 1.5em;
-                font-weight: bold;
-            }
-
-
-#step > .result {
-    height: 100%;
-    margin-top: 15px;
-    border-radius: 20px;
-    display: flex;
-    flex-flow: column nowrap;
-    background: transparent;
+#list-prods-order > .Item {
+    overflow: hidden;
+    padding-left: 0;
+    height: 150px;
+    margin-bottom: 15px;
 }
 
-        .back {
-            align-items: center;
-            margin: 30px 30% 0 30%;
-            display: flex;
-        }
+#list-prods-order > .Item { align-items: stretch; }
 
+#list-prods-order > .Item > .SplitContainer { flex-grow: 1; }
 
-        #step > .result > .order {
-            flex: 1 1 auto;
-            background-color: white;
-            border-radius: 20px;
-            padding: 15px
-        }
-            #step > .result > .order > .subtotal {
-                font-weight: bold;
-                font-size: 2em;
-            }
-                #step > .result > .order > .subtotal > p {
-                    text-align: left;
-                }
-                #order-total-prev {
-                    text-align: right;
-                }
-            #step > .result > .order > button {
-                width: 100%;
-                background-color: #6c461a;
-                color: #f9f8f6;
-                padding: 20px 0;
-                border-radius: 20px;
-
-                box-shadow: 0 5px 7px 0 grey;
-                font-weight: bold;
-                font-size: 1.5em;
-                cursor: pointer;
-                margin-right: 50px;
-            }
-
-
-#step > .login {
-    align-items: center;
+#list-prods-order > .Item > .SplitContainer > *:first-child {
+    flex-grow: 1;
+    padding-right: 10px;
 }
 
-#step > .sending{}
-    .sending > .res-shipment{
-        border: lightgray 3px solid;
-        background-color: #f9f8f6;
-    }
+#list-prods-order > .Item > .SplitContainer > *:not(:first-child) {
+    flex-shrink: 1;
+    text-align: right;
+}
+
+#list-prods-order .ImagePreview {
+    width: 20%;
+    margin-right: 15px;
+}
+
+#sending-form {margin-bottom: 15px; }
 
 #step > .success {
     margin-top: 2.5%;
@@ -184,14 +77,35 @@ html {
     }
         .message > p {
             text-align: center;
+            font-size: calc(0.9em + 1vw);
         }
 
     .gif > img{
         border-radius: 50%;
         overflow: hidden;
+        max-width: 50%;
+        max-height: 50%;
     }
 
     #clock {
         margin-bottom: 5%;
         transform: scale(120%);
     }
+
+@media screen and (max-width: 768px) {
+    #progress > .circle {
+        height: 100px;
+        width: 100px;
+        font-size: 16px;
+    }
+}
+
+/*Breakpoint for movilephones*/
+@media only screen and (max-width: 600px) {
+    #list-prods-order .ProductName {
+        font-size: 20px;
+    }
+    .ItemText > .ProductCost {
+        padding-left: 5px;
+    }
+}

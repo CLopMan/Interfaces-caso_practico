@@ -17,30 +17,22 @@ function changeSection(section){
 function generate_product(id, title, img, price, description, ingredients) {
     return `
         <!-- Standard Format of products -->
-        <article id="pr-${id}" class="pr">
-            <div class="prev">
-                <img alt="Image ${title}" src="./image/${img}">
-            </div>
-            <div class="content">
-                <div class="ops">
-                    <div class="op">
-                        <p>${title}</p>
-                        <div class="ammount">
-                            <button class="but" onclick='addProduct("${title}",${id},Number(document.getElementById("ammount-${id}").innerText) - 1)'>-</button>
-                            <p id="ammount-${id}">0</p>
-                            <button class="but" onclick='addProduct("${title}",${id},Number(document.getElementById("ammount-${id}").innerText) + 1)'>+</button>
-                        </div>
-                    </div>
-                    <div class="price">
-                        <p>${price}</p>
-                        <div class="ingredients">
-                            ${ingredients.map((x) => `<img alt="${x.alt}" src="${x.src}">`).join("\n")}
-                        </div>
+        <article id="pr-${id}" class="product Item ResizableHeight DisplayContainer">
+            <div class="ImagePreview"><img alt="Image ${title}" src="./image/${img}"></div>
+            <div class="Content">
+                <div class="title SplitContainer">
+                    <p class="ItemText">${title}</p>
+                    <button class="NumberButton ItemText" onclick='addProduct("${title}",${id},Number(document.getElementById("amount-${id}").innerText) - 1)'>-</button>
+                    <p id="amount-${id}" class="ItemText NumberValue">0</p>
+                    <button class="NumberButton ItemText" onclick='addProduct("${title}",${id},Number(document.getElementById("amount-${id}").innerText) + 1)'>+</button>
+                </div>
+                <div class="price SplitContainer">
+                    <p class="ProductPrice">${price}</p>
+                    <div class="ingredients">
+                        ${ingredients.map((x) => `<img alt="${x.alt}" src="${x.src}">`).join("\n")}
                     </div>
                 </div>
-                <div class="descr">
-                    <p>${description}</p>
-                </div>
+                <p class="description">${description}</p>
             </div>
         </article>
     `
@@ -189,7 +181,7 @@ function updateSection(num){
 }
 
 function changeStep(step){
-    let progressBar = [document.getElementById("revission"), document.getElementById("t-1"),
+    let progressBar = [document.getElementById("revision"), document.getElementById("t-1"),
         document.getElementById("login"), document.getElementById("t-2"),
         document.getElementById("shipment"), document.getElementById("t-3"), document.getElementById("payment")
     ]
@@ -301,21 +293,19 @@ generate_form(
     "#register-form",
     "Registro de Usuario",
     [
-        {name: "Nombre ", valid: Name,placeholder: "Nombre de usuario"},
-        {name: "Apellidos ", valid: Name,placeholder: "Apellidos Completos"},
-        {name: "Email de contacto ", valid: Email, type: "email",placeholder: "Nombre de usuario"},
-        {name: "Número de teléfono ", valid: Phone, type: "tel",placeholder: "Teléfono"},
-        {name: "Contraseña ", valid: Password, type: "password",placeholder: "Contraseña de usuario"}
+        {name: "Nombre",     valid: Name,     placeholder: "Nombre"},
+        {name: "Apellidos",  valid: Name,     placeholder: "Apellido1 Apellido2"},
+        {name: "Email",      valid: Email,    placeholder: "ejemplo@dominio.extensión", type: "email"},
+        {name: "Teléfono",   valid: Phone,    placeholder: "+34766666666"},
+        {name: "Contraseña", valid: Password, placeholder: "Introduzca un mínimo de 8 caracteres", type: "password"},
     ],
     {
         name: "Datos de Envío",
-        serialize: Test,
-        skip_serialize: true,
+        serialize: User,
         callback: () => {
             cart.updateMasterPrice()
             changeStep(3)
         },
-        alert_ok: true
     }
 )
 
@@ -333,7 +323,7 @@ generate_form(
     [
         {name: "Nombre del Titular", valid: Name,placeholder: "Nombre"},
         {name: "Número de targeta", valid: CreditCardNumber,placeholder: "Ej: 9999 9999 9999 9999"},
-        {name: "Fecha de Expiración", valid: CreditCardExpiryDate,placeholder: "MM / AA"},
+        {name: "Fecha de Expiración", valid: CreditCardExpiryDate,placeholder: "MM/AA"},
         {name: "CVC", valid: CreditCardCVC,placeholder: "CVC"},
     ],
     {
@@ -347,6 +337,5 @@ generate_form(
                 displayHours: false
             });
         },
-        alert_ok: true
     }
 )
