@@ -96,7 +96,8 @@ class ShoppingCart {
 
     updateMasterPrice() {
         // Update Master Price with shipment costs
-        this.masterPrice = this.shipment_cost + this.getProductsTotalCost()
+        const subtotal = this.getProductsTotalCost();
+        this.masterPrice = this.shipment_cost + subtotal
 
         // Update the Master Price fields on HTML
         let ship_cost = document.getElementById("shipment-cost")
@@ -104,7 +105,7 @@ class ShoppingCart {
         let master_price = document.getElementById("master-price")
 
         ship_cost.innerText = String(this.shipment_cost.toFixed(2)) + "€"
-        total_prods_am.innerText = String(this.getProductsTotalAmount().toFixed(2)) + "€"
+        total_prods_am.innerText = String(subtotal.toFixed(2)) + "€"
         master_price.innerText = String(this.masterPrice.toFixed(2)) + "€"
     }
 
