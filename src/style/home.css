@@ -92,6 +92,7 @@ header.col-12 {
     background-position: 50%;
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: black;
 }
 
 body > header > img {
