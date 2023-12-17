@@ -282,13 +282,13 @@ Teniendo en cuenta tanto los escenarios del [apartado 2](#apartado-2) y el anál
         \midrule[0.03em]
         Fun2 & Menú de productos & Contendrá la descripción, información sobre alérgenos y precio para cada producto \\
         \midrule[0.03em]
-        Fun3 & Pedido a domicilio & se podrá realizar un pedido de uno o varios elementos del menú \\
+        Fun3 & Pedido a domicilio & Se podrá realizar un pedido de uno o varios elementos del menú \\
         \midrule[0.03em]
-        Fun4 & información del establecimiento & Existirá una página o sección con la historia del local, destino de la facturación e imágenes del establecimiento \\
+        Fun4 & Información del establecimiento & Existirá una página o sección con la historia del local, destino de la facturación e imágenes del establecimiento \\
         \midrule[0.03em]
-        Fun5 & Información de los gatos & se incluirá un página o sección donde, para cada gato, se incluya una foto, nombre, género, edad y personalidad \\
+        Fun5 & Información de los gatos & Se incluirá un página o sección donde, para cada gato, se incluya una foto, nombre, género, edad y personalidad \\
         \midrule[0.03em]
-        Fun6 & Registro de usuario & para los pedidos a domicilio, debe existir un registro de usuario \\
+        Fun6 & Registro de usuario & Para los pedidos a domicilio, debe existir un registro de usuario \\
         \midrule[0.03em]
         Fun7 & Menú de navegación hamburguesa & Abrirá una ventana con enlaces a las demás páginas \\
         \midrule[0.03em]
