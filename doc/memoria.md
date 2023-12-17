@@ -21,6 +21,7 @@ header-includes: |
     \usepackage{booktabs}
     \usepackage{multirow}
     \usepackage{calc}
+    \usepackage{array}
     \graphicspath{ {img_memoria/} }
 
     ```
@@ -468,7 +469,7 @@ Durante la fase de documentación hemos hecho uso de la herramienta **inspeccion
 
 Para el prototipado hemos empleado [**Figma**](https://www.figma.com/). Figma es una herramienta de diseño colaborativo que nos ha permitido trabajar en paralelo sobre un diseño común. Además, una vez finalizado el prototipo, Figma nos ha permitido representar fielmente el comportamiento que esperábamos de nuestra web; lo que ha servido de punto de referencia durante todo el desarrollo. Esto ha permitido un flujo de trabajo cómodo en el que todos los integrantes del grupo han estado plenamente coordinados.
 
-Para implementar la página web se ha usado `HTML`, `CSS` y `javaScript`. `HTML` es un lenguaje de etiquetado que se ha usado para organizar el contenido que queremos mostrar en la página, esto se ha hecho mediante etiquetas semánticas que estructuran la página web. `CSS` permite la aplicación de estilos sobre los elementos definidos en el `HTML`. De esta forma, toda la estética de la página web, así como el comportamiento responsive queda definido en las hojas de estilo. `JavaScript` es un lenguaje de programación que permite dar funcionalidad a las páginas web y la introducción de elementos dinámicos.
+Para implementar la página web se ha usado **`HTML`**, **`CSS`** y **`javaScript`**. `HTML` es un lenguaje de etiquetado que se ha usado para organizar el contenido que queremos mostrar en la página, esto se ha hecho mediante etiquetas semánticas que estructuran la página web. `CSS` permite la aplicación de estilos sobre los elementos definidos en el `HTML`. De esta forma, toda la estética de la página web, así como el comportamiento responsive queda definido en las hojas de estilo. `JavaScript` es un lenguaje de programación que permite dar funcionalidad a las páginas web y la introducción de elementos dinámicos.
 
 Desarrollando el uso de `javaScript`, además de las funciones implementadas por nosotros hemos importado algunos módulos para ciertas funcionalidades. El más importante de ellos es `jQuery`, una biblioteca que facilita el uso de `javaScript` en las páginas web. También, se han importado algunos plugins de esta biblioteca:
 
@@ -487,7 +488,7 @@ El tercer cuestionario se rellenará con el fin de evaluar la tarea: "Haz un ped
 
 \hspace{-\parindent}
 \makebox[\textwidth][c]{
-    \begin{tabular}{cp{4cm}p{4cm}p{4cm}}
+    \begin{tabular}{c>{\centering\arraybackslash}p{4cm}>{\centering\arraybackslash}p{4cm}>{\centering\arraybackslash}p{4cm}}
         \toprule
         Pregunta & Evaluador 1 & Evaluador 2 & Evaluador 3 \\
         \midrule
@@ -503,6 +504,7 @@ El tercer cuestionario se rellenará con el fin de evaluar la tarea: "Haz un ped
         10 & 3 & 1 & 2 \\
         \midrule[0.03em]
         Comentarios positivos & La interfaz gráfica es muy agradable a la vista, además está muy bien organizada, de manera que no satura al usuario. & La estética es limpia, el proceso de realizar un pedido es intuitivo y cómodo. Aunque mi favorito es la reserva de mesa, las animaciones y popups hacen que casi sin darte cuenta ya tengas una mesa en CatFé a tu nombre & Estética sobria y elegante \\
+        \midrule[0.03em]
         Comentarios negativos & Demasiadas fotos. & Nada & Se podría mejorar el feedback de algunos elementos clickables \\
         \bottomrule
     \end{tabular}
