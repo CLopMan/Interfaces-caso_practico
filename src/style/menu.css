@@ -140,59 +140,16 @@
             display: flex;
             flex-flow: column nowrap;
         }
-            #sum-am {
-                margin-right: 5%;
-            }
 
-            #list-prods { }
+                #TotalProducts > span { font-size: 24px; }
 
                 #list-prods > .preview {
                 }
-                    .preview > .title {
-                        align-items: center;
-                        display: flex;
-                    }
-                        .preview > .title > .t {
-                            font-weight: bold;
-                            font-size: calc(.7em);
-                            justify-content: center;
-                            text-justify: distribute-center-last;
-                            padding: 2.5% 0 2.5% 2.5%;
-                        }
                         .ItemText > .ProductPrice {
                             font-size: 14px;
                             color: var(--marron-base);
                         }
                         .ItemText > .ProductQuantity { padding-right: 30px; }
-
-                    .preview > .price {
-                        display: flex;
-                        align-items: center;
-                    }
-                        .preview > .price > .x {
-                            text-align: center;
-                            padding-right: 0;
-                            font-size: calc(.9em);
-                        }
-                        .preview > .price > .subtotal {
-                            text-align: left;
-                            font-size: calc(.7em);
-                            font-weight: bold;
-                        }
-
-            .result > .order {
-                flex: 1 1 auto;
-            }
-                .order > .subtotal {
-                    font-weight: bold;
-                    font-size: 2em;
-                }
-                    .order > .subtotal > p {
-                        text-align: left;
-                    }
-                    #order-total {
-                        text-align: right;
-                    }
 
                 .prodSec > .result > .order > button {
                     width: 100%;
@@ -217,7 +174,7 @@
     font-weight: bold;
 }
 
-.ItemText {
+.DisplayContainer .ItemText {
     font-weight: bold;
 }
 

@@ -37,12 +37,12 @@
 
                 <!-- Sección de Carrito y resumen de pedido -->
                 <div class="col-4">
-                    <aside class="ItemContainer">
+                    <aside class="ItemContainer DisplayContainer">
                         <header class="SplitContainer">
                             <div>Carrito</div>
-                            <div class="SplitContainer">
-                                <p id="sum-am">0</p>
-                                <p> productos</p>
+                            <div id="TotalProducts">
+                                <span id="sum-am">0</span>
+                                <span> productos</span>
                             </div>
                         </header>
 
@@ -90,21 +90,15 @@
             <hr>
 
             <section id="step">
-
                 <!-- Sección de Carrito y resumen de pedido -->
-                <div class="result col-12">
-
+                <div class="result col-12 DisplayContainer">
                     <div id="list-prods-order">
                         <!-- List of products added dynamically with javascript -->
-
                     </div>
-
                     <div class="ItemContainer">
-                        <div class="ItemLabelContainer">
-                            <div class="Item SplitContainer">
-                                <p>Subtotal: </p>
-                                <p id="order-total-prev">0.00€</p>
-                            </div>
+                        <div class="Item SplitContainer">
+                            <p class="ItemText">Subtotal: </p>
+                            <p class="ItemText" id="order-total-prev">0.00€</p>
                         </div>
 
                         <button class="SplitContainer BrownButton" type="button" onclick="changeStep(2)">
@@ -141,25 +135,25 @@
                     <form id="sending-form"></form>
 
                     <!-- Container for adding shipment costs -->
-                    <div class="ItemContainer">
+                    <div class="ItemContainer DisplayContainer">
                         <header>Resumen</header>
                         <div class="ItemContainerContent">
                             <div class="ItemLabelContainer">
                                 <div class="Item SplitContainer">
-                                    <p>Subtotal</p>
-                                    <p id="total-am">12.90</p>
+                                    <p class="ItemText">Subtotal</p>
+                                    <p class="ItemText" id="total-am">12.90</p>
                                 </div>
                             </div>
                             <div class="ItemLabelContainer">
                                 <div class="Item SplitContainer">
-                                    <p>Gastos de Envío</p>
-                                    <p id="shipment-cost">1.00€</p>
+                                    <p class="ItemText">Gastos de Envío</p>
+                                    <p class="ItemText" id="shipment-cost">1.00€</p>
                                 </div>
                             </div>
                             <div class="ItemLabelContainer">
                                 <div class="SplitContainer">
-                                    <p>Total</p>
-                                    <p id="master-price">13.90€</p>
+                                    <p class="ItemText">Total</p>
+                                    <p class="ItemText" id="master-price">13.90€</p>
                                 </div>
                             </div>
                         </div>

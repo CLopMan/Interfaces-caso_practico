@@ -36,7 +36,7 @@ class ShoppingCart {
         let total_prods_am = document.getElementById("total-am")
         let master_price = document.getElementById("master-price")
 
-        ship_cost.innerText = String(this.shipment_cost,toFixed(2)) +" €"
+        ship_cost.innerText = String(this.shipment_cost.toFixed(2)) +" €"
         total_prods_am.innerText = String(this.getProductsTotalAmount().toFixed(2)) + " €"
         master_price.innerText = String(this.masterPrice.toFixed(2))+" €"
     }
@@ -77,28 +77,28 @@ class ShoppingCart {
                         <div class="Item SplitContainer">
                             <span class="ItemText">
                                 <span class="ProductName">${product.name}</span>
-                                <sub class="ProductPrice">${this.prices[i]}€</sub>
+                                <sub class="ProductPrice">${this.prices[i].toFixed(2)} €</sub>
                             </span>
                             <span class="ItemText">
                                 <span class="ProductQuantity">x${product.cantidad}</span>
-                                <span class="ProductCost">${this.sums[i].toFixed(2)}€</span>
+                                <span class="ProductCost">${this.sums[i].toFixed(2)} €</span>
                             </span>
                         </div>
                     </div>
                 `;
 
                 listOrder.innerHTML += `
-                    <div class="preview row">
-                        <div class="image-prev">
-                            <img alt="Image Prev" src=${collectionImages[i]}>
-                        </div>
-                        <div class="title col-7">
-                            <p class="t">${product.name}</p>
-                            <p class="p">${this.prices[i]}€</p>
-                        </div>
-                        <div class="price row col-3">
-                            <p class="x col-5">x${product.cantidad}</p>
-                            <p class="subtotal col-7">${this.sums[i].toFixed(2)}€</p>
+                    <div class="Item">
+                        <img class="ImagePreview" alt="Image Prev" src=${collectionImages[i]}>
+                        <div class="SplitContainer">
+                            <div class="ItemText">
+                                <p class="ProductName">${product.name}</p>
+                                <p class="ProductPrice">${this.prices[i].toFixed(2)} €</p>
+                            </div>
+                            <div class="ItemText">
+                                <span class="ProductQuantity">x${product.cantidad}</span>
+                                <span class="ProductCost">${this.sums[i].toFixed(2)} €</span>
+                            </div>
                         </div>
                     </div>
                 `;
