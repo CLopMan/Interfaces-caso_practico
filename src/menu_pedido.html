@@ -37,24 +37,22 @@
 
                 <!-- Sección de Carrito y resumen de pedido -->
                 <div class="col-4">
-                    <aside class="ItemContainer ">
+                    <aside class="ItemContainer">
                         <header class="SplitContainer">
                             <div>Carrito</div>
-                            <div class="SplitContainer prod-c">
+                            <div class="SplitContainer">
                                 <p id="sum-am">0</p>
                                 <p> productos</p>
                             </div>
                         </header>
 
-                        <div id="list-prods">
+                        <div id="list-prods" class="ItemContainerContent">
                             <!-- List of products added dynamically with javascript -->
                         </div>
 
-                        <div class="ItemLabelContainer">
-                            <div class="SplitContainer">
-                                <p class="col-6">Subtotal: </p>
-                                <p id="order-total">0.00€</p>
-                            </div>
+                        <div id="subtotal" class="SplitContainer">
+                            <p>Subtotal:</p>
+                            <p id="order-total">0.00€</p>
                         </div>
 
                         <button class="SplitContainer BrownButton" type="button" onclick="changeSection('pedido');changeStep(1)">
@@ -65,8 +63,6 @@
                 </div>
             </section>
         </section>
-
-
 
         <!-- Order Content -->
         <section id="pedido">

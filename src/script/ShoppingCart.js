@@ -25,14 +25,6 @@ class ShoppingCart {
     }
 
     updateMasterPrice(min, max) {
-
-        let truncar = (num,dec) => {
-            let s = num.toString()
-            let decimalLength = s.indexOf(".")+1
-            let numStr = s.substring(0,decimalLength + dec)
-            return Number(numStr)
-        }
-
         // Random shipment cost
         this.shipment_cost = Math.random() * (max - min) + min;
 
@@ -44,9 +36,9 @@ class ShoppingCart {
         let total_prods_am = document.getElementById("total-am")
         let master_price = document.getElementById("master-price")
 
-        ship_cost.innerText = String(truncar(this.shipment_cost,2)) +" €"
-        total_prods_am.innerText = String(truncar(this.getProductsTotalAmount(),2)) + " €"
-        master_price.innerText = String(truncar(this.masterPrice,2))+" €"
+        ship_cost.innerText = String(this.shipment_cost,toFixed(2)) +" €"
+        total_prods_am.innerText = String(this.getProductsTotalAmount().toFixed(2)) + " €"
+        master_price.innerText = String(this.masterPrice.toFixed(2))+" €"
     }
 
     getProductsTotalAmount(){
@@ -78,24 +70,19 @@ class ShoppingCart {
         listDiv.innerHTML = "";
         listOrder.innerHTML = "";
 
-        let truncar = (num,dec) => {
-            let s = num.toString()
-            let decimalLength = s.indexOf(".")+1
-            let numStr = s.substring(0,decimalLength + dec)
-            return Number(numStr)
-        }
-
         for (const [i,product] of this.prods.entries()) {
             if (product.name !== "" && product.cantidad > 0) {
                 listDiv.innerHTML += `
-                    <div class="preview row">
-                        <div class="title row col-6">
-                            <p class="t col-9">`+product.name+`</p>
-                            <p class="p col-3">`+this.prices[i]+`€</p>
-                        </div>
-                        <div class="price row col-6">
-                            <p class="x col-5">x`+product.cantidad+`</p>
-                            <p class="subtotal col-7">`+truncar(this.sums[i],2)+`€</p>
+                    <div class="ItemLabelContainer">
+                        <div class="Item SplitContainer">
+                            <span class="ItemText">
+                                <span class="ProductName">${product.name}</span>
+                                <sub class="ProductPrice">${this.prices[i]}€</sub>
+                            </span>
+                            <span class="ItemText">
+                                <span class="ProductQuantity">x${product.cantidad}</span>
+                                <span class="ProductCost">${this.sums[i].toFixed(2)}€</span>
+                            </span>
                         </div>
                     </div>
                 `;
@@ -103,15 +90,15 @@ class ShoppingCart {
                 listOrder.innerHTML += `
                     <div class="preview row">
                         <div class="image-prev">
-                            <img alt="Image Prev" src=`+collectionImages[i]+`>
+                            <img alt="Image Prev" src=${collectionImages[i]}>
                         </div>
                         <div class="title col-7">
-                            <p class="t">`+product.name+`</p>
-                            <p class="p">`+this.prices[i]+`€</p>
+                            <p class="t">${product.name}</p>
+                            <p class="p">${this.prices[i]}€</p>
                         </div>
                         <div class="price row col-3">
-                            <p class="x col-5">x`+product.cantidad+`</p>
-                            <p class="subtotal col-7">`+truncar(this.sums[i],2)+`€</p>
+                            <p class="x col-5">x${product.cantidad}</p>
+                            <p class="subtotal col-7">${this.sums[i].toFixed(2)}€</p>
                         </div>
                     </div>
                 `;
@@ -146,14 +133,8 @@ class ShoppingCart {
             totalPrice += sum
         }
 
-        let truncar = (num,dec) => {
-            let s = num.toString()
-            let decimalLength = s.indexOf(".")+1
-            let numStr = s.substring(0,decimalLength + dec)
-            return Number(numStr)
-        }
-        result.innerText = String(truncar(totalPrice,2))+"€"
-        res_prod.innerText = String(truncar(totalPrice,2))+"€"
+        result.innerText = String(totalPrice.toFixed(2))+"€"
+        res_prod.innerText = String(totalPrice.toFixed(2))+"€"
     }
 
     updateTotalQuantity(){
