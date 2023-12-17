@@ -398,7 +398,7 @@ Para realizar el análisis de accesibilidad, en este caso se ha optado por compr
 
 En el análisis, se encuentran los siguientes errores:
 
-- Errores de contraste: Adventencias debido a que el contraste entre el color del texto para algunos párrafos ( Ej. descripciones de productos ) y el fondo de la página web es demasiado bajo.
+- Errores de contraste: Adventencias debido a que el contraste entre el color del texto para algunos párrafos (Ej. descripciones de productos) y el fondo de la página web es demasiado bajo.
 
 - Falta de inclusión de etiquetas de título en algunas secciones ( Ej. h1,h2,h3,...): Hay párafos con estilo de títulos que no lo son.
 
@@ -406,14 +406,54 @@ En el análisis, se encuentran los siguientes errores:
 
 - Algúnas etiquetas no estaban asociadas a ningún elemento en los formularios
 
+### Errores de Contraste
+En nuestro deseño del prototipo, se ha acordado utilizar colores claros de fondo y texto oscuro. Comprobamos que esa configuración de colores era la que mejor combinaba a la hora de crear el estilo de un Catcafé.
+
+La combinación de colores incluye: 
+
+- Color marrón para títulos y fondos de botones de navegación
+- Blanco con tonalidad gris para el fondo de las páginas web
+- Color negro para textos generales
+- Color gris claro para la descripción de los productos y el fondo de botones de operaciones con los pedidos
+- Fondo blanco para los productos.
+
+Al validar la accesibilidad analizando las páginas con el plugin de _"WAVE"_, se mostraron bastantes errores mencionando que el contraste los colores del fondo del producto y el de las descripciones de los productos era bastante bajo. Esto impide la legibilidad a los productos en cuestión. 
+
+### Falta de inclusión de etiquetas de título
+
+Siguiendo el diseño compartido del prototipo, a la hora de implementación algunos headers o Títulos primarios carecían de elementos H1, H3 o similares.
+Como consecuencia de esto, revisando la página con _"WAVE"_, se ha detectado esa carencia como advertencias de accesibilidad.
+
+Dichas advertencias se han localizado en algúnos encabezados de secciones como las de la página web de _"Tarifas"_.
+
+### Párrafos con apariencias H1 o H3 que no lo son
+
+En la implementación de algunos bloques de textos en las páginas web, se ha optado por adoptar un tamaño de fuente más grande para mejorar la accesibilidad. Debido al grande tamaño del texto, el plugin de _"WAVE"_ detecta que tiene estilo de un título de alguna sección cuando en realidad no lo és.
+Dicho texto se puede encontrar en la cantidad de artículos, el nombre de los artículos, en los títulos del carrito y los formularios (los cuales se han implementado como headers sin título).
+
+### Justificación repetitiva de grandes bloques de texto
+
+Utilizar la justificación de textos de manera repetitiva en las páginas es considerado como un contra o defecto que afecta a la legibilidad de las páginas por el plugin de _"WAVE"_.
+
+Dicho defecto se ha encontrado por ejemplo en la página de menú de productos para todo el texto en ella.
+
+### Etiquetas no asociadas a un campo
+
+En la implementación del proceso de reserva había algunas etiquetas o labels que no estaban asociadas a nada o marginadas. A la hora de la revisión, el plugin de accesibilidad _"WAVE"_ nos lo detectó como advertencias a la hora de reservar en nuestro Catcafé. 
+
+### Correcciones de los Errores y advertencias
+
 Para corregir los errores y advertencias mencionadas, se han aplicado las siguentes soluciones:
 
-- Modificar el campo _"for"_ de algunas etiquetas en los formularios.
+- Etiquetas no asociadas a un campo: Solucionamos estas advertencias modificando simplemente la propiedad _"for"_ de los objetos _"label"_ para que todas se refirieran a algo en la implementación del HTML de las páginas.
 
-- Justificar bloques no muy grandes de texto.
+- Justificación repetitiva de texto: Este tipo de advertencias se solventaron modificando el CSS o las clases de estilo de los textos para intercalar la propiedad de _"text-justify"_ y la de _"justify-content"_ en las páginas.
 
-- Inclusión de elementos h1 y h2 con el estilo estandard definido por la página como elementos.
+- Apariencias en estilo de H1 o H3 en textos que no lo son: Este tipo de advertencias se ha dedicido ignorarla, ya que reducir el tamaño de la fuente en esos casos sería un problema aún mayor de visibilidad.
 
+- Falta de inclusión de etiquetas de título: Se solucionaron añadiendo etiquetas h1 y h2 con el estilo estandard definido por la página como elementos.
+
+- Errores de contraste: Se ha modificado la paleta de colores estandard de la página para incluir texto de color negro en vez de gris claro en las descripciones de los productos.
 
 
 \clearpage
