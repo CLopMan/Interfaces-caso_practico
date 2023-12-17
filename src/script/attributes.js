@@ -145,6 +145,8 @@ class CreditCardNumber extends Attribute {
 class CreditCardExpiryDate extends Attribute {
     validate(value) {
         if (!(/^\d\d\/\d\d$/.test(value))) { throw "formato de la fecha de expiración incorrecto"; }
+        const month = parseInt(value.slice(0, 2));
+        if (month <= 0 || month >= 13) { throw "formato de la fecha de expiración incorrecto"; }
         return value;
     }
 }
