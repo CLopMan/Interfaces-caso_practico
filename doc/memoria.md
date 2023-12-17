@@ -515,9 +515,25 @@ $$N_i = 2,5\cdot\sum_{n=1}^{10} v_n, \text{ donde } v_n =
 
 \end{array}\right.$$
 
+De esta forma, obtenemos la evaluación para cada uno de los cuestionarios: 
+
+$$\begin{array}{|c|c|}
+    \hline
+    \text{Evaluador} & \text{Evaluacion}\\
+    \hline
+    1 & 82,5 \\
+    \hline
+    2 & 90 \\
+    \hline
+    3 & 85 \\
+    \hline
+\end{array}$$
+
+De forma global, obtendremos el resultado de la evaluación SUS como la media aritmética de los 3 valores: 
+
 $$\overline N = \frac{N_1 + N_2 + N_3}{3} = \frac{82,5 + 90 + 85}{3} = 85,83$$
 
-Obtenemos un resultado de $85.83$ en la evaluación SUS, lo que se corresponde con una calificación A. Esto nos lleva a concluir que la usabilidad de nuestra web es alta y que las personas con perfiles similares al de los evaluadores encuentran la web agradable y la recomendarían a sus allegados.
+Obtenemos un resultado de $85,83$ en la evaluación SUS, lo que se corresponde con una calificación A. Esto nos lleva a concluir que la usabilidad de nuestra web es alta y que las personas con perfiles similares al de los evaluadores encuentran la web agradable y la recomendarían a sus allegados.
 
 \clearpage
 
