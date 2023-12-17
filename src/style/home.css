@@ -435,3 +435,251 @@ li {
     font-size: 2vw;
     line-height: 150%;
 }
+
+
+
+
+@media screen and (max-width: 900px) {
+    img {
+        object-fit: cover;
+    }
+    .SplitContainer > span:not(:first-child) { 
+        font-size: 20px;
+        line-height: 150%;
+    }
+
+    header.col-12 {
+        height: auto;
+    }
+    
+    section {
+        height: 60vh;
+        margin-bottom: 0;
+    }
+
+    .titulo_seccion {
+        width: 80%;
+        text-align: center;
+    }
+
+    .decoracion_rectangulo {
+        width: 90%;
+        height: 90%;
+    }
+    
+    .boton_info {
+        width: 50%;
+    }
+/*actividades*/
+    #actividades > .decoracion_rectangulo {
+        left: 5%;
+    }
+    #boton_info_act {
+        left: 25%;
+        bottom: 7%;
+    }
+    #actividades > .titulo_seccion {
+        left: 10%;
+        bottom: 87%;
+    }
+    #primera_vez {
+        left: 20%;
+        top: 20%;
+    }
+    #juega_con {
+        float: left;
+        left:15%;
+        top: 20%;
+    }
+    #img_home_activ_1{
+        height: 25%;
+        right: 20%;
+        bottom: 57%;
+    }
+    #img_home_activ_2{
+        height: 25%;
+        width: 30%;
+        left: 20%;
+        bottom: 57%;
+    }
+
+/*productos*/
+    #productos > #rect1 {
+        left: 5%;
+        bottom: -10%;
+    }
+    #productos > #rect2 {
+        display: none;
+    }
+    #productos > .titulo_seccion {
+        float: right;
+        right: 10%;
+        bottom: 60%;
+    }
+    #aprovecha_tu {
+        top: 10%;
+        right: 17%;
+    }
+    #boton_info_prod {
+        float: left;
+        left: 27%;
+        bottom: 8%;
+    }
+    #boton_haz_pedido {
+        width: 50%;
+        right: -27%;
+        top: -33%;
+    }
+    #img_home_prod_1 {
+        height: 20%;
+        right: 52%;
+        bottom: 37%;
+    }
+    #img_home_prod_2 {
+        height: 20%;
+        bottom:37%;
+        left:5%;
+    }
+
+/*gatos*/
+    #gatos > .decoracion_rectangulo {
+        left: 5%;
+        top: 0%;
+    }
+    #img_home_gatos_1 {
+        width: 30%;
+        height: 45%;
+        object-position: center;
+        top: 35%;
+        right: 15%;
+    }
+    #img_home_gatos_2 {
+        width: 30%;
+        height: 45%;
+        top: 18%;
+        left: 13%;
+    }
+    #todo_lo{
+        top: 15%;
+        margin: 2%;
+        left: 25%;
+    }
+    #gatos > .titulo_seccion {
+        text-align: center;
+        bottom: 85%;
+        left: 10%;
+    }
+    #boton_info_gatos {
+        bottom:17%;
+        left: 25%;
+    }
+
+/*local*/
+    #rect3 {
+        right: 5%;
+        top: 0%;
+    }
+    #rect4 {
+        display: none;
+    }
+    #local > .titulo_seccion {
+        bottom:90%;
+        right:-10%;
+    }
+    #local > #rect3 > .textos {
+        left: 32%;
+        top: -34%;
+    }
+    #img_home_local_2 {
+        width: 30%;
+        height: 45%;
+        left: -15%;
+        top: 30%;
+    }
+    #img_home_local_3 {
+        width: 30%;
+        height: 45%;
+        left: -20%;
+        top: 30%;
+    }
+    #boton_info_local {
+        top:-20%;
+        left: 27%;
+    }
+
+/*redes*/
+
+#rect5 {
+    margin-left: 4%;
+    height: 60%;
+    top: 0%;
+}
+
+#rect6 {
+    left:4%;
+    height: 25%;
+    bottom: 27%;
+}
+
+#redes > .titulo_seccion {
+    bottom: 100%;
+    right: -10%;
+}
+
+#rect6 > .textos {
+    top:10%;
+}
+
+#img_home_redes_insta {
+    top:10%;
+    left:20%;
+}
+
+#img_home_redes_tumblr {
+    top:10%;
+    left:30%;
+}
+
+#boton_redes {
+    bottom:45%;
+    left: 25%;
+    width: 50%;
+}
+
+
+/*---------------------FOOTER----------------------*/
+    footer{
+        height: auto;
+        margin-top: -10%;
+    }
+    #footer_home {
+        width: 100%;
+        left: 0%;
+        font-size: 5vw;
+        text-align: center;
+    }
+    #footer_politica {
+        width: 100%;   
+        text-align: center;
+        left: 0%;
+        font-size: 5vw;
+    }
+    ul.col-3 {
+        width: 100%;
+        top: 5%;
+        align-items: center;
+        text-align: center;
+        list-style: none;
+    }
+    #lista_1 {
+        left: 0%;
+    }
+    #lista_2 {
+        left: 0%;
+    }
+    li {
+        font-size: 5vw;
+    }
+
+}
+
