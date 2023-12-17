@@ -49,6 +49,11 @@ section > header {
         background-color: var(--producto-bg);
     }
 
+    #types > .buttons > .but:hover {
+        background-color: lightgrey;
+    }
+
+
 #menu > section, .prodDiv {
     padding: 0;
 }
@@ -81,7 +86,11 @@ section > header {
     }
     .product > .Content > .title > *:first-child { flex-grow: 1; }
 
-    .product > .Content > .price > *:not(:first-child) { flex-grow: 1; }
+    .product > .Content > .price > .ingredients { flex-grow: 1; }
+    .product > .Content > .price > .ingredients > img {
+        height: 30px;
+        object-fit: contain;
+    }
 
     .product .ProductPrice {
         font-size: 20px;

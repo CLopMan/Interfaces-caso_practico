@@ -6,6 +6,56 @@ class ShoppingCart {
                        7.00, 4.00, 20.00, 10.00,
                        0.70, 1.00, 0.60];
 
+        this.shipment_countries = [
+            "Albania", "Indonesia",
+            "Alemania" ,"Irak",
+            "Angola", "Irlanda",
+            "Antigua y Barbuda", "Islas Feroe",
+            "Argentina", "Islas Vírgenes",
+            "Aruba", "Israel",
+            "Australia", "Italia",
+            "Bahamas", "Jamaica",
+            "Bangladesh", "Japón",
+            "Barbados", "Letonia",
+            "Bélgica", "Líbano",
+            "Belice", "Malasia",
+            "Bolivia", "Martinica",
+            "Brasil", "México",
+            "Canadá", "Nicaragua",
+            "Chile", "Nigeria",
+            "China", "Noruega",
+            "China-Taiwán",
+            "Colombia", "Países Bajos",
+            "Corea del Sur", "Pakistán",
+            "Costa Rica", "Paraguay",
+            "Cuba", "Perú",
+            "Curazao", "Polonia",
+            "Dinamarca", "Portugal",
+            "Dominica", "Puerto Rico",
+            "Ecuador", "Reino Unido",
+            "El Salvador", "República Dominicana",
+            "Emiratos Árabes Unidos", "Rusia",
+            "España", "San Martín",
+            "Estados Unidos de América", "Santa Lucía",
+            "Francia", "Sri Lanka",
+            "Gambia", "Suecia",
+            "Ghana", "Suiza",
+            "Granada", "Suriname",
+            "Grecia", "Tailandia",
+            "Guadalupe y Dependencias", "Trinidad y Tobago",
+            "Guatemala", "Turquía",
+            "Guyana", "Uruguay",
+            "Haití", "Venezuela",
+            "Honduras", "Vietnam",
+            "Hong Kong", "Panamá",
+            "India",
+        ]
+
+        this.shipment = {}
+        for (const country of this.shipment_countries) {
+            this.shipment[country] = Math.random() * (15-1)+1;
+        }
+
         this.sums = []
         for (let i = 0; i < this.prices.length; i++) {
             this.sums[i] = 0
@@ -24,12 +74,29 @@ class ShoppingCart {
         this.masterPrice = 0
     }
 
-    updateMasterPrice(min, max) {
-        // Random shipment cost
-        this.shipment_cost = Math.random() * (max - min) + min;
+    setUpdateAutomatic(){
+        let campo = document.getElementById("direction-input")
+        campo.onkeyup = (ev) =>{
+            this.updateShipmentCostAddress()
+            this.updateMasterPrice()
+        }
+    }
 
+    updateShipmentCostAddress(){
+        let campo = document.getElementById("direction-input")
+        for (const pais of this.shipment_countries) {
+            if (campo.value.toLowerCase().includes(pais.toLowerCase(),0) ){
+                this.shipment_cost = this.shipment[pais];
+            } else if (campo.value === "") {
+                this.shipment_cost = 0
+            }
+        }
+
+    }
+
+    updateMasterPrice() {
         // Update Master Price with shipment costs
-        this.masterPrice = this.shipment_cost + this.getProductsTotalAmount()
+        this.masterPrice = this.shipment_cost + this.getProductsTotalCost()
 
         // Update the Master Price fields on HTML
         let ship_cost = document.getElementById("shipment-cost")
@@ -39,6 +106,15 @@ class ShoppingCart {
         ship_cost.innerText = String(this.shipment_cost.toFixed(2)) + "€"
         total_prods_am.innerText = String(this.getProductsTotalAmount().toFixed(2)) + "€"
         master_price.innerText = String(this.masterPrice.toFixed(2)) + "€"
+    }
+
+    getProductsTotalCost(){
+        let cost = 0
+
+        for (let i = 0; i < this.prices.length; i++) {
+            cost += this.prods[i].cantidad * this.prices[i]
+        }
+        return cost
     }
 
     getProductsTotalAmount(){
@@ -108,7 +184,7 @@ class ShoppingCart {
 
     updateProduct(id, cantidad) {
         let product = document.getElementById(id);
-        if (cantidad > 0){
+        if (cantidad >= 0){
             product.innerText = cantidad;
         } else {
             product.innerText = "0";
@@ -126,7 +202,9 @@ class ShoppingCart {
         let result = document.getElementById("order-total")
         let res_prod = document.getElementById("order-total-prev")
 
-        this.updateSum(ind,cantidad)
+        if (cantidad >= 0){
+            this.updateSum(ind,cantidad)
+        }
 
         let totalPrice = 0
         for (const sum of this.sums) {

@@ -1,43 +1,42 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>La catfetería</title>
-        <link rel="stylesheet" href="style/establecimiento.css">
-        <link rel="stylesheet" href="style/shared.css">
-        <link rel="shortcut icon" href="">
-    </head>
-
-    <body>
-        <main>
-        <!--Cabecera y demás-->
-        <section>
-            <h1>La catfetería</h1>
-            <!--galería de imagenes-->
-            <div id="est_galeria">
-                <img alt="área de descanso A" class="est_img_gall" id = "img0" src="image//IMG_6940.jpeg">
-                <img alt="área de cafetería" class="est_img_gall" id = "img1" src="image//cat-cafe.jpg">
-                <img alt="área de alimentación para gatos" class="est_img_gall" id = "img2" src="image//1.png">
-                <img alt="área con vistas a la naturaleza" class="est_img_gall" id = "img3" src="image//mocha.jpg">
-                <img alt="área de descanso B" class="est_img_gall" id = "img4" src="image//mocha(1).jpg">
-            </div>
-            <article>
-                <p>Una cafetería acogedora que busca la comodidad de los gatos así como de los clientes. La estancia está divididad de manera que los animales tengan su propia zona para comer y jugar, donde puedes acercarte a acariciarlos y pasar tiempo con ellos. También existen zonas de trabajo y zonas exclusivas para la restauración, con acceso más limitado a los animales.</p>
-                <p>Para llegar al local puede visitar esta página de <a href="localizacion.html">localización</a>, donde cuenta con direcciones, así como paradas cercanas de transporte público.</p>
-            </article>
-        </section>
-        <section>
-            <h1>Dónde encontrarnos</h1>
-            <!--galería de imagenes-->
-            <article id="direccion" class="col-5">
-                <p class="direccion_tx">Calle Hortaleza Nº 9999, Madrid</p>
-                <p class="est_text">Paradas de transporte público a menos de 10 minutos:</p>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>La catfetería</title>
+    <link rel="stylesheet" href="style/establecimiento.css">
+    <link rel="stylesheet" href="style/shared.css">
+</head>
+<body>
+    <main>
+    <!--Cabecera y demás-->
+    <section>
+        <h2>La catfetería</h2>
+        <!--galería de imagenes-->
+        <div id="est_galeria">
+            <img alt="área de descanso A" class="est_img_gall" id = "img0" src="image//IMG_6940.jpeg">
+            <img alt="área de cafetería" class="est_img_gall" id = "img1" src="image//cat-cafe.jpg">
+            <img alt="área de alimentación para gatos" class="est_img_gall" id = "img2" src="image//1.png">
+            <img alt="área con vistas a la naturaleza" class="est_img_gall" id = "img3" src="image//mocha.jpg">
+            <img alt="área de descanso B" class="est_img_gall" id = "img4" src="image//mocha(1).jpg">
+        </div>
+        <div>
+            <p>Una cafetería acogedora que busca la comodidad de los gatos así como de los clientes. La estancia está divididad de manera que los animales tengan su propia zona para comer y jugar, donde puedes acercarte a acariciarlos y pasar tiempo con ellos. También existen zonas de trabajo y zonas exclusivas para la restauración, con acceso más limitado a los animales.</p>
+        </div>
+    </section>
+    <section>
+        <h2>Dónde encontrarnos</h2>
+        <!--galería de imagenes-->
+        <div class="row">
+            <div id="direccion" class="col-5">
+                <p id="direccion_tx">Calle Hortaleza Nº 9999, Madrid</p>
+                <p>Paradas de transporte público a menos de 10 minutos:</p>
                 
                 <div class="img-list col-12">
-                    <p class="est_text col-12">
+                    <p class="col-12">
                         Metro
                     </p>
                     <img alt="metro icono" src="image/metro.png" class ="col-2">
-                    <ul class="est_text col-9">
+                    <ul>
                         <li>Chueca, Línea 5</li>
                         <li>Gran Vía, Línea 1 y 5</li>
                         <li>Sol, líneas 1, 2 y 3</li>
@@ -45,11 +44,11 @@
                 </div>
 
                 <div class="img-list col-12">
-                    <p class="est_text col-12">
+                    <p class="col-12">
                         Bus
                     </p>
                     <img alt="icono bus" src="image/bus.png" class="col-2">
-                    <ul class="est_text col-9">
+                    <ul>
                         <li>Hortaleza, Bus 3 urbano</li>
                         <li>Valverde, Bus 002</li>
                         <li>Chueca, Bus 3 urbano</li>
@@ -57,25 +56,26 @@
                 </div>
 
                 <div class="img-list col-12">
-                    <p class="est_text col-12">
+                    <p class="col-12">
                         Cercanías
                     </p>
                     <img alt="icono tren" src="image/train.png" class="col-2">
-                    <ul class="est_text col-9">
+                    <ul>
                         <li>Sol, Línea C4</li>
                     </ul>
                 </div>
 
                 <p id="contact" class="col-12">Si tienes alguna duda <a href="contacto.html">contáctanos</a>.</p>
-            </article>
-            <div id="Map" class="col-7">
-                <iframe alt="mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12190.386710154431!2d-3.796073!3d40.1957884!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422888a054af49%3A0x40b2f5747c0af9d0!2sC%2F%20de%20Hortaleza%2C%20Centro%2C%20Madrid!5e0!3m2!1ses!2ses!4v1702476570143!5m2!1ses!2ses"></iframe>
             </div>
+            <div id="Map" class="col-7">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12190.386710154431!2d-3.796073!3d40.1957884!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422888a054af49%3A0x40b2f5747c0af9d0!2sC%2F%20de%20Hortaleza%2C%20Centro%2C%20Madrid!5e0!3m2!1ses!2ses!4v1702476570143!5m2!1ses!2ses"></iframe>
+            </div>
+        </div>
 
-        </section>
+    </section>
     </main>
-    </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script/shared.js"></script>
     <script src="script/establecimiento.js"></script>
+</body>
 </html>

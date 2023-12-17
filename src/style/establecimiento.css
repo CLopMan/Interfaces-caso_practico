@@ -21,11 +21,10 @@
     margin-top: 0;
 }
 
-p { font-size: 2.5vw; }
-p:not(:first-child):not(#direccion > * ) { padding-top: 1%; }
+p:not(:first-child) { padding-top: 1%; }
 
-.direccion_tx {
-    font-size: 2vw;
+#direccion_tx {
+    font-size: 32px;
 }
 
 #direccion {
@@ -35,12 +34,8 @@ p:not(:first-child):not(#direccion > * ) { padding-top: 1%; }
 
 #direccion > div { padding: 0; }
 
-.est_text {
-    font-size: 1.5vw;
-}
-
 .img-list > ul {
-    margin-left:1%;
+    margin-left: 1%;
 }
 
 .img-list > img {
@@ -48,7 +43,6 @@ p:not(:first-child):not(#direccion > * ) { padding-top: 1%; }
 }
 
 #Map {
-    float: left;
     height: 80vh;
 }
 
@@ -59,19 +53,19 @@ p:not(:first-child):not(#direccion > * ) { padding-top: 1%; }
 }
 
 #contact {
-    font-size: 1vw;
-    text-align:center;
-    padding:0;
+    font-size: 16px;
+    text-align: center;
+    padding: 0;
 }
+
+ul { padding: 15px; float: left; }
+ul > li { font-size: 24px; }
 
 @media only screen and (max-width: 768px) {
     .img-list > img {
         width: 75px;
     }
-}
 
-@media only screen and (max-width: 600px) {
-    /* For mobile phones: */
     #direccion {
         width: 100%;
     }
@@ -85,11 +79,9 @@ p:not(:first-child):not(#direccion > * ) { padding-top: 1%; }
         margin: 0;
     }
 
-    .est_text {
-        font-size: 20px;
-    }
+}
 
-    #contact {
-        font-size: 16px;
-    }
+@media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    p, ul > li { font-size: 20px; }
 }

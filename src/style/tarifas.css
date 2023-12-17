@@ -1,186 +1,130 @@
+.Content > * { padding-top: 0; }
 
-main {
-    display: flex;
-    flex-flow: column nowrap;
-    height: 250vh;
-    background-color: #EEEBE7;
+.Content > ul {
 }
-    .sec {
-        display: flex;
-        flex-flow: column nowrap;
-        margin: 20px 60px 10px 60px;
-        flex-flow: column nowrap;
-        flex: 1 1 auto;
-
-        justify-content: center;
-        height: 20%;
+    ul > li {
+        padding: 20px 0 0 0;
     }
-        .sec > .Title {
-            flex: 1 1 20%;
-            font-size: 3em;
+    ul > .Up {
+        font-size: calc(1em + 1vw);
+        line-height: 1em;
+    }
+    ul > .Down {
+        margin-left: 5vw;
+        font-size: calc(0.5em + 1vw);
+    }
+
+#Packs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+    #Packs > .Pack {
+        background-color: var(--producto-bg);
+        border: 2px solid var(--bordes);
+        flex: 1 1 20%;
+        margin: 0 30px 0;
+        border-radius: 25px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .Pack > header {
+            background-color: var(--bordes);
             display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 10px;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            font-size: 24px;
         }
-            .Title > p {
-                flex: 1 1 auto;
-                text-align: start;
 
-                align-self: flex-end;
-                height: 9vh;
-            }
-        .sec > hr {
-            color: #6C461A;
-            height: 2px;
-            width: 98%;
-        }
-        .sec > .Content {
+        .Pack > .body {
             display: flex;
-            flex: 1 1 80%;
-
+            flex-direction: column;
+            flex-grow: 1;
         }
 
-            .Content > ul {
-                flex: 1 1 auto;
-                width: 100%;
+            .Pack > .body > .description {
+                padding: 10px 30px;
+                font-size: 16px;
                 display: flex;
-                flex-flow: column nowrap;
-            }
-                ul > li {
-                    padding: 20px 0 0 0;
-                    margin-left: 3vw;
-                    justify-content: center;
-                    flex: 1 1 auto;
-                }
-                ul > .Up {
-                    font-size: 2.5em;
-                }
-                ul > .Down {
-                    margin-left: 4vw;
-                    font-size: 1.5em;
-                }
-
-            .Content > .Packs {
-                flex: 1 1 auto;
-                background-color: #EEEBE7;
-                margin: 20px;
-                align-items: center;
-            }
-
-            .Content > .info {
-                display: flex;
-                flex-flow: column nowrap;
                 align-items: center;
                 justify-content: center;
+                text-align: center;
+                color: black;
             }
-                .Content > .info > p {
-                    flex: 1 1 auto;
-                    font-size: 2.7em;
-                    padding: 20px;
-                    justify-content: center;
+
+            .Pack > .body > .offers {
+                padding: 0 20px;
+                font-weight: bold;
+                flex-grow: 1;
+            }
+                .Pack > .body > .offers > ul {
+                    margin-left: 25px;
                 }
 
-                .Content > .info > .but {
-                    cursor: pointer;
-                    width: 25%;
-                    padding: 10px;
-                    border: none;
-                    border-radius: 20px;
-                    background-color: #6C461A;
+                .Pack > .body > .offers > ul > li {
+                    padding: 0 10px;
+                    margin: 8px 0;
+                    font-size: 20px;
+                }
+
+            .Pack > .body > .price {
+                padding-bottom: 10px;
+            }
+                .Pack > .body > .price > * { text-align: center; }
+
+                .Pack > .body > .price > .amount {
                     font-weight: bold;
-                    font-size: 2em;
-                    color: white;
-                    align-self: end;
-                    text-decoration: none;
-                    text-align: center;
+                    color: var(--marron-base);
                 }
 
-            .Content > .img {
-                width: auto;
-                height: 100%;
-                display: flex;
-
-            }
-                .Content > .img > img {
-                    flex: 1 1 auto;
+                .Pack > .body > .price > .note {
+                    font-size: 14px;
+                    color: black;
+                    padding: 0 10px;
                 }
 
-                .Content > .Packs {
-                    margin-top: 40px;
-                }
+#check > .info {
+    text-align: center;
+}
 
-                .Packs > .Pack {
-                    background-color: #F9F8F6;
-                    border: grey 2px solid;
-                    height: 100%;
-                    margin: 0 4% 0 4%;
-                    border-radius: 30px;
-                    padding: 0;
-                    overflow: auto;
-                }
+#check > .info > p {
+    font-size: 32px;
+    padding: 20px;
+}
 
-                    .Pack > .head {
-                        width: 100%;
-                        height: 20%;
-                        background-color: #DDD8D1;
-                        border-top-right-radius: 30px;
-                        border-top-left-radius: 30px;
-                        display: flex;
-                        align-items: center;
-                        text-align: center;
-                    }
-                        .Pack > .head > p {
-                            flex: 1 1 auto;
-                            font-weight: bold;
-                            font-size: 1.9em;
-                            text-shadow: darkgray 1px 2px 5px;
-                            text-align: center;
-                        }
+#check > .info > .BrownButton {
+    width: 100%;
+    display: block;
+}
 
-                    .Pack > .body {
-                        height: 80%;
-                    }
+#check > img { float: right; }
 
-                        .Pack > .body > .desciption {
-                            width: 100%;
-                            height: 25%;
-                            text-align: center;
-                            padding: 10px 30px;
-                            font-size: 0.9em;
-                        }
+@media screen and (max-width: 1000px) {
+    #Packs {
+        align-items: center;
+        flex-flow: column nowrap;
+        justify-content: initial;
+    }
 
-                        .Pack > .body > .offers {
-                            height: 50%;
-                            overflow: auto;
-                            font-size: 1.3em;
-                        }
-                            .Pack > .body > .offers > p {
-                                padding: 0 20px;
-                                font-weight: bold;
-                            }
-                            .Pack > .body > .offers > ul {
-                                font-weight: bold;
-                                height: 80%;
-                            }
-                            .Pack > .body > .offers > ul > li {
-                                padding: 0 25px;
-                                margin: 5px 0;
-                            }
+    #Packs > .Pack {
+        width: 100%;
+        margin-bottom: 5%;
+        overflow: auto;
+    }
+}
 
+@media screen and (min-width: 768px) {
+    #check > .info > p { padding-top: 0; }
+}
 
-                        .Pack > .body > .price {
-                            height: 25%;
-                            text-align: center;
-                        }
-                            .Pack > .body > .price > .ammount {
-                                height: 55%;
-                                font-size: 2em;
-                                font-weight: bold;
-                                color: #6C461A;
-                                text-align: center;
-                            }
-
-                            .Pack > .body > .price > .note {
-                                height: 45%;
-                                font-size: 0.9em;
-                                text-align: center;
-                            }
-
+/* Breakpoint for medium devices.*/
+@media only screen and (max-width: 768px){
+    #check > * { width: 100%; }
+}

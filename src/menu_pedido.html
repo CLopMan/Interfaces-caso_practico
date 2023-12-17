@@ -39,11 +39,11 @@
                 <div id="Carrito" class="col-4">
                     <aside class="ItemContainer DisplayContainer">
                         <header class="SplitContainer">
-                            <div>Carrito</div>
-                            <div id="TotalProducts">
+                            <span>Carrito</span>
+                            <span id="TotalProducts">
                                 <span id="sum-am">0</span>
                                 <span> productos</span>
-                            </div>
+                            </span>
                         </header>
 
                         <div id="list-prods" class="ItemContainerContent">
@@ -51,13 +51,13 @@
                         </div>
 
                         <div id="subtotal" class="SplitContainer">
-                            <p>Subtotal:</p>
-                            <p id="order-total">0.00€</p>
+                            <span>Subtotal:</span>
+                            <span id="order-total">0.00€</span>
                         </div>
 
                         <button class="SplitContainer BrownButton" type="button" onclick="changeSection('pedido');changeStep(1)">
-                            <p>Revisar Pedido y Pagar</p>
-                            <p>🡢</p>
+                            <span>Revisar Pedido y Pagar</span>
+                            <span>🡢</span>
                         </button>
                     </aside>
                 </div>
@@ -86,20 +86,20 @@
                     </div>
                     <div class="ItemContainer">
                         <div class="Item SplitContainer">
-                            <p class="ItemText">Subtotal: </p>
-                            <p class="ItemText" id="order-total-prev">0.00€</p>
+                            <span class="ItemText">Subtotal: </span>
+                            <span class="ItemText" id="order-total-prev">0.00€</span>
                         </div>
 
                         <button class="SplitContainer BrownButton" type="button" onclick="changeStep(2)">
-                            <p>Iniciar sesión</p>
-                            <p>🡢</p>
+                            <span>Iniciar sesión</span>
+                            <span>🡢</span>
                         </button>
                     </div>
 
                     <div class="BackButtonContainer">
                         <button class="SplitContainer BrownButton Back" type="button" onclick="changeSection('menu')">
-                            <p>Atrás</p>
-                            <p>🡠</p>
+                            <span>Atrás</span>
+                            <span>🡠</span>
                         </button>
                     </div>
                 </div>
@@ -110,8 +110,8 @@
 
                     <div class="BackButtonContainer">
                         <button class="SplitContainer BrownButton Back" type="button" onclick="changeStep(1)">
-                            <p>Revisión de Pedido</p>
-                            <p>🡠</p>
+                            <span>Revisión de Pedido</span>
+                            <span>🡠</span>
                         </button>
                     </div>
                 </div>
@@ -128,33 +128,33 @@
                         <div class="ItemContainerContent">
                             <div class="ItemLabelContainer">
                                 <div class="Item SplitContainer">
-                                    <p class="ItemText">Subtotal</p>
-                                    <p class="ItemText" id="total-am">12.90</p>
+                                    <span class="ItemText">Subtotal</span>
+                                    <span class="ItemText" id="total-am">12.90</span>
                                 </div>
                             </div>
                             <div class="ItemLabelContainer">
                                 <div class="Item SplitContainer">
-                                    <p class="ItemText">Gastos de Envío</p>
-                                    <p class="ItemText" id="shipment-cost">1.00€</p>
+                                    <span class="ItemText">Gastos de Envío</span>
+                                    <span class="ItemText" id="shipment-cost">1.00€</span>
                                 </div>
                             </div>
                             <div class="ItemLabelContainer">
                                 <div class="SplitContainer">
-                                    <p class="ItemText">Total</p>
-                                    <p class="ItemText" id="master-price">13.90€</p>
+                                    <span class="ItemText">Total</span>
+                                    <span class="ItemText" id="master-price">13.90€</span>
                                 </div>
                             </div>
                         </div>
                         <button class="SplitContainer BrownButton" type="button" onclick="changeStep(4)">
-                            <p>Pago</p>
-                            <p>🡢</p>
+                            <span>Pago</span>
+                            <span>🡢</span>
                         </button>
                     </div>
 
                     <div class="BackButtonContainer">
                         <button class="SplitContainer BrownButton Back" type="button" onclick="changeStep(2)">
-                            <p>Cambiar Usuario</p>
-                            <p>🡠</p>
+                            <span>Cambiar Usuario</span>
+                            <span>🡠</span>
                         </button>
                     </div>
                 </div>
@@ -168,8 +168,8 @@
                     <!-- Container for the back button -->
                     <div class="BackButtonContainer">
                         <button class="SplitContainer BrownButton Back" type="button" onclick="changeStep(3)">
-                            <p>Cambiar Dirección</p>
-                            <p>🡠</p>
+                            <span>Cambiar Dirección</span>
+                            <span>🡠</span>
                         </button>
                     </div>
                 </div>
@@ -178,7 +178,7 @@
                 <div class="success col-12 ItemContainer">
 
                     <!-- Title container -->
-                    <h3>Pedido Realizado con éxito!</h3>
+                    <h4>Pedido Realizado con éxito!</h4>
 
                     <!-- Body contnainer -->
                     <div class="message">
@@ -190,15 +190,13 @@
                     <div id="clock" class=""></div>
 
                     <!-- Gif container -->
-                    <div class="gif">
-                        <img src="./image/gif-kitty.gif" alt="Gif kitty">
-                    </div>
+                    <div class="gif"><img src="./image/gif-kitty.gif" alt="Gif kitty"></div>
 
                     <!-- Container for the back button -->
                     <div class="BackButtonContainer">
                         <button class="SplitContainer BrownButton" type="button" onclick="changeSection('menu')">
-                            <p>Volver a la página de inicio</p>
-                            <p>🡠</p>
+                            <span>Volver a la página de inicio</span>
+                            <span>🡠</span>
                         </button>
                     </div>
                 </div>
@@ -216,8 +214,8 @@
     <script src="script/shared.js"></script>
 
     <!-- Especific functionalities -->
+    <script src="script/states.js"></script>
     <script src="script/ShoppingCart.js"></script>
     <script src="script/listProds.js"></script>
-    <script src="script/states.js"></script>
 </body>
 </html>

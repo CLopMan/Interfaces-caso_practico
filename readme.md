@@ -7,19 +7,20 @@ CatFe
 |   Tarea                |    estado   | quién lo hace |     descripción                    |
 | :--------------------: | :---------: | :-----------: | ---------------------------------- |
 | Memoria                | parte 1     | César & CO    | Redacción completa                 |
-| Estructura básica HTML | Sin empezar | Todos         | Html básico                        |
-| home                   | Sin empezar | Paula         | **Html** + **css** + js            |
-| Actividades            | Sin empezar | Paula         | **Html** + **css**                 |
+| Estructura básica HTML | Terminado   | Todos         | Html básico                        |
+| home                   | Responsive  | Paula         | **Html** + **css** + js            |
+| Actividades            | Responsive  | Paula         | **Html** + **css**                 |
 | Reserva                | Terminado   | Álvaro        | **Html** + **css** + js            |
-| Pedido + Menú          | Sin empezar | Adri          | **Html** + **css** + **js**        |
+| Pedido + Menú          | Revisar CSS | Adri          | **Html** + **css** + **js**        |
 | Contactanos            | Terminado   | Álvaro        | **Html** + **css** + js            |
-| Gatos                  | Sin empezar |               | **Html** + **css** + js[^1]        |
+| Gatos                  | Terminado[^2] | Paula       | **Html** + **css** + js[^1]        |
 | Loacalización          | Terminado   | César         | Html + **css**                     |
-| Tarifas                | Sin empezar | Adri          | Html + **css**                     |
+| Tarifas                | Terminado   | Adri          | Html + **css**                     |
 | Establecimiento        | Terminado   | César         | Html + **css** + **js**            |
 | Utilizades             | Terminado   | Álvaro        | Headers, y demás cosas comunes     |
 
 [^1]: Agrandar la foto de un gato para poner más fotos (galería)
+[^2]: Se podría añadir que se hagan grande los gatos al hacerles click
 
 ### Memoria
 

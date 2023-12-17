@@ -229,7 +229,7 @@ Todas las páginas mantienen la cabecera y el pie de página.
 
 #### Conclusiones
 
-El estilo minimalista y elegante se mantiene en toda la web, y los elementos similares en distintas páginas conservan la misma estructura. Esto le da una *coherencia* a la web que facilita su uso, haciéndola más intuitiva y amigable a toda clase de usuarios. 
+El estilo minimalista y elegante se mantiene en toda la web, y los elementos similares en distintas páginas conservan la misma estructura. Esto le da una *coherencia* a la web que facilita su uso, haciéndola más intuitiva y amigable a toda clase de usuarios.
 
 El estilo minimalista y elegante se mantiene en toda la web, y los elementos similares en distintas páginas conservan la misma estructura. Esto le da un **coherencia** a la web que facilita su uso, haciéndola más intuitiva y amigable a toda clase de usuarios.
 
@@ -259,7 +259,7 @@ Existe además un contador en la página de "Conócenos", donde se detalla el n�
 
 #### Conclusiones
 
-La estética hogareña y el tono de la página, además del enfasis en el rescate de gatos y el cuidado de los mismos permiten transmitir una *imagen de cercanía y confianza* hacia la marca.
+La estética hogareña y el tono de la página, además del énfasis en el rescate de gatos y el cuidado de los mismos permiten transmitir una *imagen de cercanía y confianza* hacia la marca.
 
 El proceso de reserva es muy cómodo gracias a la *barra de proceso y la guía se da durante el proceso*.
 
@@ -302,45 +302,222 @@ Teniendo en cuenta tanto los escenarios del [apartado 2](#apartado-2) y el anál
 
 Hemos desarrollado un prototipo mediante la herramienta Figma que pretende representar con una alta fidelidad visual y funcional nuestra web. En él se puede experimentar cómo un usuario ejecutaría las acciones descritas en el escenario de la [sección 2.3](#apartado-23).
 
-Puede consultar el prototipo siguiento el este [enlace](https://www.figma.com/proto/oiuQy7r7wn6Hb3JY99RUGq/Prototipo?node-id=1-2&starting-point-node-id=1%3A2&scaling=scale-down-width&mode=design&t=CFaFBGQ1qCeq90HY-1)
+Puede consultar el prototipo en el siguiente [enlace](https://www.figma.com/proto/oiuQy7r7wn6Hb3JY99RUGq/Prototipo?node-id=1-2&starting-point-node-id=1%3A2&scaling=scale-down-width&mode=design&t=CFaFBGQ1qCeq90HY-1)
 
 El prototipo incluye todas las páginas de la web, permitiéndote navegar entre ellas a través de distintos botones tal y cómo se hará en el diseño final.
 
+![imagen del prototipo completo desarrollado en Figma](img_memoria/prototipo.png){width=\textwidth}
+
 #### Página Home
+
+Esta página cuenta con distintas secciones donde se puede consultar un poco de información sobre el establecimiento. En cada sección existe un botón que llevará a la persona a la página en específico donde pueda consultar de forma más detallada aquel aspecto que le interese. Además, al igual que en el resto de páginas, tendremos una cabecera común con el nombre y logo del restaurante, así cómo el acceso al menú hamburguesa. A las secciones se accede mediante scroll vertical.
 
 #### Página de actividades
 
+Esta página está destinada a la gente que no conozca qué es un cat café. Contiene una serie de sugerencias sobre actividades que se pueden llevar acabo en este tipo de locales. Además, aquellas actividades relacionadas con los gatos o la comida cuentan con un enlace a la página sobre los gatos y el menú respectivamente. Cada una de las actividades se describe a través de una foto y un breve texto.
+
 #### Página de contacto
+
+En esta página existen 3 secciones, separadas por un título y una línea horizontal.
+
+La primera sección cuenta con el número de teléfono y el correo electrónico del restaurante. De esta forma, cualquier cliente puede acceder rápidamente a una forma de comunicación directa con el establecimiento.
+
+La segunda sección cuenta con varios desplegables, cada uno con una pregunta general sobre el establecimiento. Estas son dudas comunes que suelen tener clientes de esta clase de establecimientos.
+
+La tercera es un formulario de contacto a través del cual, una persona puede mandar su duda o inquietud al restaurante.
 
 #### Página establecimiento
 
-#### Página gatos 
+En esta sección funciona como un "quiénes somos". En ella se describe el tipo de local y servicio que se ofrece, así cómo los objetivos e ideales de la marca. Esto se hace en dos secciones diferenciadas, de nuevo, por un título y una línea horizontal.
 
-#### Página localización 
+#### Página gatos
+
+En esta página podemos consultar información acerca de los gatos. Esto es información de interés para aquellas personas amantes de esta clase de animales.
+
+Cada gato tiene su propio cuadro donde podemos consultar nombre, actitud, edad y sexo.
+
+#### Página localización
+
+En esta página podemos consultar dónde se encuentra el establecimiento, así cómo su cercanía a distintas estaciones de transporte público. También existe un enlace a la página de contacto.
 
 #### Página menú
 
-#### Página reserva 
+En esta página se puede consultar la carta, donde los productos están separados por categorías. Por defecto se mostrará la categoría de cafés, aunque se puede acceder a cualquier otra clickando en algunos de los botones de la parte superior. La categoría seleccionada tendrá un color marrón, mientras que el resto de categorías aparecerán en blanco.
+
+También, se pueden seleccionar productos para hacer un pedido. Los productos seleccionados (a través del botón '+') aparecerán instantáneamente en el carrito, desde donde los podremos eliminar o añadir unidades; esta funcionalidad también se puede hacer desde cada producto. Una vez terminado el pedido podremos revisar y efectuar el pedido a través de botón "Revisar y pagar".
+
+Para revisar y pagar el pedido se nos llevará a una página con una barra de progreso. Siguiendo los cuatro pasos podremos efectuar el pedido y aparecerá una pequeña animación indicando al cliente que su pedido se ha llevado a cabo.
+
+#### Página reserva
+
+En esta página podremos efectuar una reserva de una mesa en el local. Primero, se especifican las normas del establecimiento; a continuación, existe un contenedor con 4 pasos para poder hacer la reserva. El proceso se guía a través de una pequeña caja redonda junto a cada paso que, una vez completado, se rellena con un tick verde.
 
 #### Página tarifas
 
+Las cafeterías de este estilo suelen ofrecer planes por tiempo en el local. En esta página se pueden consultar los precios y contenidos de estos planes, así como un pequeño resumen del tipo de productos que se ofrecen.
+
 \clearpage
+
+### Patrones y heurísticas
+
+A la hora de hacer el diseño y prototipado se han aplicado las siguientes heurísticas:
+
+- Consistencia y estandarización: se aplica el mismo patrón de diseño para los bloques de contenido con botones.
+- Minimalismo: el diseño está adaptado para no sobrecargar a la persona de información. Se aprecia fácilmente en los formularios de registro de usuario.
+- Visibilidad del estado del sistema: se da retro-alimentación al usuario a través de mensajes de confirmación para los pedidos a domicilio y reserva de mesas.
+- Control de usuario y libertad: en el pedido a domicilio y la reserva de mesa existen botones para avanzar y retroceder.
+
+Además aplicamos los siguientes patrones:
+
+- Site Branding (E1): todas las páginas contienen el logo en la esquina superior derecha.
+- Botón de acción (K4): Se usan botones para activar acciones.
+- Barra de progreso (H13): el proceso de realizar un pedido se acompaña de una barra de progreso que indica los pasos anteriores, el paso actual y los pasos siguientes.
+- Prevención de errores (K12): los formularios aportan pistas sobre cómo se deben rellenar para evitar errores por el formato de entrada.
+- Plantillas de páginas (D1): todas las páginas usan una plantilla global con cabecera (que incluye el botón para acceder al menú de hamburguesa) y plantillas individuales para cada tipo de página.
+- Carrito de compra (F3): en el proceso de hacer un pedido, existe un carrito de compra donde se pueden consultar en tiempo real los productos seleccionados hasta el momento.
 
 ## 5. Diseño final {#apartado-5}
 
-[[Comparación entre original y final]]
+El diseño final cuenta con 8 páginas, 9 hojas de estilo y 13 scripts de `javaScript`. Para los elementos compartidos como la cabecera se ha empleado un script de `javaScript` para incluirlo en cada página con el mismo formato, permitiéndonos modificar la cabecera en un único sitio. Además, existe una hoja de estilos `shared.css` que contiene los estilos compartidos para todas las páginas como los encabezados, el texto o la distribución de columnas.
+
+En cuanto al comportamiento *responsive*, se ha decidido usar una aproximación de diseño por columnas. Se ha dividido el espacio de la página horizontalmente en 12 columnas y a cada elemento se le asigna un tamaño en número de columnas. De esta forma, se facilita la distribución de elementos por la página. Además, para dispositivos de distinto tamaño se varía el tamaño de las columnas o, en su defecto, de los objetos de forma que permite un código más limpio con un buen resultado.
+
+Comparando el prototipo con el diseño final, destacamos 3 errores que recibimos durante la defensa:
+
+- El menú de navegación contaba con demasiadas páginas y su uso en pantalla completa podría llegar a desorientar, perdiendo la referencia sobre en qué página se encuentra uno actualmente.
+- Existen demasiadas páginas, algunas de ellas con información redundante.
+- El indicativo para hacer scroll era un elemento innecesario y que rompía la estética de la página.
+
+Cada uno de estos errores ha sido corregido. El menú de navegación se ha sustituído por un menú lateral que ocupa aproximadamente un cuarto del ancho de la pantalla. Las páginas de localización y establecimiento se han combinado ya que contenían información fácilmente acoplable, reduciendo el número de páginas.
+
+También se han hecho algunas modificaciones por necesidades de implementación: 
+- Se han eliminado los puntos que enlazaban precio con productos en la página de tarifas.
+- Se han recolocado algunos botones en las páginas Home y activiades para su comportamiento responsive. 
+
+Teniendo todo lo anterior en cuenta, el diseño final se mantiene fiel al prototipo, aunque con leves variaciones que mejoran el producto final. 
 
 \clearpage
 
 ## 6. Informe de accesibilidad {#apartado-6}
 
+Para realizar el análisis de accesibilidad, en este caso se ha optado por comprobar el aspecto de las páginascon una herramienta llamada _"WAVE"_. Esta utilidad nos permite analizar el prototipo en busca de consejos o errores para mejorar en este aspecto.
+
+En el análisis, se encuentran los siguientes errores:
+
+- Errores de contraste: Adventencias debido a que el contraste entre el color del texto para algunos párrafos (Ej. descripciones de productos) y el fondo de la página web es demasiado bajo.
+
+- Falta de inclusión de etiquetas de título en algunas secciones ( Ej. h1,h2,h3,...): Hay párafos con estilo de títulos que no lo son.
+
+- Largos bloques de información justificados plenamente puede perjudicar la lectura de las páginas.
+
+- Algúnas etiquetas no estaban asociadas a ningún elemento en los formularios
+
+### Errores de Contraste
+En nuestro deseño del prototipo, se ha acordado utilizar colores claros de fondo y texto oscuro. Comprobamos que esa configuración de colores era la que mejor combinaba a la hora de crear el estilo de un Catcafé.
+
+La combinación de colores incluye: 
+
+- Color marrón para títulos y fondos de botones de navegación
+- Blanco con tonalidad gris para el fondo de las páginas web
+- Color negro para textos generales
+- Color gris claro para la descripción de los productos y el fondo de botones de operaciones con los pedidos
+- Fondo blanco para los productos.
+
+Al validar la accesibilidad analizando las páginas con el plugin de _"WAVE"_, se mostraron bastantes errores mencionando que el contraste los colores del fondo del producto y el de las descripciones de los productos era bastante bajo. Esto impide la legibilidad a los productos en cuestión. 
+
+### Falta de inclusión de etiquetas de título
+
+Siguiendo el diseño compartido del prototipo, a la hora de implementación algunos headers o Títulos primarios carecían de elementos H1, H3 o similares.
+Como consecuencia de esto, revisando la página con _"WAVE"_, se ha detectado esa carencia como advertencias de accesibilidad.
+
+Dichas advertencias se han localizado en algúnos encabezados de secciones como las de la página web de _"Tarifas"_.
+
+### Párrafos con apariencias H1 o H3 que no lo son
+
+En la implementación de algunos bloques de textos en las páginas web, se ha optado por adoptar un tamaño de fuente más grande para mejorar la accesibilidad. Debido al grande tamaño del texto, el plugin de _"WAVE"_ detecta que tiene estilo de un título de alguna sección cuando en realidad no lo és.
+Dicho texto se puede encontrar en la cantidad de artículos, el nombre de los artículos, en los títulos del carrito y los formularios (los cuales se han implementado como headers sin título).
+
+### Justificación repetitiva de grandes bloques de texto
+
+Utilizar la justificación de textos de manera repetitiva en las páginas es considerado como un contra o defecto que afecta a la legibilidad de las páginas por el plugin de _"WAVE"_.
+
+Dicho defecto se ha encontrado por ejemplo en la página de menú de productos para todo el texto en ella.
+
+### Etiquetas no asociadas a un campo
+
+En la implementación del proceso de reserva había algunas etiquetas o labels que no estaban asociadas a nada o marginadas. A la hora de la revisión, el plugin de accesibilidad _"WAVE"_ nos lo detectó como advertencias a la hora de reservar en nuestro Catcafé. 
+
+### Correcciones de los Errores y advertencias
+
+Para corregir los errores y advertencias mencionadas, se han aplicado las siguentes soluciones:
+
+- Etiquetas no asociadas a un campo: Solucionamos estas advertencias modificando simplemente la propiedad _"for"_ de los objetos _"label"_ para que todas se refirieran a algo en la implementación del HTML de las páginas.
+
+- Justificación repetitiva de texto: Este tipo de advertencias se solventaron modificando el CSS o las clases de estilo de los textos para intercalar la propiedad de _"text-justify"_ y la de _"justify-content"_ en las páginas.
+
+- Apariencias en estilo de H1 o H3 en textos que no lo son: Este tipo de advertencias se ha dedicido ignorarla, ya que reducir el tamaño de la fuente en esos casos sería un problema aún mayor de visibilidad.
+
+- Falta de inclusión de etiquetas de título: Se solucionaron añadiendo etiquetas h1 y h2 con el estilo estandard definido por la página como elementos.
+
+- Errores de contraste: Se ha modificado la paleta de colores _"standard"_ de la página para incluir texto de color negro en vez de gris claro en las descripciones de los productos.
+
+
 \clearpage
 
-## 7. Descripción de herramientas utilizadas {#apartado-7}
+## 7. Descripción de tecnologías utilizadas {#apartado-7}
+
+Durante el desarrollo de esta práctica hemos empleado distintas tecnologías con diversos fines.
+
+Durante la fase de documentación hemos hecho uso de la herramienta **inspeccionar**. Esta herramienta nos ha permitido analizar en profundidad la organización de contenido y los estilos de las páginas web analizadas en el [apartado 3](#apartado-3). Además, esta herramienta ha sido verdaderamente últil para el testeo del producto final y su comportamiento responsive. 
+
+Para el prototipado hemos empleado [**Figma**](https://www.figma.com/). Figma es una herramienta de diseño colaborativo que nos ha permitido trabajar en paralelo sobre un diseño común. Ademaś, una vez finalizado el prototipo, Figma nos ha permitido representar fielmente el comportamiento que esperábamos de nuestra web; lo que ha servido de punto de referencia durante todo el desarrollo. Esto ha permitido un flujo de trabajo cómodo en el que todos los integrantes del grupo han estado plenamente coordinados. 
+
+Para implementar la página web se ha usado **html**, **css** y **javaScript**. Html es un lenguaje de etiquetado que se ha usado para organizar el contenido que queremos mostrar en la página, esto se ha hecho mediante etiquetas semánticas que estructuran la página web. Css permite la aplicación de estilos sobre los elementos definidos en el html. De esta forma, toda la estética de la página web, así como el comportamiento responsive queda definido en las hojas de estilo. JavaScript es un lenguaje de programación que permite dar funcionalidad a las páginas web y la introducción de elementos dinámicos. 
+
+Desarrollando el uso de javascript, además de las funciones implementadas por nosotros hemos importado algunos módulos para ciertas funcionalidades. El más importante de ellos es **jquery**, una biblioteca que facilita el uso de javascript en las páginas web. También, se han importado algunos plugins de esta biblioteca: 
+- [TimeTo](https://plugins.jquery.com/timeTo) es un plugin que añade la funcionalidad de cuentas atrás. Lo hemos usado para la cuenta atrás en el apartado de pedidos. 
+- [picadate](https://amsul.ca/pickadate.js/) es un plugin que añade un gran abanico de funcionalidad para la selección de fechas. Nos ha permitido incluir entradas de usuario a tavés de calendarios y selectores de horas de manera sencilla en el apartado de reservas. 
 
 \clearpage
 
 ## 8. Evaluación SUS {#apartado-8}
+
+Para la evaluación SUS se han facilitado 3 cuestionarios a un grupo de 3 evaluadores. El primero se trata de un cuestionario de consentimiento, el segundo para optener datos de la población de evaluadores y el tercero con las 10 preguntas propias del cuestionario SUS. 
+
+En cuanto al primer y segundo cuestionario, contamos con el consentimiento de los 3 evaluadores para realizar el estudio. Además, sabemos que se trata de una población masculina, de entre 22 y 27 años y con grandes conocimientos en el ámbito de la tecnología. Estos datos son esperables puesto que se nos hallamos en el contexto de una clase de alumnos de informática. Es por esto que concluímos que para hacer una correcta evaluación SUS deberíamos ampliar el espectro de evaluadores para obtener datos de otra clase de poblaciones.
+
+El tercer cuestionario se rellenará con el fin de evaluar la tarea: "Haz un pedido y luego haz una reserva". Los resultados quedan recogidos en la siguiente tabla: 
+
+|   Pregunta  | Evaluador 1 | Evaluador 2 | Evaluador 3 | 
+| :---------: | :---------: | :---------: | :---------: |
+|      1      |      4      |      4      |      5      |
+|      2      |      2      |      1      |      2      |
+|      3      |      5      |      5      |      4      |
+|      4      |      1      |      1      |      1      |
+|      5      |      4      |      4      |      4      |
+|      6      |      1      |      1      |      1      |
+|      7      |      5      |      4      |      4      |
+|      8      |      2      |      1      |      1      |
+|      9      |      4      |      4      |      4      |
+|     10      |      3      |      1      |      2      |
+| comentarios positivos | La interfaz gráfica es muy agradable a la vista, además está muy bien organizada, de manera que no satura al usuario. | La estética es limpia, el proceso de realizar un pedido es intuitivo y cómodo. Aunque mi favorito es la reserva de mesa, las animaciones y popups hacen que casi sin darte cuenta ya tengas una mesa en CatFé a tu nombre | Estética sobria y elegante |
+| comentarios negativos |  Demasiadas fotos.           |      Nada      |    se podría mejorar el feedback de algunos elementos clickables      |
+
+
+Con estos resultados, calculamos la nota media del cuestionario SUS para nuestra web: 
+
+Sea $N_i$ la nota resultante de la evaluación del evaulador $i$: 
+$$N_i = 2,5\cdot\sum_{n=1}^{10} v_n, \text{ donde } v_n = 
+\left\{\begin{array}{ll}
+    \text{valorPregunta}_n - 1 & \text{si n es impar}\\
+    \\
+    5 - \text{valorPregunta}_n & \text{si n es par}\\
+
+\end{array}\right.$$
+
+$$\overline N = \frac{N_1 + N_2 + N_3}{3} = \frac{82,5 + 90 + 85}{3} = 85,83$$
+
+Obtenemos un resultado de $85.83$ en la evaluación SUS, lo que se corresponde con una calificación A. Esto nos lleva a concluir que la usabilidad de nuestra web es alta y que las personas con perfiles similares al de los evaluadores encuentran la web agradable y la recomendarían a sus allegados.
 
 \clearpage
 

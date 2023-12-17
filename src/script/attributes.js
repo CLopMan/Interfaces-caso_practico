@@ -100,7 +100,7 @@ class Email extends Attribute {
  */
 class Phone extends Attribute {
     validate(value) {
-        if (!(/^\+34[7-9]\d{8}$/.test(value))) { throw "formato de número de teléfono incorrecto"; }
+        if (!(/^\+34[6-9]\d{8}$/.test(value))) { throw "formato de número de teléfono incorrecto"; }
         return value;
     }
 }
