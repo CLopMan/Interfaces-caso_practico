@@ -472,8 +472,11 @@ Durante la fase de documentación hemos hecho uso de la herramienta **inspeccion
 
 Para el prototipado hemos empleado [**Figma**](https://www.figma.com/). Figma es una herramienta de diseño colaborativo que nos ha permitido trabajar en paralelo sobre un diseño común. Ademaś, una vez finalizado el prototipo, Figma nos ha permitido representar fielmente el comportamiento que esperábamos de nuestra web; lo que ha servido de punto de referencia durante todo el desarrollo. Esto ha permitido un flujo de trabajo cómodo en el que todos los integrantes del grupo han estado plenamente coordinados. 
 
+Para implementar la página web se ha usado **html**, **css** y **javaScript**. Html es un lenguaje de etiquetado que se ha usado para organizar el contenido que queremos mostrar en la página, esto se ha hecho mediante etiquetas semánticas que estructuran la página web. Css permite la aplicación de estilos sobre los elementos definidos en el html. De esta forma, toda la estética de la página web, así como el comportamiento responsive queda definido en las hojas de estilo. JavaScript es un lenguaje de programación que permite dar funcionalidad a las páginas web y la introducción de elementos dinámicos. 
 
-
+Desarrollando el uso de javascript, además de las funciones implementadas por nosotros hemos importado algunos módulos para ciertas funcionalidades. El más importante de ellos es **jquery**, una biblioteca que facilita el uso de javascript en las páginas web. También, se han importado algunos plugins de esta biblioteca: 
+- [TimeTo](https://plugins.jquery.com/timeTo) es un plugin que añade la funcionalidad de cuentas atrás. Lo hemos usado para la cuenta atrás en el apartado de pedidos. 
+- [picadate](https://amsul.ca/pickadate.js/) es un plugin que añade un gran abanico de funcionalidad para la selección de fechas. Nos ha permitido incluir entradas de usuario a tavés de calendarios y selectores de horas de manera sencilla en el apartado de reservas. 
 
 \clearpage
 
