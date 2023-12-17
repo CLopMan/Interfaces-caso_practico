@@ -178,6 +178,15 @@
     font-weight: bold;
 }
 
+section > header {
+    border-bottom: 2px solid var(--marron-base);
+    padding: 25px 0 10px;
+    margin-bottom: 25px;
+    font-family: Newsreader;
+    font-size: 64px;
+    font-weight: initial;
+}
+
 /*Extra breakpoint for reubicating the small cart*/
 @media only screen and (max-width: 1615px){
     [class*="col-"] {

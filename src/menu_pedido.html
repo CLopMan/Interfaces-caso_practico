@@ -17,7 +17,7 @@
         <section id="menu">
 
             <!-- Header for de subcategories -->
-            <h1 class="types">
+            <header class="types">
                 <!-- Title division -->
                 Menú
 
@@ -29,7 +29,7 @@
                     <button class="but" onclick="ChangeState(4);updateSection(4)">Tartas</button>
                     <button class="but" onclick="ChangeState(5);updateSection(5)">Galletas</button>
                 </div>
-            </h1>
+            </header>
 
             <section class="prodSec row">
                 <!-- Div for products. The products get appended dynamically with JS. -->
@@ -68,26 +68,15 @@
         <section id="pedido">
 
             <!-- División para la barra de progreso -->
-            <div class="progress">
-                <div id="revision" class="circle">
-                    <p>Revisión del pedido</p>
-                </div>
+            <header id="progress">
+                <div id="revision" class="circle">Revisión del pedido</div>
                 <div id="t-1" class="trans"></div>
-                <div id="login" class="circle">
-                    <p>Login</p>
-                </div>
+                <div id="login" class="circle">Login</div>
                 <div id="t-2" class="trans"></div>
-                <div id="shipment" class="circle">
-                    <p>Dirección y envío</p>
-                </div>
+                <div id="shipment" class="circle">Dirección y envío</div>
                 <div id="t-3" class="trans"></div>
-                <div id="payment" class="circle">
-                    <p>Pago</p>
-                </div>
-
-            </div>
-
-            <hr>
+                <div id="payment" class="circle">Pago</div>
+            </header>
 
             <section id="step">
                 <!-- Sección de Carrito y resumen de pedido -->

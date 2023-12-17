@@ -1,42 +1,33 @@
-#pedido {
-    padding: 0 10%;
-}
-
 #pedido > hr {
     margin-top: 20px;
     color: #6c461a;
 }
 
-#pedido > .progress {
-    margin-top: 5%;
+#pedido > #progress {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
+    align-items: stretch;
 }
-    .progress > .circle {
-        height: 15vh;
-        width: 12.5%;
-        font-size: calc(0.7em);
+    #progress > .circle {
+        flex-shrink: 0;
         border-radius: 50%;
         background-color: lightgray;
-        justify-content: space-around;
-        align-items: center;
         display: flex;
-        padding: 2.5%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 15px;
+        font-size: 24px;
+        height: 150px;
+        width: 150px;
     }
-        .progress > .circle > p {
-            font-size: calc(0.5em + 1vw);
-            text-align: center;
-            flex: 1 1 auto;
-        }
 
-    .progress > .trans {
+    #progress > .trans {
         height: 10px;
-        width: 12.5%;
         background-color: lightgray;
         flex: 1 1 auto;
-        align-items: center;
-        transform: translateY(60px);
+        align-self: center;
     }
 
 #list-prods-order > .Item {
@@ -46,11 +37,13 @@
     margin-bottom: 15px;
 }
 
+#list-prods-order > .Item { align-items: stretch; }
 #list-prods-order > .Item > .SplitContainer { flex-grow: 1; }
 
 .ImagePreview {
     max-width: 20%;
     margin-right: 15px;
+    object-fit: cover;
 }
 
 #sending-form {margin-bottom: 15px; }
