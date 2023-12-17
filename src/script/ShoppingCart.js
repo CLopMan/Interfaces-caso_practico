@@ -38,7 +38,7 @@ class ShoppingCart {
         this.shipment_cost = Math.random() * (max - min) + min;
 
         // Update Master Price with shipment costs
-        this.masterPrice = this.shipment_cost + this.getProductsTotalAmmount()
+        this.masterPrice = this.shipment_cost + this.getProductsTotalCost()
 
         // Update the Master Price fields on HTML
         let ship_cost = document.getElementById("shipment-cost")
@@ -46,10 +46,18 @@ class ShoppingCart {
         let master_price = document.getElementById("master-price")
 
         ship_cost.innerText = String(truncar(this.shipment_cost,2)) +" €"
-        total_prods_am.innerText = String(truncar(this.getProductsTotalAmmount(),2)) + " €"
+        total_prods_am.innerText = String(truncar(this.getProductsTotalCost(),2)) + " €"
         master_price.innerText = String(truncar(this.masterPrice,2))+" €"
     }
 
+    getProductsTotalCost(){
+        let cost = 0
+
+        for (let i = 0; i < this.prices.length; i++) {
+            cost += this.prods[i].cantidad * this.prices[i]
+        }
+        return cost
+    }
 
     getProductsTotalAmmount(){
         let total_ammount = 0
