@@ -5,8 +5,8 @@ title: |
 author: |
   | Álvaro Guerrero Espinosa - 100472294
   | Adrian Cortázar - 100475860
-  | César López Mantecón - TODO
-  | Paula Subías serrano - TODO
+  | César López Mantecón - 100472092
+  | Paula Subías serrano - 100472119
 
 lang: es
 documentclass: report
