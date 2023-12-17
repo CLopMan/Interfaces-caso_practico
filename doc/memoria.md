@@ -470,7 +470,7 @@ Durante el desarrollo de esta práctica hemos empleado distintas tecnologías co
 
 Durante la fase de documentación hemos hecho uso de la herramienta **inspeccionar**. Esta herramienta nos ha permitido analizar en profundidad la organización de contenido y los estilos de las páginas web analizadas en el [apartado 3](#apartado-3). Además, esta herramienta ha sido verdaderamente últil para el testeo del producto final y su comportamiento responsive. 
 
-Para el prototipado hemos empleado **Figma**. Figma es una herramienta de diseño colaborativo que nos ha permitido trabajar en paralelo sobre un diseño común. Ademaś, una vez finalizado el prototipo, Figma nos ha permitido representar fielmente el comportamiento que esperábamos de nuestra web; lo que ha servido de punto de referencia durante todo el desarrollo. Esto ha permitido un flujo de trabajo cómodo en el que todos los integrantes del grupo han estado plenamente coordinados. 
+Para el prototipado hemos empleado [**Figma**](https://www.figma.com/). Figma es una herramienta de diseño colaborativo que nos ha permitido trabajar en paralelo sobre un diseño común. Ademaś, una vez finalizado el prototipo, Figma nos ha permitido representar fielmente el comportamiento que esperábamos de nuestra web; lo que ha servido de punto de referencia durante todo el desarrollo. Esto ha permitido un flujo de trabajo cómodo en el que todos los integrantes del grupo han estado plenamente coordinados. 
 
 
 
