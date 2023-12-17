@@ -35,4 +35,7 @@ form {
     font-weight: bold;
 }
 
-#faq p { padding-bottom: 25px; }
+#faq p {
+    padding-bottom: 25px;
+    font-weight: normal;
+}
