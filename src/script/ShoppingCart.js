@@ -75,15 +75,15 @@ class ShoppingCart {
     }
 
     setUpdateAutomatic(){
-        let campo = document.getElementById("direction-input")
-        campo.onkeyup = (ev) =>{
+        let campo = document.getElementById("Dirección-input")
+        campo.onkeyup = (ev) => {
             this.updateShipmentCostAddress()
             this.updateMasterPrice()
         }
     }
 
     updateShipmentCostAddress(){
-        let campo = document.getElementById("direction-input")
+        let campo = document.getElementById("Dirección-input")
         for (const pais of this.shipment_countries) {
             if (campo.value.toLowerCase().includes(pais.toLowerCase(),0) ){
                 this.shipment_cost = this.shipment[pais];

@@ -313,7 +313,7 @@ generate_form(
     "#sending-form",
     "Envío",
     [
-        {name: "direction", valid: Name,placeholder: "Dirección"},
+        {name: "Dirección", valid: Name, placeholder: "Dirección"},
     ],
 )
 
